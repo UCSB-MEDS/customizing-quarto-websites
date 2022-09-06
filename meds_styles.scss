@@ -1,0 +1,28 @@
+/*-- scss:defaults --*/
+
+// Google Fonts: https://www.developerdrive.com/how-to-easily-use-google-fonts-with-sass/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+
+$body-bg: #FFFFFF;
+//$body-color: #1E211F;
+$link-color: #003660;
+$font-family-monospace: 'Roboto Mono', monospace;
+
+// Fonts
+//font-family: 'Nunito Sans', sans-serif;
+//font-family: 'Roboto Mono', monospace;
+//font-family: 'Sanchez', serif;
+
+/*-- scss:rules --*/
+
+h2 {
+  color: #003660;
+}
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+
+

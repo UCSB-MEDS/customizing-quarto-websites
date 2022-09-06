@@ -1,0 +1,25 @@
+---
+format: revealjs
+---
+
+## `r fontawesome::fa("check", fill = "#93C6C2", a11y = "sem")` Prerequisites {.smaller}
+
+You should already have a Quarto website (or at least the bones of one) that is:
+
+::: {.incremental}
+-   deployed using GitHub Pages **and**
+-   contains *some* content (e.g. text, headings, etc.) for us to customize
+:::
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap-location: bottom
+#| fig-alt: "Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." 
+knitr::include_graphics("images/penguins_meteor.png")
+```
+<center><span style = 'font-size: 70%; color: #868A8F;'>Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)</span></center>
+
+::: footer
+If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.
+:::
