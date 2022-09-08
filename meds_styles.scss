@@ -1,28 +1,83 @@
 /*-- scss:defaults --*/
 
-// Google Fonts: https://www.developerdrive.com/how-to-easily-use-google-fonts-with-sass/
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+// fonts
+//@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
 
-$body-bg: #FFFFFF;
-//$body-color: #1E211F;
-$link-color: #003660;
+// Fonts (CSS rules)
+//$font-family-sans-serif: 'Nunito Sans', sans-serif;
+//$font-family-monospace: 'Roboto Mono', monospace;
+$font-family-serif: 'Sanchez', serif; 
+$font-family-sans-serif: 'Montserrat', sans-serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 
-// Fonts
-//font-family: 'Nunito Sans', sans-serif;
-//font-family: 'Roboto Mono', monospace;
-//font-family: 'Sanchez', serif;
+// scss variables
+$presentation-title-slide-text-align: "left";
+$body-bg: #FFFFFF;
+$link-color: #047C90;
+$code-block-font-size: 0.9em;
+//$font-size: 5em;
 
 /*-- scss:rules --*/
 
-h2 {
+.reveal .custom-title {
+  font-family: $font-family-serif;
+  color: #d2e3f3;
+  font-size: 1.7em;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.reveal .custom-subtitle {
+  font-family: $font-family-sans-serif;
+  color: #d2e3f3;
+  font-size: 1.2em;
+  font-weight: 900;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.reveal .custom-subtitle2 {
+  font-family: $font-family-sans-serif;
+  color: #d2e3f3;
+  font-size: 1.1em;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.reveal .custom-subtitle3 {
+  font-family: $font-family-sans-serif;
+  color: #d2e3f3;
+  font-size: 0.8em;
+  //position: absolute; 
+  left: 20px; 
+}
+
+.reveal .title-footer {
+  text-align: center !important;
+  color: #d2e3f3;
+  font-size: 0.4em !important;
+  //margin-left: 0em;
+}
+
+.slide-title {
+  font-family: $font-family-serif;
   color: #003660;
+  font-size: 1.4em;
+  font-weight: 900;
 }
 
-.reveal .slide blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
+.reveal p {
+  font-family: $font-family-sans-serif;
+  line-height: 1.5;
+  color: #3b3a3a;
+  font-size: 0.9em;
+  font-weight: 500;
 }
 
-
-
+//.slide-title-long {
+  //font-family: $font-family-monospace;
+  //color: #003660;
+  //font-size: 1.1em;
+  //font-weight: 900;
+//}

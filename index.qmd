@@ -3,28 +3,31 @@ format:
   revealjs:
     slide-number: true
     preview-links: auto
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
     logo: images/bren_meds_hex.png
     theme: 
       - meds_styles.scss
 ---
 
-## Customizing Quarto Websites {background="#047C90"}
+## {#title-slide data-menu-title="Title Slide" background="#047C90"}
 
-### Make your website stand out using `r fontawesome::fa("sass", fill = "#93C6C2", a11y = "sem")` & `r fontawesome::fa("css3-alt", fill = "#93C6C2", a11y = "sem")`
+[Customizing Quarto Websites]{.custom-title}
 
-<br>
-
-[Sam Csik \| Data Training Coordinator]{style="font-size: 120%;"}\
-[National Center for Ecological Analysis & Synthesis]{style="font-size: 90%;"}
+[Make your website stand out using `r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")` & `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`]{.custom-subtitle}
 
 <br>
 
-[Master of Environmental Data Science \| Fall 2022]{style="font-size: 120%;"}\
-[Bren School of Environmental Science & Management]{style="font-size: 90%;"}
+[**Sam Csik** | Data Training Coordinator]{.custom-subtitle2}<br>
+[National Center for Ecological Analysis & Synthesis]{.custom-subtitle3}
 
-::: footer
-Slides & source code available on <https://github.com/UCSB-MEDS/customizing-quarto-websites>
-:::
+<br>
+
+[**Master of Environmental Data Science** | Fall 2022]{.custom-subtitle2}<br>
+[Bren School of Environmental Science & Management]{.custom-subtitle3}
+
+[Slides & source code available on <https://github.com/UCSB-MEDS/customizing-quarto-websites>]{.title-footer}
 
 ------------------------------------------------------------------------
 
