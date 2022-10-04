@@ -11,40 +11,53 @@ format:
       - meds_styles.scss
 ---
 
-## {#title-slide data-menu-title="Title Slide" background="#047C90"}
+## {#title-slide data-menu-title="Title Slide" background="images/title_background.png"} 
 
 [Customizing Quarto Websites]{.custom-title}
 
-[Make your website stand out using `r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")` & `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`]{.custom-subtitle}
+[*Make your website stand out using `r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")` & `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`*]{.custom-subtitle}
+
+<br> 
+<br>
+
+:::: {.columns} 
+
+::: {.column width="50%"}
+[Sam Csik |]{.custom-subtitle2}<br>
+[Data Training Coordinator]{.custom-subtitle2}<br>
+[*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3}
+:::
+
+::: {.column width="50%"}
+[Master of Environmental Data Science |]{.custom-subtitle2}<br>
+[Fall 2022]{.custom-subtitle2}<br>
+[*Bren School of Environmental Science & Management*]{.custom-subtitle3}
+:::
+
+::::
 
 <br>
 
-[**Sam Csik** | Data Training Coordinator]{.custom-subtitle2}<br>
-[National Center for Ecological Analysis & Synthesis]{.custom-subtitle3}
+<center><span style = 'font-size: 50%; color: #d2e3f3'>Slides & source code available on [`r fontawesome::fa("github", fill = "#d2e3f3", a11y = "sem")`](https://github.com/UCSB-MEDS/customizing-quarto-websites)</span></center>
 
-<br>
+---
 
-[**Master of Environmental Data Science** | Fall 2022]{.custom-subtitle2}<br>
-[Bren School of Environmental Science & Management]{.custom-subtitle3}
 
-[Slides & source code available on <https://github.com/UCSB-MEDS/customizing-quarto-websites>]{.title-footer}
+{{< include sections/1-prerequisites.qmd >}}
 
-------------------------------------------------------------------------
 
-{{< include /sections/prerequisites.qmd >}}
+---
 
-------------------------------------------------------------------------
+{{< include sections/2-intro_html_css.qmd >}}
 
-## A light intro to HTML & CSS
-
-------------------------------------------------------------------------
+---
 
 ## Enter Sass
 
-------------------------------------------------------------------------
+---
 
 ## That was magic
 
-------------------------------------------------------------------------
+---
 
 ## Create .scss file & start editing

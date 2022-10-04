@@ -1,0 +1,16 @@
+---
+format: revealjs
+---
+
+## {#building-blocks data-menu-title="HTML & CSS = building blocks"}
+
+<div class = "slide-title">HTML & CSS are the building blocks of web pages</div>
+
+<div class = "body-text topbr">**HTML** (Hypertext Markup Language) is a *markup language*[^1] that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</div>
+
+<div class = "body-text">**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</div>
+
+[^1]: **[Markdown](https://www.markdownguide.org/)** and **[R Markdown](https://rmarkdown.rstudio.com/)** are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
+
+
+ 

@@ -1,0 +1,81 @@
+---
+format: revealjs
+---
+
+## {#prerequisites data-menu-title="Prerequisites"}
+
+<div class = "slide-title">`r fontawesome::fa("check", fill = "#047C90", a11y = "sem")` Prerequisites</div>
+
+<div class = "body-text topbr">You should already have a Quarto website (or at least the bones of one) that:</div>
+
+-   <div class = "body-text">is deployed using GitHub Pages **and**</div>
+-   <div class = "body-text">contains *some* content (e.g. text, headings, etc.) for us to customize</div>
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-cap-location: bottom
+#| fig-alt: "Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." 
+knitr::include_graphics("images/penguins_meteor.png")
+```
+<center><div class = "body-text"><span style = 'color: #868A8F;'>Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)</span></div></center>
+
+<center><div class = "caption-text">If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.</div></center>
+
+---
+
+## {#so-youve-created-a-website data-menu-title="So you've created a Quarto website..."}
+
+<div class = "slide-title">So you've created your personal website using Quarto...</div>
+
+::: {.column width="40%"}
+<br>
+<br>
+<div class = "body-text">[Quarto](https://quarto.org/) gives us with an easy-to-use web publishing format to create our personal websites. A massive benefit is that these websites already look pretty slick right out of the box.</div>
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 4
+#| fig-align: center
+#| fig-cap-location: bottom
+#| fig-alt: "An example Quarto website with default styling using the built-in Bootswatch theme, Cosmo" 
+knitr::include_graphics("images/website_noCSS.png")
+```
+:::
+
+<center><div class = "caption-text"><span style = 'color: #868A8F;'>An example Quarto website with default styling using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)</span></div></center>
+
+---
+
+## {#modify-to-stand-out data-menu-title="Make your website stand stand out"}
+
+<div class = "slide-title">But some additional modifications can make *your* website stand out from the rest</div>
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 3
+#| fig-align: center
+#| fig-alt: "Alecia Keys, a judge on the TV show, The Voice, excited slams her hands down and stands up saying, 'There is nobody like you!'" 
+knitr::include_graphics("images/unique.gif")
+```
+
+## {#enter-css-sass data-menu-title="Enter CSS & Sass"}
+
+<div class = "slide-title">Enter CSS and Sass</div>
+
+<center><div class = "body-text topbr">In order to make those changes, we need to dive a bit into the world of [CSS](https://www.w3.org/Style/CSS/Overview.en.html) and [Sass](https://sass-lang.com/).</div></center>
+
+```{r}
+#| echo: false
+#| fig-width: 5
+#| fig-height: 3
+#| fig-align: center
+#| fig-alt: "The CSS 3 and Sass logos" 
+knitr::include_graphics("images/css_sass.png")
+```
+
+<div class = "body-text">Some of you may have already heard of and/or used CSS -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>

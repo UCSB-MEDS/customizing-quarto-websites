@@ -14,13 +14,15 @@ $font-family-monospace: 'Roboto Mono', monospace;
 // scss variables
 $presentation-title-slide-text-align: "left";
 $body-bg: #FFFFFF;
-$link-color: #047C90;
-$code-block-font-size: 0.9em;
-//$font-size: 5em;
+$link-color: #78A540; //#047C90;
+$code-color: #900C3F;
+$code-bg: #F7F7F7;
+$code-block-font-size: 0.6em;
+$code-block-bg: #F0F3F5;
 
 /*-- scss:rules --*/
 
-.reveal .custom-title {
+.custom-title { //.reveal 
   font-family: $font-family-serif;
   color: #d2e3f3;
   font-size: 1.7em;
@@ -28,7 +30,7 @@ $code-block-font-size: 0.9em;
   left: 20px; 
 }
 
-.reveal .custom-subtitle {
+.custom-subtitle { //.reveal 
   font-family: $font-family-sans-serif;
   color: #d2e3f3;
   font-size: 1.2em;
@@ -37,15 +39,15 @@ $code-block-font-size: 0.9em;
   left: 20px; 
 }
 
-.reveal .custom-subtitle2 {
+.custom-subtitle2 { //.reveal 
   font-family: $font-family-sans-serif;
   color: #d2e3f3;
-  font-size: 1.1em;
+  font-size: 1em;
   //position: absolute; 
   left: 20px; 
 }
 
-.reveal .custom-subtitle3 {
+.custom-subtitle3 { //.reveal 
   font-family: $font-family-sans-serif;
   color: #d2e3f3;
   font-size: 0.8em;
@@ -53,31 +55,45 @@ $code-block-font-size: 0.9em;
   left: 20px; 
 }
 
-.reveal .title-footer {
+.title-footer { //.reveal 
   text-align: center !important;
   color: #d2e3f3;
   font-size: 0.4em !important;
-  //margin-left: 0em;
 }
 
 .slide-title {
   font-family: $font-family-serif;
-  color: #003660;
+  color: #047C90;
   font-size: 1.4em;
-  font-weight: 900;
+  font-weight: 700;
 }
 
-.reveal p {
-  font-family: $font-family-sans-serif;
-  line-height: 1.5;
-  color: #3b3a3a;
-  font-size: 0.9em;
-  font-weight: 500;
+.body-text {
+	font-size: 23px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
 }
 
-//.slide-title-long {
-  //font-family: $font-family-monospace;
-  //color: #003660;
-  //font-size: 1.1em;
-  //font-weight: 900;
-//}
+.caption-text {
+  font-size: 19px;
+	line-height: 1.5em;
+}
+
+// font weight not working
+strong {
+  font-weight: bold;
+  color: #047C90;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+ .topbr {
+    display: block;
+    margin-top: 1em;
+}
