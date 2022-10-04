@@ -6,7 +6,7 @@ format:
     code-link: true
     highlight-style: a11y
     chalkboard: true
-    logo: images/bren_meds_hex.png
+    #logo: images/bren_meds_hex.png
     theme: 
       - meds_styles.scss
 ---
@@ -38,7 +38,7 @@ format:
 
 <br>
 
-<center><span style = 'font-size: 50%; color: #d2e3f3'>Slides & source code available on [`r fontawesome::fa("github", fill = "#d2e3f3", a11y = "sem")`](https://github.com/UCSB-MEDS/customizing-quarto-websites)</span></center>
+<center><span style='font-size: 50%; color: #d2e3f3'>Slides & source code available on [`r fontawesome::fa("github", fill = "#d2e3f3", a11y = "sem")`](https://github.com/UCSB-MEDS/customizing-quarto-websites)</span></center>
 
 ---
 

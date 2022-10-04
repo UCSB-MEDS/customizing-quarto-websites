@@ -22,6 +22,23 @@ $code-block-bg: #F0F3F5;
 
 /*-- scss:rules --*/
 
+// HTML selectors //
+
+strong, b {
+  font-weight: bold;
+  color: #047C90;
+}
+
+th {
+font-size: 35px;  
+}
+
+td {
+  font-size: 20px;
+}
+
+// Class selectors //
+
 .custom-title { //.reveal 
   font-family: $font-family-serif;
   color: #d2e3f3;
@@ -79,12 +96,6 @@ $code-block-bg: #F0F3F5;
 	line-height: 1.5em;
 }
 
-// font weight not working
-strong {
-  font-weight: bold;
-  color: #047C90;
-}
-
 .vertical-center {
   margin: 0;
   position: absolute;
@@ -93,7 +104,18 @@ strong {
   transform: translateY(-50%);
 }
 
+.page-center {
+  //padding: 70px 0;
+  line-height: 700px;
+  text-align: center;
+}
+
  .topbr {
     display: block;
     margin-top: 1em;
+}
+
+ .bottombr {
+    display: block;
+    margin-bottom: 1em;
 }

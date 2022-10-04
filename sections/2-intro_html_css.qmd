@@ -2,15 +2,189 @@
 format: revealjs
 ---
 
-## {#building-blocks data-menu-title="HTML & CSS = building blocks"}
+##  {#building-blocks-html data-menu-title="HTML & CSS = building blocks (1/2)"}
 
-<div class = "slide-title">HTML & CSS are the building blocks of web pages</div>
+<div class="slide-title">HTML & CSS are the building blocks of web pages</div>
 
-<div class = "body-text topbr">**HTML** (Hypertext Markup Language) is a *markup language*[^1] that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</div>
+<div class="body-text topbr">**HTML** (Hypertext Markup Language) is a *markup language*<sup>1</sup> that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</div>
 
-<div class = "body-text">**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</div>
+<center><img src="images/html.png" width="600"/></center>
 
-[^1]: **[Markdown](https://www.markdownguide.org/)** and **[R Markdown](https://rmarkdown.rstudio.com/)** are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
+<center><div class="caption-text topbr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
 
 
- 
+<div class="caption-text"><sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</div>
+
+---
+
+##  {#building-blocks-css data-menu-title="HTML & CSS = building blocks (2/2)"}
+
+<div class="slide-title">HTML & CSS are the building blocks of web pages</div>
+
+<div class="body-text topbr">**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</div>
+
+<center><img src="images/css.png" width="600"/></center>
+
+<center><div class="caption-text bottombr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
+
+---
+
+##  {#browser-styling data-menu-title="Browser styling"}
+
+<div class="slide-title">Your browser has its own internal style sheet to render HTML</div>
+
+<div class="body-text topbr">Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.</div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<center><img src="images/html_github.png" width="600"/></center>
+<center><div class="caption-text">HTML</div></center>
+:::
+::: {.column width="50%"}
+<center><img src="images/browser_styling_github.png" width="600"/></center>
+<center><div class="caption-text">Browser default styling</div></center>
+:::
+::::
+
+---
+
+##  {#css-styling data-menu-title="CSS styling"}
+
+<div class="slide-title">CSS adds *pizzazz* to web page renderings</div>
+
+<div class="body-text topbr">CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they'd all generally look the same).</div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<center><img src="images/browser_styling_github.png" width="600"/></center>
+<center><div class="caption-text">Browser default styling</div></center>
+:::
+::: {.column width="50%"}
+<center><img src="images/css_styling_github.png" width="600"/></center>
+<center><div class="caption-text">CSS styling</div></center>
+:::
+::::
+
+---
+
+##  {#light-intro-html data-menu-title="Light intro to HTML" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">A light introduction to HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
+</div>
+
+---
+
+##  {#html-elements1 data-menu-title="HTML elements"}
+
+<div class="slide-title">HTML elements</div>
+
+<div class="body-text topbr">HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **opening tags** and **closing tags** that render some form of content in a particular way.</div>
+
+:::: {.columns}
+::: {.column width="70%"}
+<center><div class="body-text">**The basic anatomy of an HTML element:**</div></center>
+<center><img src="images/html_element.png" width="700"/></center>
+:::
+::: {.column width="30%"}
+<br> 
+<br>
+<div class="caption-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your website customization workshop`</div>
+:::
+:::
+
+<center><div class="caption-text"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have a closing tag.</span></div></center>
+
+---
+
+##  {#html-elements2 data-menu-title="Commonly used HTML tags"}
+
+<div class="slide-title">Commonly used HTML tags</div>
+
+<center><div class="body-text topbr">Browse a complete list of HTML tags [here](https://www.w3schools.com/tags/default.asp).</div></center>
+
+| Tag                 | What it does                                                 |
+|---------------------|-------------------------------------------------------------|
+| `<div>`       | defines a division or section in an HTML document            |
+| `<h1>`         | create a first-level heading (largest)                       |
+| `<h6>`         | create a sixth-level heading (smallest)                      |
+| `<p>`           | begin a new paragraph                                        |
+| `<strong>` | bold text                                                    |
+| `<em>`         | italicized text                                              |
+| `<img>`       | present an image                                             |
+| `<a>`           | define a hyperlink                                           |
+| `<br>`              | add a line break (empty element)                             |
+| `<span>`     | an inline container used to markup part of a text or document|
+
+---
+
+##  {#nested-html-elements data-menu-title="Nested HTML elements"}
+
+<div class="slide-title">HTML nested elements</div>
+
+<div class="body-text topbr">You can also *nest* elements. Remember to close out tags from the inside-out to avoid unexpected renderings.</div>
+
+:::: {.columns}
+::: {.column width="70%"}
+<center><div class="body-text">**Nested HTML elements:**</div></center>
+<center><img src="images/nested_html_elements.png" width="700"/></center>
+:::
+::: {.column width="30%"}
+<br> 
+<br>
+<div class="body-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`</div>
+:::
+::::
+
+---
+
+##  {#html-attribures data-menu-title="HTML attributes"}
+
+<div class="slide-title">HTML attributes</div>
+
+<div class="body-text topbr">HTML elements can also have [attributes](https://www.w3schools.com/html/html_attributes.asp) which provide extra information about elements. They are always specified in the opening tag and usually come in value/name pairs (e.g. `attributeName="attributeValue"`).</div>
+
+<div class="body-text">Attributes can be used in many powerful ways -- one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We'll come back to this concept in a little bit.</div>
+
+<center><div class="body-text">**The basic anatomy of an HTML attribute:**</div></center>
+
+<center><img src="images/html_attribute.png" width="700"/></center>
+
+---
+
+## Add short exercise here on writing some basic html
+
+1. open RStudio (don't have to be in a project)
+2. in terminal, `cd` to Desktop, use `touch` to create a `practice.html` file
+3. open HTML file in Source Pane
+
+```{html}
+<html>
+  <h1>This is a level one header</h1>
+  <p>Here is my firstparagraph<p>
+</html>
+```
+
+4. Preview the output
+5. Use code animations to add in nested html element
+
+```{html}
+<html>
+  <h1>This is a <em>level one</em> header</h1>
+  <p>Here is my first paragraph<p>
+</html>
+```
+
+6. Preview the new changes
+
+---
+
+##  {#light-intro-css data-menu-title="Light intro to CSS" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">A light introduction to CSS `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
+</div>
+
+---
+
+
