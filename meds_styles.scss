@@ -96,6 +96,15 @@ td {
 	line-height: 1.5em;
 }
 
+.important-text-bg {
+  background-color: rgba(217, 178, 189, 0.5); 
+  padding-top: 5px; 
+  padding-bottom: 5px; 
+  padding-right: 5px; 
+  padding-left: 8px; 
+  border-radius: 25px;
+}
+
 .vertical-center {
   margin: 0;
   position: absolute;

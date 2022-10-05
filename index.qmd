@@ -6,7 +6,6 @@ format:
     code-link: true
     highlight-style: a11y
     chalkboard: true
-    #logo: images/bren_meds_hex.png
     theme: 
       - meds_styles.scss
 ---

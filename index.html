@@ -346,22 +346,22 @@
 <div class="body-text topbr">
 You should already have a Quarto website (or at least the bones of one) that:
 </div>
-<ul>
-<li><div class="body-text">
-is deployed using GitHub Pages <strong>and</strong>
-</div></li>
-<li><div class="body-text">
-contains <em>some</em> content (e.g.&nbsp;text, headings, etc.) for us to customize
-</div></li>
-</ul>
+<div class="body-text">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> is deployed using GitHub Pages <strong>and</strong>
+</div>
+<div class="body-text">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> contains <em>some</em> content (e.g.&nbsp;text, headings, etc.) for us to customize
+</div>
 
 <img data-src="images/penguins_meteor.png" alt="Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." width="4000" class="r-stretch quarto-figure-center"><center>
-<div class="body-text">
+<div class="caption-text">
 <span style="color: #868A8F;">Art by <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></span>
 </div>
 </center>
 <center>
-<div class="caption-text">
+<div class="caption-text topbr">
 If you first need to get your website up and running, follow along with these <a href="https://ucsb-meds.github.io/creating-quarto-websites/">step-by-step instructions</a> before moving forward.
 </div>
 </center>
@@ -403,7 +403,7 @@ In order to make those changes, we need to dive a bit into the world of <a href=
 </center>
 
 <img data-src="images/css_sass.png" alt="The CSS 3 and Sass logos" width="705" class="r-stretch quarto-figure-center"><div class="body-text">
-Some of you may have already heard of and/or used CSS – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.
+Some of you may have already heard of and/or used CSS and/or Sass – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.
 </div>
 </section><section id="building-blocks-html" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (1/2)"><h2></h2>
 <div class="slide-title">
@@ -416,8 +416,8 @@ HTML &amp; CSS are the building blocks of web pages
 <img src="images/html.png" width="600">
 </center>
 <center>
-<div class="caption-text topbr">
-Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
+<div class="caption-text topbr bottombr">
+<span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a></span>
 </div>
 </center>
 <div class="caption-text">
@@ -435,7 +435,7 @@ HTML &amp; CSS are the building blocks of web pages
 </center>
 <center>
 <div class="caption-text bottombr">
-Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
+<span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a></span>
 </div>
 </center>
 </section><section id="browser-styling" class="slide level2" data-menu-title="Browser styling"><h2></h2>
@@ -506,7 +506,7 @@ A light introduction to HTML <svg aria-label="HTML 5 Logo" role="img" viewbox="0
 HTML elements
 </div>
 <div class="body-text topbr">
-HTML consists of a series of <a href="https://www.w3schools.com/html/html_elements.asp">elements</a> comprising <strong>opening tags</strong> and <strong>closing tags</strong> that render some form of content in a particular way.
+HTML consists of a series of <a href="https://www.w3schools.com/html/html_elements.asp">elements</a> comprising <strong>start tags</strong> and <strong>end tags</strong> that render some form of content in a particular way.
 </div>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -525,7 +525,7 @@ In Markdown syntax, this HTML element would be written as: <br><code># Welcome t
 </div>
 </div>
 <center>
-<div class="caption-text">
+<div class="caption-text topbr">
 <span style="color: #868A8F"><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have a closing tag.</span>
 </div>
 </center>
@@ -549,35 +549,35 @@ Browse a complete list of HTML tags <a href="https://www.w3schools.com/tags/defa
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><code>&lt;div&gt;</code></td>
+<td><code>&lt;div&gt;&lt;/div&gt;</code></td>
 <td>defines a division or section in an HTML document</td>
 </tr>
 <tr class="even">
-<td><code>&lt;h1&gt;</code></td>
+<td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
 <td>create a first-level heading (largest)</td>
 </tr>
 <tr class="odd">
-<td><code>&lt;h6&gt;</code></td>
+<td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
 <td>create a sixth-level heading (smallest)</td>
 </tr>
 <tr class="even">
-<td><code>&lt;p&gt;</code></td>
+<td><code>&lt;p&gt;&lt;/p&gt;</code></td>
 <td>begin a new paragraph</td>
 </tr>
 <tr class="odd">
-<td><code>&lt;strong&gt;</code></td>
+<td><code>&lt;strong&gt;&lt;/strong&gt;</code></td>
 <td>bold text</td>
 </tr>
 <tr class="even">
-<td><code>&lt;em&gt;</code></td>
+<td><code>&lt;em&gt;&lt;/em&gt;</code></td>
 <td>italicized text</td>
 </tr>
 <tr class="odd">
-<td><code>&lt;img&gt;</code></td>
+<td><code>&lt;img&gt;&lt;/img&gt;</code></td>
 <td>present an image</td>
 </tr>
 <tr class="even">
-<td><code>&lt;a&gt;</code></td>
+<td><code>&lt;a&gt;&lt;/a&gt;</code></td>
 <td>define a hyperlink</td>
 </tr>
 <tr class="odd">
@@ -585,7 +585,7 @@ Browse a complete list of HTML tags <a href="https://www.w3schools.com/tags/defa
 <td>add a line break (empty element)</td>
 </tr>
 <tr class="even">
-<td><code>&lt;span&gt;</code></td>
+<td><code>&lt;span&gt;&lt;/span&gt;</code></td>
 <td>an inline container used to markup part of a text or document</td>
 </tr>
 </tbody>
@@ -607,20 +607,24 @@ You can also <em>nest</em> elements. Remember to close out tags from the inside-
 <img src="images/nested_html_elements.png" width="700">
 </center>
 </div><div class="column" style="width:30%;">
-<br><br><div class="body-text">
+<br><div class="body-text">
 In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your **website customization** workshop</code>
 </div>
 </div>
+</div>
+<div class="caption-text topbr important-text-bg">
+<em>Important:</em> Take extra care to never skip an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors <svg aria-label="Grinning Face With Sweat" role="img" viewbox="0 0 504 512" style="height:1em;width:0.98em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#222222;overflow:visible;position:relative;"><title>Grinning Face With Sweat</title>
+<path d="M456 128c26.5 0 48-21 48-47 0-20-28.5-60.4-41.6-77.8-3.2-4.3-9.6-4.3-12.8 0C436.5 20.6 408 61 408 81c0 26 21.5 47 48 47zm0 32c-44.1 0-80-35.4-80-79 0-4.4.3-14.2 8.1-32.2C345 23.1 298.3 8 248 8 111 8 0 119 0 256s111 248 248 248 248-111 248-248c0-35.1-7.4-68.4-20.5-98.6-6.3 1.5-12.7 2.6-19.5 2.6zm-128-8c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 12-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.1 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm-160 0c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 12-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.2 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm80 280c-60.6 0-134.5-38.3-143.8-93.3-2-11.8 9.3-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.5-3.7 22.6 6.2 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z"></path></svg>.
 </div>
 </section><section id="html-attribures" class="slide level2" data-menu-title="HTML attributes"><h2></h2>
 <div class="slide-title">
 HTML attributes
 </div>
 <div class="body-text topbr">
-HTML elements can also have <a href="https://www.w3schools.com/html/html_attributes.asp">attributes</a> which provide extra information about elements. They are always specified in the opening tag and usually come in value/name pairs (e.g.&nbsp;<code>attributeName="attributeValue"</code>).
+HTML elements can also have <a href="https://www.w3schools.com/html/html_attributes.asp">attributes</a> which provide extra information about elements. They are always specified in the start tag and usually come in value/name pairs (e.g.&nbsp;<code>attributeName="attributeValue"</code>).
 </div>
 <div class="body-text">
-Attributes can be used in many powerful ways – one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We’ll come back to this concept in a little bit.
+Attributes can be used in many powerful ways – one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We’ll come back to this concept soon.
 </div>
 <center>
 <div class="body-text">
@@ -655,7 +659,50 @@ A light introduction to CSS <svg aria-label="Alternate CSS3 Logo" role="img" vie
 <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
 </div>
 </div>
-</section><section class="slide level2"></section><section id="enter-sass" class="slide level2"><h2>Enter Sass</h2>
+</section><section id="css-rules" class="slide level2" data-menu-title="CSS rules"><h2></h2>
+<div class="slide-title">
+CSS is a rule-based language
+</div>
+<div class="body-text topbr">
+CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, <em>“I want all first-level (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<img src="images/CSS_syntax.png" width="700">
+</center>
+</div><div class="column" style="width:50%;">
+<div class="caption-text">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Selectors</strong> select the HTML element(s) you want to style <em>(e.g.&nbsp;first-level headings, <code>&lt;h1&gt;</code>)</em>
+</div>
+<div class="caption-text topbr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Declarations</strong> sit inside curly brackets, <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, and are made up of <strong>property</strong> and <strong>value</strong> pairs. Each pair specifies the property of the HTML element(s) you’re selecting <em>(e.g.&nbsp;the color property of the element <code>&lt;h1&gt;</code>)</em>, and a value you’d like to assign to that property <em>(e.g.&nbsp;green)</em>
+</div>
+<div class="caption-text topbr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> A property and its corresponding value are separated by a colon, <code>:</code>. Delcaration end with a semicolon, <code>;</code>
+</div>
+</div>
+</div>
+</section><section class="slide level2"><h3 id="element-selectors">Element Selectors</h3>
+<p>Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p>example css rule</p>
+</div><div class="column" style="width:33%;">
+<p>applied in line</p>
+</div><div class="column" style="width:33%;">
+<p>output</p>
+</div>
+</div>
+</section><section class="slide level2"><h3 id="id-selectors">ID Selectors</h3>
+</section><section class="slide level2"><h3 id="class-selectors">Class Selectors</h3>
+</section><section class="slide level2"><h3 id="universal-selectors">Universal Selectors</h3>
+</section><section class="slide level2"><h3 id="grouping-selectors">Grouping Selectors</h3>
+</section><section class="slide level2"><h3 id="inline-styling">Inline styling</h3>
+</section><section id="enter-sass" class="slide level2"><h2>Enter Sass</h2>
 </section><section id="that-was-magic" class="slide level2"><h2>That was magic</h2>
 </section><section id="create-.scss-file-start-editing" class="slide level2"><h2>Create .scss file &amp; start editing</h2>
 <div class="footer footer-default">

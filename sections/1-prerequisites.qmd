@@ -8,8 +8,8 @@ format: revealjs
 
 <div class="body-text topbr">You should already have a Quarto website (or at least the bones of one) that:</div>
 
--   <div class="body-text">is deployed using GitHub Pages **and**</div>
--   <div class="body-text">contains *some* content (e.g. text, headings, etc.) for us to customize</div>
+<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` is deployed using GitHub Pages **and**</div>
+<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` contains *some* content (e.g. text, headings, etc.) for us to customize</div>
 
 ```{r}
 #| echo: false
@@ -18,9 +18,9 @@ format: revealjs
 #| fig-alt: "Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." 
 knitr::include_graphics("images/penguins_meteor.png")
 ```
-<center><div class="body-text"><span style='color: #868A8F;'>Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)</span></div></center>
+<center><div class="caption-text"><span style='color: #868A8F;'>Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)</span></div></center>
 
-<center><div class="caption-text">If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.</div></center>
+<center><div class="caption-text topbr">If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.</div></center>
 
 ---
 
@@ -78,4 +78,4 @@ knitr::include_graphics("images/unique.gif")
 knitr::include_graphics("images/css_sass.png")
 ```
 
-<div class="body-text">Some of you may have already heard of and/or used CSS -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>
+<div class="body-text">Some of you may have already heard of and/or used CSS and/or Sass -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>

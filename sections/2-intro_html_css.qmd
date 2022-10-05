@@ -10,7 +10,7 @@ format: revealjs
 
 <center><img src="images/html.png" width="600"/></center>
 
-<center><div class="caption-text topbr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
+<center><div class="caption-text topbr bottombr"><span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></span></div></center>
 
 
 <div class="caption-text"><sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</div>
@@ -25,7 +25,7 @@ format: revealjs
 
 <center><img src="images/css.png" width="600"/></center>
 
-<center><div class="caption-text bottombr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
+<center><div class="caption-text bottombr"><span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></span></div></center>
 
 ---
 
@@ -79,7 +79,7 @@ format: revealjs
 
 <div class="slide-title">HTML elements</div>
 
-<div class="body-text topbr">HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **opening tags** and **closing tags** that render some form of content in a particular way.</div>
+<div class="body-text topbr">HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **start tags** and **end tags** that render some form of content in a particular way.</div>
 
 :::: {.columns}
 ::: {.column width="70%"}
@@ -93,7 +93,7 @@ format: revealjs
 :::
 :::
 
-<center><div class="caption-text"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have a closing tag.</span></div></center>
+<center><div class="caption-text topbr"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have a closing tag.</span></div></center>
 
 ---
 
@@ -104,17 +104,17 @@ format: revealjs
 <center><div class="body-text topbr">Browse a complete list of HTML tags [here](https://www.w3schools.com/tags/default.asp).</div></center>
 
 | Tag                 | What it does                                                 |
-|---------------------|-------------------------------------------------------------|
-| `<div>`       | defines a division or section in an HTML document            |
-| `<h1>`         | create a first-level heading (largest)                       |
-| `<h6>`         | create a sixth-level heading (smallest)                      |
-| `<p>`           | begin a new paragraph                                        |
-| `<strong>` | bold text                                                    |
-| `<em>`         | italicized text                                              |
-| `<img>`       | present an image                                             |
-| `<a>`           | define a hyperlink                                           |
+|---------------------|--------------------------------------------------------------|
+| `<div></div>`       | defines a division or section in an HTML document            |
+| `<h1></h1>`         | create a first-level heading (largest)                       |
+| `<h6></h6>`         | create a sixth-level heading (smallest)                      |
+| `<p></p>`           | begin a new paragraph                                        |
+| `<strong></strong>` | bold text                                                    |
+| `<em></em>`         | italicized text                                              |
+| `<img></img>`       | present an image                                             |
+| `<a></a>`           | define a hyperlink                                           |
 | `<br>`              | add a line break (empty element)                             |
-| `<span>`     | an inline container used to markup part of a text or document|
+| `<span></span>`     | an inline container used to markup part of a text or document|
 
 ---
 
@@ -131,10 +131,11 @@ format: revealjs
 :::
 ::: {.column width="30%"}
 <br> 
-<br>
 <div class="body-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`</div>
 :::
 ::::
+
+<div class="caption-text topbr important-text-bg">*Important:* Take extra care to never skip an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
 
 ---
 
@@ -142,9 +143,9 @@ format: revealjs
 
 <div class="slide-title">HTML attributes</div>
 
-<div class="body-text topbr">HTML elements can also have [attributes](https://www.w3schools.com/html/html_attributes.asp) which provide extra information about elements. They are always specified in the opening tag and usually come in value/name pairs (e.g. `attributeName="attributeValue"`).</div>
+<div class="body-text topbr">HTML elements can also have [attributes](https://www.w3schools.com/html/html_attributes.asp) which provide extra information about elements. They are always specified in the start tag and usually come in value/name pairs (e.g. `attributeName="attributeValue"`).</div>
 
-<div class="body-text">Attributes can be used in many powerful ways -- one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We'll come back to this concept in a little bit.</div>
+<div class="body-text">Attributes can be used in many powerful ways -- one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We'll come back to this concept soon.</div>
 
 <center><div class="body-text">**The basic anatomy of an HTML attribute:**</div></center>
 
@@ -186,5 +187,65 @@ format: revealjs
 </div>
 
 ---
+
+##  {#css-rules data-menu-title="CSS rules"}
+
+<div class="slide-title">CSS is a rule-based language</div>
+
+<div class="body-text topbr">CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, *"I want all first-level (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:</div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<center><img src="images/CSS_syntax.png" width="700"/></center>
+:::
+::: {.column width="50%"}
+<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Selectors** select the HTML element(s) you want to style *(e.g. first-level headings, `<h1>`)*</div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*</div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` A property and its corresponding value are separated by a colon, `:`. Delcaration end with a semicolon, `;`</div>
+:::
+::::
+
+---
+
+### Element Selectors
+
+<div class="body-text topbr">Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</div>
+
+:::: {.columns}
+::: {.column width="33%"}
+example css rule
+:::
+::: {.column width="33%"}
+applied in line
+:::
+::: {.column width="33%"}
+output
+:::
+::::
+
+---
+
+### ID Selectors
+
+---
+
+### Class Selectors
+
+<div class="body-text topbr">Class selectors select HTML elements with a specific class attribute.</div>
+
+---
+
+### Universal Selectors
+
+---
+
+### Grouping Selectors
+
+---
+
+### Inline styling
+
 
 
