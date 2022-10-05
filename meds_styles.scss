@@ -39,7 +39,7 @@ td {
 
 // Class selectors //
 
-.custom-title { //.reveal 
+.custom-title { 
   font-family: $font-family-serif;
   color: #d2e3f3;
   font-size: 1.7em;
@@ -47,7 +47,7 @@ td {
   left: 20px; 
 }
 
-.custom-subtitle { //.reveal 
+.custom-subtitle { 
   font-family: $font-family-sans-serif;
   color: #d2e3f3;
   font-size: 1.2em;
@@ -56,7 +56,7 @@ td {
   left: 20px; 
 }
 
-.custom-subtitle2 { //.reveal 
+.custom-subtitle2 { 
   font-family: $font-family-sans-serif;
   color: #d2e3f3;
   font-size: 1em;
@@ -64,7 +64,7 @@ td {
   left: 20px; 
 }
 
-.custom-subtitle3 { //.reveal 
+.custom-subtitle3 { 
   font-family: $font-family-sans-serif;
   color: #d2e3f3;
   font-size: 0.8em;
@@ -72,7 +72,7 @@ td {
   left: 20px; 
 }
 
-.title-footer { //.reveal 
+.title-footer { 
   text-align: center !important;
   color: #d2e3f3;
   font-size: 0.4em !important;
@@ -83,6 +83,12 @@ td {
   color: #047C90;
   font-size: 1.4em;
   font-weight: 700;
+}
+
+.large-body-text {
+  font-family: $font-family-sans-serif;
+  color: #05859B;
+  font-size: 1em;
 }
 
 .body-text {

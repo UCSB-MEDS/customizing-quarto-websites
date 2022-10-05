@@ -10,7 +10,7 @@ format: revealjs
 
 <center><img src="images/html.png" width="600"/></center>
 
-<center><div class="caption-text topbr bottombr"><span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></span></div></center>
+<center><div class="caption-text topbr"><span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></span></div></center>
 
 
 <div class="caption-text"><sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</div>
@@ -93,7 +93,7 @@ format: revealjs
 :::
 :::
 
-<center><div class="caption-text topbr"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have a closing tag.</span></div></center>
+<center><div class="caption-text topbr"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.</span></div></center>
 
 ---
 
@@ -213,15 +213,34 @@ format: revealjs
 
 <div class="body-text topbr">Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</div>
 
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+
+h1 {
+  color: green;
+  letter-spacing: 5px;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<h1>My level one header will be styled</h1>
+<h2>This level two header will not be styled</h2>
+<p>Neither will this paragaph</p>
+<h1>But this second level one header will be</h1>
+```
+
 :::: {.columns}
-::: {.column width="33%"}
-example css rule
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
 :::
-::: {.column width="33%"}
-applied in line
-:::
-::: {.column width="33%"}
-output
+::: {.column width="60%"}
+<center><img src="images/element_selector.png" width="500"/></center>
 :::
 ::::
 
@@ -229,15 +248,76 @@ output
 
 ### ID Selectors
 
+<div class="body-text">An ID selector uses the *id attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a pound symbol followed by the selector name, e.g. `#selector`.</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+
+#para1 {
+  color: red;
+  text-align: center;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<p id="para1">My first paragraph is styled</p>
+<p>But my second paragraph is not</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/id_selector.png" width="600"/></center>
+:::
+::::
+
 ---
 
 ### Class Selectors
 
-<div class="body-text topbr">Class selectors select HTML elements with a specific class attribute.</div>
+<div class="body-text topbr">Class selectors select HTML elements with a specific class attribute. Class selectors are written using a period followed by the selector name, e.g. `.selector`</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+
+.blue-italicized {
+  color: blue;
+  font-style: italic;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<p class="blue-italicized">My first paragraph is styled</p>
+<p>But my second paragraph is not</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/class_selector.png" width="600"/></center>
+:::
+::::
 
 ---
 
-### Universal Selectors
+### Universal Selector
+
 
 ---
 
@@ -246,6 +326,7 @@ output
 ---
 
 ### Inline styling
+
 
 
 

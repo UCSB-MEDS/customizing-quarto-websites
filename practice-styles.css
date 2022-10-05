@@ -1,0 +1,15 @@
+
+.blue-italicized {
+  color: blue;
+  font-style: italic;
+}
+
+h1 {
+  color: green;
+  letter-spacing: 5px;
+}
+
+#para1 {
+  color: red;
+  text-align: center;
+}

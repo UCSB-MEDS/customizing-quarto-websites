@@ -6,6 +6,7 @@ format:
     code-link: true
     highlight-style: a11y
     chalkboard: true
+    #scrollable: true
     theme: 
       - meds_styles.scss
 ---
