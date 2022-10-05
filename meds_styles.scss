@@ -119,6 +119,10 @@ td {
   transform: translateY(-50%);
 }
 
+.horizontal-center {
+  text-align: center;
+}
+
 .page-center {
   //padding: 70px 0;
   line-height: 700px;
@@ -133,4 +137,8 @@ td {
  .bottombr {
     display: block;
     margin-bottom: 1em;
+}
+
+.panel-tabset {
+  font-size: 30px;
 }

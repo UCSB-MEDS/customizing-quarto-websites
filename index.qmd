@@ -45,10 +45,17 @@ format:
 
 {{< include sections/1-prerequisites.qmd >}}
 
-
 ---
 
 {{< include sections/2-intro_html_css.qmd >}}
+
+---
+
+{{< include sections/3-intro_html.qmd >}}
+
+---
+
+{{< include sections/4-intro_css.qmd >}}
 
 ---
 
@@ -56,8 +63,16 @@ format:
 
 ---
 
-## That was magic
+## Quarto vs CSS syntax
+
+---
+
+## Inspecting pages
 
 ---
 
 ## Create .scss file & start editing
+
+---
+
+## Look for inspiration (and code) elsewhere

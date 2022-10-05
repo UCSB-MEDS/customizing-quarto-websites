@@ -1,0 +1,369 @@
+---
+format: revealjs
+---
+
+##  {#light-intro-css data-menu-title="Light intro to CSS" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">A light introduction to CSS `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
+</div>
+
+---
+
+##  {#css-rules data-menu-title="CSS rules"}
+
+<div class="slide-title">CSS is a rule-based language</div>
+
+<div class="body-text topbr">CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, *"I want all first-level (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:</div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<center><img src="images/CSS_syntax.png" width="700"/></center>
+:::
+::: {.column width="50%"}
+<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Selectors** select the HTML element(s) you want to style *(e.g. first-level headings, `<h1>`)*</div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*</div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` A property and its corresponding value are separated by a colon, `:`. Delcaration end with a semicolon, `;`</div>
+:::
+::::
+
+---
+
+##  {#select-tags data-menu-title="element & grouping selectors"}
+
+<div class="slide-title">Select an element(s) based on its tag</div>
+
+::: {.panel-tabset}
+
+## Element Selectors
+
+<div class="body-text">Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+h1 {
+  color: green;
+  letter-spacing: 5px;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<h1>My level one header will be styled</h1>
+<h2>This level two header will not be styled</h2>
+<p>Neither will this paragaph</p>
+<h1>But this second level one header will be</h1>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/element_selector.png" width="450"/></center>
+:::
+::::
+
+## Grouping Selectors
+
+<div class="body-text">Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+h1, h2, p {
+  text-align: center;
+  color: purple;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<h1>My level one header will be styled</h1>
+<h2>This level two header will be styled</h2>
+<h3>This level three header will not be styled</h3>
+<p>This paragaph will be styled</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/grouping_selector.png" width="600"/></center>
+:::
+::::
+:::
+
+---
+
+##  {#select-attributes data-menu-title="id & class selectors"}
+
+<div class="slide-title">Select an element(s) using attributes</div>
+
+::: {.panel-tabset}
+## ID Selectors
+
+<div class="body-text">An ID selector uses the *id attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a pound symbol followed by the selector name, e.g. `#selector`.</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+#para1 {
+  color: red;
+  text-align: center;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<p id="para1">My first paragraph is styled</p>
+<p>But my second paragraph is not</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/id_selector.png" width="600"/></center>
+:::
+::::
+
+## Class Selectors
+
+<div class="body-text">An class selector uses the *class attribute* of an HTML element to style that specific element. Class selectors are written using a period followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+.blue-italicized {
+  color: blue;
+  font-style: italic;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<p class="blue-italicized">My first paragraph is styled</p>
+<p>But my second paragraph is not</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/class_selector.png" width="500"/></center>
+:::
+::::
+::::
+:::
+
+---
+
+##  {#universal-inline data-menu-title="universal & inline selectors"}
+
+<div class="slide-title">Select an all elements or style inline</div>
+
+::: {.panel-tabset}
+## Universal Selector
+
+<div class="body-text">The universal selector selects *all* HTML elements on the page. It is written using only an asterisk.</div>
+
+<div class="body-text topbr">**CSS**</div>
+```{css}
+#| eval: false
+#| echo: true
+* {
+  text-align: center;
+  color: orange;
+}
+```
+
+<div class="body-text topbr">**HTML**</div>
+```{html}
+#| eval: false
+#| echo: true
+<h1>My level one header will be styled</h1>
+<h2>This level two header will be styled</h2>
+<p>This paragaph will also be styled</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/universal_selector.png" width="450"/></center>
+:::
+::::
+
+## Inline styling
+
+<div class="body-text">The *style attribute* may be used inline to apply unique styles to a single element. It's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</div>
+
+<div class="body-text topbr">**HTML with inline styling**</div>
+```{html}
+#| eval: false
+#| echo: true
+<p>This is a normal paragraph</p>
+<p style="color: red; font-style: italic;">This paragraph has inline styling</p>
+<p>Here, only the word <span style="color: red; font-style: italic;">paragraph</span> is styled</p>
+```
+
+:::: {.columns}
+::: {.column width="40%"}
+<br>
+<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
+:::
+::: {.column width="60%"}
+<center><img src="images/inline_styling.png" width="400"/></center>
+:::
+::::
+:::
+
+---
+
+##  {#css-specificity data-menu-title="CSS Specificity"}
+
+<div class="slide-title">CSS Specificity</div>
+
+---
+
+##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"}
+
+<div class="vertical-center horizontal-center">
+<div class="custom-subtitle">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some CSS rules to style your HTML elements `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
+</div>
+
+---
+
+##  {#css-practice1 data-menu-title="Practice HTML (1/3)"}
+
+<div class="slide-title">Exercise: practice writing CSS (1/3)</div>
+
+<div class="caption-text topbr">1. Return to your RProject (where you created your `practice-html.html` file). In your terminal window, use the `touch` command to create a CSS file in the same location as your html file:</div> 
+
+```{bash}
+#| eval: false
+#| echo: true
+touch practice-styles.css
+```
+
+<div class="caption-text topbr">2. Link your CSS file inside the `<head>` of your HTML file.</div>
+
+```{html} 
+#| eval: false
+#| echo: true
+<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
+<html> <!-- This tag represents the root of the HTML doc -->
+<head>
+ <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
+ <link rel="stylesheet" href="practice-styles.css"> 
+</head>
+<body> 
+  <!-- Write all the contents of the HTML doc here -->
+  <h1>Here is my level one header</h1>
+  <p>Here is my first paragraph</p>
+  <p>Here is my second paragraph</p>
+  <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button>
+</body>
+</html>
+```
+
+---
+
+
+##  {#css-practice2 data-menu-title="Practice HTML (2/3"}
+
+<div class="slide-title">Exercise: practice writing CSS (2/3)</div>
+
+<div class="caption-text topbr">3. Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions: **(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page, **(b)** create a class selector to color the text of your first paragraph blue, **(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue, **(d)** create a class selector to color your button text red and enlarge the font size (try `20px`). **(bonus)** What happens if you also apply that red/large font selector to your second paragraph?</div> 
+
+<br>
+
+<center><div class="slide-title"><span style="font-size: 40px">(One) solution on next slide!</span></div></center>
+
+---
+
+##  {#css-practice-answer data-menu-title="Practice HTML (3/3)"}
+
+<div class="slide-title">Exercise: practice writing CSS (3/3)</div>
+
+<div class="caption-text topbr">3. Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions: **(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page, **(b)** create a class selector to color the text of your first paragraph blue, **(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue, **(d)** create a class selector to color your button text red and enlarge the font size (try `20px`). **(bonus)** What happens if you also apply that red/large font selector to your second paragraph?</div> 
+
+::: {.panel-tabset}
+
+## CSS
+```{css}
+#| eval: false
+#| echo: true
+h1 {
+  background-color: #49bf96;
+  text-align: center;
+}
+
+.blue-text {
+  color: blue;
+}
+
+.large-red-text{
+  color: red;
+  font-size: 20px;
+}
+```
+
+## HTML 
+```{html}
+#| eval: false
+#| echo: true
+<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
+<html> <!-- This tag represents the root of the HTML doc -->
+<head>
+ <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
+  <link rel="stylesheet" href="practice-styles.css"> 
+</head>
+<body> 
+  <!-- Write all the contents of the HTML doc here -->
+  <h1>Here is my level one header</h1>
+  <p class="blue-text">Here is my first paragraph</p>
+  <p class="large-red-text">Here is my <span class="blue-text">second</span> paragraph</p>
+  <button type="button" class="large-red-text" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button>
+</body>
+</html>
+```
+
+## Output
+
+<center><img src="images/solution.png" width="900"/></center>
+
+:::
+
+---
+
+## Practice
+
+though you can also have the option of writing an internal style sheet (read more about internal vs. external style sheets [here](https://www.w3schools.com/css/css_howto.asp))
+
+

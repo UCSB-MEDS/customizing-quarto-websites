@@ -1,15 +1,15 @@
 
-.blue-italicized {
-  color: blue;
-  font-style: italic;
-}
 
 h1 {
-  color: green;
-  letter-spacing: 5px;
+  background-color: #49bf96;
+  text-align: center;
 }
 
-#para1 {
+.blue-text {
+  color: blue;
+}
+
+.large-red-text{
   color: red;
-  text-align: center;
+  font-size: 20px;
 }

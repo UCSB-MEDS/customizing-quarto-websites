@@ -1,0 +1,181 @@
+---
+format: revealjs
+---
+
+##  {#light-intro-html data-menu-title="Light intro to HTML" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">A light introduction to HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
+</div>
+
+---
+
+##  {#html-elements1 data-menu-title="HTML elements"}
+
+<div class="slide-title">HTML elements</div>
+
+<div class="body-text topbr">HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **start tags** and **end tags** that render some form of content in a particular way.</div>
+
+:::: {.columns}
+::: {.column width="70%"}
+<center><div class="body-text">**The basic anatomy of an HTML element:**</div></center>
+<center><img src="images/html_element.png" width="700"/></center>
+:::
+::: {.column width="30%"}
+<br> 
+<br>
+<div class="caption-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your website customization workshop`</div>
+:::
+:::
+
+<center><div class="caption-text topbr"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.</span></div></center>
+
+---
+
+##  {#html-elements2 data-menu-title="Commonly used HTML tags"}
+
+<div class="slide-title">Commonly used HTML tags</div>
+
+<center><div class="body-text topbr">Browse a complete list of HTML tags [here](https://www.w3schools.com/tags/default.asp).</div></center>
+
+| Tag                 | What it does                                                 |
+|---------------------|--------------------------------------------------------------|
+| `<div></div>`       | defines a division or section in an HTML document            |
+| `<h1></h1>`         | create a first-level heading (largest)                       |
+| `<h6></h6>`         | create a sixth-level heading (smallest)                      |
+| `<p></p>`           | begin a new paragraph                                        |
+| `<strong></strong>` | bold text                                                    |
+| `<em></em>`         | italicized text                                              |
+| `<img></img>`       | present an image                                             |
+| `<a></a>`           | define a hyperlink                                           |
+| `<br>`              | add a line break (empty element)                             |
+| `<span></span>`     | an inline container used to markup part of a text or document|
+
+---
+
+##  {#nested-html-elements data-menu-title="Nested HTML elements"}
+
+<div class="slide-title">HTML nested elements</div>
+
+<div class="body-text topbr">You can also *nest* elements. Remember to close out tags from the inside-out to avoid unexpected renderings.</div>
+
+:::: {.columns}
+::: {.column width="70%"}
+<center><div class="body-text">**Nested HTML elements:**</div></center>
+<center><img src="images/nested_html_elements.png" width="700"/></center>
+:::
+::: {.column width="30%"}
+<br> 
+<div class="body-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`</div>
+:::
+::::
+
+<div class="caption-text topbr important-text-bg">*Important:* Take extra care to never skip an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
+
+---
+
+##  {#html-attribures data-menu-title="HTML attributes"}
+
+<div class="slide-title">HTML attributes</div>
+
+<div class="body-text topbr">HTML elements can also have [attributes](https://www.w3schools.com/html/html_attributes.asp) which provide extra information about elements. They are always specified in the start tag and usually come in value/name pairs (e.g. `attributeName="attributeValue"`).</div>
+
+<div class="body-text">Attributes can be used in many powerful ways -- one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We'll come back to this concept soon.</div>
+
+<center><div class="body-text">**The basic anatomy of an HTML attribute:**</div></center>
+
+<center><img src="images/html_attribute.png" width="700"/></center>
+
+---
+
+##  {#html-practice0 data-menu-title="Practice HTML (0/2)" background="#053660"}
+
+<div class="vertical-center">
+<div class="custom-subtitle">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
+</div>
+
+---
+
+##  {#html-practice1 data-menu-title="Practice HTML (1/2)"}
+
+<div class="slide-title">Exercise: practice writing HTML (1/2)</div>
+
+<div class="body-text topbr">You can use any text editor to do so (RStudio an VS Code work too!). The following steps assume you're working in RStudio. Later, we'll link an external (separate) CSS style sheet within our HTML file, to style our elements.</div>
+
+<div class="caption-text topbr">1. Open an RProject (an existing one is fine). In your terminal window, use the `touch` command to create an html file (for simplicity, I did this in my project's root directory), then choose **Open in Editor**.</div> 
+
+```{bash}
+#| eval: false
+#| echo: true
+touch practice-html.html
+```
+
+<div class="caption-text">2. Create the skeleton of your HTML file.</div>
+
+```{html}
+#| eval: false
+#| echo: true
+<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
+<html> <!-- This tag represents the root of the HTML doc -->
+<head> 
+  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
+</head>
+<body> 
+  <!-- Write all the contents of the HTML doc here -->
+</body>
+</html>
+```
+
+---
+
+##  {#html-practice2 data-menu-title="Practice HTML (2/2)" auto-animate="true"}
+
+<div class="slide-title">Exercise: practice writing HTML (2/2)</div>
+
+<div class="body-text topbr">Write some HTML! *We'll practice styling our HTML in the next section.*</div>
+
+<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button that takes you to the MEDS website ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) within the `<body>` of your html file.</div>
+
+```{html}
+#| eval: false
+#| echo: true
+<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
+<html> <!-- This tag represents the root of the HTML doc -->
+<head>
+ <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
+</head>
+<body> 
+  <!-- Write all the contents of the HTML doc here -->
+</body>
+</html>
+```
+
+---
+
+##  {#html-practice3 data-menu-title="Practice HTML (2/2)" auto-animate=true visibility="uncounted"}
+
+<div class="slide-title">Exercise: practice writing HTML (2/2)</div>
+
+<div class="body-text topbr">Write some HTML! *We'll practice styling our HTML in the next section.*</div>
+
+<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button that takes you to the MEDS website ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that).</div>
+
+```{html}
+#| eval: false
+#| echo: true
+<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
+<html> <!-- This tag represents the root of the HTML doc -->
+<head>
+ <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
+</head>
+<body> 
+  <!-- Write all the contents of the HTML doc here -->
+  <h1>Here is my level one header</h1>
+  <p>Here is my first paragraph</p>
+  <p>Here is my second paragraph</p>
+  <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button>
+</body>
+</html>
+```
+
+<div class="caption-text topbr">4. Click on the **Preview** button at the top of your source pane to see the rendered output.</div>
