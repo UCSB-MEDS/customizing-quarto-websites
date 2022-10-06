@@ -11,13 +11,8 @@ format: revealjs
 <div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` is deployed using GitHub Pages **and**</div>
 <div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` contains *some* content (e.g. text, headings, etc.) for us to customize</div>
 
-```{r}
-#| echo: false
-#| fig-align: center
-#| fig-cap-location: bottom
-#| fig-alt: "Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." 
-knitr::include_graphics("images/penguins_meteor.png")
-```
+<center><img src="images/penguins_meteor.png" alt="Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." width="500"/></center>
+
 <center><div class="caption-text"><span style='color: #868A8F;'>Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)</span></div></center>
 
 <center><div class="caption-text topbr">If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.</div></center>
@@ -30,20 +25,12 @@ knitr::include_graphics("images/penguins_meteor.png")
 
 ::: {.column width="40%"}
 <br>
-<br>
-<div class="body-text">[Quarto](https://quarto.org/) gives us with an easy-to-use web publishing format to create our personal websites. A massive benefit is that these websites already look pretty slick right out of the box.</div>
+<div class="body-text topbr">[Quarto](https://quarto.org/) gives us with an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.</div>
 :::
 
 ::: {.column width="60%"}
-```{r}
-#| echo: false
-#| fig-width: 6
-#| fig-height: 4
-#| fig-align: center
-#| fig-cap-location: bottom
-#| fig-alt: "An example Quarto website with default styling using the built-in Bootswatch theme, Cosmo" 
-knitr::include_graphics("images/website_noCSS.png")
-```
+<br>
+<img src="images/website_noCSS.png" width="500"/>
 :::
 
 <center><div class="caption-text"><span style = 'color: #868A8F;'>An example Quarto website with default styling using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)</span></div></center>

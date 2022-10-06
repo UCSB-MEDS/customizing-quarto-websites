@@ -59,15 +59,21 @@ format:
 
 ---
 
-## Enter Sass
+## Inspecting website
+
+---
+
+## Write some CSS (in styles.css)
+(note to make branch)
 
 ---
 
 ## Quarto vs CSS syntax
+(I use a mix of both)
 
 ---
 
-## Inspecting pages
+## Before we get too far...Enter Sass
 
 ---
 
@@ -76,3 +82,12 @@ format:
 ---
 
 ## Look for inspiration (and code) elsewhere
+
+---
+
+## Other fun things to change:
+
+- logo
+- favicon
+- footer
+- link cv

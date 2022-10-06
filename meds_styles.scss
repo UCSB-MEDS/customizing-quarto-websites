@@ -25,7 +25,7 @@ $code-block-bg: #F0F3F5;
 // HTML selectors //
 
 strong, b {
-  font-weight: bold;
+  font-weight: 900; // does not change weight?
   color: #047C90;
 }
 
@@ -117,10 +117,6 @@ td {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.horizontal-center {
-  text-align: center;
 }
 
 .page-center {
