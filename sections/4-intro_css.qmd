@@ -5,7 +5,7 @@ format: revealjs
 ##  {#light-intro-css data-menu-title="Light intro to CSS" background="#053660"}
 
 <div class="page-center">
-<div class="custom-subtitle">A light introduction to CSS `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
+<div class="custom-subtitle">A *light* introduction to CSS `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
 </div>
 
 ---
@@ -31,7 +31,27 @@ format: revealjs
 
 ---
 
-##  {#select-tags data-menu-title="element & grouping selectors"}
+##  {#selector-types data-menu-title="Types of Selectors"}
+
+<div class="slide-title">There are a number of different CSS selectors</div>
+
+<div class="body-text topbr">The next few slides review just a few basic CSS selector types for styling HTML elements (but you can read more about advanced CSS selectors [here](https://www.w3schools.com/css/css_selectors.asp):</div>
+
+<div class="caption-text topbr bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Element selectors</div>
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Grouping selectors</div>
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` ID selectors</div>
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Class selectors</div>
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Universal selector</div>
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Inline styling (not a selector type, but an alternative way to apply CSS styling)</div>
+
+---
+
+##  {#select-tags data-menu-title="Element & Grouping Selectors"}
 
 <div class="slide-title">Select an element(s) based on its tag</div>
 
@@ -41,7 +61,9 @@ format: revealjs
 
 <div class="body-text">Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</div>
 
-<div class="body-text topbr">**CSS**</div>
+:::: {.columns}
+::: {.column width="60%"}
+<div class="body-text">**CSS**</div>
 ```{css}
 #| eval: false
 #| echo: true
@@ -60,14 +82,12 @@ h1 {
 <p>Neither will this paragaph</p>
 <h1>But this second level one header will be</h1>
 ```
-
-:::: {.columns}
+:::
 ::: {.column width="40%"}
 <br>
-<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
-:::
-::: {.column width="60%"}
-<center><img src="images/element_selector.png" width="450"/></center>
+<br>
+<center><div class="body-text topbr">**Output**</div></center>
+<center><img src="images/element_selector.png" width="600"/></center>
 :::
 ::::
 
@@ -75,7 +95,9 @@ h1 {
 
 <div class="body-text">Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.</div>
 
-<div class="body-text topbr">**CSS**</div>
+:::: {.columns}
+::: {.column width="60%"}
+<div class="body-text">**CSS**</div>
 ```{css}
 #| eval: false
 #| echo: true
@@ -94,30 +116,32 @@ h1, h2, p {
 <h3>This level three header will not be styled</h3>
 <p>This paragaph will be styled</p>
 ```
-
-:::: {.columns}
+:::
 ::: {.column width="40%"}
 <br>
-<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
-:::
-::: {.column width="60%"}
+<br>
+<center><div class="body-text topbr">**Output**</div></center>
 <center><img src="images/grouping_selector.png" width="600"/></center>
 :::
 ::::
+
 :::
 
 ---
 
-##  {#select-attributes data-menu-title="id & class selectors"}
+##  {#select-attributes data-menu-title="ID & Class Selectors"}
 
 <div class="slide-title">Select an element(s) using attributes</div>
 
 ::: {.panel-tabset}
+
 ## ID Selectors
 
 <div class="body-text">An ID selector uses the *id attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a pound symbol followed by the selector name, e.g. `#selector`.</div>
 
-<div class="body-text topbr">**CSS**</div>
+:::: {.columns}
+::: {.column width="60%"}
+<div class="body-text">**CSS**</div>
 ```{css}
 #| eval: false
 #| echo: true
@@ -134,13 +158,11 @@ h1, h2, p {
 <p id="para1">My first paragraph is styled</p>
 <p>But my second paragraph is not</p>
 ```
-
-:::: {.columns}
+:::
 ::: {.column width="40%"}
 <br>
-<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
-:::
-::: {.column width="60%"}
+<br>
+<center><div class="body-text topbr">**Output**</div></center>
 <center><img src="images/id_selector.png" width="600"/></center>
 :::
 ::::
@@ -149,6 +171,8 @@ h1, h2, p {
 
 <div class="body-text">An class selector uses the *class attribute* of an HTML element to style that specific element. Class selectors are written using a period followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`</div>
 
+:::: {.columns}
+::: {.column width="50%"}
 <div class="body-text topbr">**CSS**</div>
 ```{css}
 #| eval: false
@@ -166,22 +190,20 @@ h1, h2, p {
 <p class="blue-italicized">My first paragraph is styled</p>
 <p>But my second paragraph is not</p>
 ```
-
-:::: {.columns}
-::: {.column width="40%"}
+:::
+::: {.column width="50%"}
 <br>
-<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
-:::
-::: {.column width="60%"}
-<center><img src="images/class_selector.png" width="500"/></center>
+<br>
+<center><div class="body-text topbr">**Output**</div></center>
+<center><img src="images/class_selector.png" width="450"/></center>
 :::
 ::::
-::::
+
 :::
 
 ---
 
-##  {#universal-inline data-menu-title="universal & inline selectors"}
+##  {#universal-inline data-menu-title="Universal & Inline Selectors"}
 
 <div class="slide-title">Select an all elements or style inline</div>
 
@@ -190,6 +212,8 @@ h1, h2, p {
 
 <div class="body-text">The universal selector selects *all* HTML elements on the page. It is written using only an asterisk.</div>
 
+:::: {.columns}
+::: {.column width="50%"}
 <div class="body-text topbr">**CSS**</div>
 ```{css}
 #| eval: false
@@ -208,14 +232,12 @@ h1, h2, p {
 <h2>This level two header will be styled</h2>
 <p>This paragaph will also be styled</p>
 ```
-
-:::: {.columns}
-::: {.column width="40%"}
-<br>
-<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
 :::
-::: {.column width="60%"}
-<center><img src="images/universal_selector.png" width="450"/></center>
+::: {.column width="50%"}
+<br>
+<br>
+<center><div class="body-text topbr">**Output**</div></center>
+<center><img src="images/universal_selector.png" width="425"/></center>
 :::
 ::::
 
@@ -232,15 +254,9 @@ h1, h2, p {
 <p>Here, only the word <span style="color: red; font-style: italic;">paragraph</span> is styled</p>
 ```
 
-:::: {.columns}
-::: {.column width="40%"}
-<br>
-<div class="large-body-text">Result `r fontawesome::fa("arrow-right", fill = "#05859B", a11y = "sem")`</div>
-:::
-::: {.column width="60%"}
-<center><img src="images/inline_styling.png" width="400"/></center>
-:::
-::::
+<div class="body-text topbr">**Output**</div>
+<img src="images/inline_styling.png" width="400"/>
+
 :::
 
 ---
@@ -249,17 +265,52 @@ h1, h2, p {
 
 <div class="slide-title">CSS Specificity</div>
 
+<div class="body-text topbr">It is often the case that more than one CSS rule will point to the same element. For example, say you have a style sheet and HTML that look like the following:</div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<div class="large-body-text">CSS</div>
+```{css}
+#| eval: false
+#| echo: true
+* {
+  color: orange;
+}
+
+h1 {
+  color: blue;
+}
+
+.green-italicized-text {
+  color: green;
+  font-style: italics;
+}
+```
+:::
+::: {.column width="50%"}
+<div class="large-body-text">HTML</div>
+```{html}
+#| eval: false
+#| echo: true
+<h1>This is my header</h1>
+<p>This is my paragraph with <span style="green-italicized-text">some green text</span></p>
+```
+:::
+::::
+
+<div class="body-text topbr">In this case, how do you know which style is declared and applied to your HTML elements?</div>
+
 ---
 
 ##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"}
 
-<div class="vertical-center horizontal-center">
+<div class="page-center">
 <div class="custom-subtitle">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some CSS rules to style your HTML elements `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
 </div>
 
 ---
 
-##  {#css-practice1 data-menu-title="Practice HTML (1/3)"}
+##  {#css-practice1 data-menu-title="Practice CSS (1/3)"}
 
 <div class="slide-title">Exercise: practice writing CSS (1/3)</div>
 
@@ -271,7 +322,7 @@ h1, h2, p {
 touch practice-styles.css
 ```
 
-<div class="caption-text topbr">2. Link your CSS file inside the `<head>` of your HTML file.</div>
+<div class="caption-text topbr">2. Link your CSS file inside the `<head>` of your HTML file (read more about inserting style sheets [here](https://www.w3schools.com/css/css_howto.asp)).</div>
 
 ```{html} 
 #| eval: false
@@ -295,7 +346,7 @@ touch practice-styles.css
 ---
 
 
-##  {#css-practice2 data-menu-title="Practice HTML (2/3"}
+##  {#css-practice2 data-menu-title="Practice CSS (2/3)"}
 
 <div class="slide-title">Exercise: practice writing CSS (2/3)</div>
 
@@ -307,7 +358,7 @@ touch practice-styles.css
 
 ---
 
-##  {#css-practice-answer data-menu-title="Practice HTML (3/3)"}
+##  {#css-practice-answer data-menu-title="Practice CSS (3/3)"}
 
 <div class="slide-title">Exercise: practice writing CSS (3/3)</div>
 
@@ -359,11 +410,5 @@ h1 {
 <center><img src="images/solution.png" width="900"/></center>
 
 :::
-
----
-
-## Practice
-
-though you can also have the option of writing an internal style sheet (read more about internal vs. external style sheets [here](https://www.w3schools.com/css/css_howto.asp))
 
 

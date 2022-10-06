@@ -5,7 +5,7 @@ format: revealjs
 ##  {#light-intro-html data-menu-title="Light intro to HTML" background="#053660"}
 
 <div class="page-center">
-<div class="custom-subtitle">A light introduction to HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
+<div class="custom-subtitle">A *light* introduction to HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
 </div>
 
 ---
@@ -90,7 +90,7 @@ format: revealjs
 
 ##  {#html-practice0 data-menu-title="Practice HTML (0/2)" background="#053660"}
 
-<div class="vertical-center">
+<div class="page-center">
 <div class="custom-subtitle">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
 </div>
 
@@ -152,7 +152,7 @@ touch practice-html.html
 
 ---
 
-##  {#html-practice3 data-menu-title="Practice HTML (2/2)" auto-animate=true visibility="uncounted"}
+##  {#html-practice3 data-menu-title="Practice HTML Solution (2/2)" auto-animate=true visibility="uncounted"}
 
 <div class="slide-title">Exercise: practice writing HTML (2/2)</div>
 
