@@ -33,7 +33,7 @@ format: revealjs
 
 ##  {#selector-types data-menu-title="Types of Selectors"}
 
-<div class="slide-title">There are a number of different CSS selectors</div>
+<div class="slide-title">There are a number of different CSS selector types</div>
 
 <div class="body-text topbr">The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but you can learn more about all the different categories of CSS selectors [here](https://www.w3schools.com/css/css_selectors.asp)):</div>
 
@@ -329,8 +329,10 @@ h1 {
 
 ##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"}
 
-<div class="page-center">
-<div class="custom-subtitle">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some CSS rules to style your HTML elements `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div>
+<div class = "vertical-center">
+
+<center><div class="custom-subtitle2">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some CSS rules to style your HTML elements `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div></center>
+
 </div>
 
 ---
@@ -375,7 +377,17 @@ touch practice-styles.css
 
 <div class="slide-title">Exercise: practice writing CSS (2/3)</div>
 
-<div class="caption-text topbr">3. Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions: **(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page, **(b)** create a class selector to color the text of your first paragraph blue, **(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue, **(d)** create a class selector to color your button text red and enlarge the font size (try `20px`). **(bonus)** What happens if you also apply that red/large font selector to your second paragraph?</div> 
+<div class="caption-text topbr">3. Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:</div> 
+
+<div class="caption-text topbr">**(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page,</div>  
+<div class="caption-text topbr">**(b)** create a class selector to color the text of your first paragraph blue,</div>   
+<div class="caption-text topbr">**(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue,</div>  
+<div class="caption-text topbr">**(d)** create a class selector to color your button text red and enlarge the font size (try `20px`),</div>   
+<div class="caption-text topbr">**(bonus)** What happens if you also apply that red/large font selector to your second paragraph?</div> 
+
+<br>
+
+<center><p class="caption-text">Explore a list of all CSS properties [here](https://www.w3schools.com/cssref/).</p></center>
 
 <br>
 
@@ -387,7 +399,7 @@ touch practice-styles.css
 
 <div class="slide-title">Exercise: practice writing CSS (3/3)</div>
 
-<div class="caption-text topbr">3. Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions: **(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page, **(b)** create a class selector to color the text of your first paragraph blue, **(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue, **(d)** create a class selector to color your button text red and enlarge the font size (try `20px`). **(bonus)** What happens if you also apply that red/large font selector to your second paragraph?</div> 
+<br>
 
 ::: {.panel-tabset}
 

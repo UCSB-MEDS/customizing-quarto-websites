@@ -1,0 +1,35 @@
+---
+format: revealjs
+---
+
+##  {#css-quarto data-menu-title="CSS + Quarto" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">`r fontawesome::fa("question", fill = "#d2e3f3", a11y = "sem")` Okay, but what about Quarto?</div>
+</div>
+
+---
+
+##  {#styles.css data-menu-title="Quarto comes with `styles.css`"}
+
+<div class="slide-title">When you create a new Quarto site, it automatically creates a `styles.css` file</div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<br>
+<center><img src="images/quarto_files.png" width="500"/></center>
+:::
+::: {.column width="50%"}
+<br>
+<br>
+<br>
+<div class="body-text">We can start writing our CSS rules here. But where to start...?</div>
+:::
+::::
+
+
+---
+
+## before we start writing rules, we can test things out in our browswer first by inspecting our webpage
+
+---
