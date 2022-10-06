@@ -99,3 +99,51 @@ format:
 
 :::
 
+---
+
+
+## {#add-favicon data-menu-title="Add favicon & logo"}
+
+<p class="slide-title">Add a favicon and personal logo</p>
+
+::: {.panel-tabset}
+
+## `_quarto.yml` file
+
+```{r}
+#| eval: false
+#| echo: true
+---
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "samantha csik"
+  navbar:
+    title: samanthacsik
+    right: # align navbar items to the right/left/center
+      - href: index.qmd
+        text: home # use 'text' option to update the name as it appears in your navbar
+      - about.qmd
+      - resources.qmd
+      - href: CV/SCsik_CV.pdf
+        text: cv
+      - icon: github # add icons that link to social media, etc.
+        href: https://github.com/samanthacsik
+      - icon: twitter
+        href: https://twitter.com/SamanthaCsik
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+---
+```
+
+## Output
+
+<center><img src="images/---.png" width="600"/></center>
+
+:::
