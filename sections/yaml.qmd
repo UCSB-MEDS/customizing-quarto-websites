@@ -1,0 +1,101 @@
+---
+format: revealjs
+---
+
+##  {#edit-quarto-yml data-menu-title="Edit YAML" background="#053660"}
+
+<div class="vertical-center">
+<center><div class="custom-subtitle2">Add a template to your `index.qmd` and edit `_quarto.qmd`</div></center>
+</div>
+
+---
+
+## {#about-page data-menu-title="Create a nice landing page"}
+
+<p class="slide-title">Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)</p>
+
+::: {.panel-tabset}
+
+## `index.qmd` YAML
+```{r}
+#| eval: false
+#| echo: true
+---
+title: "samantha csik" # if using a built-in template, this appears under your photo
+image: headshot.jpg # great spot for your professional headshot :) 
+about: 
+  template: trestles # see other templates at https://quarto.org/docs/websites/website-about.html#templates
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - icon: linkedin # you'll need to the fontawesome extension to include icons: https://github.com/quarto-ext/fontawesome
+      text: LinkedIn
+      href: https://www.linkedin.com/in/samanthacsik/
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/SamanthaCsik
+    - icon: github
+      text: GitHub
+      href: https://github.com/samanthacsik
+    - icon: envelope
+      text: Email
+      href: mailto:scsik@ucsb.edu
+---
+```
+
+<p class="caption-text">To install the quarto fontawesome extension, run `quarto install extension quarto-ext/fontawesome` in your RStudio terminal. You'll need to install this for each project where you'd like to use fontawesome icons.</p>
+
+## Output
+
+<center><img src="images/trestles_template.png" width="600"/></center>
+
+:::
+
+---
+
+## {#add-pages data-menu-title="Add pages"}
+
+<p class="slide-title">Add additional web pages to your navbar</p>
+
+::: {.panel-tabset}
+
+## `_quarto.yml` file
+
+```{r}
+#| eval: false
+#| echo: true
+---
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "samantha csik"
+  navbar:
+    title: samanthacsik
+    right: # align navbar items to the right/left/center
+      - href: index.qmd
+        text: home # use 'text' option to update the name as it appears in your navbar
+      - about.qmd
+      - resources.qmd
+      - href: CV/SCsik_CV.pdf
+        text: cv
+      - icon: github # add icons that link to social media, etc.
+        href: https://github.com/samanthacsik
+      - icon: twitter
+        href: https://twitter.com/SamanthaCsik
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+---
+```
+
+## Output
+
+<center><img src="images/add_navbar_items.png" width="600"/></center>
+
+:::
+

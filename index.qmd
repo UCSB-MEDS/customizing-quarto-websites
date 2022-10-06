@@ -42,8 +42,11 @@ format:
 
 ---
 
-
 {{< include sections/1-prerequisites.qmd >}}
+
+---
+
+{{< include sections/yaml.qmd >}}
 
 ---
 
