@@ -19,6 +19,41 @@ format: revealjs
 
 ---
 
+## {#tldr data-menu-title="TL;DR"}
+
+<p class="slide-title">TL;DR</p>
+
+<div class="body-text topbr">When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built default CSS stylesheet (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)).</div>
+
+<div class="body-text bottombr">We can modify the appearance of our website in a number of ways. We'll learn a bit about the following (but know that this is just a starting point!):</div>
+
+. . .
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Editing the `_quarto.yml` file** -- here we can easily update our top navigation bar (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).</div>
+
+. . .
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Creating a `.scss` file(s)** that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).</div>
+
+. . . 
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Define CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.</div>
+
+. . . 
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Combine all of the above!** Approaching this in the following order worked best for me: **First** fill out as much of the `_quarto.yml` file as you can/want -- this is the easiest way to add some really cool features with minimal effort. **Next**, create a `mystyles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables. **Finally** make fine-tuned adjustments by defining CSS rules directly in your `mystyles.scss` file (you can write CSS in SCSS files, but not the other way around).</div>
+
+---
+
+
+##  {#lets-start-styling data-menu-title="Let's start styling" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">`r fontawesome::fa("palette", fill = "#d2e3f3", a11y = "sem")` Let's start styling</div>
+</div>
+
+---
+
 ## {#so-youve-created-a-website data-menu-title="So you've created a Quarto website..."}
 
 <div class="slide-title">So you've created your personal website using Quarto...</div>
@@ -50,7 +85,9 @@ format: revealjs
 knitr::include_graphics("images/unique.gif")
 ```
 
-## {#enter-css-sass data-menu-title="Enter CSS & Sass"}
+---
+
+## {#enter-css-sass data-menu-title="Enter HTML, CSS & Sass"}
 
 <div class="slide-title">Enter HTML, CSS and Sass</div>
 
@@ -66,3 +103,5 @@ knitr::include_graphics("images/html_css_sass.png")
 ```
 
 <div class="body-text">Some of you may have already heard of/written HTML and/or CSS and/or Sass -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>
+
+

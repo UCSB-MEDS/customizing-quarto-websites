@@ -431,6 +431,47 @@ You should already have a Quarto website (or at least the bones of one) that:
 If you first need to get your website up and running, follow along with these <a href="https://ucsb-meds.github.io/creating-quarto-websites/">step-by-step instructions</a> before moving forward.
 </div>
 </center>
+</section><section id="tldr" class="slide level2" data-menu-title="TL;DR"><h2></h2>
+<p class="slide-title">
+TL;DR
+</p>
+<div class="body-text topbr">
+When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built default CSS stylesheet (the Bootswatch <a href="https://bootswatch.com/cosmo/">Cosmo theme</a>).
+</div>
+<div class="body-text bottombr">
+We can modify the appearance of our website in a number of ways. We’ll learn a bit about the following (but know that this is just a starting point!):
+</div>
+<div class="fragment">
+<div class="caption-text bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Editing the <code>_quarto.yml</code> file</strong> – here we can easily update our top navigation bar (e.g.&nbsp;add new pages), add a page footer, a <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a>, Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built <a href="https://bootswatch.com/">Bootswatch theme</a> (by replacing <code>cosmo</code> with an alternative theme name).
+</div>
+</div>
+<div class="fragment">
+<div class="caption-text bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Creating a <code>.scss</code> file(s)</strong> that contains <a href="https://sass-lang.com/">Sass</a> variables to quickly customize your website’s theme – these take the form of <code>$var-name: value;</code> and you can find a list of them in the <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">Quarto documentation</a>.
+</div>
+</div>
+<div class="fragment">
+<div class="caption-text bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Define CSS rules in the <code>styles.css</code> file</strong> that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
+</div>
+</div>
+<div class="fragment">
+<div class="caption-text bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Combine all of the above!</strong> Approaching this in the following order worked best for me: <strong>First</strong> fill out as much of the <code>_quarto.yml</code> file as you can/want – this is the easiest way to add some really cool features with minimal effort. <strong>Next</strong>, create a <code>mystyles.scss</code> file (name it however you want), link to it in <code>_quarto.yml</code> (this applies your styles to your Quarto site), and define your Sass variables. <strong>Finally</strong> make fine-tuned adjustments by defining CSS rules directly in your <code>mystyles.scss</code> file (you can write CSS in SCSS files, but not the other way around).
+</div>
+</div>
+</section><section id="lets-start-styling" class="slide level2" data-menu-title="Let's start styling" data-background="#053660"><h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+<svg aria-label="Palette" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Palette</title>
+<path d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"></path></svg> Let’s start styling
+</div>
+</div>
 </section><section id="so-youve-created-a-website" class="slide level2" data-menu-title="So you've created a Quarto website..."><h2></h2>
 <div class="slide-title">
 So you’ve created your personal website using Quarto…
@@ -451,7 +492,7 @@ So you’ve created your personal website using Quarto…
 But some additional modifications can make <em>your</em> website stand out from the rest
 </div>
 
-<img data-src="images/unique.gif" alt="Alecia Keys, a judge on the TV show, The Voice, excited slams her hands down and stands up saying, 'There is nobody like you!'" class="r-stretch quarto-figure-center"></section><section id="enter-css-sass" class="slide level2" data-menu-title="Enter CSS &amp; Sass"><h2></h2>
+<img data-src="images/unique.gif" alt="Alecia Keys, a judge on the TV show, The Voice, excited slams her hands down and stands up saying, 'There is nobody like you!'" class="r-stretch quarto-figure-center"></section><section id="enter-css-sass" class="slide level2" data-menu-title="Enter HTML, CSS &amp; Sass"><h2></h2>
 <div class="slide-title">
 Enter HTML, CSS and Sass
 </div>
