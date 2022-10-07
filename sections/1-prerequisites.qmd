@@ -27,7 +27,7 @@ format: revealjs
 
 . . . 
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`**Editing the `index.qmd` YAML** -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give you landing page a sleek and professional appearance (we can further modify this later with some CSS).</div>
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`**Editing the `index.qmd` YAML** -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).</div>
 
 . . .
 
@@ -86,23 +86,5 @@ format: revealjs
 knitr::include_graphics("images/unique.gif")
 ```
 
----
-
-## {#enter-css-sass data-menu-title="Enter HTML, CSS & Sass"}
-
-<div class="slide-title">Enter HTML, CSS and Sass</div>
-
-<div class="body-text topbr">In order to make those changes, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/), [CSS](https://www.w3.org/Style/CSS/Overview.en.html) and [Sass](https://sass-lang.com/).</div>
-
-```{r}
-#| echo: false
-#| fig-width: 5
-#| fig-height: 3
-#| fig-align: center
-#| fig-alt: "The CSS 3 and Sass logos" 
-knitr::include_graphics("images/html_css_sass.png")
-```
-
-<div class="body-text">Some of you may have already heard of/written HTML and/or CSS and/or Sass -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>
 
 
