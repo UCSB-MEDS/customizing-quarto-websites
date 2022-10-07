@@ -78,7 +78,7 @@ about:
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "14-20|21-29"
+#| code-line-numbers: "13-19|20-29"
 project:
   type: website
   output-dir: docs
@@ -140,7 +140,7 @@ format:
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "8|9-12"
+#| code-line-numbers: "7|8-11"
 project:
   type: website
   output-dir: docs

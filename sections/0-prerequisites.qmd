@@ -69,7 +69,7 @@ format: revealjs
 <img src="images/website_noCSS.png" width="500"/>
 :::
 
-<center><div class="caption-text"><span style = 'color: #868A8F;'>An example Quarto website with default styling using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)</span></div></center>
+<center><div class="caption-text"><span style = 'color: #868A8F;'>An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)</span></div></center>
 
 ---
 

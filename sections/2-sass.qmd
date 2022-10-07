@@ -94,7 +94,7 @@ touch mystyles.scss # name it whatever you want (you can apply more than one sty
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "9-11"
+#| code-line-numbers: "9-10"
 project:
    # ~ additional YAML omitted for brevity ~
 
