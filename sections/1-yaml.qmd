@@ -52,7 +52,7 @@ about:
 <center><p class="caption-text"><span style="color:#868A8F;">Without an About Page template</span></p></center>
 :::
 ::: {.column width="50%"}
-<center><img src="images/trestles_template.png" width="300"/></center>
+<center><img src="images/trestles_template.png" width="600"/></center>
 <center><p class="caption-text"><span style="color:#868A8F;">With the `trestles` About Page template</span></p></center>
 :::
 ::::
