@@ -1,0 +1,198 @@
+---
+format: revealjs
+---
+
+##  {#use-sass data-menu-title="Use Sass" background="#053660"}
+
+<div class="vertical-center">
+<center><div class="custom-subtitle2">Use a *Syntatctically Awesome Stylesheet* (`r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")`) to define variables for use throughout your website </div></center>
+</div>
+
+---
+
+## {#what-is-sass data-menu-title="What is Sass?"}
+
+<p class="slide-title">What is Sass?</p>
+
+<div class="body-text topbr">[Sass](https://sass-lang.com/) stands for **S**yntactically **A**wesome **S**tyle**s**heets and is an extension to CSS (I know, it seems like we're talking about this in an incorrect order, but bear with me).</div> 
+
+<div class="body-text topbr">Sass is a CSS **preprocessor** -- this means that Sass allows web developers to use Sass syntax and features that don't currently exist in CSS  (e.g. variables, which we'll be using today), then converts that Sass code into standard CSS (browsers don't understand Sass code, but *do* understand CSS).</div> 
+
+<div class="body-text topbr">Quarto has a [number of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that you can specify within a `mystyles.scss` file.</div>
+
+<center><img src="images/sass.png" width="300"/></center>
+
+---
+
+## {#why-use-sass data-menu-title="Why use Sass?"}
+
+<p class="slide-title">Why use Sass?</p>
+
+<div class="body-text topbr">Stylesheets (e.g. `.css` files) are getting larger and more complex. Sass extends existing CSS features and importantly, reduces repetition. For example, imagine you're working on a website, which uses 3 main colors:</div>
+
+<center><img src="images/meds_colors.png" width="300"/></center>
+
+<div class="body-text topbr">You might imagine how often you'll need to type those HEX codes out as you developing your style sheet...it can get annoying rather quickly.</div>
+
+---
+
+## {#why-use-sass data-menu-title="Why use Sass?"}
+
+<p class="slide-title">Why use Sass?</p>
+
+<div class="caption-text topbr bottombr">Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time:</div>
+
+```{css}
+#| eval: false
+#| echo: true
+
+/* -- define Sass vars --*/
+$darkblue: #053660;
+$teal: #147C91;
+$darkgray: #333333;
+
+/*-- use vars in CSS rules (we'll learn more about how to write CSS soon!) --*/
+h1 {
+  font-color: $darkblue;
+}
+
+.button-styling {
+  background: $teal;
+  color: $darkblue; 
+  border-color: $gray;
+}
+```
+
+<div class="caption-text topbr">If you decide that you actually like a *different* shade of teal better, you'll only need to update the hex code where you first define the `$teal` Sass variable, saving lots of time.</div>
+
+---
+
+## {#quarto-sass-vars data-menu-title="Quarto Sass Variables"}
+
+<p class="slide-title">Create a `.scss` file for your website</p>
+
+<div class="caption-text topbr bottombr">**1.** Create a `.scss` file in the root directory of your website's repo using the `touch` command in the RStudio terminal:</div>
+
+```{bash}
+#| eval: false
+#| echo: true
+touch mystyles.scss # name it whatever you want (you can apply more than one style sheet to your website)
+```
+
+<div class="caption-text topbr bottombr">**2.** Add the `/*-- scss:defaults --*/` page divider to the top of `mystyles.scss` (this is important!) -- you'll write all your Sass variables underneath this.</div>
+
+
+```{css}
+#| eval: false
+#| echo: true
+
+/*-- scss:defaults --*/
+```
+
+<div class="caption-text topbr bottombr">**3.** Apply your `mystyles.scss` stylesheet to your website by updating the `_quarto.yml` YAML under the `format` section:</div>
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "9-11"
+project:
+   # ~ additional YAML omitted for brevity ~
+
+website:
+  # ~ additional YAML omitted for brevity ~
+  
+format:
+  html:
+   theme: 
+      - mystyles.scss
+    toc: true
+```
+
+---
+
+## {#sass-colors data-menu-title="Sass Colors"}
+
+<p class="slide-title">Create Sass variables for your website's primary colors</p>
+
+<div class="body-text topbr">We can quickly change the color theme of our website by defining just a few Sass variables in a `.scss` file. Let's first define the colors we want to use throughout our site. For me, that looks like this:</div>
+
+```{css}
+#| eval: false
+#| echo: true
+
+/*-- scss:defaults --*/
+
+// Colors
+$light-sage-green: #D1D9CE;
+$dark-sage-green: #98A08D;
+$cream: #FDFBF7;
+$gray: #64605f;
+$light-gray: #949799;
+$purple: #AE8BD1;
+```
+
+<div class="body-text topbr">You can also define values with units, e.g. `$my-font-size: 25px;` or `$my-width: 500px;`.</div>
+
+<br>
+
+<div class="caption-text topbr"><span style="color:#868A8F;">In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.</span></div>
+
+---
+
+## {#use-sass-colors data-menu-title="Use Sass Colors"}
+
+<p class="slide-title">Use your color variables as values for Quarto's list of Sass Variables</p>
+
+<div class="caption-text topbr">Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified wihtin `.scss` files. Let's use our newly minted Sass color variables to change things like the background color, navbar & footer colors, hyperlink color, and more.</div>
+
+::: {.panel-tabset}
+
+## `mystyles.scss` file
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "11-25"
+/*-- scss:defaults --*/
+
+// Colors
+$light-sage-green: #D1D9CE;
+$dark-sage-green: #98A08D;
+$cream: #FDFBF7;
+$gray: #64605f;
+$light-gray: #949799;
+$purple: #AE8BD1;
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-sage-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-sage-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $cream; // code block background color
+```
+
+## Output
+
+<center><img src="images/sass_colors.png" width="550"/></center>
+
+## Notes
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Okay, tell me that that doesn't already look so much better?!</span></div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` You don't have to create a theme entirely from scratch! If you like parts of a pre-built Bootswatch theme (e.g. [cosmo](https://bootswatch.com/cosmo/)), you can modify it by layering on your desired updates. See the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#customizing-themes) for more details.</div>
+
+:::
+
+---
+
+## {#update-fonts data-menu-title="Update fonts"}
+
+<p class="slide-title">Import & use Google Fonts</p>

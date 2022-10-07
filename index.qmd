@@ -42,27 +42,31 @@ format:
 
 ---
 
-{{< include sections/1-prerequisites.qmd >}}
+{{< include sections/0-prerequisites.qmd >}}
 
 ---
 
-{{< include sections/yaml.qmd >}}
+{{< include sections/1-yaml.qmd >}}
 
 ---
 
-{{< include sections/2-intro_html_css.qmd >}}
+{{< include sections/2-sass.qmd >}}
 
 ---
 
-{{< include sections/3-intro_html.qmd >}}
+{{< include sections/3-intro_html_css.qmd >}}
 
 ---
 
-{{< include sections/4-intro_css.qmd >}}
+{{< include sections/4-intro_html.qmd >}}
 
 ---
 
-{{< include sections/5-css_quarto.qmd >}}
+{{< include sections/5-intro_css.qmd >}}
+
+---
+
+{{< include sections/6-css_quarto.qmd >}}
 
 ---
 
