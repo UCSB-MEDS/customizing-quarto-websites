@@ -131,7 +131,6 @@ format:
 
 ---
 
-
 ## {#add-favicon data-menu-title="Add favicon & logo"}
 
 <p class="slide-title">Add a favicon & personal logo</p>
@@ -181,3 +180,13 @@ format:
 <div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. **NOTE:** You can download with a transparent background, or with a background that matches the color you plan to change your navbar to.</div> 
 
 :::
+
+## {#website-tools data-menu-title="Website Tools"}
+
+<p class="slide-title">Checkout other website tools</p>
+
+<div class="body-text topbr">Explore the [Quarto documentation](https://quarto.org/docs/websites/website-tools.html) to learn more about enabling [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards), [Google Analytics](https://analytics.google.com/), [Open Graph protocol](https://ogp.me/), and more.</div>
+
+<br>
+
+<center><img src="images/web-tools.png" width="900"/></center>
