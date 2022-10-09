@@ -70,7 +70,7 @@ format: revealjs
 :::
 ::::
 
-<div class="caption-text topbr important-text-bg">*Important:* Take extra care to never skip an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
+<div class="caption-text topbr important-text-bg">*Important:* Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
 
 ---
 

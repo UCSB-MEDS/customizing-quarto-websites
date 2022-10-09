@@ -74,11 +74,6 @@ format:
 
 ---
 
-## Write some CSS (in styles.css)
-(note to make branch)
-
----
-
 ## Quarto vs CSS syntax
 (I use a mix of both)
 

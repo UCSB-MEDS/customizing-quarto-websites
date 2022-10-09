@@ -247,6 +247,127 @@ title: "about"
 
 <div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` We can apply the `title` class to any text element. In this example, we apply it both to an `<h1>` element and a `<p>` element.</div>
 
+:::
 
+---
+
+##  {#write-own-class-selector data-menu-title="Write your own class selector"}
+
+<p class="slide-title">Write your own class selector</p>
+
+::: {.panel-tabset}
+
+## `mystyles.scss` file
+
+<p class="body-text bottombr">Let's create a class named `custom-subtitle` that styles text in the following ways: increases font size, italicizes it, and colors it purple. We can then add an element to our **resources** page and apply our new class selector:</p>
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "13-17"
+/*-- scss:rules --*/
+
+h1, h3 {
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: $gray;
+}
+
+.title {
+  color: red;
+}
+
+.custom-subtitle {
+  font-size: 22px;
+  font-style: italic;
+  color: $purple;
+}
+```
+
+## `resources.qmd` file
+
+<p class="body-text bottombr">Here, I'm creating two paragraphs -- one that is styled as a `custom-subtitle` and one that is not. What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?</p>
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5,7"
+
+---
+title: "resources"
+---
+
+<p class="custom-subtitle">Here is my custom subtitle.</p>
+
+<p>And here is some normal text beneath it.</p>
+```
+
+## Output
+
+<center><img src="images/custom-subtitle.png" width="500"/></center>
+
+## Notes
+
+<div class="body-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Remember, class selectors take the form `.selector-name {}`</div>
+
+:::
+
+---
+
+##  {#apply-two-class-selectors data-menu-title="Apply two class selectors"}
+
+<p class="slide-title">Apply a second class selector our text styled as a `custom-subtitle`</p>
+
+::: {.panel-tabset}
+
+## `mystyles.scss` file
+
+<p class="caption-text bottombr">Let's say we want the option to add a bit of extra space beneath this particular custom subtitle before the element is rendered -- but maybe we don't *always* want that extra space beneath *every* custom subtitle. If we were to add a declaration that increases `margin-bottom` directly to our `.custom-subtitle` class selector, all elements of class `custom-subtitle` would have that extra space.</p>
+
+<p class="caption-text bottombr">One solution, then, is to create a new class selector (we'll call it `.bottombr`, for "bottom break") that we can specifically apply to our custom subtitle on the **resources** page.</p>
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "10-12"
+/*-- scss:rules --*/
+
+/* Additional rules/electors omitted for brevity */
+
+.custom-subtitle {
+  font-size: 22px;
+  font-style: italic;
+  color: $purple;
+}
+
+.bottombr {
+  margin-bottom: 3em;
+}
+```
+
+## `resources.qmd` file
+
+<p class="body-text bottombr">Here, we add our `bottombr` class selector within the `""` after `custom-subtitle` and a space.</p>
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5"
+---
+title: "resources"
+---
+
+<p class="custom-subtitle bottombr">Here is my custom subtitle.</p>
+
+<p>And here is some normal text beneath it.</p>
+```
+
+## Output
+
+<center><img src="images/bottombr.png" width="500"/></center>
+
+## Notes
+
+<div class="body-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Remember, HTML elements can have more than one class, e.g. `<p class="class1 class2 etc">`</div>
 
 :::
