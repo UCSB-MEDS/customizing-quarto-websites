@@ -2,7 +2,7 @@
 format: 
   revealjs:
     slide-number: true
-    preview-links: auto
+    preview-links: true
     code-link: true
     highlight-style: a11y
     chalkboard: true
@@ -51,6 +51,10 @@ format:
 ---
 
 {{< include sections/2-sass.qmd >}}
+
+---
+
+{{< include sections/3-fonts.qmd >}}
 
 ---
 

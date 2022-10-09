@@ -1,0 +1,135 @@
+---
+format: revealjs
+---
+
+##  {#fonts data-menu-title="Fonts" background="#053660"}
+
+<div class="vertical-center">
+<center><div class="custom-subtitle2">Import and apply new fonts `r fontawesome::fa("font", fill = "#d2e3f3", a11y = "sem")`</div></center>
+</div>
+
+---
+
+## {#explore-fonts data-menu-title="Explore"}
+
+<p class="slide-title">Explore Google Fonts</p>
+
+<div class="body-text topbr">With Quarto, we can define a single primary font directly in our `_quarto.yml` file:</div>
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5"
+format:
+  html:
+    theme: 
+      - mystyles.scss
+    mainfont: yourFontHere
+    toc: true
+```
+
+<div class="body-text topbr bottombr">To do so, we first need to choose and import any fonts we'd like to use throughout our website. Start by exploring the *many* fonts available at <https://fonts.google.com/>.</div>
+
+<br>
+
+<center><img src="images/google-fonts.png" width="500"/></center>
+
+---
+
+## {#select-fonts data-menu-title="Select Fonts"}
+
+<p class="slide-title">Selecting a Google Font(s)</p>
+
+<div class="caption-text topbr bottombr">**1.** Once you've found a font you'd like to use, scroll down to the **Styles** section of that font's page -- here you'll (typically) find a number of different weights (e.g. thin, light, regular, bold) and styles (e.g. italic). Click on the **+** button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, to the right of the style you want. In this example, I choose *Nunito* in the *Light 300* style, though you can choose as many fonts to import as you'd like.</div>
+
+<div class="caption-text topbr bottombr">**2.** Click on the **View selected families** button, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, in the top right corner to see all of your selected fonts. Under the **Use on the web** section, select the radio button for **@import** and copy everything between the `<style> </style>` tags (starting with `@import` and ending with `;`) to your clipboard.</div>
+
+<center><iframe width="550" height="290" src="images/google-fonts.gif" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+---
+
+## {#import-fonts data-menu-title="Import Fonts"}
+
+<p class="slide-title">Importing a Google Font(s)</p>
+
+<div class="body-text topbr bottombr">To import a font, paste your copied clipboard into `mystyles.scss`</div>
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "3-4"
+/*-- scss:defaults --*/
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+// Colors
+$light-sage-green: #D1D9CE;
+$dark-sage-green: #98A08D;
+$cream: #FDFBF7;
+$gray: #64605f;
+$light-gray: #949799;
+$purple: #AE8BD1;
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-sage-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-sage-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $cream; // code block background color
+
+```
+
+---
+
+## {#use-fonts data-menu-title="Use Fonts"}
+
+<p class="slide-title">Using a Google Font(s)</p>
+
+::: {.panel-tabset}
+## `_quarto.yml` file
+<div class="body-text topbr bottombr">To apply an imported font as a primary font, update `_quarto.yml` with the font name.</div>
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5"
+format:
+  html:
+    theme: 
+      - mystyles.scss
+    mainfont: Nunito
+    toc: true
+```
+
+## Output
+
+<center><img src="images/nunito.png" width="550"/></center>
+
+## Notes
+<div class="caption-text topbr bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` If you plan to use multiple fonts, you can create Sass variables for each font type, then use those variables as you construct your CSS rules. For example, this slide deck uses three fonts (Sanchez, Montserrat, and Roboto Mono):</div>
+
+```{css}
+#| eval: false
+#| echo: true
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+
+// Fonts
+$font-family-serif: 'Sanchez', serif; 
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+```
+:::
+
+
+

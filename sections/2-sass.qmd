@@ -5,7 +5,7 @@ format: revealjs
 ##  {#use-sass data-menu-title="Use Sass" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle2">Use a *Syntatctically Awesome Stylesheet* (`r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")`) to define variables for use throughout your website </div></center>
+<center><div class="custom-subtitle2">Use a *Syntactically Awesome Stylesheet* (`r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")`) to define variables for use throughout your website </div></center>
 </div>
 
 ---
@@ -28,7 +28,7 @@ format: revealjs
 
 <p class="slide-title">Why use Sass?</p>
 
-<div class="body-text topbr">Stylesheets (e.g. `.css` files) are getting larger and more complex. Sass extends existing CSS features and importantly, reduces repetition. For example, imagine you're working on a website, which uses 3 main colors:</div>
+<div class="body-text topbr">Stylesheets (e.g. `.css` files) are getting larger and more complex. Sass extends existing CSS features and importantly, reduces repetition. For example, let's say you're working on a website, which uses 3 main colors:</div>
 
 <center><img src="images/meds_colors.png" width="300"/></center>
 
@@ -89,7 +89,7 @@ touch mystyles.scss # name it whatever you want (you can apply more than one sty
 /*-- scss:defaults --*/
 ```
 
-<div class="caption-text topbr bottombr">**3.** Apply your `mystyles.scss` stylesheet to your website by updating the `_quarto.yml` YAML under the `format` section:</div>
+<div class="caption-text topbr bottombr">**3.** Apply your `mystyles.scss` stylesheet to your website by updating the `_quarto.yml` under the `format` section:</div>
 
 ```{r}
 #| eval: false
@@ -191,8 +191,3 @@ $code-block-bg: $cream; // code block background color
 
 :::
 
----
-
-## {#update-fonts data-menu-title="Update fonts"}
-
-<p class="slide-title">Import & use Google Fonts</p>
