@@ -11,14 +11,24 @@ $font-family-serif: 'Sanchez', serif;
 $font-family-sans-serif: 'Montserrat', sans-serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 
+// Colors
+$baby-blue: #d2e3f3;
+$teal: #047C90;
+$dark-blue: #003660;
+$white: #FFFFFF;
+$green: #78A540; 
+$magenta: #900C3F;
+$off-white: #F7F7F7; 
+$gray: #ADADAD; 
+
 // scss variables
 $presentation-title-slide-text-align: "left";
-$body-bg: #FFFFFF;
-$link-color: #78A540; //#047C90;
-$code-color: #900C3F;
-$code-bg: #F7F7F7;
+$body-bg: $white;
+$link-color: $green; 
+$code-color: $magenta;
+$code-bg: $off-white;
 $code-block-font-size: 0.4em;
-$code-block-bg: #F0F3F5;
+$code-block-bg: $off-white;
 
 /*-- scss:rules --*/
 
@@ -26,7 +36,7 @@ $code-block-bg: #F0F3F5;
 
 strong, b {
   font-weight: 900; // does not change weight?
-  color: #047C90;
+  color: $teal;
 }
 
 th {
@@ -41,7 +51,7 @@ td {
 
 .custom-title { 
   font-family: $font-family-serif;
-  color: #d2e3f3;
+  color: $baby-blue;
   font-size: 1.7em;
   //position: absolute; 
   left: 20px; 
@@ -49,7 +59,7 @@ td {
 
 .custom-subtitle { 
   font-family: $font-family-sans-serif;
-  color: #d2e3f3;
+  color: $baby-blue;
   font-size: 1.2em;
   font-weight: 900;
   //position: absolute; 
@@ -58,7 +68,7 @@ td {
 
 .custom-subtitle2 { 
   font-family: $font-family-sans-serif;
-  color: #d2e3f3;
+  color: $baby-blue;
   font-size: 1em;
   //position: absolute; 
   left: 20px; 
@@ -66,7 +76,7 @@ td {
 
 .custom-subtitle3 { 
   font-family: $font-family-sans-serif;
-  color: #d2e3f3;
+  color: $baby-blue;
   font-size: 0.8em;
   //position: absolute; 
   left: 20px; 
@@ -74,20 +84,20 @@ td {
 
 .title-footer { 
   text-align: center !important;
-  color: #d2e3f3;
+  color: $baby-blue;
   font-size: 0.4em !important;
 }
 
 .slide-title {
   font-family: $font-family-serif;
-  color: #047C90;
+  color: $teal;
   font-size: 1.4em;
   font-weight: 700;
 }
 
 .large-body-text {
   font-family: $font-family-sans-serif;
-  color: #05859B;
+  color: $teal;
   font-size: 1em;
 }
 
@@ -100,6 +110,10 @@ td {
 .caption-text {
   font-size: 19px;
 	line-height: 1.5em;
+}
+
+.gray-text {
+  color: $gray;
 }
 
 .important-text-bg {

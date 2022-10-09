@@ -33,13 +33,14 @@ format: revealjs
 
 <div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Editing the `_quarto.yml` file** -- here we can easily update our top navigation bar (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).</div>
 
-. . .
-
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Creating a `.scss` file(s)** that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).</div>
-
 . . . 
 
 <div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Define CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.</div>
+
+. . . 
+
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Creating a `.scss` file(s)** that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).</div>
+
 
 . . .
 

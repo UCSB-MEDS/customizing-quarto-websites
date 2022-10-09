@@ -44,16 +44,18 @@ about:
 ---
 ```
 
+<div class="body-text topbr important-text-bg">Run `quarto preview` in your terminal window to view changes in near real time -- each time your save your work, the preview will update in your browser.</div>
+
 ## Output
 
 :::: {.columns}
 ::: {.column width="50%"}
 <center><img src="images/no_about_page.png" width="600"/></center>
-<center><p class="caption-text"><span style="color:#868A8F;">Without an About Page template</span></p></center>
+<center><p class="caption-text gray-text">Without an About Page template</p></center>
 :::
 ::: {.column width="50%"}
 <center><img src="images/trestles_template.png" width="600"/></center>
-<center><p class="caption-text"><span style="color:#868A8F;">With the `trestles` About Page template</span></p></center>
+<center><p class="caption-text gray-text">With the `trestles` About Page template</p></center>
 :::
 ::::
 

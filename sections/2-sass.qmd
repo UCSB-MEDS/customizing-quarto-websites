@@ -135,7 +135,7 @@ $purple: #AE8BD1;
 
 <br>
 
-<div class="caption-text topbr"><span style="color:#868A8F;">In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.</span></div>
+<div class="caption-text gray-text topbr">In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.</div>
 
 ---
 

@@ -354,6 +354,7 @@ touch practice-styles.css
 ```{html} 
 #| eval: false
 #| echo: true
+#| #| code-line-numbers: "5"
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>

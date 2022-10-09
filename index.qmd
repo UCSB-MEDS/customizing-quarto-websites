@@ -88,24 +88,7 @@ format:
 
 ---
 
-## Before we get too far...Enter Sass
-
----
-
-## Create .scss file & start editing
-
----
-
 ## Look for inspiration (and code) elsewhere
-
----
-
-## Other fun things to change:
-
-- logo
-- favicon
-- footer
-- link cv
 
 ---
 

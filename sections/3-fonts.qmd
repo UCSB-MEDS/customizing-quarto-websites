@@ -5,7 +5,7 @@ format: revealjs
 ##  {#fonts data-menu-title="Fonts" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle2">Import and apply new fonts `r fontawesome::fa("font", fill = "#d2e3f3", a11y = "sem")`</div></center>
+<center><div class="custom-subtitle2">Import and apply new fonts `r fontawesome::fa("font", fill = "#d2e3f3", a11y = "sem")` </div></center>
 </div>
 
 ---

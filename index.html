@@ -453,13 +453,13 @@ When we render a new Quarto site, it converts all of our markdown into HTML and 
 <div class="fragment">
 <div class="caption-text bottombr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Creating a <code>.scss</code> file(s)</strong> that contains <a href="https://sass-lang.com/">Sass</a> variables to quickly customize your website’s theme – these take the form of <code>$var-name: value;</code> and you can find a list of them in the <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">Quarto documentation</a>.
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Define CSS rules in the <code>styles.css</code> file</strong> that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
 </div>
 </div>
 <div class="fragment">
 <div class="caption-text bottombr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Define CSS rules in the <code>styles.css</code> file</strong> that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Creating a <code>.scss</code> file(s)</strong> that contains <a href="https://sass-lang.com/">Sass</a> variables to quickly customize your website’s theme – these take the form of <code>$var-name: value;</code> and you can find a list of them in the <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">Quarto documentation</a>.
 </div>
 </div>
 <div class="fragment">
@@ -564,6 +564,9 @@ Turn your landing page into an “<a href="https://quarto.org/docs/websites/webs
 <span id="cb1-20"><a href="#cb1-20"></a>      href<span class="sc">:</span> mailto<span class="sc">:</span>scsik<span class="sc">@</span>ucsb.edu</span>
 <span id="cb1-21"><a href="#cb1-21"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="body-text topbr important-text-bg">
+Run <code>quarto preview</code> in your terminal window to view changes in near real time – each time your save your work, the preview will update in your browser.
+</div>
 </div>
 <div id="tabset-1-2">
 <div class="columns">
@@ -572,8 +575,8 @@ Turn your landing page into an “<a href="https://quarto.org/docs/websites/webs
 <img src="images/no_about_page.png" width="600">
 </center>
 <center>
-<p class="caption-text">
-<span style="color:#868A8F;">Without an About Page template</span>
+<p class="caption-text gray-text">
+Without an About Page template
 </p>
 </center>
 </div><div class="column" style="width:50%;">
@@ -581,8 +584,8 @@ Turn your landing page into an “<a href="https://quarto.org/docs/websites/webs
 <img src="images/trestles_template.png" width="600">
 </center>
 <center>
-<p class="caption-text">
-<span style="color:#868A8F;">With the <code>trestles</code> About Page template</span>
+<p class="caption-text gray-text">
+With the <code>trestles</code> About Page template
 </p>
 </center>
 </div>
@@ -846,8 +849,8 @@ We can quickly change the color theme of our website by defining just a few Sass
 You can also define values with units, e.g.&nbsp;<code>$my-font-size: 25px;</code> or <code>$my-width: 500px;</code>.
 </div>
 <p><br></p>
-<div class="caption-text topbr">
-<span style="color:#868A8F;">In <code>.scss</code> files, <code>//</code> denote single line comments. Multi-line comments start with <code>/*</code> and end at the next <code>*/</code>.</span>
+<div class="caption-text gray-text topbr">
+In <code>.scss</code> files, <code>//</code> denote single line comments. Multi-line comments start with <code>/*</code> and end at the next <code>*/</code>.
 </div>
 </section><section id="use-sass-colors" class="slide level2" data-menu-title="Use Sass Colors"><h2></h2>
 <p class="slide-title">
@@ -1037,16 +1040,24 @@ To apply an imported font as a primary font, update <code>_quarto.yml</code> wit
 </div>
 </div>
 </div>
-</section><section id="enter-css-sass" class="slide level2" data-menu-title="Enter HTML, CSS &amp; Sass"><h2></h2>
+</section><section id="refining" class="slide level2" data-menu-title="Time to Refine" data-background="#053660"><h2></h2>
+<div class="vertical-center">
+<center>
+<div class="custom-subtitle3">
+With just a few YAML additions and a handful of Sass variables, we’ve already really transformed the appearance of our website. Next up: refining.
+</div>
+</center>
+</div>
+</section><section id="enter-css-sass" class="slide level2" data-menu-title="Enter HTML &amp; CSS"><h2></h2>
 <div class="slide-title">
-Enter HTML, CSS and Sass
+Enter HTML and CSS
 </div>
 <div class="body-text topbr">
-In order to really fine-tune the appearance of our site, we need to dive a bit into the world of <a href="https://html.spec.whatwg.org/">HTML</a>, <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a> and <a href="https://sass-lang.com/">Sass</a>.
+In order to really fine-tune the appearance of our site, we need to dive a bit into the world of <a href="https://html.spec.whatwg.org/">HTML</a> and <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>.
 </div>
 
-<img data-src="images/html_css_sass.png" alt="The CSS 3 and Sass logos" width="647" class="r-stretch quarto-figure-center"><div class="body-text">
-Some of you may have already heard of/written HTML and/or CSS and/or Sass – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.
+<img data-src="images/html_css.png" alt="The CSS 3 and Sass logos" width="299" class="r-stretch quarto-figure-center"><div class="body-text">
+Some of you may have already heard of/written HTML and/or CSS – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.
 </div>
 </section><section id="building-blocks-html" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (1/2)"><h2></h2>
 <div class="slide-title">
@@ -1059,8 +1070,8 @@ HTML &amp; CSS are the building blocks of web pages
 <img src="images/html.png" width="600">
 </center>
 <center>
-<div class="caption-text topbr">
-<span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a></span>
+<div class="caption-text gray-text topbr">
+Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
 </div>
 </center>
 <div class="caption-text">
@@ -1077,8 +1088,8 @@ HTML &amp; CSS are the building blocks of web pages
 <img src="images/css.png" width="600">
 </center>
 <center>
-<div class="caption-text bottombr">
-<span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a></span>
+<div class="caption-text gray-text bottombr">
+Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
 </div>
 </center>
 </section><section id="browser-styling" class="slide level2" data-menu-title="Browser styling"><h2></h2>
@@ -1168,8 +1179,8 @@ In Markdown syntax, this HTML element would be written as: <br><code># Welcome t
 </div>
 </div>
 <center>
-<div class="caption-text topbr">
-<span style="color: #868A8F"><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.</span>
+<div class="caption-text gray-text topbr">
+<strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.
 </div>
 </center>
 </section><section id="html-elements2" class="slide level2" data-menu-title="Commonly used HTML tags"><h2></h2>
@@ -1898,27 +1909,95 @@ When you create a new Quarto site, it automatically creates a <code>styles.css</
 <img src="images/quarto_files.png" width="500">
 </center>
 </div><div class="column" style="width:50%;">
-<br><br><br><div class="body-text">
-We can start writing our CSS rules here. But where to start…?
+<br><div class="body-text">
+We can write our CSS rules in <code>styles.css</code>, <em>but alternatively</em>, we can write them directly in our <code>mystyles.scss</code> file (remember, you can write CSS in a <code>.scss</code> file but you can’t write Sass in a <code>.css</code> file). You can delete <code>styles.css</code> if you don’t plan to use it, or leave it be (it’s easy to create a new one using the <code>touch</code> command in your terminal).
 </div>
 </div>
 </div>
-</section><section id="before-we-start-writing-rules-we-can-test-things-out-in-our-browswer-first-by-inspecting-our-webpage" class="slide level2"><h2>before we start writing rules, we can test things out in our browswer first by inspecting our webpage</h2>
-</section><section class="slide level2"></section><section id="inspecting-website" class="slide level2"><h2>Inspecting website</h2>
+</section><section id="scss-div" class="slide level2" data-menu-title="SCSS rules divider"><h2></h2>
+<div class="slide-title">
+Create a section for defining CSS rules in <code>mystyles.scss</code>
+</div>
+<div class="body-text topbr">
+To start defining CSS rules in <code>mystyles.scss</code> you first need to add the <code>/*-- scss:rules --*/</code> section divider beneath your Sass variables section:
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb35-1"><a href="#cb35-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="er">// Fonts</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:wght@300&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb35-4"><a href="#cb35-4"></a></span>
+<span id="cb35-5"><a href="#cb35-5"></a><span class="er">// Colors</span></span>
+<span id="cb35-6"><a href="#cb35-6"></a>$light-sage-green<span class="in">: #D1D9CE</span>;</span>
+<span id="cb35-7"><a href="#cb35-7"></a>$dark-sage-green<span class="in">: #98A08D;</span></span>
+<span id="cb35-8"><a href="#cb35-8"></a></span>
+<span id="cb35-9"><a href="#cb35-9"></a><span class="er">// additional Sass variables omitted for brevity</span></span>
+<span id="cb35-10"><a href="#cb35-10"></a></span>
+<span id="cb35-11"><a href="#cb35-11"></a><span class="co">/*-- scss:rules --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="body-text topbr">
+Next, we’ll walk through some examples of how to modify your site with your own CSS rules.
+</div>
+</section><section id="use-element-selectors" class="slide level2" data-menu-title="Change header styling using element selectors"><h2></h2>
+<p class="slide-title">
+Change header styling using an element or group selector
+</p>
+<div class="panel-tabset">
+<ul id="tabset-10" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-10-1"><code>mystyles.scss</code> file</a></li>
+<li><a href="#tabset-10-2">Output</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-10-1">
+<div class="body-text topbr">
+Let’s say I want my headers to be styled in a particular way. I can use an element or grouping selector to pick which header-level(s) to style, then include one or more declarations to style it to my liking. Here, I make the color of the font gray, increase the spacing between each letter, and increase the font weight:
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb36-1"><a href="#cb36-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3<span class="op">,</span> h4<span class="op">,</span> h5<span class="op">,</span> h6 {</span>
+<span id="cb36-2"><a href="#cb36-2"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
+<span id="cb36-5"><a href="#cb36-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-10-2">
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<img src="images/without-header-styling.png" width="500">
+</center>
+<center>
+<div class="caption-text gray-text topbr">
+No CSS styling on headers (<code>h1</code> - <code>h6</code>)
+</div>
+</center>
+</div><div class="column" style="width:50%;">
+<center>
+<img src="images/with-header-styling.png" width="500">
+</center>
+<center>
+<div class="caption-text gray-text topbr">
+With CSS styling on headers (<code>h1</code> - <code>h6</code>)
+</div>
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="dinspect" class="slide level2" data-menu-title="Inspecting web pages"><h2></h2>
+<div class="slide-title">
+“Inspect”ing web pages allows you to view and edit HTML &amp; CSS source code
+</div>
+<div class="body-text">
+<p>Using the “Inspect” tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and <em>also</em> your .</p>
+</div>
+</section><section id="inspecting-website" class="slide level2"><h2>Inspecting website</h2>
 </section><section id="write-some-css-in-styles.css" class="slide level2"><h2>Write some CSS (in styles.css)</h2>
 <p>(note to make branch)</p>
 </section><section id="quarto-vs-css-syntax" class="slide level2"><h2>Quarto vs CSS syntax</h2>
 <p>(I use a mix of both)</p>
-</section><section id="before-we-get-too-farenter-sass" class="slide level2"><h2>Before we get too far…Enter Sass</h2>
-</section><section id="create-.scss-file-start-editing" class="slide level2"><h2>Create .scss file &amp; start editing</h2>
 </section><section id="look-for-inspiration-and-code-elsewhere" class="slide level2"><h2>Look for inspiration (and code) elsewhere</h2>
-</section><section id="other-fun-things-to-change" class="slide level2"><h2>Other fun things to change:</h2>
-<ul>
-<li>logo</li>
-<li>favicon</li>
-<li>footer</li>
-<li>link cv</li>
-</ul></section><section id="TheEnd" class="slide level2" data-menu-title="~End Slide~"><h2></h2>
+</section><section id="TheEnd" class="slide level2" data-menu-title="~End Slide~"><h2></h2>
 <center>
 <div class="slide-title">
 Now get to customizing!

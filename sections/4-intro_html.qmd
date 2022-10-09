@@ -28,7 +28,7 @@ format: revealjs
 :::
 :::
 
-<center><div class="caption-text topbr"><span style="color: #868A8F">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.</span></div></center>
+<center><div class="caption-text gray-text topbr">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.</div></center>
 
 ---
 

@@ -2,11 +2,19 @@
 format: revealjs
 ---
 
-## {#enter-css-sass data-menu-title="Enter HTML, CSS & Sass"}
+##  {#refining data-menu-title="Time to Refine" background="#053660"}
 
-<div class="slide-title">Enter HTML, CSS and Sass</div>
+<div class="vertical-center">
+<center><div class="custom-subtitle3">With just a few YAML additions and a handful of Sass variables, we've already really transformed the appearance of our website. Next up: refining.</div></center>
+</div>
 
-<div class="body-text topbr">In order to really fine-tune the appearance of our site, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/), [CSS](https://www.w3.org/Style/CSS/Overview.en.html) and [Sass](https://sass-lang.com/).</div>
+---
+
+## {#enter-css-sass data-menu-title="Enter HTML & CSS"}
+
+<div class="slide-title">Enter HTML and CSS</div>
+
+<div class="body-text topbr">In order to really fine-tune the appearance of our site, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html).</div>
 
 ```{r}
 #| echo: false
@@ -14,10 +22,10 @@ format: revealjs
 #| fig-height: 3
 #| fig-align: center
 #| fig-alt: "The CSS 3 and Sass logos" 
-knitr::include_graphics("images/html_css_sass.png")
+knitr::include_graphics("images/html_css.png")
 ```
 
-<div class="body-text">Some of you may have already heard of/written HTML and/or CSS and/or Sass -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>
+<div class="body-text">Some of you may have already heard of/written HTML and/or CSS -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>
 
 ---
 
@@ -29,7 +37,7 @@ knitr::include_graphics("images/html_css_sass.png")
 
 <center><img src="images/html.png" width="600"/></center>
 
-<center><div class="caption-text topbr"><span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></span></div></center>
+<center><div class="caption-text gray-text topbr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
 
 
 <div class="caption-text"><sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</div>
@@ -44,7 +52,7 @@ knitr::include_graphics("images/html_css_sass.png")
 
 <center><img src="images/css.png" width="600"/></center>
 
-<center><div class="caption-text bottombr"><span style="color: #868A8F">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></span></div></center>
+<center><div class="caption-text gray-text bottombr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
 
 ---
 

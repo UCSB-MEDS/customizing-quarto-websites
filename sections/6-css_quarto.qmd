@@ -21,15 +21,80 @@ format: revealjs
 :::
 ::: {.column width="50%"}
 <br>
-<br>
-<br>
-<div class="body-text">We can start writing our CSS rules here. But where to start...?</div>
+<div class="body-text">We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `mystyles.scss` file (remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file). You can delete `styles.css` if you don't plan to use it, or leave it be (it's easy to create a new one using the `touch` command in your terminal).</div>
 :::
 ::::
 
+---
+
+##  {#scss-div data-menu-title="SCSS rules divider"}
+
+<div class="slide-title">Create a section for defining CSS rules in `mystyles.scss`</div>
+
+<div class="body-text topbr">To start defining CSS rules in `mystyles.scss` you first need to add the `/*-- scss:rules --*/` section divider beneath your Sass variables section:</div>
+
+```{css}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "11"
+
+/*-- scss:defaults --*/
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+// Colors
+$light-sage-green: #D1D9CE;
+$dark-sage-green: #98A08D;
+
+// additional Sass variables omitted for brevity
+
+/*-- scss:rules --*/
+```
+
+<div class="body-text topbr">Next, we'll walk through some examples of how to modify your site with your own CSS rules.</div>
 
 ---
 
-## before we start writing rules, we can test things out in our browswer first by inspecting our webpage
+##  {#use-element-selectors data-menu-title="Change header styling using element selectors"}
+
+<p class="slide-title">Change header styling using an element or group selector</p>
+
+::: {.panel-tabset}
+
+### `mystyles.scss` file
+<div class="body-text topbr">Let's say I want my headers to be styled in a particular way. I can use an element or grouping selector to pick which header-level(s) to style, then include one or more declarations to style it to my liking. Here, I make the color of the font gray, increase the spacing between each letter, and increase the font weight:</div>
+
+```{css}
+#| eval: false
+#| echo: true
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: $gray;
+}
+```
+
+### Output
+:::: {.columns}
+::: {.column width="50%"}
+<center><img src="images/without-header-styling.png" width="500"/></center>
+<center><div class="caption-text gray-text topbr">No CSS styling on headers (`h1` - `h6`)</div></center>
+:::
+::: {.column width="50%"}
+<center><img src="images/with-header-styling.png" width="500"/></center>
+<center><div class="caption-text gray-text topbr">With CSS styling on headers (`h1` - `h6`)</div></center>
+:::
+::::
+
+:::
 
 ---
+
+##  {#dinspect data-menu-title="Inspecting web pages"}
+
+<div class="slide-title">"Inspect"ing web pages allows you to view and edit source HTML & CSS source</div>
+
+<div class="body-text">Using the "Inspect" tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview</div>.
+
+<div class="body-text">Navigate to any web page and *right click* on an element of interest (e.g. text, images, links, etc.) and choose *Inspect* to pull up the underlying HTML & CSS files.</div>
