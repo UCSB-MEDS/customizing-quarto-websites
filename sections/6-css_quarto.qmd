@@ -55,35 +55,107 @@ $dark-sage-green: #98A08D;
 
 ---
 
-##  {#use-element-selectors data-menu-title="Change header styling using element selectors"}
+##  {#determine-element-to-style data-menu-title="Determine element(s) to style"}
 
-<p class="slide-title">Change header styling using an element or group selector</p>
+<p class="slide-title">Determine which element you want to style</p>
+
+<div class="body-text topbr">Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:</div>
+
+:::: {.columns}
+::: {.column width="33%"}
+<center><img src="images/index-font.png" width="500"/></center>
+<center><div class="caption-text gray-text topbr">On my landing page, I want to style my name, "samantha csik", and the three section headers, "hi there!", "education", and "experience"</div></center>
+:::
+::: {.column width="33%"}
+<center><img src="images/about-font.png" width="500"/></center>
+<center><div class="caption-text gray-text topbr">On my about page, I want to style the top header, "about"</div></center>
+:::
+::: {.column width="33%"}
+<center><img src="images/resources-font.png" width="500"/></center>
+<center><div class="caption-text gray-text topbr">On my resources page, I want to style the top header, "resources"</div></center>
+:::
+::::
+
+---
+
+##  {#dont-know-element data-menu-title="Don't know element?"}
+
+<p class="slide-title">But what if I don't know what HTML element type this is? Inspect!</p>
+
+:::: {.columns}
+::: {.column width="50%"}
+<br>
+<center><img src="images/inspect.gif" width="500"/></center>
+:::
+::: {.column width="50%"}
+<div class="caption-text topbr">Using the *Inspect* tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview).</div>
+
+<div class="caption-text topbr">In your website preview, *right click* on an element of interest (in this case, let's start with my name, "samantha csik") and choose *Inspect* to pull up the underlying HTML & CSS files.</div>
+
+<div class="caption-text topbr">Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.</div>
+:::
+::::
+
+---
+
+##  {#inspect-name data-menu-title="Inspect landing page name"}
+
+<center><p class="large-body-text">My name is an `<h1>` element</p></center>
+
+<center><img src="images/inspect-name.png" width="750"/></center>
+
+<center><div class="caption-text gray-text">**Note:** This `<h1>` element also has a class `title` -- more on that in a minute.</div></center> 
+
+---
+
+##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"}
+
+<center><p class="large-body-text">My landing page section, "education" (as well as "hi there!" and "experience") are `<h3>` elements</p></center>
+
+<center><img src="images/inspect-education.png" width="750"/></center>
+
+---
+
+##  {#inspect-about data-menu-title="Inspect about page"}
+
+<center><p class="large-body-text">My about page title (as well as my resource page title) are `<h1>` elements</p></center>
+
+<center><img src="images/inspect-about.png" width="750"/></center>
+
+---
+
+##  {#write-grouping-selector data-menu-title="Write a CSS grouping selector"}
+
+<center><p class="slide-title">Write a CSS grouping selector to style `<h1>` and `<h3>` elements</p></center>
 
 ::: {.panel-tabset}
 
-### `mystyles.scss` file
-<div class="body-text topbr">Let's say I want my headers to be styled in a particular way. I can use an element or grouping selector to pick which header-level(s) to style, then include one or more declarations to style it to my liking. Here, I make the color of the font gray, increase the spacing between each letter, and increase the font weight:</div>
+## `mystyles.scss` file
+
+<div class="body-text topbr bottombr">Here, we have a grouping selector that targets *all* `<h1>` and `<h3>` elements -- it increases both the spacing between each letter and the font weight (makes it bolder), and it colors those header levels gray (reminder: I created a Sass variable: `$gray: #64605f;`).</div>
 
 ```{css}
 #| eval: false
 #| echo: true
+/*-- scss:rules --*/
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3 {
   letter-spacing: 5px;
   font-weight: 700;
   color: $gray;
 }
 ```
 
-### Output
+## Output
+
 :::: {.columns}
 ::: {.column width="50%"}
 <center><img src="images/without-header-styling.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">No CSS styling on headers (`h1` - `h6`)</div></center>
+<center><div class="caption-text gray-text topbr">No CSS styling on `h1` and `h3` headers</div></center>
 :::
 ::: {.column width="50%"}
 <center><img src="images/with-header-styling.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">With CSS styling on headers (`h1` - `h6`)</div></center>
+<center><div class="caption-text gray-text topbr">With CSS styling on `h1` and `h3` headers</div></center>
 :::
 ::::
 
@@ -91,10 +163,90 @@ h1, h2, h3, h4, h5, h6 {
 
 ---
 
-##  {#dinspect data-menu-title="Inspecting web pages"}
+##  {#title-class data-menu-title="'title' class"}
 
-<div class="slide-title">"Inspect"ing web pages allows you to view and edit source HTML & CSS source</div>
+<center><p class="slide-title">What's with that `title` class selector?</p></center>
 
-<div class="body-text">Using the "Inspect" tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview</div>.
+<div class="caption-text topbr">Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class `title`.</div>
 
-<div class="body-text">Navigate to any web page and *right click* on an element of interest (e.g. text, images, links, etc.) and choose *Inspect* to pull up the underlying HTML & CSS files.</div>
+<div class="caption-text topbr">The `.title` class selector is defined by Quarto and used to target and style any element with `class="title"`. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:</div>
+
+::: {.panel-tabset}
+
+## `mystyles.scss` file
+```{css}
+#| eval: false
+#| echo: true
+/*-- scss:rules --*/
+
+h1, h3 {
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: $gray;
+}
+
+.title {
+  color: red;
+}
+```
+
+## Output
+
+:::: {.columns}
+::: {.column width="33%"}
+<center><img src="images/red-name.png" width="500"/></center>
+:::
+::: {.column width="33%"}
+<center><img src="images/red-about.png" width="500"/></center>
+:::
+::: {.column width="33%"}
+<center><img src="images/red-resources.png" width="500"/></center>
+:::
+::::
+
+:::
+
+---
+
+##  {#title-class2 data-menu-title=""}
+
+<p class="slide-title">Okay, but what about `<h1>` elements that are not of class `title`?</p>
+
+<div class="body-text topbr">Let's write a couple other `<h1>` elements that *are not* of `class="title"` to see what happens. I'll do this on my *about* page:</div>
+
+::: {.panel-tabset}
+
+## `about.qmd` file
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5-11"
+---
+title: "about"
+---
+
+<h1>this is an `<h1>` element</h1> # alternatively, you can write <h1> elements using markdown (`# this is an `<h1>` element`)
+
+<h1 class="title">this is an `<h1>` element of class `title`</h1>
+
+<p>this is a `<p>` element</p>
+
+<p class="title">this is a `<p>` element of class `title`</p>
+```
+
+## Output
+
+<center><img src="images/h1-title.png" width="500"/></center>
+
+## Notes
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` You can add elements on your web pages using either RMarkdown/Markdown syntax (e.g. use `# text here` to denote an `<h1>` element) *or* use HTML tags (e.g. use `<h1>text here</h1>`). I tend to use a mix of both Markdown syntax and HTML tags.</div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are of class `title` are colored red. Any `<h1>` elements that are not of class `title` are styled according to our `h1, h3 {}` element selector.</div>
+
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` We can apply the `title` class to any text element. In this example, we apply it both to an `<h1>` element and a `<p>` element.</div>
+
+
+
+:::

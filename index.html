@@ -1937,10 +1937,102 @@ To start defining CSS rules in <code>mystyles.scss</code> you first need to add 
 <div class="body-text topbr">
 Next, we’ll walk through some examples of how to modify your site with your own CSS rules.
 </div>
-</section><section id="use-element-selectors" class="slide level2" data-menu-title="Change header styling using element selectors"><h2></h2>
+</section><section id="determine-element-to-style" class="slide level2" data-menu-title="Determine element(s) to style"><h2></h2>
 <p class="slide-title">
-Change header styling using an element or group selector
+Determine which element you want to style
 </p>
+<div class="body-text topbr">
+Let’s say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:
+</div>
+<div class="columns">
+<div class="column" style="width:33%;">
+<center>
+<img src="images/index-font.png" width="500">
+</center>
+<center>
+<div class="caption-text gray-text topbr">
+On my landing page, I want to style my name, “samantha csik”, and the three section headers, “hi there!”, “education”, and “experience”
+</div>
+</center>
+</div><div class="column" style="width:33%;">
+<center>
+<img src="images/about-font.png" width="500">
+</center>
+<center>
+<div class="caption-text gray-text topbr">
+On my about page, I want to style the top header, “about”
+</div>
+</center>
+</div><div class="column" style="width:33%;">
+<center>
+<img src="images/resources-font.png" width="500">
+</center>
+<center>
+<div class="caption-text gray-text topbr">
+On my resources page, I want to style the top header, “resources”
+</div>
+</center>
+</div>
+</div>
+</section><section id="dont-know-element" class="slide level2" data-menu-title="Don't know element?"><h2></h2>
+<p class="slide-title">
+But what if I don’t know what HTML element type this is? Inspect!
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<br><center>
+<img src="images/inspect.gif" width="500">
+</center>
+</div><div class="column" style="width:50%;">
+<div class="caption-text topbr">
+Using the <em>Inspect</em> tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and <em>also</em> your locally hosted website preview).
+</div>
+<div class="caption-text topbr">
+In your website preview, <em>right click</em> on an element of interest (in this case, let’s start with my name, “samantha csik”) and choose <em>Inspect</em> to pull up the underlying HTML &amp; CSS files.
+</div>
+<div class="caption-text topbr">
+Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.
+</div>
+</div>
+</div>
+</section><section id="inspect-name" class="slide level2" data-menu-title="Inspect landing page name"><h2></h2>
+<center>
+<p class="large-body-text">
+My name is an <code>&lt;h1&gt;</code> element
+</p>
+</center>
+<center>
+<img src="images/inspect-name.png" width="750">
+</center>
+<center>
+<div class="caption-text gray-text">
+<strong>Note:</strong> This <code>&lt;h1&gt;</code> element also has a class <code>title</code> – more on that in a minute.
+</div>
+</center>
+</section><section id="inspect-landing-page-sections" class="slide level2" data-menu-title="Inspect landing page sections"><h2></h2>
+<center>
+<p class="large-body-text">
+My landing page section, “education” (as well as “hi there!” and “experience”) are <code>&lt;h3&gt;</code> elements
+</p>
+</center>
+<center>
+<img src="images/inspect-education.png" width="750">
+</center>
+</section><section id="inspect-about" class="slide level2" data-menu-title="Inspect about page"><h2></h2>
+<center>
+<p class="large-body-text">
+My about page title (as well as my resource page title) are <code>&lt;h1&gt;</code> elements
+</p>
+</center>
+<center>
+<img src="images/inspect-about.png" width="750">
+</center>
+</section><section id="write-grouping-selector" class="slide level2" data-menu-title="Write a CSS grouping selector"><h2></h2>
+<center>
+<p class="slide-title">
+Write a CSS grouping selector to style <code>&lt;h1&gt;</code> and <code>&lt;h3&gt;</code> elements
+</p>
+</center>
 <div class="panel-tabset">
 <ul id="tabset-10" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-10-1"><code>mystyles.scss</code> file</a></li>
@@ -1948,15 +2040,17 @@ Change header styling using an element or group selector
 </ul>
 <div class="tab-content">
 <div id="tabset-10-1">
-<div class="body-text topbr">
-Let’s say I want my headers to be styled in a particular way. I can use an element or grouping selector to pick which header-level(s) to style, then include one or more declarations to style it to my liking. Here, I make the color of the font gray, increase the spacing between each letter, and increase the font weight:
+<div class="body-text topbr bottombr">
+Here, we have a grouping selector that targets <em>all</em> <code>&lt;h1&gt;</code> and <code>&lt;h3&gt;</code> elements – it increases both the spacing between each letter and the font weight (makes it bolder), and it colors those header levels gray (reminder: I created a Sass variable: <code>$gray: #64605f;</code>).
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb36-1"><a href="#cb36-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3<span class="op">,</span> h4<span class="op">,</span> h5<span class="op">,</span> h6 {</span>
-<span id="cb36-2"><a href="#cb36-2"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb36-3"><a href="#cb36-3"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
-<span id="cb36-4"><a href="#cb36-4"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
-<span id="cb36-5"><a href="#cb36-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb36-1"><a href="#cb36-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-3"><a href="#cb36-3"></a>h1<span class="op">,</span> h3 {</span>
+<span id="cb36-4"><a href="#cb36-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb36-5"><a href="#cb36-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb36-6"><a href="#cb36-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
+<span id="cb36-7"><a href="#cb36-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-10-2">
@@ -1967,7 +2061,7 @@ Let’s say I want my headers to be styled in a particular way. I can use an ele
 </center>
 <center>
 <div class="caption-text gray-text topbr">
-No CSS styling on headers (<code>h1</code> - <code>h6</code>)
+No CSS styling on <code>h1</code> and <code>h3</code> headers
 </div>
 </center>
 </div><div class="column" style="width:50%;">
@@ -1976,7 +2070,7 @@ No CSS styling on headers (<code>h1</code> - <code>h6</code>)
 </center>
 <center>
 <div class="caption-text gray-text topbr">
-With CSS styling on headers (<code>h1</code> - <code>h6</code>)
+With CSS styling on <code>h1</code> and <code>h3</code> headers
 </div>
 </center>
 </div>
@@ -1984,12 +2078,107 @@ With CSS styling on headers (<code>h1</code> - <code>h6</code>)
 </div>
 </div>
 </div>
-</section><section id="dinspect" class="slide level2" data-menu-title="Inspecting web pages"><h2></h2>
-<div class="slide-title">
-“Inspect”ing web pages allows you to view and edit HTML &amp; CSS source code
+</section><section id="title-class" class="slide level2" data-menu-title="'title' class"><h2></h2>
+<center>
+<p class="slide-title">
+What’s with that <code>title</code> class selector?
+</p>
+</center>
+<div class="caption-text topbr">
+Note how the page headers (“samantha csik” on the landing page, and “about” and “resources” on those respective pages), which all happen to be <code>&lt;h1&gt;</code> elements, are also of class <code>title</code>.
 </div>
-<div class="body-text">
-<p>Using the “Inspect” tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and <em>also</em> your .</p>
+<div class="caption-text topbr">
+The <code>.title</code> class selector is defined by Quarto and used to target and style any element with <code>class="title"</code>. We can modify it however we’d like. For example, let’s turn text elements of class <code>title</code> the color red:
+</div>
+<div class="panel-tabset">
+<ul id="tabset-11" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-11-1"><code>mystyles.scss</code> file</a></li>
+<li><a href="#tabset-11-2">Output</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-11-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb37-1"><a href="#cb37-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a></span>
+<span id="cb37-3"><a href="#cb37-3"></a>h1<span class="op">,</span> h3 {</span>
+<span id="cb37-4"><a href="#cb37-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb37-6"><a href="#cb37-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
+<span id="cb37-7"><a href="#cb37-7"></a>}</span>
+<span id="cb37-8"><a href="#cb37-8"></a></span>
+<span id="cb37-9"><a href="#cb37-9"></a><span class="fu">.title</span> {</span>
+<span id="cb37-10"><a href="#cb37-10"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb37-11"><a href="#cb37-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-11-2">
+<div class="columns">
+<div class="column" style="width:33%;">
+<center>
+<img src="images/red-name.png" width="500">
+</center>
+</div><div class="column" style="width:33%;">
+<center>
+<img src="images/red-about.png" width="500">
+</center>
+</div><div class="column" style="width:33%;">
+<center>
+<img src="images/red-resources.png" width="500">
+</center>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="title-class2" class="slide level2" data-menu-title=""><h2></h2>
+<p class="slide-title">
+Okay, but what about <code>&lt;h1&gt;</code> elements that are not of class <code>title</code>?
+</p>
+<div class="body-text topbr">
+Let’s write a couple other <code>&lt;h1&gt;</code> elements that <em>are not</em> of <code>class="title"</code> to see what happens. I’ll do this on my <em>about</em> page:
+</div>
+<div class="panel-tabset">
+<ul id="tabset-12" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-12-1"><code>about.qmd</code> file</a></li>
+<li><a href="#tabset-12-2">Output</a></li>
+<li><a href="#tabset-12-3">Notes</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-12-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="5-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="sc">---</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a>title<span class="sc">:</span> <span class="st">"about"</span></span>
+<span id="cb38-3"><a href="#cb38-3"></a><span class="sc">---</span></span>
+<span id="cb38-4"><a href="#cb38-4"></a></span>
+<span id="cb38-5"><a href="#cb38-5"></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> <span class="co"># alternatively, you can write &lt;h1&gt; elements using markdown (`# this is an `&lt;h1&gt;` element`)</span></span>
+<span id="cb38-6"><a href="#cb38-6"></a></span>
+<span id="cb38-7"><a href="#cb38-7"></a><span class="er">&lt;</span>h1 class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
+<span id="cb38-8"><a href="#cb38-8"></a></span>
+<span id="cb38-9"><a href="#cb38-9"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb38-10"><a href="#cb38-10"></a></span>
+<span id="cb38-11"><a href="#cb38-11"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-12-2">
+<center>
+<img src="images/h1-title.png" width="500">
+</center>
+</div>
+<div id="tabset-12-3">
+<div class="caption-text topbr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> You can add elements on your web pages using either RMarkdown/Markdown syntax (e.g.&nbsp;use <code># text here</code> to denote an <code>&lt;h1&gt;</code> element) <em>or</em> use HTML tags (e.g.&nbsp;use <code>&lt;h1&gt;text here&lt;/h1&gt;</code>). I tend to use a mix of both Markdown syntax and HTML tags.
+</div>
+<div class="caption-text topbr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only <code>&lt;h1&gt;</code> elements that are of class <code>title</code> are colored red. Any <code>&lt;h1&gt;</code> elements that are not of class <code>title</code> are styled according to our <code>h1, h3 {}</code> element selector.
+</div>
+<div class="caption-text topbr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> We can apply the <code>title</code> class to any text element. In this example, we apply it both to an <code>&lt;h1&gt;</code> element and a <code>&lt;p&gt;</code> element.
+</div>
+</div>
+</div>
 </div>
 </section><section id="inspecting-website" class="slide level2"><h2>Inspecting website</h2>
 </section><section id="write-some-css-in-styles.css" class="slide level2"><h2>Write some CSS (in styles.css)</h2>
