@@ -74,10 +74,6 @@ format:
 
 ---
 
-## Inspecting website
-
----
-
 ## Write some CSS (in styles.css)
 (note to make branch)
 
