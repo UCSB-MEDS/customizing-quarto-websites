@@ -32,7 +32,7 @@ format: revealjs
 
 <center><img src="images/meds_colors.png" width="300"/></center>
 
-<div class="body-text topbr">You might imagine how often you'll need to type those HEX codes out as you developing your style sheet...it can get annoying rather quickly.</div>
+<div class="body-text topbr">You might imagine how often you'll need to type those HEX codes out as you developing your stylesheet...it can get annoying rather quickly.</div>
 
 ---
 
@@ -59,7 +59,7 @@ h1 {
 .button-styling {
   background: $teal;
   color: $darkblue; 
-  border-color: $gray;
+  border-color: $darkgray;
 }
 ```
 
@@ -79,6 +79,8 @@ h1 {
 touch mystyles.scss # name it whatever you want (you can apply more than one style sheet to your website)
 ```
 
+. . .
+
 <div class="caption-text topbr bottombr">**2.** Add the `/*-- scss:defaults --*/` page divider to the top of `mystyles.scss` (this is important!) -- you'll write all your Sass variables underneath this.</div>
 
 
@@ -88,6 +90,8 @@ touch mystyles.scss # name it whatever you want (you can apply more than one sty
 
 /*-- scss:defaults --*/
 ```
+
+. . .
 
 <div class="caption-text topbr bottombr">**3.** Apply your `mystyles.scss` stylesheet to your website by updating the `_quarto.yml` under the `format` section:</div>
 
@@ -143,7 +147,7 @@ $purple: #AE8BD1;
 
 <p class="slide-title">Use your color variables as values for Quarto's list of Sass Variables</p>
 
-<div class="caption-text topbr">Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified wihtin `.scss` files. Let's use our newly minted Sass color variables to change things like the background color, navbar & footer colors, hyperlink color, and more.</div>
+<div class="caption-text topbr">Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified within `.scss` files. Let's use our newly minted Sass color variables to change things like the background color, navbar & footer colors, hyperlink color, and more.</div>
 
 ::: {.panel-tabset}
 
@@ -181,7 +185,7 @@ $code-block-bg: $cream; // code block background color
 
 ## Output
 
-<center><img src="images/sass_colors.png" width="550"/></center>
+<center><img src="images/sass_colors.png" width="500"/></center>
 
 ## Notes
 

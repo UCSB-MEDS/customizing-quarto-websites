@@ -220,7 +220,7 @@ h1, h3 {
 
 <p class="slide-title">Okay, but what about `<h1>` elements that are not of class `title`?</p>
 
-<div class="body-text topbr">Let's write a couple other `<h1>` elements that *are not* of `class="title"` to see what happens. I'll do this on my *about* page:</div>
+<div class="body-text topbr">Let's write a couple of other elements that *are not* of `class="title"` to see what happens. I'll do this on my *about* page:</div>
 
 ::: {.panel-tabset}
 

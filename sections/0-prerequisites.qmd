@@ -35,7 +35,7 @@ format: revealjs
 
 . . . 
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Define CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.</div>
+<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Defining CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.</div>
 
 . . . 
 

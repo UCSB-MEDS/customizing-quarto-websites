@@ -33,11 +33,11 @@ knitr::include_graphics("images/html_css.png")
 
 <div class="slide-title">HTML & CSS are the building blocks of web pages</div>
 
-<div class="body-text topbr">**HTML** (Hypertext Markup Language) is a *markup language*<sup>1</sup> that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</div>
+<div class="caption-text topbr">**HTML** (Hypertext Markup Language) is a *markup language*<sup>1</sup> that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</div>
 
 <center><img src="images/html.png" width="600"/></center>
 
-<center><div class="caption-text gray-text topbr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
+<center><div class="caption-text gray-text topbr bottombr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
 
 
 <div class="caption-text"><sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</div>
@@ -48,7 +48,7 @@ knitr::include_graphics("images/html_css.png")
 
 <div class="slide-title">HTML & CSS are the building blocks of web pages</div>
 
-<div class="body-text topbr">**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</div>
+<div class="caption-text topbr">**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</div>
 
 <center><img src="images/css.png" width="600"/></center>
 
@@ -65,11 +65,11 @@ knitr::include_graphics("images/html_css.png")
 :::: {.columns}
 ::: {.column width="50%"}
 <center><img src="images/html_github.png" width="600"/></center>
-<center><div class="caption-text">HTML</div></center>
+<center><div class="caption-text gray-text">HTML</div></center>
 :::
 ::: {.column width="50%"}
 <center><img src="images/browser_styling_github.png" width="600"/></center>
-<center><div class="caption-text">Browser default styling</div></center>
+<center><div class="caption-text gray-text">Browser default styling</div></center>
 :::
 ::::
 
@@ -84,10 +84,10 @@ knitr::include_graphics("images/html_css.png")
 :::: {.columns}
 ::: {.column width="50%"}
 <center><img src="images/browser_styling_github.png" width="600"/></center>
-<center><div class="caption-text">Browser default styling</div></center>
+<center><div class="caption-text gray-text">Browser default styling</div></center>
 :::
 ::: {.column width="50%"}
 <center><img src="images/css_styling_github.png" width="600"/></center>
-<center><div class="caption-text">CSS styling</div></center>
+<center><div class="caption-text gray-text">CSS styling</div></center>
 :::
 ::::

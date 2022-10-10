@@ -453,7 +453,7 @@ When we render a new Quarto site, it converts all of our markdown into HTML and 
 <div class="fragment">
 <div class="caption-text bottombr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Define CSS rules in the <code>styles.css</code> file</strong> that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Defining CSS rules in the <code>styles.css</code> file</strong> that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
 </div>
 </div>
 <div class="fragment">
@@ -621,6 +621,10 @@ With the <code>trestles</code> About Page template
 <div class="caption-text topbr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
 <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> Use the <code>about</code> option in the YAML section of <code>index.qmd</code> to turn your landing page into an <a href="https://quarto.org/docs/websites/website-about.html">About Page</a> – supply it with one of five template options (here, I chose <code>trestles</code>). It <em>is not</em> necessary to do this (you can fully build/customize your web page layout using CSS), but it’s a fast way to create a clean, professional-looking landing page. <strong>NOTE:</strong> Any of your webpages can be turned into an About Page.
+</div>
+<div class="caption-text topbr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> The <code>links</code> option under <code>about</code> allows you to create buttons underneath your landing page photo. You need to supply a <code>text</code> (as you’d like it to appear on the button) and an <code>href</code> (a link), and optionally can supply an icon.
 </div>
 <div class="caption-text topbr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
@@ -793,7 +797,7 @@ Stylesheets (e.g.&nbsp;<code>.css</code> files) are getting larger and more comp
 <img src="images/meds_colors.png" width="300">
 </center>
 <div class="body-text topbr">
-You might imagine how often you’ll need to type those HEX codes out as you developing your style sheet…it can get annoying rather quickly.
+You might imagine how often you’ll need to type those HEX codes out as you developing your stylesheet…it can get annoying rather quickly.
 </div>
 </section><section id="why-use-sass" class="slide level2" data-menu-title="Why use Sass?"><h2></h2>
 <p class="slide-title">
@@ -816,7 +820,7 @@ Sass allows us to define variables (in the form <code>$var-name: value;</code>) 
 <span id="cb6-11"><a href="#cb6-11"></a><span class="fu">.button-styling</span> {</span>
 <span id="cb6-12"><a href="#cb6-12"></a>  <span class="kw">background</span>: $teal<span class="op">;</span></span>
 <span id="cb6-13"><a href="#cb6-13"></a>  <span class="kw">color</span>: $darkblue<span class="op">;</span> </span>
-<span id="cb6-14"><a href="#cb6-14"></a>  <span class="kw">border-color</span>: $gray<span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a>  <span class="kw">border-color</span>: $darkgray<span class="op">;</span></span>
 <span id="cb6-15"><a href="#cb6-15"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="caption-text topbr">
@@ -832,12 +836,15 @@ Create a <code>.scss</code> file for your website
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">touch</span> mystyles.scss <span class="co"># name it whatever you want (you can apply more than one style sheet to your website)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <div class="caption-text topbr bottombr">
 <strong>2.</strong> Add the <code>/*-- scss:defaults --*/</code> page divider to the top of <code>mystyles.scss</code> (this is important!) – you’ll write all your Sass variables underneath this.
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">/*-- scss:defaults --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+<div class="fragment">
 <div class="caption-text topbr bottombr">
 <strong>3.</strong> Apply your <code>mystyles.scss</code> stylesheet to your website by updating the <code>_quarto.yml</code> under the <code>format</code> section:
 </div>
@@ -853,6 +860,7 @@ Create a <code>.scss</code> file for your website
 <span id="cb9-9"><a href="#cb9-9"></a>   theme<span class="sc">:</span> </span>
 <span id="cb9-10"><a href="#cb9-10"></a>      <span class="sc">-</span> mystyles.scss</span>
 <span id="cb9-11"><a href="#cb9-11"></a>    toc<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section><section id="sass-colors" class="slide level2" data-menu-title="Sass Colors"><h2></h2>
 <p class="slide-title">
@@ -884,7 +892,7 @@ In <code>.scss</code> files, <code>//</code> denote single line comments. Multi-
 Use your color variables as values for Quarto’s list of Sass Variables
 </p>
 <div class="caption-text topbr">
-Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">list of Sass Variables</a> that can be specified wihtin <code>.scss</code> files. Let’s use our newly minted Sass color variables to change things like the background color, navbar &amp; footer colors, hyperlink color, and more.
+Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">list of Sass Variables</a> that can be specified within <code>.scss</code> files. Let’s use our newly minted Sass color variables to change things like the background color, navbar &amp; footer colors, hyperlink color, and more.
 </div>
 <div class="panel-tabset">
 <ul id="tabset-4" class="panel-tabset-tabby">
@@ -924,7 +932,7 @@ Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.ht
 </div>
 <div id="tabset-4-2">
 <center>
-<img src="images/sass_colors.png" width="550">
+<img src="images/sass_colors.png" width="500">
 </center>
 </div>
 <div id="tabset-4-3">
@@ -1090,14 +1098,14 @@ Some of you may have already heard of/written HTML and/or CSS – that’s great
 <div class="slide-title">
 HTML &amp; CSS are the building blocks of web pages
 </div>
-<div class="body-text topbr">
+<div class="caption-text topbr">
 <strong>HTML</strong> (Hypertext Markup Language) is a <em>markup language</em><sup>1</sup> that tells web browsers how to <em>structure</em> web pages. You can think of HTML as the <em>skeleton</em> of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.
 </div>
 <center>
 <img src="images/html.png" width="600">
 </center>
 <center>
-<div class="caption-text gray-text topbr">
+<div class="caption-text gray-text topbr bottombr">
 Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
 </div>
 </center>
@@ -1108,7 +1116,7 @@ Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Ill
 <div class="slide-title">
 HTML &amp; CSS are the building blocks of web pages
 </div>
-<div class="body-text topbr">
+<div class="caption-text topbr">
 <strong>CSS</strong> (Cascading Style Sheets) is a programming language that allows you to control how HTML elements <em>look</em> on a web page. You can think of CSS as the <em>outfit</em> that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.
 </div>
 <center>
@@ -1132,7 +1140,7 @@ Your browser will style HTML documents using an internal style sheet, which ensu
 <img src="images/html_github.png" width="600">
 </center>
 <center>
-<div class="caption-text">
+<div class="caption-text gray-text">
 HTML
 </div>
 </center>
@@ -1141,7 +1149,7 @@ HTML
 <img src="images/browser_styling_github.png" width="600">
 </center>
 <center>
-<div class="caption-text">
+<div class="caption-text gray-text">
 Browser default styling
 </div>
 </center>
@@ -1160,7 +1168,7 @@ CSS allows website developers to add additional styling to web browser defaults.
 <img src="images/browser_styling_github.png" width="600">
 </center>
 <center>
-<div class="caption-text">
+<div class="caption-text gray-text">
 Browser default styling
 </div>
 </center>
@@ -1169,7 +1177,7 @@ Browser default styling
 <img src="images/css_styling_github.png" width="600">
 </center>
 <center>
-<div class="caption-text">
+<div class="caption-text gray-text">
 CSS styling
 </div>
 </center>
@@ -1288,7 +1296,7 @@ You can also <em>nest</em> elements. Remember to close out tags from the inside-
 <img src="images/nested_html_elements.png" width="700">
 </center>
 </div><div class="column" style="width:30%;">
-<br><div class="body-text">
+<br><br><div class="caption-text">
 In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your **website customization** workshop</code>
 </div>
 </div>
@@ -1328,16 +1336,17 @@ Attributes can be used in many powerful ways – one way is to provide a class o
 Exercise: practice writing HTML (1/2)
 </div>
 <div class="body-text topbr">
-You can use any text editor to do so (RStudio an VS Code work too!). The following steps assume you’re working in RStudio. Later, we’ll link an external (separate) CSS style sheet within our HTML file, to style our elements.
+You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you’re working in RStudio. Later, we’ll link an external (separate) CSS stylesheet within our HTML file to style our elements.
 </div>
 <div class="caption-text topbr">
-<ol type="1"><li>Open an RProject (an existing one is fine). In your terminal window, use the <code>touch</code> command to create an html file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.
+<ol type="1"><li>Open an RProject (it’s fine to work on your website branch!). In your terminal window, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.
 </li></ol>
 </div>
 
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">touch</span> practice-html.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <div class="caption-text">
 <ol start="2" type="1"><li>Create the skeleton of your HTML file.
 </li></ol>
@@ -1354,6 +1363,7 @@ You can use any text editor to do so (RStudio an VS Code work too!). The followi
 <span id="cb17-8"><a href="#cb17-8"></a><span class="kw">&lt;/body&gt;</span></span>
 <span id="cb17-9"><a href="#cb17-9"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 </section><section id="html-practice2" class="slide level2" data-menu-title="Practice HTML (2/2)" data-auto-animate="true"><h2 data-id="quarto-animate-title"></h2>
 <div class="slide-title">
 Exercise: practice writing HTML (2/2)
@@ -1362,7 +1372,7 @@ Exercise: practice writing HTML (2/2)
 Write some HTML! <em>We’ll practice styling our HTML in the next section.</em>
 </div>
 <div class="caption-text topbr">
-<ol start="3" type="1"><li>Create a level one header, a paragraph, and a button that takes you to the MEDS website (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) within the <code>&lt;body&gt;</code> of your html file.
+<ol start="3" type="1"><li>Create a level one header, a paragraph, and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.
 </li></ol>
 </div>
 
@@ -1385,7 +1395,7 @@ Exercise: practice writing HTML (2/2)
 Write some HTML! <em>We’ll practice styling our HTML in the next section.</em>
 </div>
 <div class="caption-text topbr">
-<ol start="3" type="1"><li>Create a level one header, a paragraph, and a button that takes you to the MEDS website (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that).
+<ol start="3" type="1"><li>Create a level one header, a paragraph, and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.
 </li></ol>
 </div>
 
@@ -1421,7 +1431,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 CSS is a rule-based language
 </div>
 <div class="body-text topbr">
-CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, <em>“I want all first-level (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:
+CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, <em>“I want all level one (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1431,7 +1441,7 @@ CSS is a rule-based language, meaning that it allows you to define groups of sty
 </div><div class="column" style="width:50%;">
 <div class="caption-text">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Selectors</strong> select the HTML element(s) you want to style <em>(e.g.&nbsp;first-level headings, <code>&lt;h1&gt;</code>)</em>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><strong>Selectors</strong> select the HTML element(s) you want to style <em>(e.g.&nbsp;level one headings, <code>&lt;h1&gt;</code>)</em>
 </div>
 <div class="caption-text topbr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
@@ -1439,7 +1449,7 @@ CSS is a rule-based language, meaning that it allows you to define groups of sty
 </div>
 <div class="caption-text topbr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> A property and its corresponding value are separated by a colon, <code>:</code>. Delcaration end with a semicolon, <code>;</code>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> A property and its corresponding value are separated by a colon, <code>:</code>. Declarations end with a semicolon, <code>;</code>
 </div>
 </div>
 </div>
@@ -1542,7 +1552,7 @@ Rather than defining separate rules for multiple element selectors that you want
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
 <span id="cb23-3"><a href="#cb23-3"></a><span class="kw">&lt;h3&gt;</span>This level three header will not be styled<span class="kw">&lt;/h3&gt;</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a><span class="kw">&lt;p&gt;</span>This paragaph will be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="kw">&lt;p&gt;</span>This paragraph will be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <br><br><center>
@@ -1570,7 +1580,7 @@ Select an element(s) using attributes
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="body-text">
-An ID selector uses the <em>id attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a pound symbol followed by the selector name, e.g.&nbsp;<code>#selector</code>.
+An ID selector uses the <em><code>id</code> attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a <code>#</code> followed by the selector name, e.g.&nbsp;<code>#selector</code>.
 </div>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -1604,7 +1614,7 @@ An ID selector uses the <em>id attribute</em> of an HTML element to style that s
 </div>
 <div id="tabset-7-2">
 <div class="body-text">
-An class selector uses the <em>class attribute</em> of an HTML element to style that specific element. Class selectors are written using a period followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code>
+A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1645,7 +1655,7 @@ An class selector uses the <em>class attribute</em> of an HTML element to style 
 </div>
 </section><section id="universal-inline" class="slide level2" data-menu-title="Universal &amp; Inline Selectors"><h2></h2>
 <div class="slide-title">
-Select an all elements or style inline
+Select all elements or style inline
 </div>
 <div class="panel-tabset">
 <ul id="tabset-8" class="panel-tabset-tabby">
@@ -1655,7 +1665,7 @@ Select an all elements or style inline
 <div class="tab-content">
 <div id="tabset-8-1">
 <div class="body-text">
-The universal selector selects <em>all</em> HTML elements on the page. It is written using only an asterisk.
+The universal selector selects <em>all</em> HTML elements on the page. It is written using only an asterisk, <code>*</code>.
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1690,7 +1700,7 @@ The universal selector selects <em>all</em> HTML elements on the page. It is wri
 </div>
 <div id="tabset-8-2">
 <div class="body-text">
-The <em>style attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.
+The <em><code>style</code> attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.
 </div>
 <div class="body-text topbr">
 <strong>HTML with inline styling</strong>
@@ -1808,6 +1818,7 @@ Exercise: practice writing CSS (1/3)
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">touch</span> practice-styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
 <div class="caption-text topbr">
 <ol start="2" type="1"><li>Link your CSS file inside the <code>&lt;head&gt;</code> of your HTML file (read more about inserting style sheets <a href="https://www.w3schools.com/css/css_howto.asp">here</a>).
 </li></ol>
@@ -1828,6 +1839,7 @@ Exercise: practice writing CSS (1/3)
 <span id="cb34-12"><a href="#cb34-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
 <span id="cb34-13"><a href="#cb34-13"></a><span class="kw">&lt;/body&gt;</span></span>
 <span id="cb34-14"><a href="#cb34-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section><section id="css-practice2" class="slide level2" data-menu-title="Practice CSS (2/3)"><h2></h2>
 <div class="slide-title">
@@ -1851,7 +1863,7 @@ Exercise: practice writing CSS (2/3)
 <strong>(d)</strong> create a class selector to color your button text red and enlarge the font size (try <code>20px</code>),
 </div>
 <div class="caption-text topbr">
-<strong>(bonus)</strong> What happens if you also apply that red/large font selector to your second paragraph?
+<strong>(bonus)</strong> What happens if you also apply that red/large font selector (from part <strong>(d)</strong>) to your second paragraph?
 </div>
 <p><br></p>
 <center>
@@ -1869,7 +1881,9 @@ Explore a list of all CSS properties <a href="https://www.w3schools.com/cssref/"
 <div class="slide-title">
 Exercise: practice writing CSS (3/3)
 </div>
-<p><br></p>
+<p class="body-text topbr bottombr">
+Below is one solution – yours may look different!
+</p>
 <div class="panel-tabset">
 <ul id="tabset-9" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-9-1">CSS</a></li>
@@ -2176,7 +2190,7 @@ The Quarto framework has defined a class selector called <code>.title</code> and
 Okay, but what about <code>&lt;h1&gt;</code> elements that are not of class <code>title</code>?
 </p>
 <div class="body-text topbr">
-Let’s write a couple other <code>&lt;h1&gt;</code> elements that <em>are not</em> of <code>class="title"</code> to see what happens. I’ll do this on my <em>about</em> page:
+Let’s write a couple of other elements that <em>are not</em> of <code>class="title"</code> to see what happens. I’ll do this on my <em>about</em> page:
 </div>
 <div class="panel-tabset">
 <ul id="tabset-12" class="panel-tabset-tabby">
@@ -2443,7 +2457,7 @@ Check out source code (specifically the stylesheets) of other sites
 <div class="fragment">
 <p class="caption-text bottombr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> More and more Quarto websites are popping up all the time – keep an eye out on Twitter for folks sharing their sites! (I’ll never stop obsessing over <a href="https://maya.rbind.io/">Maya Gans’ Quarto site</a>). You can also explore the source code and stylesheets for Quarto presentations (cough cough, like <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites">this very presentation</a>), books, and more.
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> More and more Quarto websites are popping up all the time – keep an eye out on Twitter for folks sharing their sites! (I’ll never stop obsessing over <a href="https://maya.rbind.io/">Maya Gans’ Quarto site</a>). You can also explore the source code and stylesheets for Quarto presentations (<em>cough cough,</em> like <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites">this very presentation</a>), books, and more.
 </p>
 <p><br></p>
 </div>
@@ -2458,7 +2472,7 @@ Check out source code (specifically the stylesheets) of other sites
 Inspecting web pages allows you to temporarily “edit” CSS
 </p>
 <p class="caption-text bottombr">
-Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly what elements selectors are manipulating. <strong>Note</strong> that these changes are only <em>temporary</em> – refreshing your web browser will revert your site back to it’s original state.
+Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly which elements different selectors are manipulating. <strong>Note</strong> that these changes are only <em>temporary</em> – refreshing your web browser will revert your site back to it’s original state.
 </p>
 <center>
 <img src="images/inspect-edit.gif" width="650">

@@ -63,6 +63,8 @@ about:
 
 <div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Use the `about` option in the YAML section of `index.qmd` to turn your landing page into an [About Page](https://quarto.org/docs/websites/website-about.html) -- supply it with one of five template options (here, I chose `trestles`). It *is not* necessary to do this (you can fully build/customize your web page layout using CSS), but it's a fast way to create a clean, professional-looking landing page. **NOTE:** Any of your webpages can be turned into an About Page.</div>
 
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and an `href` (a link), and optionally can supply an icon.</div>
+
 <div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` You'll need to install the quarto fontawesome extension to include icons throughout your site (including your About Page buttons). Run `quarto install extension quarto-ext/fontawesome` in your RStudio terminal. **NOTE:** You'll need to install this for each project where you'd like to use fontawesome icons.</div>
 
 :::

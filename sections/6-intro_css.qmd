@@ -14,18 +14,18 @@ format: revealjs
 
 <div class="slide-title">CSS is a rule-based language</div>
 
-<div class="body-text topbr">CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, *"I want all first-level (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:</div>
+<div class="body-text topbr">CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:</div>
 
 :::: {.columns}
 ::: {.column width="50%"}
 <center><img src="images/CSS_syntax.png" width="700"/></center>
 :::
 ::: {.column width="50%"}
-<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Selectors** select the HTML element(s) you want to style *(e.g. first-level headings, `<h1>`)*</div>
+<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Selectors** select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*</div>
 
 <div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*</div>
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` A property and its corresponding value are separated by a colon, `:`. Delcaration end with a semicolon, `;`</div>
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`</div>
 :::
 ::::
 
@@ -114,7 +114,7 @@ h1, h2, p {
 <h1>My level one header will be styled</h1>
 <h2>This level two header will be styled</h2>
 <h3>This level three header will not be styled</h3>
-<p>This paragaph will be styled</p>
+<p>This paragraph will be styled</p>
 ```
 :::
 ::: {.column width="40%"}
@@ -137,7 +137,7 @@ h1, h2, p {
 
 ## ID Selectors
 
-<div class="body-text">An ID selector uses the *id attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a pound symbol followed by the selector name, e.g. `#selector`.</div>
+<div class="body-text">An ID selector uses the *`id` attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a `#` followed by the selector name, e.g. `#selector`.</div>
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -169,7 +169,7 @@ h1, h2, p {
 
 ## Class Selectors
 
-<div class="body-text">An class selector uses the *class attribute* of an HTML element to style that specific element. Class selectors are written using a period followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`</div>
+<div class="body-text">A class selector uses the *`class` attribute* of an HTML element to style that specific element. Class selectors are written using a `.` followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`</div>
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -207,12 +207,12 @@ h1, h2, p {
 
 ##  {#universal-inline data-menu-title="Universal & Inline Selectors"}
 
-<div class="slide-title">Select an all elements or style inline</div>
+<div class="slide-title">Select all elements or style inline</div>
 
 ::: {.panel-tabset}
 ## Universal Selector
 
-<div class="body-text">The universal selector selects *all* HTML elements on the page. It is written using only an asterisk.</div>
+<div class="body-text">The universal selector selects *all* HTML elements on the page. It is written using only an asterisk, `*`.</div>
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -245,7 +245,7 @@ h1, h2, p {
 
 ## Inline styling
 
-<div class="body-text">The *style attribute* may be used inline to apply unique styles to a single element. It's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</div>
+<div class="body-text">The *`style` attribute* may be used inline to apply unique styles to a single element. It's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</div>
 
 <div class="body-text topbr">**HTML with inline styling**</div>
 ```{html}
@@ -349,6 +349,8 @@ h1 {
 touch practice-styles.css
 ```
 
+. . .
+
 <div class="caption-text topbr">2. Link your CSS file inside the `<head>` of your HTML file (read more about inserting style sheets [here](https://www.w3schools.com/css/css_howto.asp)).</div>
 
 ```{html} 
@@ -384,7 +386,7 @@ touch practice-styles.css
 <div class="caption-text topbr">**(b)** create a class selector to color the text of your first paragraph blue,</div>   
 <div class="caption-text topbr">**(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue,</div>  
 <div class="caption-text topbr">**(d)** create a class selector to color your button text red and enlarge the font size (try `20px`),</div>   
-<div class="caption-text topbr">**(bonus)** What happens if you also apply that red/large font selector to your second paragraph?</div> 
+<div class="caption-text topbr">**(bonus)** What happens if you also apply that red/large font selector (from part **(d)**) to your second paragraph?</div> 
 
 <br>
 
@@ -400,7 +402,7 @@ touch practice-styles.css
 
 <div class="slide-title">Exercise: practice writing CSS (3/3)</div>
 
-<br>
+<p class="body-text topbr bottombr">Below is one solution -- yours may look different!</p>
 
 ::: {.panel-tabset}
 

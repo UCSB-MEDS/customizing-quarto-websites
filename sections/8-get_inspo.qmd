@@ -46,7 +46,7 @@ format: revealjs
 
 . . . 
 
-<p class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  More and more Quarto websites are popping up all the time -- keep an eye out on Twitter for folks sharing their sites! (I'll never stop obsessing over [Maya Gans' Quarto site](https://maya.rbind.io/)). You can also explore the source code and stylesheets for Quarto presentations (cough cough, like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), books, and more.</p>
+<p class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  More and more Quarto websites are popping up all the time -- keep an eye out on Twitter for folks sharing their sites! (I'll never stop obsessing over [Maya Gans' Quarto site](https://maya.rbind.io/)). You can also explore the source code and stylesheets for Quarto presentations (*cough cough,* like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), books, and more.</p>
 
 <br>
 
@@ -61,7 +61,7 @@ format: revealjs
 
 <p class="slide-title">Inspecting web pages allows you to temporarily "edit" CSS</p>
 
-<p class="caption-text bottombr">Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly what elements selectors are manipulating. **Note** that these changes are only *temporary* -- refreshing your web browser will revert your site back to it's original state.</p>
+<p class="caption-text bottombr">Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly which elements different selectors are manipulating. **Note** that these changes are only *temporary* -- refreshing your web browser will revert your site back to it's original state.</p>
 
 <center><img src="images/inspect-edit.gif" width="650"/></center>
 

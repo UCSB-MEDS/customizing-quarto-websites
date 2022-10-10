@@ -66,7 +66,8 @@ format: revealjs
 :::
 ::: {.column width="30%"}
 <br> 
-<div class="body-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`</div>
+<br>
+<div class="caption-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`</div>
 :::
 ::::
 
@@ -100,15 +101,17 @@ format: revealjs
 
 <div class="slide-title">Exercise: practice writing HTML (1/2)</div>
 
-<div class="body-text topbr">You can use any text editor to do so (RStudio an VS Code work too!). The following steps assume you're working in RStudio. Later, we'll link an external (separate) CSS style sheet within our HTML file, to style our elements.</div>
+<div class="body-text topbr">You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you're working in RStudio. Later, we'll link an external (separate) CSS stylesheet within our HTML file to style our elements.</div>
 
-<div class="caption-text topbr">1. Open an RProject (an existing one is fine). In your terminal window, use the `touch` command to create an html file (for simplicity, I did this in my project's root directory), then choose **Open in Editor**.</div> 
+<div class="caption-text topbr">1. Open an RProject (it's fine to work on your website branch!). In your terminal window, use the `touch` command to create an HTML file (for simplicity, I did this in my project's root directory), then choose **Open in Editor**.</div> 
 
 ```{bash}
 #| eval: false
 #| echo: true
 touch practice-html.html
 ```
+
+. . .
 
 <div class="caption-text">2. Create the skeleton of your HTML file.</div>
 
@@ -134,7 +137,7 @@ touch practice-html.html
 
 <div class="body-text topbr">Write some HTML! *We'll practice styling our HTML in the next section.*</div>
 
-<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button that takes you to the MEDS website ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) within the `<body>` of your html file.</div>
+<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.</div>
 
 ```{html}
 #| eval: false
@@ -158,7 +161,7 @@ touch practice-html.html
 
 <div class="body-text topbr">Write some HTML! *We'll practice styling our HTML in the next section.*</div>
 
-<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button that takes you to the MEDS website ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that).</div>
+<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.</div>
 
 ```{html}
 #| eval: false
