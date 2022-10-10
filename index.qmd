@@ -6,7 +6,8 @@ format:
     code-link: true
     highlight-style: a11y
     chalkboard: true
-    #scrollable: true
+    # self-contained: true
+    # scrollable: true
     theme: 
       - meds_styles.scss
 ---
@@ -58,28 +59,23 @@ format:
 
 ---
 
-{{< include sections/3-intro_html_css.qmd >}}
+{{< include sections/4-intro_html_css.qmd >}}
 
 ---
 
-{{< include sections/4-intro_html.qmd >}}
+{{< include sections/5-intro_html.qmd >}}
 
 ---
 
-{{< include sections/5-intro_css.qmd >}}
+{{< include sections/6-intro_css.qmd >}}
 
 ---
 
-{{< include sections/6-css_quarto.qmd >}}
+{{< include sections/7-css_quarto.qmd >}}
 
 ---
 
-## Quarto vs CSS syntax
-(I use a mix of both)
-
----
-
-## Look for inspiration (and code) elsewhere
+{{< include sections/8-get_inspo.qmd >}}
 
 ---
 

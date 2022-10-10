@@ -159,6 +159,10 @@ h1, h3 {
 :::
 ::::
 
+## Notes
+
+<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd` since this grouping selector targets *all* `<h1>` and `<h3>` elements across my site. If an element on any of my pages has either of those tags, it will get styled with the declarations included in our CSS rule.</div>
+
 :::
 
 ---
@@ -169,7 +173,7 @@ h1, h3 {
 
 <div class="caption-text topbr">Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class `title`.</div>
 
-<div class="caption-text topbr">The `.title` class selector is defined by Quarto and used to target and style any element with `class="title"`. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:</div>
+<div class="caption-text topbr">The Quarto framework has defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:</div> 
 
 ::: {.panel-tabset}
 
@@ -203,6 +207,10 @@ h1, h3 {
 <center><img src="images/red-resources.png" width="500"/></center>
 :::
 ::::
+
+## Notes
+
+<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` In this case, I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements *already* are assigned the class `title`.</div>
 
 :::
 
@@ -286,7 +294,9 @@ h1, h3 {
 
 ## `resources.qmd` file
 
-<p class="body-text bottombr">Here, I'm creating two paragraphs -- one that is styled as a `custom-subtitle` and one that is not. What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?</p>
+<p class="body-text bottombr">Here, I'm creating two paragraphs -- one that is styled as a `custom-subtitle` and one that is not.</p>
+
+<p class="body-text bottombr">What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?</p>
 
 ```{r}
 #| eval: false
@@ -371,3 +381,47 @@ title: "resources"
 <div class="body-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Remember, HTML elements can have more than one class, e.g. `<p class="class1 class2 etc">`</div>
 
 :::
+
+---
+
+##  {#quarto-syntax data-menu-title="Quarto Syntax"}
+
+<p class="slide-title">Apply class selectors to page elements using Quarto's own syntax</p>
+
+<p class="caption-text bottombr">The following will be rendered the same way:</p> 
+
+<p class="caption-text bottombr">`<tag class="myclass">Some text</tag>` == `[Some text]{.myclass}`</p>
+
+<p class="caption-text bottombr">I tend to use a mix of both approaches (HTML & Quarto syntax). In some situations using Quarto's `[]{}` feels cleaner. In other situations, I can get finer control over the styling of elements using HTML.</p>
+
+::: {.panel-tabset}
+
+## `resources.qmd` file
+
+```{r}
+#| eval: false
+#| echo: true
+
+---
+title: "resources"
+---
+
+<p class="custom-subtitle">Here is my custom subtitle.</p>
+
+<p>And here is some normal text beneath it.</p>
+
+[Here is another custom subtitle written with Quarto syntax]{.custom-subtitle}
+
+Also note that I do not need to wrap this text in the `<p>` tag in order for it to render as normal text. `.qmd` files allow us to seamlessly blend markdown syntax with HTML.
+```
+
+## Output
+
+<center><img src="images/quarto-css-syntax.png" width="500"/></center>
+
+## Notes
+
+<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` You'll notice the `[]{}` syntax throughout Quarto's documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don't *need* to use it, but it helps to know what it is when you see it!</div>
+
+:::
+

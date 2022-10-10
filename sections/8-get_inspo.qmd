@@ -1,0 +1,78 @@
+---
+format: revealjs
+---
+
+##  {#get-inspired data-menu-title="Get inspired" background="#053660"}
+
+<div class="page-center">
+<div class="custom-subtitle">`r fontawesome::fa("lightbulb", fill = "#d2e3f3", a11y = "sem")` Get inspired</div>
+</div>
+
+---
+
+##  {#trial-error data-menu-title="Styling = lots of trial & error"}
+
+<p class="slide-title">Styling your website can be challenging</p>
+
+:::: {.columns}
+::: {.column width="50%"}
+<center><img src="images/dont-know.gif" width="400"/></center>
+<center><p class="caption-text gray-text topbr">^ How I feel most of the time while trying to write CSS</p></center>
+:::
+::: {.column width="50%"}
+<br>
+<p class="body-text">...and honestly, ***a lot*** of it is trial and error. Inspecting (*reminder: right-click on an element in your website preview and choose "Inspect"*) your website can take patience and persistence to figure out how exactly to target your desired element.</p>
+
+<br>
+
+<p class="body-text bottombr">Luckily, there are ways to help yourself along.</p>
+
+:::
+::::
+
+---
+
+##  {#look-at-other-sites data-menu-title="Look at other websites"}
+
+<p class="slide-title">Check out source code (specifically the stylesheets) of other sites</p>
+
+<br>
+
+. . . 
+
+<p class="caption-text topbr bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Learn from others! Exploring the source code for other websites, presentations, etc. is, in my opinion, critical for learning this new skill and applying it to your own work.</p> 
+
+<br>
+
+. . . 
+
+<p class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  More and more Quarto websites are popping up all the time -- keep an eye out on Twitter for folks sharing their sites! (I'll never stop obsessing over [Maya Gans' Quarto site](https://maya.rbind.io/)). You can also explore the source code and stylesheets for Quarto presentations (cough cough, like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), books, and more.</p>
+
+<br>
+
+. . . 
+
+<p class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  And don't limit yourself to Quarto sites! Check out [The Distillery Showcase](https://distillery.rbind.io/), which links to a long list of websites built with R's `{distill}` package (**Note:** the `{distill}` framework *is* a bit different -- when exploring `.css` files, look for CSS selectors beneath the section `/*-- Additional custom styles --*/`).</p>
+
+
+---
+
+##  {#inspect-edit data-menu-title="'Edit' while you Inspect"}
+
+<p class="slide-title">Inspecting web pages allows you to temporarily "edit" CSS</p>
+
+<p class="caption-text bottombr">Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly what elements selectors are manipulating. **Note** that these changes are only *temporary* -- refreshing your web browser will revert your site back to it's original state.</p>
+
+<center><img src="images/inspect-edit.gif" width="650"/></center>
+
+---
+
+##  {#inspect-edit data-menu-title="Interactive tutorials"}
+
+<p class="slide-title">Take advantage of interactive tutorials</p>
+
+<p class="body-text bottombr">[W3Schools](https://www.w3schools.com/css/default.asp) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!</p>
+
+<br>
+
+<center><img src="images/w3-try.gif" width="650"/></center>

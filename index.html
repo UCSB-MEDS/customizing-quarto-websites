@@ -740,7 +740,8 @@ Add a favicon &amp; personal logo
 <div id="tabset-3-3">
 <div class="caption-text topbr">
 <svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
-<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> Create your own logo using the free <a href="https://www.adobe.com/express/create/logo">Adobe Express Logo Maker</a> to include in the top left corner of your website (clicking on this will take you back to your site’s landing page) – provide Adobe with a little info about yourself, and it’ll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. <strong>Tip:</strong> You can download logos with a transparent background, or with a background that matches the color you plan to change your navbar to (as in this example).
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> Create your own logo using the free <a href="https://www.adobe.com/express/create/logo">Adobe Express Logo Maker</a> to include in the top left corner of your website (clicking on this will take you back to your site’s landing page) – provide Adobe with a little info about yourself, and it’ll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. <strong>Tip:</strong> You can download logos with a transparent background, or with a background that matches the color you plan to change your navbar to (as in this example). I also recommend making them as large as possible <em>before</em> downloading – doing so may circumvent having to adjust the logo size using CSS (I realized that after the fact <svg aria-label="Smiling Face" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#222222;overflow:visible;position:relative;"><title>Smiling Face</title>
+<path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"></path></svg>).
 </div>
 </div>
 </div>
@@ -939,7 +940,7 @@ Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.ht
 </div>
 </div>
 </section><section id="fonts" class="slide level2" data-menu-title="Fonts" data-background="#053660"><h2></h2>
-<div class="vertical-center">
+<div class="page-center">
 <center>
 <div class="custom-subtitle2">
 Import and apply new fonts <svg aria-label="font" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>font</title>
@@ -2063,6 +2064,7 @@ Write a CSS grouping selector to style <code>&lt;h1&gt;</code> and <code>&lt;h3&
 <ul id="tabset-10" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-10-1"><code>mystyles.scss</code> file</a></li>
 <li><a href="#tabset-10-2">Output</a></li>
+<li><a href="#tabset-10-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-10-1">
@@ -2102,6 +2104,12 @@ With CSS styling on <code>h1</code> and <code>h3</code> headers
 </div>
 </div>
 </div>
+<div id="tabset-10-3">
+<div class="body-text">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> I don’t need to make any changes to the HTML (in <code>index.qmd</code>, <code>about.qmd</code>, and <code>resources.qmd</code> since this grouping selector targets <em>all</em> <code>&lt;h1&gt;</code> and <code>&lt;h3&gt;</code> elements across my site. If an element on any of my pages has either of those tags, it will get styled with the declarations included in our CSS rule.
+</div>
+</div>
 </div>
 </div>
 </section><section id="title-class" class="slide level2" data-menu-title="'title' class"><h2></h2>
@@ -2114,12 +2122,13 @@ What’s with that <code>title</code> class selector?
 Note how the page headers (“samantha csik” on the landing page, and “about” and “resources” on those respective pages), which all happen to be <code>&lt;h1&gt;</code> elements, are also of class <code>title</code>.
 </div>
 <div class="caption-text topbr">
-The <code>.title</code> class selector is defined by Quarto and used to target and style any element with <code>class="title"</code>. We can modify it however we’d like. For example, let’s turn text elements of class <code>title</code> the color red:
+The Quarto framework has defined a class selector called <code>.title</code> and applied that class to the above elements. We can modify it however we’d like. For example, let’s turn text elements of class <code>title</code> the color red:
 </div>
 <div class="panel-tabset">
 <ul id="tabset-11" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-11-1"><code>mystyles.scss</code> file</a></li>
 <li><a href="#tabset-11-2">Output</a></li>
+<li><a href="#tabset-11-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-11-1">
@@ -2152,6 +2161,12 @@ The <code>.title</code> class selector is defined by Quarto and used to target a
 <img src="images/red-resources.png" width="500">
 </center>
 </div>
+</div>
+</div>
+<div id="tabset-11-3">
+<div class="body-text">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> In this case, I don’t need to make any changes to the HTML (in <code>index.qmd</code>, <code>about.qmd</code>, and <code>resources.qmd</code>) since those <code>&lt;h1&gt;</code> elements <em>already</em> are assigned the class <code>title</code>.
 </div>
 </div>
 </div>
@@ -2244,7 +2259,10 @@ Let’s create a class named <code>custom-subtitle</code> that styles text in th
 </div>
 <div id="tabset-13-2">
 <p class="body-text bottombr">
-Here, I’m creating two paragraphs – one that is styled as a <code>custom-subtitle</code> and one that is not. What happens if you create your custom subtitle using an <code>&lt;h1&gt;</code> tag instead of <code>&lt;p&gt;</code>? Why do you think this happens?
+Here, I’m creating two paragraphs – one that is styled as a <code>custom-subtitle</code> and one that is not.
+</p>
+<p class="body-text bottombr">
+What happens if you create your custom subtitle using an <code>&lt;h1&gt;</code> tag instead of <code>&lt;p&gt;</code>? Why do you think this happens?
 </p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42" data-code-line-numbers="5,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="sc">---</span></span>
@@ -2331,9 +2349,131 @@ Here, we add our <code>bottombr</code> class selector within the <code>""</code>
 </div>
 </div>
 </div>
-</section><section id="quarto-vs-css-syntax" class="slide level2"><h2>Quarto vs CSS syntax</h2>
-<p>(I use a mix of both)</p>
-</section><section id="look-for-inspiration-and-code-elsewhere" class="slide level2"><h2>Look for inspiration (and code) elsewhere</h2>
+</section><section id="quarto-syntax" class="slide level2" data-menu-title="Quarto Syntax"><h2></h2>
+<p class="slide-title">
+Apply class selectors to page elements using Quarto’s own syntax
+</p>
+<p class="caption-text bottombr">
+The following will be rendered the same way:
+</p>
+<p class="caption-text bottombr">
+<code>&lt;tag class="myclass"&gt;Some text&lt;/tag&gt;</code> == <code>[Some text]{.myclass}</code>
+</p>
+<p class="caption-text bottombr">
+I tend to use a mix of both approaches (HTML &amp; Quarto syntax). In some situations using Quarto’s <code>[]{}</code> feels cleaner. In other situations, I can get finer control over the styling of elements using HTML.
+</p>
+<div class="panel-tabset">
+<ul id="tabset-15" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-15-1"><code>resources.qmd</code> file</a></li>
+<li><a href="#tabset-15-2">Output</a></li>
+<li><a href="#tabset-15-3">Notes</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-15-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="sc">---</span></span>
+<span id="cb45-2"><a href="#cb45-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="sc">---</span></span>
+<span id="cb45-4"><a href="#cb45-4"></a></span>
+<span id="cb45-5"><a href="#cb45-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-6"><a href="#cb45-6"></a></span>
+<span id="cb45-7"><a href="#cb45-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-8"><a href="#cb45-8"></a></span>
+<span id="cb45-9"><a href="#cb45-9"></a>[Here is another custom subtitle written with Quarto syntax]{.custom<span class="sc">-</span>subtitle}</span>
+<span id="cb45-10"><a href="#cb45-10"></a></span>
+<span id="cb45-11"><a href="#cb45-11"></a>Also note that I do not need to wrap this text <span class="cf">in</span> the <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> tag <span class="cf">in</span> order <span class="cf">for</span> it to render as normal text. <span class="st">`</span><span class="at">.qmd</span><span class="st">`</span> files allow us to seamlessly blend markdown syntax with HTML.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-15-2">
+<center>
+<img src="images/quarto-css-syntax.png" width="500">
+</center>
+</div>
+<div id="tabset-15-3">
+<div class="caption-text">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> You’ll notice the <code>[]{}</code> syntax throughout Quarto’s documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don’t <em>need</em> to use it, but it helps to know what it is when you see it!
+</div>
+</div>
+</div>
+</div>
+</section><section id="get-inspired" class="slide level2" data-menu-title="Get inspired" data-background="#053660"><h2></h2>
+<div class="page-center">
+<div class="custom-subtitle">
+<svg aria-label="Lightbulb" role="img" viewbox="0 0 352 512" style="height:1em;width:0.69em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Lightbulb</title>
+<path d="M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z"></path></svg> Get inspired
+</div>
+</div>
+</section><section id="trial-error" class="slide level2" data-menu-title="Styling = lots of trial &amp; error"><h2></h2>
+<p class="slide-title">
+Styling your website can be challenging
+</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<center>
+<img src="images/dont-know.gif" width="400">
+</center>
+<center>
+<p class="caption-text gray-text topbr">
+^ How I feel most of the time while trying to write CSS
+</p>
+</center>
+</div><div class="column" style="width:50%;">
+<br><p class="body-text">
+…and honestly, <strong><em>a lot</em></strong> of it is trial and error. Inspecting (<em>reminder: right-click on an element in your website preview and choose “Inspect”</em>) your website can take patience and persistence to figure out how exactly to target your desired element.
+</p>
+<p><br></p>
+<p class="body-text bottombr">
+Luckily, there are ways to help yourself along.
+</p>
+</div>
+</div>
+</section><section id="look-at-other-sites" class="slide level2" data-menu-title="Look at other websites"><h2></h2>
+<p class="slide-title">
+Check out source code (specifically the stylesheets) of other sites
+</p>
+<p><br></p>
+<div class="fragment">
+<p class="caption-text topbr bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> Learn from others! Exploring the source code for other websites, presentations, etc. is, in my opinion, critical for learning this new skill and applying it to your own work.
+</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p class="caption-text bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> More and more Quarto websites are popping up all the time – keep an eye out on Twitter for folks sharing their sites! (I’ll never stop obsessing over <a href="https://maya.rbind.io/">Maya Gans’ Quarto site</a>). You can also explore the source code and stylesheets for Quarto presentations (cough cough, like <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites">this very presentation</a>), books, and more.
+</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p class="caption-text bottombr">
+<svg aria-label="angle-right" role="img" viewbox="0 0 256 512" style="height:1em;width:0.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>angle-right</title>
+<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg> And don’t limit yourself to Quarto sites! Check out <a href="https://distillery.rbind.io/">The Distillery Showcase</a>, which links to a long list of websites built with R’s <a href="https://github.com/rstudio/distill">distill</a> package (<strong>Note:</strong> the <a href="https://github.com/rstudio/distill">distill</a> framework <em>is</em> a bit different – when exploring <code>.css</code> files, look for CSS selectors beneath the section <code>/*-- Additional custom styles --*/</code>).
+</p>
+</div>
+</section><section id="inspect-edit" class="slide level2" data-menu-title="'Edit' while you Inspect"><h2></h2>
+<p class="slide-title">
+Inspecting web pages allows you to temporarily “edit” CSS
+</p>
+<p class="caption-text bottombr">
+Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly what elements selectors are manipulating. <strong>Note</strong> that these changes are only <em>temporary</em> – refreshing your web browser will revert your site back to it’s original state.
+</p>
+<center>
+<img src="images/inspect-edit.gif" width="650">
+</center>
+</section><section id="inspect-edit" class="slide level2" data-menu-title="Interactive tutorials"><h2></h2>
+<p class="slide-title">
+Take advantage of interactive tutorials
+</p>
+<p class="body-text bottombr">
+<a href="https://www.w3schools.com/css/default.asp">W3Schools</a> has <em>tons</em> of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!
+</p>
+<p><br></p>
+<center>
+<img src="images/w3-try.gif" width="650">
+</center>
 </section><section id="TheEnd" class="slide level2" data-menu-title="~End Slide~"><h2></h2>
 <center>
 <div class="slide-title">
