@@ -91,8 +91,9 @@ format: revealjs
 
 ##  {#html-practice0 data-menu-title="Practice HTML (0/2)" background="#053660"}
 
-<div class="page-center">
-<div class="custom-subtitle">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
+<div class="page-center vertical-center">
+<p class="custom-subtitle bottombr">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</p>
+<p class="caption-text">*In the following exercise, we’ll be creating a `.html` file (and eventually, a `.css` file to style it). This is meant only to help us familiarize ourselves with HTML syntax and does not have anything to directly do with our Quarto websites — feel free to delete this file(s) later, or keep as a reference!*</p>
 </div>
 
 ---
