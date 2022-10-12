@@ -24,7 +24,7 @@ format: revealjs
 
 ---
 
-## {#why-use-sass data-menu-title="Why use Sass?"}
+## {#why-use-sass1 data-menu-title="Why use Sass?"}
 
 <p class="slide-title">Why use Sass?</p>
 
@@ -36,7 +36,7 @@ format: revealjs
 
 ---
 
-## {#why-use-sass data-menu-title="Why use Sass?"}
+## {#why-use-sass2 data-menu-title="Why use Sass?"}
 
 <p class="slide-title">Why use Sass?</p>
 

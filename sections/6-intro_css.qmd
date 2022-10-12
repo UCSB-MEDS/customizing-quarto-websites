@@ -307,7 +307,7 @@ h1 {
 
 <div class="slide-title">The highest specificity value "wins"</div>
 
-<div class="caption-text topbr">[Specificity](https://www.w3schools.com/css/css_specificity.asp) can be complicated (especially when you consider all the other types of selectors we haven't covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override Element selectors, etc. The order that rules are written in your style sheet matters as well -- since rules are read top to bottom, a directly competing rule farther down your style sheet will take precedent.</div>
+<div class="caption-text topbr">[Specificity](https://www.w3schools.com/css/css_specificity.asp) can be complicated (especially when you consider all the other types of selectors we haven't covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override element selectors, etc. The order that rules are written in your stylesheet matters as well -- since rules are read top to bottom, a directly competing rule farther down your stylesheet will take precedent.</div>
 
 :::: {.columns}
 ::: {.column width="50%"}

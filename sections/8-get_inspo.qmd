@@ -67,7 +67,7 @@ format: revealjs
 
 ---
 
-##  {#inspect-edit data-menu-title="Interactive tutorials"}
+##  {#interactive-tutorials data-menu-title="Interactive tutorials"}
 
 <p class="slide-title">Take advantage of interactive tutorials</p>
 

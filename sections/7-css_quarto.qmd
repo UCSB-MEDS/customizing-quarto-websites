@@ -171,7 +171,7 @@ h1, h3 {
 
 <center><p class="slide-title">What's with that `title` class selector?</p></center>
 
-<div class="caption-text topbr">Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class `title`.</div>
+<div class="caption-text topbr">Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class, `title`.</div>
 
 <div class="caption-text topbr">The Quarto framework has defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:</div> 
 
@@ -210,7 +210,7 @@ h1, h3 {
 
 ## Notes
 
-<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` In this case, I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements *already* are assigned the class `title`.</div>
+<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` In this case, I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`.</div>
 
 :::
 
