@@ -81,7 +81,7 @@ format:
 
 ## {#TheEnd data-menu-title="~End Slide~"}
 
-<center><div class="slide-title">Now get to customizing!</div></center>
+<center><p class="slide-title">Now get to customizing!</p></center>
 
 <br>
 
