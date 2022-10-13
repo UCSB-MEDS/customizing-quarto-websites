@@ -2,7 +2,7 @@
 format: 
   revealjs:
     slide-number: true
-    preview-links: true
+    # preview-links: true
     code-link: true
     highlight-style: a11y
     chalkboard: true
