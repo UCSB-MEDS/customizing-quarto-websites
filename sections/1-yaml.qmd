@@ -125,9 +125,9 @@ format:
 
 ## Notes
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` The navbar pages will appear as however you named each `.qmd` file (e.g. `about.qmd` appears in the navbar as "**about**", however you can update the name by providing the `text` option and specifying how you'd like the text to appear.</div>
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` The navbar page names will appear as the title given to each `.qmd` file (e.g. in the YAML of `about.qmd`, the `title` option has the value `about`, and therefore appears in the navbar as "**about**"). However you can update the name as it appears in your navbar by providing the `text` option when linking your new page in `_quarto.yml`.</div>
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Link your resume or CV by providing a file path to the pdf in `href` (e.g. `href: file/path/to/CV.pdf`) and the text as you'd like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked.</div>
+<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Link your resume or CV by providing a file path to the pdf in `href` (e.g. `href: file/path/to/CV.pdf`) and the text as you'd like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked. Be sure to provide the `text` option with the title as you'd like it to appear in your navbar.</div>
 
 :::
 
