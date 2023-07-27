@@ -925,11 +925,10 @@ Import and apply new fonts <svg aria-label="Font" role="img" viewbox="0 0 448 51
 </center>
 </div>
 </section><section id="explore-fonts" class="slide level2" data-menu-title="Explore"><h2></h2>
-<p class="slide-title">
-Explore Google Fonts
-</p>
+<p><span class="slide-title">Explore Google Fonts</span></p>
+<hr>
 <div class="body-text topbr">
-With Quarto, we can define a single primary font directly in our <code>_quarto.yml</code> file:
+<p>With Quarto, we can define a single primary font directly in our <code>_quarto.yml</code> file:</p>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>format<span class="sc">:</span></span>
@@ -940,32 +939,28 @@ With Quarto, we can define a single primary font directly in our <code>_quarto.y
 <span id="cb12-6"><a href="#cb12-6"></a>    toc<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="body-text topbr bottombr">
-To do so, we first need to choose and import any fonts we’d like to use throughout our website. Start by exploring the <em>many</em> fonts available at <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a>.
+<p>To do so, we first need to choose and import any fonts we’d like to use throughout our website. Start by exploring the <em>many</em> fonts available at <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a>.</p>
 </div>
 <p><br></p>
-<center>
-<img src="images/google-fonts.png" width="500">
-</center>
-</section><section id="select-fonts" class="slide level2" data-menu-title="Select Fonts"><h2></h2>
-<p class="slide-title">
-Selecting a Google Font(s)
-</p>
+
+<img data-src="images/google-fonts.png" style="width:50.0%" class="r-stretch quarto-figure-center"></section><section id="select-fonts" class="slide level2" data-menu-title="Select Fonts"><h2></h2>
+<p><span class="slide-title">Selecting a Google Font(s)</span></p>
+<hr>
 <div class="caption-text topbr bottombr">
-<strong>1.</strong> Once you’ve found a font you’d like to use, scroll down to the <strong>Styles</strong> section of that font’s page – here you’ll (typically) find a number of different weights (e.g.&nbsp;thin, light, regular, bold) and styles (e.g.&nbsp;italic). Click on the <strong>+</strong> button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, to the right of the style you want. In this example, I choose <em>Nunito</em> in the <em>Light 300</em> style, though you can choose as many fonts to import as you’d like.
+<p><strong>1.</strong> Once you’ve found a font you’d like to use, scroll down to the <strong>Styles</strong> section of that font’s page – here you’ll (typically) find a number of different weights (e.g.&nbsp;thin, light, regular, bold) and styles (e.g.&nbsp;italic). Click on the <strong>+</strong> button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, to the right of the style you want. In this example, I choose <em>Nunito</em> in the <em>Light 300</em> style, though you can choose as many fonts and styles to import as you’d like. <strong>Note:</strong> You <em>must</em> import a higher weight font style if you plan to use <strong>bolded</strong> text.</p>
 </div>
 <div class="caption-text topbr bottombr">
-<strong>2.</strong> Click on the <strong>View selected families</strong> button, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, in the top right corner to see all of your selected fonts. Under the <strong>Use on the web</strong> section, select the radio button for <strong><span class="citation" data-cites="import">@import</span></strong> and copy everything between the <code>&lt;style&gt; &lt;/style&gt;</code> tags (starting with <code>@import</code> and ending with <code>;</code>) to your clipboard.
+<p><strong>2.</strong> Click on the <strong>View selected families</strong> button, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, in the top right corner to see all of your selected fonts. Under the <strong>Use on the web</strong> section, select the radio button for <strong><span class="citation" data-cites="import">@import</span></strong> and copy everything between the <code>&lt;style&gt; &lt;/style&gt;</code> tags (starting with <code>@import</code> and ending with <code>;</code>) to your clipboard.</p>
 </div>
 <center>
 <iframe width="550" height="290" src="images/google-fonts.gif" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
 </iframe>
 </center>
 </section><section id="import-fonts" class="slide level2" data-menu-title="Import Fonts"><h2></h2>
-<p class="slide-title">
-Importing a Google Font(s)
-</p>
+<p><span class="slide-title">Importing a Google Font(s)</span></p>
+<hr>
 <div class="body-text topbr bottombr">
-To import a font, paste your copied clipboard into <code>mystyles.scss</code>
+<p>To import a font, paste your copied clipboard into <code>mystyles.scss</code></p>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13" data-code-line-numbers="3-4"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
@@ -998,9 +993,8 @@ To import a font, paste your copied clipboard into <code>mystyles.scss</code>
 <span id="cb13-28"><a href="#cb13-28"></a>$code-block-bg<span class="in">: $cream</span>; <span class="er">// code block background color</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="use-fonts" class="slide level2" data-menu-title="Use Fonts"><h2></h2>
-<p class="slide-title">
-Using a Google Font(s)
-</p>
+<p><span class="slide-title">Using a Google Font(s)</span></p>
+<hr>
 <div class="panel-tabset">
 <ul id="tabset-5" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-5-1"><code>_quarto.yml</code> file</a></li>
@@ -1010,7 +1004,7 @@ Using a Google Font(s)
 <div class="tab-content">
 <div id="tabset-5-1">
 <div class="body-text topbr bottombr">
-To apply an imported font as a primary font, update <code>_quarto.yml</code> with the font name.
+<p>To apply an imported font as a primary font, update <code>_quarto.yml</code> with the font name.</p>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>format<span class="sc">:</span></span>
@@ -1022,14 +1016,18 @@ To apply an imported font as a primary font, update <code>_quarto.yml</code> wit
 </div>
 </div>
 <div id="tabset-5-2">
-<center>
-<img src="images/nunito.png" width="550">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/nunito.png" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div id="tabset-5-3">
-<div class="caption-text topbr bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> If you plan to use multiple fonts, you can create Sass variables for each font type, then use those variables as you construct your CSS rules. For example, this slide deck uses three fonts (Sanchez, Montserrat, and Roboto Mono):
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> If you plan to use multiple fonts, you can create Sass variables for each font type, then use those variables as you construct your CSS rules. For example, this slide deck uses three fonts (Sanchez, Montserrat, and Roboto Mono):</p>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1"></a><span class="er">// Fonts</span></span>
@@ -1043,6 +1041,9 @@ To apply an imported font as a primary font, update <code>_quarto.yml</code> wit
 </div>
 </div>
 </div>
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You <em>must</em> import a higher font weight (e.g.&nbsp;800), in addition to your standard “regular” weight, if you wish to <strong>bold</strong> text.</p>
+</div>
 </section><section id="refining" class="slide level2" data-menu-title="Time to Refine" data-background="#053660"><h2></h2>
 <div class="vertical-center">
 <center>
@@ -1052,103 +1053,102 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 </center>
 </div>
 </section><section id="enter-css-sass" class="slide level2" data-menu-title="Enter HTML &amp; CSS"><h2></h2>
-<div class="slide-title">
-Enter HTML and CSS
-</div>
+<p><span class="slide-title">Enter HTML and CSS</span></p>
+<hr>
 <div class="body-text topbr">
-In order to really fine-tune the appearance of our site, we need to dive a bit into the world of <a href="https://html.spec.whatwg.org/">HTML</a> and <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>.
+<p>In order to really fine-tune the appearance of our site, we need to dive a bit into the world of <a href="https://html.spec.whatwg.org/">HTML</a> and <a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a>.</p>
 </div>
 
-<img data-src="images/html_css.png" alt="The CSS 3 and Sass logos" width="299" class="r-stretch quarto-figure-center"><div class="body-text">
-Some of you may have already heard of/written HTML and/or CSS – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.
+<img data-src="images/html_css.png" style="width:60.0%" alt="The CSS 3 and Sass logos" class="r-stretch quarto-figure-center"><div class="body-text topbr">
+<p>Some of you may have already heard of/written HTML and/or CSS – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.</p>
 </div>
 </section><section id="building-blocks-html" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (1/2)"><h2></h2>
-<div class="slide-title">
-HTML &amp; CSS are the building blocks of web pages
+<p><span class="slide-title-smaller">HTML &amp; CSS are the building blocks of web pages</span></p>
+<hr>
+<div class="smaller-body-text topbr">
+<p><strong>HTML</strong> (Hypertext Markup Language) is a <em>markup language</em><sup>1</sup> that tells web browsers how to <em>structure</em> web pages. You can think of HTML as the <em>skeleton</em> of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</p>
+</div>
+
+<img data-src="images/html.png" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text topbr">
+<p>Source: Adapted from <a href="https://github.com/nkarasiak/Illustration">Nicolas Karasiak</a></p>
 </div>
 <div class="caption-text topbr">
-<strong>HTML</strong> (Hypertext Markup Language) is a <em>markup language</em><sup>1</sup> that tells web browsers how to <em>structure</em> web pages. You can think of HTML as the <em>skeleton</em> of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.
-</div>
-<center>
-<img src="images/html.png" width="600">
-</center>
-<center>
-<div class="caption-text gray-text topbr bottombr">
-Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
-</div>
-</center>
-<div class="caption-text">
-<sup>1</sup><a href="https://www.markdownguide.org/"><strong>Markdown</strong></a> and <a href="https://rmarkdown.rstudio.com/"><strong>R Markdown</strong></a> are both lightweight markup languages – they’re a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
+<p><sup>1</sup><a href="https://www.markdownguide.org/"><strong>Markdown</strong></a> and <a href="https://rmarkdown.rstudio.com/"><strong>R Markdown</strong></a> are both lightweight markup languages – they’re a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</p>
 </div>
 </section><section id="building-blocks-css" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (2/2)"><h2></h2>
-<div class="slide-title">
-HTML &amp; CSS are the building blocks of web pages
+<p><span class="slide-title-smaller">HTML &amp; CSS are the building blocks of web pages</span></p>
+<hr>
+<div class="smaller-body-text topbr">
+<p><strong>CSS</strong> (Cascading Style Sheets) is a programming language that allows you to control how HTML elements <em>look</em> on a web page. You can think of CSS as the <em>outfit</em> that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</p>
 </div>
-<div class="caption-text topbr">
-<strong>CSS</strong> (Cascading Style Sheets) is a programming language that allows you to control how HTML elements <em>look</em> on a web page. You can think of CSS as the <em>outfit</em> that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.
+
+<img data-src="images/css.png" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text bottombr">
+<p>Source: Adapted from <a href="https://github.com/nkarasiak/Illustration">Nicolas Karasiak</a></p>
 </div>
-<center>
-<img src="images/css.png" width="600">
-</center>
-<center>
-<div class="caption-text gray-text bottombr">
-Source: Adapted from Nicolas Karasiak, <a href="https://github.com/nkarasiak/Illustration" class="uri">https://github.com/nkarasiak/Illustration</a>
-</div>
-</center>
 </section><section id="browser-styling" class="slide level2" data-menu-title="Browser styling"><h2></h2>
-<div class="slide-title">
-Your browser has its own internal style sheet to render HTML
-</div>
+<p><span class="slide-title-smaller">Your browser has its own internal style sheet to render HTML</span></p>
+<hr>
 <div class="body-text topbr">
-Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.
+<p>Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<center>
-<img src="images/html_github.png" width="600">
-</center>
-<center>
-<div class="caption-text gray-text">
-HTML
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/html_github.png" style="width:90.0%"></p>
+</figure>
 </div>
-</center>
+</div>
+</div>
+<div class="caption-text gray-text center-text">
+<p>HTML</p>
+</div>
 </div><div class="column" style="width:50%;">
-<center>
-<img src="images/browser_styling_github.png" width="600">
-</center>
-<center>
-<div class="caption-text gray-text">
-Browser default styling
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/browser_styling_github.png" style="width:90.0%"></p>
+</figure>
 </div>
-</center>
+</div>
+</div>
+<div class="caption-text gray-text center-text">
+<p>Browser default styling</p>
+</div>
 </div>
 </div>
 </section><section id="css-styling" class="slide level2" data-menu-title="CSS styling"><h2></h2>
-<div class="slide-title">
-CSS adds <em>pizzazz</em> to web page renderings
-</div>
+<p><span class="slide-title-smaller">CSS adds <em>pizzazz</em> to web page renderings</span></p>
+<hr>
 <div class="body-text topbr">
-CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they’d all generally look the same).
+<p>CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they’d all generally look the same).</p>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<center>
-<img src="images/browser_styling_github.png" width="600">
-</center>
-<center>
-<div class="caption-text gray-text">
-Browser default styling
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/browser_styling_github.png" style="width:100.0%"></p>
+</figure>
 </div>
-</center>
+</div>
+</div>
+<div class="caption-text gray-text center-text">
+<p>Browser default styling</p>
+</div>
 </div><div class="column" style="width:50%;">
-<center>
-<img src="images/css_styling_github.png" width="600">
-</center>
-<center>
-<div class="caption-text gray-text">
-CSS styling
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/css_styling_github.png" style="width:100.0%"></p>
+</figure>
 </div>
-</center>
+</div>
+</div>
+<div class="caption-text gray-text center-text">
+<p>CSS styling</p>
+</div>
 </div>
 </div>
 </section><section id="light-intro-html" class="slide level2" data-menu-title="Light intro to HTML" data-background="#053660"><h2></h2>
@@ -1159,42 +1159,40 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 </div>
 </div>
 </section><section id="html-elements1" class="slide level2" data-menu-title="HTML elements"><h2></h2>
-<div class="slide-title">
-HTML elements
-</div>
+<p><span class="slide-title">HTML elements</span></p>
+<hr>
 <div class="body-text topbr">
-HTML consists of a series of <a href="https://www.w3schools.com/html/html_elements.asp">elements</a> comprising <strong>start tags</strong> and <strong>end tags</strong> that render some form of content in a particular way.
+<p>HTML consists of a series of <a href="https://www.w3schools.com/html/html_elements.asp">elements</a> comprising <strong>start tags</strong> and <strong>end tags</strong> that render some form of content in a particular way.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:70%;">
-<center>
-<div class="body-text">
-<strong>The basic anatomy of an HTML element:</strong>
+<div class="body-text center-text">
+<p><strong>The basic anatomy of an HTML element:</strong></p>
 </div>
-</center>
-<center>
-<img src="images/html_element.png" width="700">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/html_element.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:30%;">
-<br><br><div class="caption-text">
-In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your website customization workshop</code>
+<p><br><br></p>
+<div class="caption-text">
+<p>In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your website customization workshop</code></p>
 </div>
 </div>
 </div>
-<center>
-<div class="caption-text gray-text topbr">
-<strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.
+<div class="caption-text gray-text center-text topbr">
+<p><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.</p>
 </div>
-</center>
 </section><section id="html-elements2" class="slide level2" data-menu-title="Commonly used HTML tags"><h2></h2>
-<div class="slide-title">
-Commonly used HTML tags
+<p><span class="slide-title">Commonly used HTML tags</span></p>
+<hr>
+<div class="body-text center-text topbr">
+<p>Browse a complete <a href="https://www.w3schools.com/tags/default.asp">list of HTML tags</a>.</p>
 </div>
-<center>
-<div class="body-text topbr">
-Browse a complete list of HTML tags <a href="https://www.w3schools.com/tags/default.asp">here</a>.
-</div>
-</center>
 <table>
 <colgroup>
 <col style="width: 25%">
@@ -1247,81 +1245,78 @@ Browse a complete list of HTML tags <a href="https://www.w3schools.com/tags/defa
 </tr>
 </tbody>
 </table></section><section id="nested-html-elements" class="slide level2" data-menu-title="Nested HTML elements"><h2></h2>
-<div class="slide-title">
-HTML nested elements
-</div>
+<p><span class="slide-title">HTML nested elements</span></p>
+<hr>
 <div class="body-text topbr">
-You can also <em>nest</em> elements. Remember to close out tags from the inside-out to avoid unexpected renderings.
+<p>You can also <em>nest</em> elements. Remember to close out tags from the inside-out to avoid unexpected renderings.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:70%;">
-<center>
-<div class="body-text">
-<strong>Nested HTML elements:</strong>
+<div class="body-text center-text">
+<p><strong>Nested HTML elements:</strong></p>
 </div>
-</center>
-<center>
-<img src="images/nested_html_elements.png" width="700">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/nested_html_elements.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:30%;">
-<br><br><div class="caption-text">
-In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your **website customization** workshop</code>
+<p><br><br></p>
+<div class="caption-text">
+<p>In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your **website customization** workshop</code></p>
 </div>
 </div>
 </div>
-<div class="caption-text topbr important-text-bg">
+<div class="caption-text topbr">
+<div class="important-text-bg">
 <em>Important:</em> Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors <svg aria-label="Face Grin Beam Sweat" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#222222;overflow:visible;position:relative;"><title>Face Grin Beam Sweat</title>
 <path d="M476.8 126.3C497.1 120.8 512 102.7 512 81c0-20-28.6-60.4-41.6-77.7c-3.2-4.4-9.6-4.4-12.8 0c-9.5 12.6-27.1 37.2-36 57.5c-.3 .7-.6 1.4-.9 2.1C417.8 69.7 416 76 416 81c0 26 21.5 47 48 47c4.4 0 8.7-.6 12.8-1.7zM395.4 41.2C355.3 15.2 307.4 0 256 0C114.6 0 0 114.6 0 256S114.6 512 256 512s256-114.6 256-256c0-35.8-7.3-69.9-20.6-100.8c-8.6 3.1-17.8 4.8-27.4 4.8c-8.9 0-17.6-1.5-25.7-4.2C454.7 185.5 464 219.7 464 256c0 114.9-93.1 208-208 208S48 370.9 48 256S141.1 48 256 48c48.7 0 93.4 16.7 128.9 44.7c-.6-3.8-.9-7.7-.9-11.7c0-11.4 3.8-22.4 7.1-30.5c1.3-3.1 2.7-6.2 4.3-9.3zM375 336.5c10.4-16.1-6.8-32.5-25.5-28.1c-28.9 6.8-60.5 10.5-93.6 10.5s-64.7-3.7-93.6-10.5c-18.7-4.4-35.9 12-25.5 28.1c24.6 38.1 68.7 63.5 119.1 63.5s94.5-25.4 119.1-63.5zM217.6 228.8l0 0 0 0 0 0c2.1 2.8 5.7 3.9 8.9 2.8s5.5-4.1 5.5-7.6c0-17.9-6.7-35.6-16.6-48.8c-9.8-13-23.9-23.2-39.4-23.2s-29.6 10.2-39.4 23.2C126.7 188.4 120 206.1 120 224c0 3.4 2.2 6.5 5.5 7.6s6.9 0 8.9-2.8l0 0 0 0 0 0 .2-.2c.2-.2 .4-.5 .7-.9c.6-.8 1.6-2 2.8-3.4c2.5-2.8 6-6.6 10.2-10.3c8.8-7.8 18.8-14 27.7-14s18.9 6.2 27.7 14c4.2 3.7 7.7 7.5 10.2 10.3c1.2 1.4 2.2 2.6 2.8 3.4c.3 .4 .6 .7 .7 .9l.2 .2 0 0zm160 0l0 0 0 0c2.1 2.8 5.7 3.9 8.9 2.8s5.5-4.1 5.5-7.6c0-17.9-6.7-35.6-16.6-48.8c-9.8-13-23.9-23.2-39.4-23.2s-29.6 10.2-39.4 23.2C286.7 188.4 280 206.1 280 224c0 3.4 2.2 6.5 5.5 7.6s6.9 0 8.9-2.8l0 0 0 0 0 0 .2-.2c.2-.2 .4-.5 .7-.9c.6-.8 1.6-2 2.8-3.4c2.5-2.8 6-6.6 10.2-10.3c8.8-7.8 18.8-14 27.7-14s18.9 6.2 27.7 14c4.2 3.7 7.7 7.5 10.2 10.3c1.2 1.4 2.2 2.6 2.8 3.4c.3 .4 .6 .7 .7 .9l.2 .2 0 0 0 0z"></path></svg>.
 </div>
+</div>
 </section><section id="html-attribures" class="slide level2" data-menu-title="HTML attributes"><h2></h2>
-<div class="slide-title">
-HTML attributes
+<p><span class="slide-title-smallest">HTML attributes can be used for targetted styling</span></p>
+<hr>
+<div class="body-text topbr">
+<p><a href="https://www.w3schools.com/html/html_attributes.asp">Attributes</a> provide extra information about elements. They are always <strong>specified in the start tag</strong> and usually come in <strong>value/name pairs</strong> (e.g.&nbsp;<code>attributeName="attributeValue"</code>).</p>
 </div>
 <div class="body-text topbr">
-HTML elements can also have <a href="https://www.w3schools.com/html/html_attributes.asp">attributes</a> which provide extra information about elements. They are always specified in the start tag and usually come in value/name pairs (e.g.&nbsp;<code>attributeName="attributeValue"</code>).
-</div>
 <div class="body-text">
-Attributes can be used in many powerful ways – one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We’ll come back to this concept soon.
+Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp;<strong><code>class</code></strong> or <strong><code>id</code></strong> attributes) – more on this soon.
 </div>
-<center>
-<div class="body-text">
-<strong>The basic anatomy of an HTML attribute:</strong>
 </div>
-</center>
-<center>
-<img src="images/html_attribute.png" width="700">
-</center>
-</section><section id="html-practice0" class="slide level2" data-menu-title="Practice HTML (0/2)" data-background="#053660"><h2></h2>
+<div class="body-text center-text">
+<p><strong>The basic anatomy of an HTML attribute:</strong></p>
+</div>
+
+<img data-src="images/html_attribute.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="html-practice0" class="slide level2" data-menu-title="Practice HTML (0/2)" data-background="#053660"><h2></h2>
 <div class="page-center vertical-center">
 <p class="custom-subtitle bottombr">
 <svg aria-label="Laptop Code" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Laptop Code</title>
 <path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Practice writing some HTML <svg aria-label="HTML 5 Logo" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>HTML 5 Logo</title>
 <path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg></p>
-<p class="caption-text">
+<p class="smaller-body-text">
 <em>In the following exercise, we’ll be creating a <code>.html</code> file (and eventually, a <code>.css</code> file to style it). This is meant only to help us familiarize ourselves with HTML syntax and does not have anything to directly do with our Quarto websites — feel free to delete this file(s) later, or keep as a reference!</em>
 </p>
 </div>
 </section><section id="html-practice1" class="slide level2" data-menu-title="Practice HTML (1/2)"><h2></h2>
-<div class="slide-title">
-Exercise: practice writing HTML (1/2)
-</div>
+<p><span class="slide-title">Exercise: practice writing HTML (1/2)</span></p>
+<hr>
 <div class="body-text topbr">
-You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you’re working in RStudio. Later, we’ll link an external (separate) CSS stylesheet within our HTML file to style our elements.
+<p>You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you’re working in RStudio. Later, we’ll link an external (separate) CSS stylesheet within our HTML file to style our elements.</p>
 </div>
 <div class="caption-text topbr">
-<ol type="1"><li>Open an RProject (it’s fine to work on your website branch!). In your terminal window, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.
-</li></ol>
+<p><strong>1.</strong> Open an RProject (it’s fine to work on your website branch!). In your terminal window, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</p>
 </div>
-
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">touch</span> practice-html.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<div class="caption-text">
-<ol start="2" type="1"><li>Create the skeleton of your HTML file.
-</li></ol>
+<div class="caption-text topbr">
+<p><strong>2.</strong> Create the skeleton of your HTML file.</p>
 </div>
-
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
@@ -1335,17 +1330,14 @@ You can use any text editor to do so (RStudio and VS Code work too!). The follow
 </div>
 </div>
 </section><section id="html-practice2" class="slide level2" data-menu-title="Practice HTML (2/2)" data-auto-animate="true"><h2 data-id="quarto-animate-title"></h2>
-<div class="slide-title">
-Exercise: practice writing HTML (2/2)
-</div>
+<p><span class="slide-title">Exercise: practice writing HTML (2/2)</span></p>
+<hr>
 <div class="body-text topbr">
-Write some HTML! <em>We’ll practice styling our HTML in the next section.</em>
+<p>Write some HTML! <em>We’ll practice styling our HTML in the next section.</em></p>
 </div>
 <div class="caption-text topbr">
-<ol start="3" type="1"><li>Create a level one header, a paragraph, and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.
-</li></ol>
+<p><strong>3.</strong> Create a level one header, a paragraph, and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.</p>
 </div>
-
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource html number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode html hljs"><span id="cb18-1" class="hljs-ln-code"><a href="#cb18-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb18-2" class="hljs-ln-code"><a href="#cb18-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
@@ -1358,17 +1350,14 @@ Write some HTML! <em>We’ll practice styling our HTML in the next section.</em>
 <span id="cb18-9" class="hljs-ln-code"><a href="#cb18-9"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="html-practice3" class="slide level2" data-menu-title="Practice HTML Solution (2/2)" data-auto-animate="true" data-visibility="uncounted"><h2 data-id="quarto-animate-title"></h2>
-<div class="slide-title">
-Exercise: practice writing HTML (2/2)
-</div>
+<p><span class="slide-title">Exercise: practice writing HTML (2/2)</span></p>
+<hr>
 <div class="body-text topbr">
-Write some HTML! <em>We’ll practice styling our HTML in the next section.</em>
+<p>Write some HTML! <em>We’ll practice styling our HTML in the next section.</em></p>
 </div>
 <div class="caption-text topbr">
-<ol start="3" type="1"><li>Create a level one header, a paragraph, and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.
-</li></ol>
+<p><strong>3.</strong> Create a level one header, a paragraph, and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.</p>
 </div>
-
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource html number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode html hljs"><span id="cb19-1" class="hljs-ln-code"><a href="#cb19-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb19-2" class="hljs-ln-code"><a href="#cb19-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
@@ -1385,10 +1374,8 @@ Write some HTML! <em>We’ll practice styling our HTML in the next section.</em>
 <span id="cb19-13" class="hljs-ln-code"><a href="#cb19-13"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="caption-text topbr">
-<ol start="4" type="1"><li>Click on the <strong>Preview</strong> button at the top of your source pane to see the rendered output.
-</li></ol>
+<p><strong>4.</strong> Click on the <strong>Preview</strong> button at the top of your source pane to see the rendered output.</p>
 </div>
-
 </section><section id="light-intro-css" class="slide level2" data-menu-title="Light intro to CSS" data-background="#053660"><h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
@@ -1397,67 +1384,60 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="css-rules" class="slide level2" data-menu-title="CSS rules"><h2></h2>
-<div class="slide-title">
-CSS is a rule-based language
-</div>
+<p><span class="slide-title">CSS is a rule-based language</span></p>
+<hr>
 <div class="body-text topbr">
-CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, <em>“I want all level one (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:
+<p>CSS is a rule-based language, meaning that it allows you to <strong>define groups of styles that should be applied to particular elements or groups of elements on a web page.</strong> For example, <em>“I want all level one (<code>&lt;h1&gt;</code>) headings to be green text with a bit of extra space between each letter”</em> could be coded as:</p>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<center>
-<img src="images/CSS_syntax.png" width="700">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/CSS_syntax.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:50%;">
-<div class="caption-text">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg><strong>Selectors</strong> select the HTML element(s) you want to style <em>(e.g.&nbsp;level one headings, <code>&lt;h1&gt;</code>)</em>
+<div class="smaller-body-text">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> <strong>Selectors</strong> select the HTML element(s) you want to style <em>(e.g.&nbsp;level one headings, <code>&lt;h1&gt;</code>)</em></p>
 </div>
-<div class="caption-text topbr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg><strong>Declarations</strong> sit inside curly brackets, <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, and are made up of <strong>property</strong> and <strong>value</strong> pairs. Each pair specifies the property of the HTML element(s) you’re selecting <em>(e.g.&nbsp;the color property of the element <code>&lt;h1&gt;</code>)</em>, and a value you’d like to assign to that property <em>(e.g.&nbsp;green)</em>
+<div class="smaller-body-text topbr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> <strong>Declarations</strong> sit inside curly brackets, <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, and are made up of <strong>property</strong> and <strong>value</strong> pairs. Each pair specifies the property of the HTML element(s) you’re selecting <em>(e.g.&nbsp;the color property of the element <code>&lt;h1&gt;</code>)</em>, and a value you’d like to assign to that property <em>(e.g.&nbsp;green)</em></p>
 </div>
-<div class="caption-text topbr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> A property and its corresponding value are separated by a colon, <code>:</code>. Declarations end with a semicolon, <code>;</code>
+<div class="smaller-body-text topbr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> A property and its corresponding value are separated by a colon, <code>:</code>. Declarations end with a semicolon, <code>;</code></p>
 </div>
 </div>
 </div>
 </section><section id="selector-types" class="slide level2" data-menu-title="Types of Selectors"><h2></h2>
-<div class="slide-title">
-There are a number of different CSS selector types
-</div>
+<p><span class="slide-title-smaller">There are a number of different CSS selector types</span></p>
+<hr>
 <div class="body-text topbr">
-The next few slides review just a few basic CSS selector types for styling HTML elements – these will get you far in your website customization journey (but you can learn more about all the different categories of CSS selectors <a href="https://www.w3schools.com/css/css_selectors.asp">here</a>):
+<p>The next few slides review just a few basic CSS selector types for styling HTML elements – these will get you far in your website customization journey (but check out you can learn more about all the <a href="https://www.w3schools.com/css/css_selectors.asp">different categories of CSS selectors here</a>):</p>
 </div>
-<div class="caption-text topbr bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> Element selectors
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Element selectors</p>
 </div>
-<div class="caption-text bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> Grouping selectors
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Grouping selectors</p>
 </div>
-<div class="caption-text bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> ID selectors
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> ID selectors</p>
 </div>
-<div class="caption-text bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> Class selectors
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Class selectors</p>
 </div>
-<div class="caption-text bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> Universal selector
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Universal selector</p>
 </div>
-<div class="caption-text bottombr">
-<svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
-<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> Inline styling (not a selector type, but an alternative way to apply CSS styling)
+<div class="smaller-body-text topbr bottombr">
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Inline styling (not a selector type, but an alternative way to apply CSS styling)</p>
 </div>
 </section><section id="select-tags" class="slide level2" data-menu-title="Element &amp; Grouping Selectors"><h2></h2>
-<div class="slide-title">
-Select an element(s) based on its tag
-</div>
+<p><span class="slide-title">Select an element(s) based on its tag</span></p>
+<hr>
 <div class="panel-tabset">
 <ul id="tabset-6" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-6-1">Element Selectors</a></li>
@@ -1466,22 +1446,18 @@ Select an element(s) based on its tag
 <div class="tab-content">
 <div id="tabset-6-1">
 <div class="body-text">
-Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.
+<p>Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="body-text">
-<strong>CSS</strong>
-</div>
+<p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb20-1"><a href="#cb20-1"></a>h1 {</span>
 <span id="cb20-2"><a href="#cb20-2"></a>  <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
 <span id="cb20-3"><a href="#cb20-3"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb20-4"><a href="#cb20-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="body-text topbr">
-<strong>HTML</strong>
-</div>
+<p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb21-2"><a href="#cb21-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will not be styled<span class="kw">&lt;/h2&gt;</span></span>
@@ -1489,35 +1465,35 @@ Any HTML element can be used as a selector. The declarations specified apply to 
 <span id="cb21-4"><a href="#cb21-4"></a><span class="kw">&lt;h1&gt;</span>But this second level one header will be<span class="kw">&lt;/h1&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
-<br><br><center>
-<div class="body-text topbr">
-<strong>Output</strong>
+<p><br><br></p>
+<div class="body-text center-text topbr">
+<p><strong>Output</strong></p>
 </div>
-</center>
-<center>
-<img src="images/element_selector.png" width="600">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/element_selector.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="tabset-6-2">
 <div class="body-text">
-Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.
+<p>Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="body-text">
-<strong>CSS</strong>
-</div>
+<p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb22-1"><a href="#cb22-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> p {</span>
 <span id="cb22-2"><a href="#cb22-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
 <span id="cb22-3"><a href="#cb22-3"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
 <span id="cb22-4"><a href="#cb22-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="body-text topbr">
-<strong>HTML</strong>
-</div>
+<p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
@@ -1525,23 +1501,27 @@ Rather than defining separate rules for multiple element selectors that you want
 <span id="cb23-4"><a href="#cb23-4"></a><span class="kw">&lt;p&gt;</span>This paragraph will be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
-<br><br><center>
-<div class="body-text topbr">
-<strong>Output</strong>
+<p><br><br></p>
+<div class="body-text center-text topbr">
+<p><strong>Output</strong></p>
 </div>
-</center>
-<center>
-<img src="images/grouping_selector.png" width="600">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/grouping_selector.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section><section id="select-attributes" class="slide level2" data-menu-title="ID &amp; Class Selectors"><h2></h2>
-<div class="slide-title">
-Select an element(s) using attributes
-</div>
+<p><span class="slide-title">Target element(s) using attributes</span></p>
+<!-- Select an element(s) using attributes -->
+<hr>
 <div class="panel-tabset">
 <ul id="tabset-7" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-7-1">ID Selectors</a></li>
@@ -1550,83 +1530,82 @@ Select an element(s) using attributes
 <div class="tab-content">
 <div id="tabset-7-1">
 <div class="body-text">
-An ID selector uses the <em><code>id</code> attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a <code>#</code> followed by the selector name, e.g.&nbsp;<code>#selector</code>.
+<p>An ID selector uses the <em><code>id</code> attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a <code>#</code> followed by the selector name, e.g.&nbsp;<code>#selector</code>.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:60%;">
-<div class="body-text">
-<strong>CSS</strong>
-</div>
+<p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1"></a><span class="pp">#para1</span> {</span>
 <span id="cb24-2"><a href="#cb24-2"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
 <span id="cb24-3"><a href="#cb24-3"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
 <span id="cb24-4"><a href="#cb24-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="body-text topbr">
-<strong>HTML</strong>
-</div>
+<p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"para1"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb25-2"><a href="#cb25-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
-<br><br><center>
-<div class="body-text topbr">
-<strong>Output</strong>
+<p><br><br></p>
+<div class="body-text center-text topbr">
+<p><strong>Output</strong></p>
 </div>
-</center>
-<center>
-<img src="images/id_selector.png" width="600">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/id_selector.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="tabset-7-2">
-<div class="body-text">
-A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code>
+<div class="smaller-body-text">
+<p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="body-text topbr">
-<strong>CSS</strong>
-</div>
+<p><span class="body-text topbr"><strong>CSS</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">.blue-italicized</span> {</span>
 <span id="cb26-2"><a href="#cb26-2"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
 <span id="cb26-3"><a href="#cb26-3"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
 <span id="cb26-4"><a href="#cb26-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="body-text topbr">
-<strong>HTML</strong>
-</div>
+<p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-italicized"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb27-2"><a href="#cb27-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
-<br><br><center>
-<div class="body-text topbr">
-<strong>Output</strong>
+<p><br></p>
+<div class="body-text center-text topbr">
+<p><strong>Output</strong></p>
 </div>
-</center>
-<center>
-<img src="images/class_selector.png" width="450">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/class_selector.png" style="width:60.0%"></p>
+</figure>
 </div>
 </div>
-<center>
-<div class="body-text topbr important-text-bg">
-<em>If you’re like me, you’ll probably find yourself using class selectors most often!</em>
 </div>
-</center>
+</div>
+</div>
+<div class="caption-text center-text topbr">
+<div class="important-text-bg">
+<em>If you’re like me, you’ll probably find yourself using <strong>class selectors</strong> most often!</em>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section><section id="universal-inline" class="slide level2" data-menu-title="Universal &amp; Inline Selectors"><h2></h2>
-<div class="slide-title">
-Select all elements or style inline
-</div>
+<p><span class="slide-title">Select all elements or style inline</span></p>
+<hr>
 <div class="panel-tabset">
 <ul id="tabset-8" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-8-1">Universal Selector</a></li>
@@ -1635,55 +1614,66 @@ Select all elements or style inline
 <div class="tab-content">
 <div id="tabset-8-1">
 <div class="body-text">
-The universal selector selects <em>all</em> HTML elements on the page. It is written using only an asterisk, <code>*</code>.
+<p>The universal selector selects <em>all</em> HTML elements on the page. It is written using only an asterisk, <code>*</code>.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="body-text topbr">
-<strong>CSS</strong>
-</div>
+<p><span class="body-text topbr"><strong>CSS</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb28-1"><a href="#cb28-1"></a><span class="op">*</span> {</span>
 <span id="cb28-2"><a href="#cb28-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
 <span id="cb28-3"><a href="#cb28-3"></a>  <span class="kw">color</span>: <span class="cn">orange</span><span class="op">;</span></span>
 <span id="cb28-4"><a href="#cb28-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="body-text topbr">
-<strong>HTML</strong>
-</div>
+<p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
 <span id="cb29-3"><a href="#cb29-3"></a><span class="kw">&lt;p&gt;</span>This paragaph will also be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
-<br><br><center>
-<div class="body-text topbr">
-<strong>Output</strong>
+<p><br><br></p>
+<div class="body-text center-text topbr">
+<p><strong>Output</strong></p>
 </div>
-</center>
-<center>
-<img src="images/universal_selector.png" width="425">
-</center>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/universal_selector.png" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="tabset-8-2">
-<div class="body-text">
-The <em><code>style</code> attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.
+<div class="smaller-body-text">
+<p>The <em><code>style</code> attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</p>
 </div>
-<div class="body-text topbr">
-<strong>HTML with inline styling</strong>
-</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span class="body-text topbr"><strong>HTML with inline styling</strong></span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">&lt;p&gt;</span>This is a normal paragraph<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb30-2"><a href="#cb30-2"></a><span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color: red; font-style: italic;"</span><span class="kw">&gt;</span>This paragraph has inline styling<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb30-3"><a href="#cb30-3"></a><span class="kw">&lt;p&gt;</span>Here, only the word <span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color: red; font-style: italic;"</span><span class="kw">&gt;</span>paragraph<span class="kw">&lt;/span&gt;</span> is styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="body-text topbr">
-<strong>Output</strong>
+</div><div class="column" style="width:50%;">
+<p><span class="body-text topbr"><strong>Output</strong></span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/inline_styling.png" style="width:60.0%"></p>
+</figure>
 </div>
-<p><img src="images/inline_styling.png" width="400"></p>
+</div>
+</div>
+</div>
+</div>
+<div class="caption-text">
+<p><strong>Note:</strong> You can also use the <code>&lt;span&gt;</code> tag to apply class or ID selectors to <em>part</em> of an element (e.g.&nbsp;let’s say I have a class selector, <code>.blue-text{color: blue;}</code>. I can target parts of HTML elements using this selector in conjunction with the <code>&lt;span&gt;</code> tag: <code>&lt;p&gt;In this sentence, only the word &lt;span class="blue-text"&gt;blue&lt;/span&gt; is styled.&lt;/p&gt;</code>)</p>
+</div>
 </div>
 </div>
 </div>

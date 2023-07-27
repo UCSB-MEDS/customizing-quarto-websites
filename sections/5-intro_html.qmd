@@ -12,31 +12,56 @@ format: revealjs
 
 ##  {#html-elements1 data-menu-title="HTML elements"}
 
-<div class="slide-title">HTML elements</div>
+[HTML elements]{.slide-title}
 
-<div class="body-text topbr">HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **start tags** and **end tags** that render some form of content in a particular way.</div>
+<hr>
+
+::: {.body-text .topbr}
+HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **start tags** and **end tags** that render some form of content in a particular way.
+:::
 
 :::: {.columns}
 ::: {.column width="70%"}
-<center><div class="body-text">**The basic anatomy of an HTML element:**</div></center>
-<center><img src="images/html_element.png" width="700"/></center>
+
+::: {.body-text .center-text}
+**The basic anatomy of an HTML element:**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/html_element.png")
+```
+
 :::
 ::: {.column width="30%"}
 <br> 
 <br>
-<div class="caption-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your website customization workshop`</div>
+
+::: {.caption-text}
+In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your website customization workshop`
+:::
+
 :::
 :::
 
-<center><div class="caption-text gray-text topbr">**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.</div></center>
+::: {.caption-text .gray-text .center-text .topbr}
+**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.
+:::
 
 ---
 
 ##  {#html-elements2 data-menu-title="Commonly used HTML tags"}
 
-<div class="slide-title">Commonly used HTML tags</div>
+[Commonly used HTML tags]{.slide-title}
 
-<center><div class="body-text topbr">Browse a complete list of HTML tags [here](https://www.w3schools.com/tags/default.asp).</div></center>
+<hr>
+
+::: {.body-text .center-text .topbr}
+Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp).
+:::
 
 | Tag                 | What it does                                                 |
 |---------------------|--------------------------------------------------------------|
@@ -55,37 +80,72 @@ format: revealjs
 
 ##  {#nested-html-elements data-menu-title="Nested HTML elements"}
 
-<div class="slide-title">HTML nested elements</div>
+[HTML nested elements]{.slide-title}
 
-<div class="body-text topbr">You can also *nest* elements. Remember to close out tags from the inside-out to avoid unexpected renderings.</div>
+<hr>
+
+::: {.body-text .topbr}
+You can also *nest* elements. Remember to close out tags from the inside-out to avoid unexpected renderings.
+:::
 
 :::: {.columns}
 ::: {.column width="70%"}
-<center><div class="body-text">**Nested HTML elements:**</div></center>
-<center><img src="images/nested_html_elements.png" width="700"/></center>
+
+::: {.body-text .center-text}
+**Nested HTML elements:**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/nested_html_elements.png")
+```
+
 :::
 ::: {.column width="30%"}
 <br> 
 <br>
-<div class="caption-text">In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`</div>
+
+::: {.caption-text}
+In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`
+:::
+
 :::
 ::::
 
-<div class="caption-text topbr important-text-bg">*Important:* Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
+::: {.caption-text .topbr}
+<div class="important-text-bg">*Important:* Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
+:::
 
 ---
 
 ##  {#html-attribures data-menu-title="HTML attributes"}
 
-<div class="slide-title">HTML attributes</div>
+[HTML attributes can be used for targetted styling]{.slide-title-smallest}
 
-<div class="body-text topbr">HTML elements can also have [attributes](https://www.w3schools.com/html/html_attributes.asp) which provide extra information about elements. They are always specified in the start tag and usually come in value/name pairs (e.g. `attributeName="attributeValue"`).</div>
+<hr>
 
-<div class="body-text">Attributes can be used in many powerful ways -- one way is to provide a class or ID as an identifier to be used for targeted styling with CSS. We'll come back to this concept soon.</div>
+::: {.body-text .topbr}
+[Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`).
+:::
 
-<center><div class="body-text">**The basic anatomy of an HTML attribute:**</div></center>
+::: {.body-text .topbr}
+<div class="body-text">Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon.</div>
+:::
 
-<center><img src="images/html_attribute.png" width="700"/></center>
+::: {.body-text .center-text}
+**The basic anatomy of an HTML attribute:**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/html_attribute.png")
+```
 
 ---
 
@@ -93,18 +153,24 @@ format: revealjs
 
 <div class="page-center vertical-center">
 <p class="custom-subtitle bottombr">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</p>
-<p class="caption-text">*In the following exercise, we’ll be creating a `.html` file (and eventually, a `.css` file to style it). This is meant only to help us familiarize ourselves with HTML syntax and does not have anything to directly do with our Quarto websites — feel free to delete this file(s) later, or keep as a reference!*</p>
+<p class="smaller-body-text">*In the following exercise, we’ll be creating a `.html` file (and eventually, a `.css` file to style it). This is meant only to help us familiarize ourselves with HTML syntax and does not have anything to directly do with our Quarto websites — feel free to delete this file(s) later, or keep as a reference!*</p>
 </div>
 
 ---
 
 ##  {#html-practice1 data-menu-title="Practice HTML (1/2)"}
 
-<div class="slide-title">Exercise: practice writing HTML (1/2)</div>
+[Exercise: practice writing HTML (1/2)]{.slide-title}
 
-<div class="body-text topbr">You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you're working in RStudio. Later, we'll link an external (separate) CSS stylesheet within our HTML file to style our elements.</div>
+<hr>
 
-<div class="caption-text topbr">1. Open an RProject (it's fine to work on your website branch!). In your terminal window, use the `touch` command to create an HTML file (for simplicity, I did this in my project's root directory), then choose **Open in Editor**.</div> 
+::: {.body-text .topbr}
+You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you're working in RStudio. Later, we'll link an external (separate) CSS stylesheet within our HTML file to style our elements.
+:::
+
+::: {.caption-text .topbr}
+**1.** Open an RProject (it's fine to work on your website branch!). In your terminal window, use the `touch` command to create an HTML file (for simplicity, I did this in my project's root directory), then choose **Open in Editor**.
+:::
 
 ```{bash}
 #| eval: false
@@ -114,7 +180,9 @@ touch practice-html.html
 
 . . .
 
-<div class="caption-text">2. Create the skeleton of your HTML file.</div>
+::: {.caption-text .topbr}
+**2.** Create the skeleton of your HTML file.
+:::
 
 ```{html}
 #| eval: false
@@ -134,11 +202,17 @@ touch practice-html.html
 
 ##  {#html-practice2 data-menu-title="Practice HTML (2/2)" auto-animate="true"}
 
-<div class="slide-title">Exercise: practice writing HTML (2/2)</div>
+[Exercise: practice writing HTML (2/2)]{.slide-title}
 
-<div class="body-text topbr">Write some HTML! *We'll practice styling our HTML in the next section.*</div>
+<hr>
 
-<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.</div>
+::: {.body-text .topbr}
+Write some HTML! *We'll practice styling our HTML in the next section.*
+:::
+
+::: {.caption-text .topbr}
+**3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.
+:::
 
 ```{html}
 #| eval: false
@@ -158,11 +232,17 @@ touch practice-html.html
 
 ##  {#html-practice3 data-menu-title="Practice HTML Solution (2/2)" auto-animate=true visibility="uncounted"}
 
-<div class="slide-title">Exercise: practice writing HTML (2/2)</div>
+[Exercise: practice writing HTML (2/2)]{.slide-title}
 
-<div class="body-text topbr">Write some HTML! *We'll practice styling our HTML in the next section.*</div>
+<hr>
 
-<div class="caption-text topbr">3. Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.</div>
+::: {.body-text .topbr}
+Write some HTML! *We'll practice styling our HTML in the next section.*
+:::
+
+::: {.caption-text .topbr}
+**3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.
+:::
 
 ```{html}
 #| eval: false
@@ -182,4 +262,6 @@ touch practice-html.html
 </html>
 ```
 
-<div class="caption-text topbr">4. Click on the **Preview** button at the top of your source pane to see the rendered output.</div>
+::: {.caption-text .topbr}
+**4.** Click on the **Preview** button at the top of your source pane to see the rendered output.
+:::

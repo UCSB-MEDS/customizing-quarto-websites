@@ -12,58 +12,103 @@ format: revealjs
 
 ##  {#css-rules data-menu-title="CSS rules"}
 
-<div class="slide-title">CSS is a rule-based language</div>
+[CSS is a rule-based language]{.slide-title}
 
-<div class="body-text topbr">CSS is a rule-based language, meaning that it allows you to define groups of styles that should be applied to particular elements or groups of elements on a web page. For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:</div>
+<hr>
+
+::: {.body-text .topbr}
+CSS is a rule-based language, meaning that it allows you to **define groups of styles that should be applied to particular elements or groups of elements on a web page.** For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:
+:::
 
 :::: {.columns}
-::: {.column width="50%"}
-<center><img src="images/CSS_syntax.png" width="700"/></center>
-:::
-::: {.column width="50%"}
-<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Selectors** select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*</div>
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*</div>
+::: {.column width="50%"}
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`</div>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/CSS_syntax.png")
+```
+
 :::
+
+::: {.column width="50%"}
+
+::: {.smaller-body-text}
+**{{< fa angle-right >}}** **Selectors** select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*
+:::
+
+::: {.smaller-body-text .topbr}
+**{{< fa angle-right >}}** **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*
+:::
+
+::: {.smaller-body-text .topbr}
+**{{< fa angle-right >}}** A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`
+:::
+
+:::
+
 ::::
 
 ---
 
 ##  {#selector-types data-menu-title="Types of Selectors"}
 
-<div class="slide-title">There are a number of different CSS selector types</div>
+[There are a number of different CSS selector types]{.slide-title-smaller}
 
-<div class="body-text topbr">The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but you can learn more about all the different categories of CSS selectors [here](https://www.w3schools.com/css/css_selectors.asp)):</div>
+<hr>
 
-<div class="caption-text topbr bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Element selectors</div>
+::: {.body-text .topbr}
+The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but check out you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)):
+:::
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Grouping selectors</div>
+::: {.smaller-body-text .topbr .bottombr}
+**{{< fa angle-right >}}** Element selectors
+:::
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` ID selectors</div>
+::: {.smaller-body-text .topbr .bottombr}
+**{{< fa angle-right >}}** Grouping selectors
+:::
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Class selectors</div>
+::: {.smaller-body-text .topbr .bottombr}
+**{{< fa angle-right >}}** ID selectors
+:::
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Universal selector</div>
+::: {.smaller-body-text .topbr .bottombr}
+**{{< fa angle-right >}}** Class selectors
+:::
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Inline styling (not a selector type, but an alternative way to apply CSS styling)</div>
+::: {.smaller-body-text .topbr .bottombr}
+**{{< fa angle-right >}}** Universal selector
+:::
+
+::: {.smaller-body-text .topbr .bottombr}
+**{{< fa angle-right >}}** Inline styling (not a selector type, but an alternative way to apply CSS styling)
+:::
 
 ---
 
 ##  {#select-tags data-menu-title="Element & Grouping Selectors"}
 
-<div class="slide-title">Select an element(s) based on its tag</div>
+[Select an element(s) based on its tag]{.slide-title}
+
+<hr>
 
 ::: {.panel-tabset}
 
 ## Element Selectors
 
-<div class="body-text">Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</div>
+::: {.body-text}
+Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.
+:::
 
 :::: {.columns}
 ::: {.column width="60%"}
-<div class="body-text">**CSS**</div>
+
+[**CSS**]{.body-text}
+
 ```{css}
 #| eval: false
 #| echo: true
@@ -73,7 +118,8 @@ h1 {
 }
 ```
 
-<div class="body-text topbr">**HTML**</div>
+[**HTML**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -84,20 +130,36 @@ h1 {
 ```
 :::
 ::: {.column width="40%"}
+
 <br>
 <br>
-<center><div class="body-text topbr">**Output**</div></center>
-<center><img src="images/element_selector.png" width="600"/></center>
+
+::: {.body-text .center-text .topbr}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/element_selector.png")
+```
+
 :::
 ::::
 
 ## Grouping Selectors
 
-<div class="body-text">Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.</div>
+::: {.body-text}
+Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.
+:::
 
 :::: {.columns}
 ::: {.column width="60%"}
-<div class="body-text">**CSS**</div>
+
+[**CSS**]{.body-text}
+
 ```{css}
 #| eval: false
 #| echo: true
@@ -107,7 +169,8 @@ h1, h2, p {
 }
 ```
 
-<div class="body-text topbr">**HTML**</div>
+[**HTML**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -116,12 +179,24 @@ h1, h2, p {
 <h3>This level three header will not be styled</h3>
 <p>This paragraph will be styled</p>
 ```
+
 :::
 ::: {.column width="40%"}
 <br>
 <br>
-<center><div class="body-text topbr">**Output**</div></center>
-<center><img src="images/grouping_selector.png" width="600"/></center>
+
+::: {.body-text .center-text .topbr}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/grouping_selector.png")
+```
+
 :::
 ::::
 
@@ -131,17 +206,25 @@ h1, h2, p {
 
 ##  {#select-attributes data-menu-title="ID & Class Selectors"}
 
-<div class="slide-title">Select an element(s) using attributes</div>
+[Target element(s) using attributes]{.slide-title}
+
+<!-- Select an element(s) using attributes -->
+
+<hr>
 
 ::: {.panel-tabset}
 
 ## ID Selectors
 
-<div class="body-text">An ID selector uses the *`id` attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a `#` followed by the selector name, e.g. `#selector`.</div>
+::: {.body-text}
+An ID selector uses the *`id` attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a `#` followed by the selector name, e.g. `#selector`.
+:::
 
 :::: {.columns}
 ::: {.column width="60%"}
-<div class="body-text">**CSS**</div>
+
+[**CSS**]{.body-text}
+
 ```{css}
 #| eval: false
 #| echo: true
@@ -151,7 +234,8 @@ h1, h2, p {
 }
 ```
 
-<div class="body-text topbr">**HTML**</div>
+[**HTML**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -162,18 +246,33 @@ h1, h2, p {
 ::: {.column width="40%"}
 <br>
 <br>
-<center><div class="body-text topbr">**Output**</div></center>
-<center><img src="images/id_selector.png" width="600"/></center>
+
+::: {.body-text .center-text .topbr}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/id_selector.png")
+```
+
 :::
 ::::
 
 ## Class Selectors
 
-<div class="body-text">A class selector uses the *`class` attribute* of an HTML element to style that specific element. Class selectors are written using a `.` followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`</div>
+::: {.smaller-body-text}
+A class selector uses the *`class` attribute* of an HTML element to style that specific element. Class selectors are written using a `.` followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-<div class="body-text topbr">**CSS**</div>
+
+[**CSS**]{.body-text .topbr}
+
 ```{css}
 #| eval: false
 #| echo: true
@@ -183,7 +282,8 @@ h1, h2, p {
 }
 ```
 
-<div class="body-text topbr">**HTML**</div>
+[**HTML**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -193,13 +293,25 @@ h1, h2, p {
 :::
 ::: {.column width="50%"}
 <br>
-<br>
-<center><div class="body-text topbr">**Output**</div></center>
-<center><img src="images/class_selector.png" width="450"/></center>
+
+::: {.body-text .center-text .topbr}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/class_selector.png")
+```
+
 :::
 ::::
 
-<center><div class="body-text topbr important-text-bg">*If you're like me, you'll probably find yourself using class selectors most often!*</div></center>
+::: {.caption-text .center-text .topbr}
+<div class="important-text-bg">*If you're like me, you'll probably find yourself using **class selectors** most often!*</div>
+:::
 
 :::
 
@@ -207,16 +319,22 @@ h1, h2, p {
 
 ##  {#universal-inline data-menu-title="Universal & Inline Selectors"}
 
-<div class="slide-title">Select all elements or style inline</div>
+[Select all elements or style inline]{.slide-title}
+
+<hr>
 
 ::: {.panel-tabset}
 ## Universal Selector
 
-<div class="body-text">The universal selector selects *all* HTML elements on the page. It is written using only an asterisk, `*`.</div>
+::: {.body-text}
+The universal selector selects *all* HTML elements on the page. It is written using only an asterisk, `*`.
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-<div class="body-text topbr">**CSS**</div>
+
+[**CSS**]{.body-text .topbr}
+
 ```{css}
 #| eval: false
 #| echo: true
@@ -226,7 +344,8 @@ h1, h2, p {
 }
 ```
 
-<div class="body-text topbr">**HTML**</div>
+[**HTML**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -238,16 +357,33 @@ h1, h2, p {
 ::: {.column width="50%"}
 <br>
 <br>
-<center><div class="body-text topbr">**Output**</div></center>
-<center><img src="images/universal_selector.png" width="425"/></center>
+
+::: {.body-text .center-text .topbr}
+**Output**
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/universal_selector.png")
+```
+
 :::
 ::::
 
 ## Inline styling
 
-<div class="body-text">The *`style` attribute* may be used inline to apply unique styles to a single element. It's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</div>
+::: {.smaller-body-text}
+The *`style` attribute* may be used inline to apply unique styles to a single element. It's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.
+:::
 
-<div class="body-text topbr">**HTML with inline styling**</div>
+:::: {.columns}
+
+::: {.column width="50%"}
+[**HTML with inline styling**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -256,8 +392,26 @@ h1, h2, p {
 <p>Here, only the word <span style="color: red; font-style: italic;">paragraph</span> is styled</p>
 ```
 
-<div class="body-text topbr">**Output**</div>
-<img src="images/inline_styling.png" width="400"/>
+:::
+
+::: {.column width="50%"}
+[**Output**]{.body-text .topbr}
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/inline_styling.png")
+```
+
+:::
+
+::::
+
+::: {.caption-text}
+**Note:** You can also use the `<span>` tag to apply class or ID selectors to *part* of an element (e.g. let's say I have a class selector, `.blue-text{color: blue;}`. I can target parts of HTML elements using this selector in conjunction with the `<span>` tag: `<p>In this sentence, only the word <span class="blue-text">blue</span> is styled.</p>`)
+:::
 
 :::
 

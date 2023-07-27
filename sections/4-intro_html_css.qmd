@@ -12,64 +12,117 @@ format: revealjs
 
 ## {#enter-css-sass data-menu-title="Enter HTML & CSS"}
 
-<div class="slide-title">Enter HTML and CSS</div>
+[Enter HTML and CSS]{.slide-title}
 
-<div class="body-text topbr">In order to really fine-tune the appearance of our site, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html).</div>
+<hr>
+
+::: {.body-text .topbr}
+In order to really fine-tune the appearance of our site, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html).
+:::
 
 ```{r}
+#| eval: true 
 #| echo: false
-#| fig-width: 5
-#| fig-height: 3
-#| fig-align: center
+#| fig-align: "center"
+#| out-width: "60%" 
 #| fig-alt: "The CSS 3 and Sass logos" 
 knitr::include_graphics("images/html_css.png")
 ```
 
-<div class="body-text">Some of you may have already heard of/written HTML and/or CSS -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.</div>
+::: {.body-text .topbr}
+Some of you may have already heard of/written HTML and/or CSS -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.
+:::
 
 ---
 
 ##  {#building-blocks-html data-menu-title="HTML & CSS = building blocks (1/2)"}
 
-<div class="slide-title">HTML & CSS are the building blocks of web pages</div>
+[HTML & CSS are the building blocks of web pages]{.slide-title-smaller}
 
-<div class="caption-text topbr">**HTML** (Hypertext Markup Language) is a *markup language*<sup>1</sup> that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</div>
+<hr>
 
-<center><img src="images/html.png" width="600"/></center>
+::: {.smaller-body-text .topbr}
+**HTML** (Hypertext Markup Language) is a *markup language*<sup>1</sup> that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.
+:::
 
-<center><div class="caption-text gray-text topbr bottombr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/html.png")
+```
 
+::: {.caption-text .gray-text .center-text .topbr}
+Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
+:::
 
-<div class="caption-text"><sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</div>
+::: {.caption-text .topbr}
+<sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
+:::
 
 ---
 
 ##  {#building-blocks-css data-menu-title="HTML & CSS = building blocks (2/2)"}
 
-<div class="slide-title">HTML & CSS are the building blocks of web pages</div>
+[HTML & CSS are the building blocks of web pages]{.slide-title-smaller}
 
-<div class="caption-text topbr">**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</div>
+<hr>
 
-<center><img src="images/css.png" width="600"/></center>
+::: {.smaller-body-text .topbr}
+**CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.
+:::
 
-<center><div class="caption-text gray-text bottombr">Source: Adapted from Nicolas Karasiak, <https://github.com/nkarasiak/Illustration></div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/css.png")
+```
+
+::: {.caption-text .gray-text .center-text .bottombr}
+Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
+:::
 
 ---
 
 ##  {#browser-styling data-menu-title="Browser styling"}
 
-<div class="slide-title">Your browser has its own internal style sheet to render HTML</div>
+[Your browser has its own internal style sheet to render HTML]{.slide-title-smaller}
 
-<div class="body-text topbr">Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.</div>
+<hr>
+
+::: {.body-text .topbr}
+Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-<center><img src="images/html_github.png" width="600"/></center>
-<center><div class="caption-text gray-text">HTML</div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/html_github.png")
+```
+
+::: {.caption-text .gray-text .center-text}
+HTML
+:::
 :::
 ::: {.column width="50%"}
-<center><img src="images/browser_styling_github.png" width="600"/></center>
-<center><div class="caption-text gray-text">Browser default styling</div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/browser_styling_github.png")
+```
+
+::: {.caption-text .gray-text .center-text}
+Browser default styling
+:::
 :::
 ::::
 
@@ -77,17 +130,39 @@ knitr::include_graphics("images/html_css.png")
 
 ##  {#css-styling data-menu-title="CSS styling"}
 
-<div class="slide-title">CSS adds *pizzazz* to web page renderings</div>
+[CSS adds *pizzazz* to web page renderings]{.slide-title-smaller}
 
-<div class="body-text topbr">CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they'd all generally look the same).</div>
+<hr>
+
+::: {.body-text .topbr}
+CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they'd all generally look the same).
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-<center><img src="images/browser_styling_github.png" width="600"/></center>
-<center><div class="caption-text gray-text">Browser default styling</div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/browser_styling_github.png")
+```
+
+::: {.caption-text .gray-text .center-text}
+Browser default styling
+:::
 :::
 ::: {.column width="50%"}
-<center><img src="images/css_styling_github.png" width="600"/></center>
-<center><div class="caption-text gray-text">CSS styling</div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/css_styling_github.png")
+```
+
+::: {.caption-text .gray-text .center-text}
+CSS styling
+:::
 :::
 ::::
