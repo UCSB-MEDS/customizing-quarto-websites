@@ -4,93 +4,137 @@ format: revealjs
 
 ## {#prerequisites data-menu-title="Prerequisites"}
 
-<div class="slide-title">`r fontawesome::fa("check", fill = "#047C90", a11y = "sem")` Prerequisites</div>
+[{{< fa check >}} Prerequisites]{.slide-title}
 
-<div class="body-text topbr">You should already have a Quarto website (or at least the bones of one) that:</div>
+<hr>
 
-<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` is deployed using GitHub Pages **and**</div>
-<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` contains *some* content (e.g. text, headings, etc.) for us to customize</div>
+::: {.body-text}
+You should already have a Quarto website (or at least the bones of one) that:
+:::
 
-<center><img src="images/penguins_meteor.png" alt="Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." width="500"/></center>
+::: {.body-text}
+**{{< fa angle-right >}}** is deployed using GitHub Pages **and**
 
-<center><div class="caption-text"><span style='color: #868A8F;'>Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)</span></div></center>
+**{{< fa angle-right >}}** contains *some* content (e.g. text, headings, etc.) for us to customize
+:::
 
-<center><div class="caption-text topbr">If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.</div></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "85%" 
+#| fig-alt: "Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead."
+knitr::include_graphics("images/penguins_meteor.png")
+```
+
+::: {.caption-text .gray-text .center-text}
+Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+:::
+
+::: {.caption-text .center-text}
+If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.
+:::
 
 ---
 
 ## {#tldr1 data-menu-title="TL;DR"}
 
-<p class="slide-title">TL;DR</p>
+[TL;DR]{.slide-title}
 
-<div class="body-text topbr">When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). We can modify the appearance of our website in a number of ways. We'll learn a bit about the following (but know that this is just a starting point!):</div>
+<hr>
+
+::: {.body-text}
+When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). We can modify the appearance of our website in a number of ways. We'll learn a bit about the following (but know that this is just a starting point!):
+:::
+
+::: incremental
+::: {.caption-text}
+- **Editing the `index.qmd` YAML**= -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
+
+- **Editing the `_quarto.yml` file** -- here we can easily update our top navigation bar (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
+
+- **Defining CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
+
+- **Creating a `.scss` file(s)** that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).
+
+:::
+:::
 
 . . . 
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`**Editing the `index.qmd` YAML** -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).</div>
-
-. . .
-
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Editing the `_quarto.yml` file** -- here we can easily update our top navigation bar (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).</div>
-
-. . . 
-
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Defining CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.</div>
-
-. . . 
-
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  **Creating a `.scss` file(s)** that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).</div>
-
-
-. . .
-
-<center><p class="large-body-text">Or....</p></center>
+::: {.large-body-text .center-text}
+Or...
+:::
 
 ---
 
 ## {#tldr2 data-menu-title="TL;DR"}
 
-<p class="slide-title">TL;DR</p>
+[TL;DR]{.slide-title}
 
-<div class="body-text topbr bottombr">**Combine all of the above!** Approaching this in the following order worked best for me:</div>
+<hr>
+
+<br>
+
+::: {.large-body-text .center-text .bottombr}
+Combine all of the above!
+:::
+
+::: {.medium-body-text .center-text}
+Approaching this in the following order worked best for me:
+:::
 
 . . .
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **First** add a template to `index.qmd`, then fill out as much of the `_quarto.yml` file as you can/want -- this is the easiest way to add some really cool features with minimal effort.</div>
+::: incremental
+::: {.body-text .bottombr}
+- **First** add a template to `index.qmd`, then fill out as much of the `_quarto.yml` file as you can/want -- this is the easiest way to add some really cool features with minimal effort.
 
-. . .
+- **Next**, create a `mystyles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
 
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Next**, create a `mystyles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.</div>
-
-. . .
-
-<div class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` **Finally** make fine-tuned adjustments by defining CSS rules directly in your `mystyles.scss` file (you can write CSS in SCSS files, but not the other way around).</div>
+- **Finally** make fine-tuned adjustments by defining CSS rules directly in your `mystyles.scss` file (you can write CSS in SCSS files, but not the other way around).
+:::
+:::
 
 ---
 
 ## {#branches data-menu-title="Use branches!"}
 
-<div class="slide-title">`r fontawesome::fa("code-branch", fill = "#05859B", a11y = "sem")` Working on branches is recommended!</div>
+[{{< fa code-branch >}} Working on branches is recommended!]{.slide-title-smaller}
 
-<div class="caption-text topbr">I almost always work on a branch when making changes to my website -- this way I can safely test changes before deploying them to my live site.</div>
+<hr>
 
-<div class="caption-text topbr">To create a branch, first ensure that you're on `main` by typing either `git branch` or `git status` into your RStudio terminal (either will tell you which branch you're currently on). If you're not on `main`, you can switch by running `git checkout main`.</div>
+::: {.medium-body-text .center-text}
+*I almost always work on a branch when making changes to my website -- this way I can safely test changes before deploying them to my live site.*
+:::
 
-<div class="caption-text topbr bottombr">Create a local git branch from `main` by running the following in your terminal:</div>
+::: {.smaller-body-text}
+To create a branch, first ensure that you're on `main` by typing either `git branch` or `git status` into your RStudio terminal (either will tell you which branch you're currently on). If you're not on `main`, you can switch by running `git checkout main`.
+:::
+
+::: {.smaller-body-text}
+Create a local git branch from `main` by running the following in your terminal:
+:::
+
 ```{bash}
 #| eval: false
 #| echo: true
 git checkout -b my-new-branch
 ```
 
-<div class="caption-text topbr bottombr">Push your new local branch to GitHub by running the following in your terminal:</div>
+::: {.smaller-body-text}
+Push your new local branch to GitHub by running the following in your terminal:
+:::
+
 ```{bash}
 #| eval: false
 #| echo: true
 git push -u origin my-new-branch
 ```
 
-<div class="caption-text topbr">You're now ready to work as normal! Once satisfied with your changes, you can `git add`, `git commit`, and `git push` (or use the RStudio GUI buttons in the **Git** tab) your files. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from GitHub and [merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into `main` to integrate your changes.</div>
+::: {.smaller-body-text .topbr}
+You're now ready to work as normal! Once satisfied with your changes, you can `git add`, `git commit`, and `git push` (or use the RStudio GUI buttons in the **Git** tab) your files. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from GitHub and [merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into `main` to integrate your changes.
+:::
 
 ---
 
@@ -104,25 +148,37 @@ git push -u origin my-new-branch
 
 ## {#so-youve-created-a-website data-menu-title="So you've created a Quarto website..."}
 
-<div class="slide-title">So you've created your personal website using Quarto...</div>
+[So you've created your personal website using Quarto...]{.slide-title}
+
+<hr>
 
 ::: {.column width="40%"}
+<!-- <br> -->
+::: {.body-text}
 <br>
-<div class="body-text topbr">[Quarto](https://quarto.org/) gives us with an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.</div>
+<br>
+[Quarto](https://quarto.org/) gives us with an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.
+:::
 :::
 
-::: {.column width="60%"}
-<br>
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
 <img src="images/website_noCSS.png" width="500"/>
 :::
 
-<center><div class="caption-text"><span style = 'color: #868A8F;'>An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)</span></div></center>
+::: {.caption-text .gray-text .center-text}
+An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)
+:::
 
 ---
 
 ## {#modify-to-stand-out data-menu-title="Make your website stand stand out"}
 
-<div class="slide-title">But some additional modifications can make *your* website stand out from the rest</div>
+[But some additional modifications can make *your* website stand out from the rest]{.slide-title-smallest}
+
+<hr>
 
 ```{r}
 #| echo: false

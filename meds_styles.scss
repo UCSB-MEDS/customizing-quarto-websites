@@ -2,13 +2,13 @@
 
 // fonts
 //@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@300;800&family=Roboto+Mono:wght@300;400&family=Sanchez&display=swap');
 
 // Fonts (CSS rules)
-//$font-family-sans-serif: 'Nunito Sans', sans-serif;
-//$font-family-monospace: 'Roboto Mono', monospace;
+$font-family-sans-serif: 'Nunito', sans-serif;
 $font-family-serif: 'Sanchez', serif; 
-$font-family-sans-serif: 'Montserrat', sans-serif;
+//$font-family-sans-serif: 'Montserrat', sans-serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 
 // Colors
@@ -18,15 +18,17 @@ $dark-blue: #003660;
 $white: #FFFFFF;
 $green: #78A540; 
 $magenta: #900C3F;
+$white: #FFFFFF;
 $off-white: #F7F7F7; 
 $gray: #ADADAD; 
 
 // scss variables
 $presentation-title-slide-text-align: "left";
+//$presentation-font-size-root: 23px;
 $body-bg: $white;
 $link-color: $green; 
 $code-color: $magenta;
-$code-bg: $off-white;
+$code-bg: $white;
 $code-block-font-size: 0.4em;
 $code-block-bg: $off-white;
 
@@ -47,6 +49,13 @@ td {
   font-size: 20px;
 }
 
+// horizontal line
+hr {
+  border: 5px solid $dark-blue;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
 // Class selectors //
 
 .custom-title { 
@@ -61,7 +70,7 @@ td {
   font-family: $font-family-sans-serif;
   color: $baby-blue;
   font-size: 1.2em;
-  font-weight: 900;
+  //font-weight: 600;
   //position: absolute; 
   left: 20px; 
 }
@@ -95,10 +104,30 @@ td {
   font-weight: 700;
 }
 
+.slide-title-smaller {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.slide-title-smallest {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
 .large-body-text {
   font-family: $font-family-sans-serif;
   color: $teal;
   font-size: 1em;
+}
+
+.medium-body-text {
+  font-size: 25px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
 }
 
 .body-text {
@@ -107,9 +136,19 @@ td {
 	margin-bottom: 1em;
 }
 
+.smaller-body-text{
+  font-size: 21px;
+	line-height: 1.7em;
+	margin-bottom: 1em;
+}
+
+.center-text{
+  text-align: center;
+}
+
 .caption-text {
   font-size: 19px;
-	line-height: 1.5em;
+	line-height: 1.7em;
 }
 
 .gray-text {
@@ -123,6 +162,12 @@ td {
   padding-right: 5px; 
   padding-left: 8px; 
   border-radius: 25px;
+}
+
+.blue-underline { 
+  text-decoration: underline $dark-blue;
+  text-underline-offset: 10px; // https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset
+  text-decoration-thickness: 4px;
 }
 
 .vertical-center {
