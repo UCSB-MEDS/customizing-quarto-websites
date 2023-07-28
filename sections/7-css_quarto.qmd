@@ -611,18 +611,15 @@ You can create both **divs (block-level regions of content)** and **spans (inlin
 **Divs**
 :::
 
-```{r}
-#| eval: false
-#| echo: true
-
+```{.md}
 # Quarto syntax
 ::: {.my-selector}
-Some text to style
+Some element (e.g. text) to style
 :::
   
-## HTML syntax
+# HTML syntax
 <div class="my-selector">
-  Some text to style
+  Some element (e.g. text) to style
 </div>
 ```
 :::
@@ -632,15 +629,12 @@ Some text to style
 **Spans**
 :::
 
-```{r}
-#| eval: false
-#| echo: true
-
+```{.md}
 # Quarto syntax
-Some other text with just [this section]{.my-selector} styled
+Some text with just [this section]{.my-selector} styled
 
 # HTML syntax
-<p>Some other text with just <span class="my-selector">this section</span> styled</p>
+<p>Some text with just <span class="my-selector">this section</span> styled</p>
 ```
 :::
 
