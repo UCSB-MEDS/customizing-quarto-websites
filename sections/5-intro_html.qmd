@@ -200,7 +200,8 @@ touch practice-html.html
 
 ---
 
-##  {#html-practice2 data-menu-title="Practice HTML (2/2)" auto-animate="true"}
+##  {#html-practice2 data-menu-title="Practice HTML (2/2)"} 
+<!-- auto-animate="true" -->
 
 [Exercise: practice writing HTML (2/2)]{.slide-title}
 
@@ -211,42 +212,13 @@ Write some HTML! *We'll practice styling our HTML in the next section.*
 :::
 
 ::: {.caption-text .topbr}
-**3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.
+**3.** Create a level one header, two paragraphs (these can just be sentences), and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.
 :::
 
 ```{html}
 #| eval: false
 #| echo: true
-<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
-<html> <!-- This tag represents the root of the HTML doc -->
-<head>
- <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
-</head>
-<body> 
-  <!-- Write all the contents of the HTML doc here -->
-</body>
-</html>
-```
-
----
-
-##  {#html-practice3 data-menu-title="Practice HTML Solution (2/2)" auto-animate=true visibility="uncounted"}
-
-[Exercise: practice writing HTML (2/2)]{.slide-title}
-
-<hr>
-
-::: {.body-text .topbr}
-Write some HTML! *We'll practice styling our HTML in the next section.*
-:::
-
-::: {.caption-text .topbr}
-**3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.
-:::
-
-```{html}
-#| eval: false
-#| echo: true
+#| code-line-numbers: "8-11"
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>
@@ -262,6 +234,53 @@ Write some HTML! *We'll practice styling our HTML in the next section.*
 </html>
 ```
 
+. . . 
+
 ::: {.caption-text .topbr}
 **4.** Click on the **Preview** button at the top of your source pane to see the rendered output.
 :::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "30%" 
+knitr::include_graphics("images/practice-html.png")
+```
+
+
+<!-- ##  {#html-practice3 data-menu-title="Practice HTML Solution (2/2)" auto-animate=true visibility="uncounted"} -->
+
+<!-- [Exercise: practice writing HTML (2/2)]{.slide-title} -->
+
+<!-- <hr> -->
+
+<!-- ::: {.body-text .topbr} -->
+<!-- Write some HTML! *We'll practice styling our HTML in the next section.* -->
+<!-- ::: -->
+
+<!-- ::: {.caption-text .topbr} -->
+<!-- **3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file. -->
+<!-- ::: -->
+
+<!-- ```{html} -->
+<!-- #| eval: false -->
+<!-- #| echo: true -->
+<!-- <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration--> 
+<!-- <html> <!-- This tag represents the root of the HTML doc --> 
+<!-- <head> -->
+<!--  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --> 
+<!-- </head> -->
+<!-- <body>  -->
+<!--   <!-- Write all the contents of the HTML doc here --> 
+<!--   <h1>Here is my level one header</h1> -->
+<!--   <p>Here is my first paragraph</p> -->
+<!--   <p>Here is my second paragraph</p> -->
+<!--   <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button> -->
+<!-- </body> -->
+<!-- </html> -->
+<!-- ``` -->
+
+<!-- ::: {.caption-text .topbr} -->
+<!-- **4.** Click on the **Preview** button at the top of your source pane to see the rendered output. -->
+<!-- ::: -->
