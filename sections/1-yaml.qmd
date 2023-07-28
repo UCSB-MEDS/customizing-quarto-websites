@@ -172,6 +172,10 @@ format:
 
 <hr>
 
+::: {.body-text}
+A favicon is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
+:::
+
 ::: {.panel-tabset}
 
 ## `_quarto.yml` file

@@ -16,17 +16,9 @@ format: revealjs
 
 <hr>
 
-::: {.body-text}
-[Sass](https://sass-lang.com/) stands for **S**yntactically **A**wesome **S**tyle**s**heets and is an extension to CSS (I know, it seems like we're talking about this in an incorrect order, but bear with me).
-:::
-
-::: {.body-text}
-Sass is a CSS **preprocessor** -- this means that Sass allows web developers to use Sass syntax and features that don't currently exist in CSS  (e.g. variables, which we'll be using today), then converts that Sass code into standard CSS (browsers don't understand Sass code, but *do* understand CSS).
-:::
-
-::: {.body-text}
-Quarto has a [number of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that you can specify within a `mystyles.scss` file.
-:::
+:::: {.columns}
+::: {.column width="50%"}
+<br>
 
 ```{r}
 #| eval: true 
@@ -36,16 +28,47 @@ Quarto has a [number of Sass Variables](https://quarto.org/docs/output-formats/h
 knitr::include_graphics("images/sass.png")
 ```
 
+::: {.large-body-text .center-text}
+**S**yntactically **A**wesome **S**tyle**s**heets
+:::
+:::
+
+::: {.column width="50%"}
+<br>
+<br>
+
+::: {.body-text}
+- Sass is a **CSS extension** (provides additional features, like variables)
+- Sass is a **CSS preprocesser** (converts Sass code into standard CSS because browsers can’t interpret Sass)
+:::
+:::
+
+::::
+
+<!-- ::: {.body-text} -->
+<!-- - [Sass](https://sass-lang.com/) stands for **S**yntactically **A**wesome **S**tyle**s**heets and is an extension to CSS (I know, it seems like we're talking about this in an incorrect order, but bear with me). -->
+<!-- ::: -->
+
+<!-- ::: {.body-text} -->
+<!-- Sass is a CSS **preprocessor** (converts Sass code into standard CSS because browsers can’t interpret Sass) -->
+<!-- this means that Sass allows web developers to use Sass syntax and features that don't currently exist in CSS  (e.g. variables, which we'll be using today), then converts that Sass code into standard CSS (browsers don't understand Sass code, but *do* understand CSS). -->
+<!-- ::: -->
+
+<!-- ::: {.body-text .center-text} -->
+<!-- Quarto has a [number of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that you can specify within a `styles.scss` file. -->
+<!-- ::: -->
+
 ---
 
-## {#why-use-sass1 data-menu-title="Why use Sass?"}
+## {#why-use-sass1 data-menu-title="Sass reduces repetition"}
 
-[Why use Sass?]{.slide-title}
+[Sass helps to reduce repetition]{.slide-title}
 
 <hr>
 
 ::: {.body-text}
-Stylesheets (e.g. `.css` files) are getting larger and more complex. Sass extends existing CSS features and importantly, reduces repetition. For example, let's say you're working on a website, which uses 3 main colors:
+Sass extends existing CSS features in a number of exciting ways, but importantly **reduces repetition**. For example, let’s say you’re working on a website/web page that uses three main colors:
+<!-- Stylesheets (e.g. `.css` files) are getting larger and more complex. Sass extends existing CSS features and importantly, reduces repetition. For example, let's say you're working on a website, which uses 3 main colors: -->
 :::
 
 ```{r}
@@ -62,14 +85,15 @@ You might imagine how often you'll need to type those HEX codes out as you devel
 
 ---
 
-## {#why-use-sass2 data-menu-title="Why use Sass?"}
+## {#why-use-sass2 data-menu-title="Define Sass variables"}
 
-[Why use Sass?]{.slide-title}
+[Define Sass variables to reduce repetition]{.slide-title-smaller}
 
 <hr>
 
 ::: {.smaller-body-text}
-Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time:
+Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (e.g. only need to change HEX codes in one spot, not multiple!)
+<!-- Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time: -->
 :::
 
 ```{css}
@@ -94,7 +118,29 @@ h1 {
 ```
 
 ::: {.smaller-body-text .topbr}
-If you decide that you actually like a *different* shade of teal better, you'll only need to update the hex code where you first define the `$teal` Sass variable, saving lots of time.
+**Note:** Sass has two syntaxes – SCSS syntax (`.scss`), shown above, is the most common. It stands for **S**assy **C**ascading **S**tylesheets {{< fa smile >}}
+:::
+
+---
+
+## {#quarto-compiels data-menu-title="Quarto compiles Sass automatically"}
+
+[Quarto automatically compiles Sass]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+**Recall:** Web browsers can interpret CSS ({{< fa check >}} `.css`) but *not* Sass ({{< fa xmark >}} `.scss` or `.sass`). Typically, you’d need to **compile (aka convert) Sass to CSS**, then link the resulting `.css` file in your HTML.
+:::
+
+::: {.body-text}
+Lucky for us, **Quarto compiles the contents of a `.scss` file into CSS without any extra steps** -- meaning we can include a `.scss` file directly in our website's `_quarto.yml` file. 
+:::
+
+<br>
+
+::: {.large-body-text .center-text}
+Let's create our website's `.scss ` stylesheet.
 :::
 
 ---
@@ -112,13 +158,13 @@ If you decide that you actually like a *different* shade of teal better, you'll 
 ```{bash}
 #| eval: false
 #| echo: true
-touch mystyles.scss # name it whatever you want (you can apply more than one style sheet to your website)
+touch styles.scss # name it whatever you want (you can apply more than one stylesheet to your website)
 ```
 
 . . .
 
 ::: {.caption-text .topbr .bottombr}
-**2.** Add the `/*-- scss:defaults --*/` region decorator to the top of `mystyles.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)) -- you'll write all your Sass variables underneath this.
+**2.** Add the `/*-- scss:defaults --*/` region decorator to the top of `styles.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)) -- you'll write all your Sass variables underneath this.
 :::
 
 ```{css}
@@ -131,7 +177,7 @@ touch mystyles.scss # name it whatever you want (you can apply more than one sty
 . . .
 
 ::: {.caption-text .topbr .bottombr}
-**3.** Apply your `mystyles.scss` stylesheet to your website by updating the `_quarto.yml` under the `format` section:
+**3.** Apply your `styles.scss` stylesheet to your website by updating the `_quarto.yml` under the `format` section:
 :::
 
 ```{r}
@@ -147,7 +193,7 @@ website:
 format:
   html:
    theme: 
-      - mystyles.scss
+      - styles.scss
     toc: true
 ```
 
@@ -155,12 +201,15 @@ format:
 
 ## {#sass-colors data-menu-title="Sass Colors"}
 
-[Create Sass variables for your website's primary colors]{.slide-title-smaller}
+[Define some color variables]{.slide-title}
+
+<!-- Create Sass variables for your website's primary colors -->
 
 <hr>
 
 ::: {.body-text .topbr}
-We can quickly change the color theme of our website by defining just a few Sass variables in a `.scss` file. Let's first define the colors we want to use throughout our site. For me, that looks like this:
+<!-- We can quickly change the color theme of our website by defining just a few Sass variables in a `.scss` file. -->
+Let's first define the colors we want to use throughout our site. For me, that looks like this:
 :::
 
 ```{css}
@@ -184,7 +233,7 @@ You can also define values with units, e.g. `$my-font-size: 25px;` or `$my-width
 
 <br>
 
-::: {.caption-text .gray-text .topbr}
+::: {.caption-text .center-text .topbr}
 In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.
 :::
 
@@ -192,7 +241,7 @@ In `.scss` files, `//` denote single line comments. Multi-line comments start wi
 
 ## {#use-sass-colors data-menu-title="Use Sass Colors"}
 
-[Use your color variables as values for Quarto's list of Sass Variables]{.slide-title-smallest}
+[Use your color variables as values for Quarto's Sass variables]{.slide-title-smallest}
 
 <hr>
 
@@ -202,7 +251,7 @@ Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-format
 
 ::: {.panel-tabset}
 
-## `mystyles.scss` file
+## `styles.scss` file
 ```{css}
 #| eval: false
 #| echo: true

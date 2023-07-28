@@ -419,13 +419,19 @@ knitr::include_graphics("images/inline_styling.png")
 
 ##  {#conflicting-css data-menu-title="Conflicting CSS rules"}
 
-<div class="slide-title">Conflicting CSS rules?</div>
+[Conflicting CSS rules?]{.slide-title}
 
-<div class="caption-text topbr">It is often the case that more than one CSS rule will point to the same element. For example, say you have a style sheet and HTML that look like the following:</div>
+<hr>
+
+::: {.caption-text .topbr}
+It is often the case that more than one CSS rule will point to the same element. For example, say you have a style sheet and HTML that look like the following:
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-<div class="body-text topbr">**CSS**</div>
+
+[**CSS**]{.body-text .topbr}
+
 ```{css}
 #| eval: false
 #| echo: true
@@ -443,7 +449,9 @@ h1 {
 ```
 :::
 ::: {.column width="50%"}
-<div class="body-text topbr">**HTML**</div>
+
+[**HTML**]{.body-text .topbr}
+
 ```{html}
 #| eval: false
 #| echo: true
@@ -453,27 +461,55 @@ h1 {
 :::
 ::::
 
-<div class="caption-text topbr">In this case, we have a universal selector that styles all of our text orange, but we also have an element selector that colors our `<h1>` elements blue and a class selector that is applied inline to color a subset of text green. How do you know which style will be declared and applied to each of our HTML elements?</div>
+::: {.caption-text .topbr}
+In this case, we have a universal selector that styles all of our text orange, but we also have an element selector that colors our `<h1>` elements blue and a class selector that is applied inline to color a subset of text green. How do you know which style will be declared and applied to each of our HTML elements?
+:::
 
 ---
 
 ##  {#css-specificity data-menu-title="CSS Specificity"}
 
-<div class="slide-title">The highest specificity value "wins"</div>
+[The highest specificity value "wins"]{.slide-title}
 
-<div class="caption-text topbr">[Specificity](https://www.w3schools.com/css/css_specificity.asp) can be complicated (especially when you consider all the other types of selectors we haven't covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override element selectors, etc. The order that rules are written in your stylesheet matters as well -- since rules are read top to bottom, a directly competing rule farther down your stylesheet will take precedent.</div>
+<hr>
+
+::: {.caption-text .topbr}
+[Specificity](https://www.w3schools.com/css/css_specificity.asp) can be complicated (especially when you consider all the other types of selectors we haven't covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override element selectors, etc. The order that rules are written in your stylesheet matters as well -- since rules are read top to bottom, a directly competing rule farther down your stylesheet will take precedent.
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
 <br>
-<center><div class="body-text topbr bottombr">**Inline Styles**</div></center>
-<center><div class="body-text bottombr">**IDs**</div></center>
-<center><div class="body-text bottombr">**Class Selectors**</div></center>
-<center><div class="body-text bottombr">**Element Selectors**</div></center>
-<center><div class="body-text">**Universal Selector**</div></center>
+
+::: {.body-text .center-text .topbr .bottombr}
+**Inline Styles**
+:::
+
+::: {.body-text .center-text .topbr .bottombr}
+**IDs**
+:::
+
+::: {.body-text .center-text .topbr .bottombr}
+**Class Selectors**
+:::
+
+::: {.body-text .center-text .topbr .bottombr}
+**Element Selectors**
+:::
+
+::: {.body-text .center-text .topbr .bottombr}
+**Universal Selectors**
+:::
+
 :::
 ::: {.column width="50%"}
-<img src="images/specificity_arrow.png" height="400"/>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "left"
+#| out-width: "60%" 
+knitr::include_graphics("images/specificity_arrow.png")
+```
 :::
 ::::
 
@@ -495,9 +531,13 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 ##  {#css-practice1 data-menu-title="Practice CSS (1/3)"}
 
-<div class="slide-title">Exercise: practice writing CSS (1/3)</div>
+[Exercise: practice writing CSS (1/3)]{.slide-title}
 
-<div class="caption-text topbr">1. Return to your RProject (where you created your `practice-html.html` file). In your terminal window, use the `touch` command to create a CSS file in the same location as your html file:</div> 
+<hr>
+
+::: {.caption-text .topbr}
+**1.** Return to your RProject (where you created your `practice-html.html` file). In your terminal window, use the `touch` command to create a CSS file in the same location as your html file:
+:::
 
 ```{bash}
 #| eval: false
@@ -507,7 +547,9 @@ touch practice-styles.css
 
 . . .
 
-<div class="caption-text topbr">2. Link your CSS file inside the `<head>` of your HTML file (read more about inserting style sheets [here](https://www.w3schools.com/css/css_howto.asp)).</div>
+::: {.caption-text .topbr}
+**2.** Link your CSS file inside the `<head>` of your HTML file (read more about inserting style sheets [here](https://www.w3schools.com/css/css_howto.asp)).
+:::
 
 ```{html} 
 #| eval: false
@@ -531,34 +573,59 @@ touch practice-styles.css
 
 ---
 
-
 ##  {#css-practice2 data-menu-title="Practice CSS (2/3)"}
 
-<div class="slide-title">Exercise: practice writing CSS (2/3)</div>
+[Exercise: practice writing CSS (2/3)]{.slide-title}
 
-<div class="caption-text topbr">3. Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:</div> 
+<hr>
 
-<div class="caption-text topbr">**(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page,</div>  
-<div class="caption-text topbr">**(b)** create a class selector to color the text of your first paragraph blue,</div>   
-<div class="caption-text topbr">**(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue,</div>  
-<div class="caption-text topbr">**(d)** create a class selector to color your button text red and enlarge the font size (try `20px`),</div>   
-<div class="caption-text topbr">**(bonus)** What happens if you also apply that red/large font selector (from part **(d)**) to your second paragraph?</div> 
+::: {.body-text .topbr}
+**3.** Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
+:::
+
+::: {.caption-text .topbr}
+**(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page,
+:::
+
+::: {.caption-text .topbr}
+**(b)** create a class selector to color the text of your first paragraph blue,
+:::
+
+::: {.caption-text .topbr}
+**(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue,
+:::
+
+::: {.caption-text .topbr}
+**(d)** create a class selector to color your button text red and enlarge the font size (try `20px`),
+:::
+
+::: {.caption-text .topbr}
+**(bonus)** What happens if you also apply that red/large font selector (from part **(d)**) to your second paragraph?
+:::
 
 <br>
 
-<center><p class="caption-text">Explore a list of all CSS properties [here](https://www.w3schools.com/cssref/).</p></center>
+::: {.caption-text .center-text}
+Explore a list of all CSS properties [here](https://www.w3schools.com/cssref/).
+:::
 
 <br>
 
-<center><div class="slide-title"><span style="font-size: 40px">(One) solution on next slide!</span></div></center>
+::: {.large-body-text .center-text}
+(One) solution on next slide!
+:::
 
 ---
 
 ##  {#css-practice-answer data-menu-title="Practice CSS (3/3)"}
 
-<div class="slide-title">Exercise: practice writing CSS (3/3)</div>
+[Exercise: practice writing CSS (3/3)]{.slide-title}
 
-<p class="body-text topbr bottombr">Below is one solution -- yours may look different!</p>
+<hr>
+
+::: {.body-text .topb .bottombr}
+Below is one solution -- yours may look different!
+:::
 
 ::: {.panel-tabset}
 
@@ -603,7 +670,13 @@ h1 {
 
 ## Output
 
-<center><img src="images/solution.png" width="900"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/solution.png")
+```
 
 :::
 

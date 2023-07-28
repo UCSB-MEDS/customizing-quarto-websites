@@ -12,7 +12,7 @@ format: revealjs
 
 ## {#explore-fonts data-menu-title="Explore"}
 
-[Explore Google Fonts]{.slide-title}
+[Explore Google fonts]{.slide-title}
 
 <hr>
 
@@ -27,7 +27,7 @@ With Quarto, we can define a single primary font directly in our `_quarto.yml` f
 format:
   html:
     theme: 
-      - mystyles.scss
+      - styles.scss
     mainfont: yourFontHere
     toc: true
 ```
@@ -50,7 +50,7 @@ knitr::include_graphics("images/google-fonts.png")
 
 ## {#select-fonts data-menu-title="Select Fonts"}
 
-[Selecting a Google Font(s)]{.slide-title}
+[Selecting a Google font(s)]{.slide-title}
 
 <hr>
 
@@ -66,14 +66,14 @@ knitr::include_graphics("images/google-fonts.png")
 
 ---
 
-## {#import-fonts data-menu-title="Import Fonts"}
+## {#import-fonts data-menu-title="Import fonts"}
 
-[Importing a Google Font(s)]{.slide-title}
+[Importing a Google font(s)]{.slide-title}
 
 <hr>
 
 ::: {.body-text .topbr .bottombr}
-To import a font, paste your copied clipboard into `mystyles.scss`
+To import a font, paste your copied clipboard into `styles.scss` under `/*-- scss:defaults --*/`
 :::
 
 ```{css}
@@ -113,9 +113,9 @@ $code-block-bg: $cream; // code block background color
 
 ---
 
-## {#use-fonts data-menu-title="Use Fonts"}
+## {#use-fonts data-menu-title="Use fonts"}
 
-[Using a Google Font(s)]{.slide-title}
+[Using a Google font(s)]{.slide-title}
 
 <hr>
 
@@ -133,7 +133,7 @@ To apply an imported font as a primary font, update `_quarto.yml` with the font 
 format:
   html:
     theme: 
-      - mystyles.scss
+      - styles.scss
     mainfont: Nunito
     toc: true
 ```
@@ -150,7 +150,7 @@ knitr::include_graphics("images/nunito.png")
 
 ## Notes
 
-::: {.smaller-body-text .topbr .bottombr}
+::: {.body-text .topbr .bottombr}
 **{{< fa angle-right >}}** If you plan to use multiple fonts, you can create Sass variables for each font type, then use those variables as you construct your CSS rules. For example, this slide deck uses three fonts (Sanchez, Montserrat, and Roboto Mono):
 :::
 
@@ -165,9 +165,12 @@ $font-family-serif: 'Sanchez', serif;
 $font-family-sans-serif: 'Montserrat', sans-serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 ```
-:::
 
-::: {.smaller-body-text .topbr .bottombr}
+::: {.body-text .topbr .bottombr}
 **{{< fa angle-right >}}** You *must* import a higher font weight (e.g. 800), in addition to your standard "regular" weight, if you wish to **bold** text. 
 :::
+
+:::
+
+
 

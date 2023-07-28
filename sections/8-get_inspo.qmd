@@ -12,67 +12,114 @@ format: revealjs
 
 ##  {#trial-error data-menu-title="Styling = lots of trial & error"}
 
-<p class="slide-title">Styling your website can be challenging</p>
+[Styling your website can be challenging]{.slide-title-smallest}
+
+<hr>
 
 :::: {.columns}
+
 ::: {.column width="50%"}
-<center><img src="images/dont-know.gif" width="400"/></center>
-<center><p class="caption-text gray-text topbr">^ How I feel most of the time while trying to write CSS</p></center>
-:::
-::: {.column width="50%"}
-<br>
-<p class="body-text">...and honestly, ***a lot*** of it is trial and error. Inspecting (*reminder: right-click on an element in your website preview and choose "Inspect"*) your website can take patience and persistence to figure out how exactly to target your desired element.</p>
 
 <br>
 
-<p class="body-text bottombr">Luckily, there are ways to help yourself along.</p>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/dont-know.gif")
+```
+
+::: {.caption-text .gray-text .center-text .topbr}
+^ How I feel most of the time while trying to write CSS
+:::
 
 :::
+
+::: {.column width="50%"}
+
+::: {.body-text}
+For me, it’s **a lot** of it is trial and error. Inspecting your website can take patience and persistence to figure out how exactly to target your desired element. Some things that have helped me:
+<!-- ...and honestly, ***a lot*** of it is trial and error. Inspecting (*reminder: right-click on an element in your website preview and choose "Inspect"*) your website can take patience and persistence to figure out how exactly to target your desired element. -->
+:::
+
+::: incremental
+::: {.body-text}
+- re-rendering often to ensure your Sass/CSS is working as expected
+- Google! (lots of queries that look like, “CSS underline text”, “CSS rounded corners”, etc.)
+- [W3 Schools](https://www.w3schools.com/css/default.asp) – seriously such a valuable resource (especially their interactive tutorials)
+- drawing inspiration (and borrowing source code) from other webpages
+:::
+:::
+
+:::
+
 ::::
 
 ---
 
 ##  {#look-at-other-sites data-menu-title="Look at other websites"}
 
-<p class="slide-title">Check out source code (specifically the stylesheets) of other sites</p>
+[Check out source code (specifically the stylesheets) of other sites]{.slide-title-smaller}
 
-<br>
-
-. . . 
-
-<p class="caption-text topbr bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Learn from others! Exploring the source code for other websites, presentations, etc. is, in my opinion, critical for learning this new skill and applying it to your own work.</p> 
-
-<br>
+<hr>
 
 . . . 
 
-<p class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  More and more Quarto websites are popping up all the time -- keep an eye out on Twitter for folks sharing their sites! (I'll never stop obsessing over [Maya Gans' Quarto site](https://maya.rbind.io/)). You can also explore the source code and stylesheets for Quarto presentations (*cough cough,* like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), books, and more.</p>
-
-<br>
+::: {.body-text .topbr .bottombr}
+**{{< fa angle-right >}}** Learn from others! Exploring the source code for other websites, presentations, etc. is, in my opinion, critical for learning this new skill and applying it to your own work.
+:::
 
 . . . 
 
-<p class="caption-text bottombr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")`  And don't limit yourself to Quarto sites! Check out [The Distillery Showcase](https://distillery.rbind.io/), which links to a long list of websites built with R's `{distill}` package (**Note:** the `{distill}` framework *is* a bit different -- when exploring `.css` files, look for CSS selectors beneath the section `/*-- Additional custom styles --*/`).</p>
+::: {.body-text .topbr .bottombr}
+**{{< fa angle-right >}}** More and more Quarto websites are popping up all the time -- Twitter is (or at least was...) a great spot to find folks sharing their sites (I'll never stop obsessing over [Maya Gans' Quarto site](https://maya.rbind.io/)). You can also explore the source code and stylesheets for Quarto presentations (*cough cough,* like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), books, and more.
+:::
 
+. . . 
+
+::: {.body-text .topbr .bottombr}
+**{{< fa angle-right >}}** And don't limit yourself to Quarto sites! Check out [The Distillery Showcase](https://distillery.rbind.io/), which links to a long list of websites built with R's `{distill}` package (**Note:** the `{distill}` framework *is* a bit different -- when exploring `.css` files, look for CSS selectors beneath the section `/*-- Additional custom styles --*/`).
+:::
 
 ---
 
 ##  {#inspect-edit data-menu-title="'Edit' while you Inspect"}
 
-<p class="slide-title">Inspecting web pages allows you to temporarily "edit" CSS</p>
+[Inspecting web pages allows you to temporarily "edit" CSS]{.slide-title}
 
-<p class="caption-text bottombr">Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly which elements different selectors are manipulating. **Note** that these changes are only *temporary* -- refreshing your web browser will revert your site back to its original state.</p>
+<hr>
 
-<center><img src="images/inspect-edit.gif" width="650"/></center>
+::: {.caption-text .bottombr}
+Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This not only allows you to try out styles before actually hard-coding them, but it also helps you identify exactly which elements different selectors are manipulating. **Note** that these changes are only *temporary* -- refreshing your web browser will revert your site back to its original state.
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/inspect-edit.gif")
+```
 
 ---
 
 ##  {#interactive-tutorials data-menu-title="Interactive tutorials"}
 
-<p class="slide-title">Take advantage of interactive tutorials</p>
+[Take advantage of interactive tutorials]{.slide-title}
 
-<p class="body-text bottombr">[W3Schools](https://www.w3schools.com/css/default.asp) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!</p>
+<hr>
+
+::: {.body-text .bottombr}
+[W3Schools](https://www.w3schools.com/css/default.asp) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!
+:::
 
 <br>
 
-<center><img src="images/w3-try.gif" width="650"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/w3-try.gif")
+```

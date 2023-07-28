@@ -81,14 +81,23 @@ format:
 
 ## {#TheEnd data-menu-title="~End Slide~"}
 
-<center><div class="slide-title">Now get to customizing!</div></center>
-
-<br>
-
-<center><img src="images/hacker.gif" alt="" width="700"/></center>
-
-::: aside
-<center>This is a Quarto Presentation. To learn more, visit <https://quarto.org>.</center>
-
-<center><span style = 'font-size: 60%;'>*If you see mistakes or want to suggest changes, please create an [issue](https://github.com/UCSB-MEDS/customizing-quarto-websites/issues) on the source repository.*</span></center>
+::: {.slide-title .center-text}
+Happy Styling!
 :::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/bob-ross.gif")
+```
+
+::: {.center-text .medium-body-text .gray-text}
+This is a Quarto Presentation. To learn more, visit <https://quarto.org>.
+:::
+
+::: {.center-text .smaller-body-text .gray-text}
+*If you see mistakes or want to suggest changes, please create an [issue](https://github.com/UCSB-MEDS/customizing-quarto-websites/issues) on the source repository.*
+:::
+

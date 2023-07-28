@@ -12,16 +12,33 @@ format: revealjs
 
 ##  {#styles.css data-menu-title="Quarto comes with `styles.css`"}
 
-<div class="slide-title">When you create a new Quarto site, it automatically creates a `styles.css` file</div>
+[When you create a new Quarto site, it automatically creates a `styles.css` file]{.slide-title-smallest}
+
+<hr>
 
 :::: {.columns}
 ::: {.column width="50%"}
 <br>
-<center><img src="images/quarto_files.png" width="500"/></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/quarto_files.png")
+```
+
 :::
 ::: {.column width="50%"}
 <br>
-<div class="body-text">We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `mystyles.scss` file (remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file). You can delete `styles.css` if you don't plan to use it, or leave it be (it's easy to create a new one using the `touch` command in your terminal).</div>
+
+::: {.body-text}
+We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `styles.scss` file ***(remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file)***. 
+:::
+
+::: {.body-text}
+You can delete `styles.css` if you don't plan to use it, or leave it be (it's easy to create a new one using the `touch` command in your terminal).
+:::
 :::
 ::::
 
@@ -29,9 +46,13 @@ format: revealjs
 
 ##  {#scss-div data-menu-title="SCSS rules divider"}
 
-<div class="slide-title">Create a section for defining CSS rules in `mystyles.scss`</div>
+[Create a section for defining CSS rules in `styles.scss`]{.slide-title}
 
-<div class="body-text topbr">To start defining CSS rules in `mystyles.scss` you first need to add the `/*-- scss:rules --*/` section divider beneath your Sass variables section:</div>
+<hr>
+
+::: {.body-text .topbr}
+To start defining CSS rules in `styles.scss` you first need to add the `/*-- scss:rules --*/` region decorator beneath your Sass variables section:
+:::
 
 ```{css}
 #| eval: false
@@ -51,48 +72,109 @@ $dark-sage-green: #98A08D;
 /*-- scss:rules --*/
 ```
 
-<div class="body-text topbr">Next, we'll walk through some examples of how to modify your site with your own CSS rules.</div>
+::: {.body-text .topbr}
+Next, we'll walk through some examples of how to modify your site with your own CSS rules.
+:::
 
 ---
 
 ##  {#determine-element-to-style data-menu-title="Determine element(s) to style"}
 
-<p class="slide-title">Determine which element you want to style</p>
+[Determine which element you want to style]{.slide-title-smallest}
 
-<div class="body-text topbr">Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:</div>
+<hr>
+
+::: {.body-text .topbr}
+Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:
+:::
 
 :::: {.columns}
+
 ::: {.column width="33%"}
-<center><img src="images/index-font.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">On my landing page, I want to style my name, "samantha csik", and the three section headers, "hi there!", "education", and "experience"</div></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/index-font.png")
+```
+
+::: {.caption-text .center-text .gray-text .topbr}
+On my landing page, I want to style my name, "samantha csik", and the three section headers, "hi there!", "education", and "experience"
 :::
+
+:::
+
 ::: {.column width="33%"}
-<center><img src="images/about-font.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">On my about page, I want to style the top header, "about"</div></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/about-font.png")
+```
+
+::: {.caption-text .center-text .gray-text .topbr}
+On my about page, I want to style the top header, "about"
 :::
+
+:::
+
 ::: {.column width="33%"}
-<center><img src="images/resources-font.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">On my resources page, I want to style the top header, "resources"</div></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/resources-font.png")
+```
+
+::: {.caption-text .center-text .gray-text .topbr}
+On my resources page, I want to style the top header, "resources"
 :::
+
+:::
+
 ::::
 
 ---
 
 ##  {#dont-know-element data-menu-title="Don't know element?"}
 
-<p class="slide-title">But what if I don't know what HTML element type this is? Inspect!</p>
+[But what if I don't know what HTML element type this is? Inspect!]{.slide-title-smallest}
+
+<hr>
 
 :::: {.columns}
 ::: {.column width="50%"}
 <br>
-<center><img src="images/inspect.gif" width="500"/></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/inspect.gif")
+```
+
 :::
 ::: {.column width="50%"}
-<div class="caption-text topbr">Using the *Inspect* tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview).</div>
+<br>
 
-<div class="caption-text topbr">In your website preview, *right click* on an element of interest (in this case, let's start with my name, "samantha csik") and choose *Inspect* to pull up the underlying HTML & CSS files.</div>
+::: {.caption-text .topbr}
+Using the **Inspect** tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview).
+:::
 
-<div class="caption-text topbr">Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.</div>
+::: {.caption-text .topbr}
+In your website preview, **right click on an element of interest** (in this case, let's start with my name, "samantha csik") and **choose Inspect** to pull up the underlying HTML & CSS files.
+:::
+
+::: {.caption-text .topbr}
+Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.
+:::
 :::
 ::::
 
@@ -100,39 +182,69 @@ $dark-sage-green: #98A08D;
 
 ##  {#inspect-name data-menu-title="Inspect landing page name"}
 
-<center><p class="large-body-text">My name is an `<h1>` element</p></center>
+::: {.large-body-text .center-text}
+My name is an `<h1>` element
+:::
 
-<center><img src="images/inspect-name.png" width="750"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/inspect-name.png")
+```
 
-<center><div class="caption-text gray-text">**Note:** This `<h1>` element also has a class `title` -- more on that in a minute.</div></center> 
+::: {.caption-text .gray-text .center-text}
+**Note:** This `<h1>` element also has a class `title` -- more on that in a minute.
+:::
 
 ---
 
 ##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"}
 
-<center><p class="large-body-text">My landing page section, "education" (as well as "hi there!" and "experience") are `<h3>` elements</p></center>
+::: {.large-body-text .center-text}
+My landing page section, "education" (as well as "hi there!" and "experience") are `<h3>` elements
+:::
 
-<center><img src="images/inspect-education.png" width="750"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/inspect-education.png")
+```
 
 ---
 
 ##  {#inspect-about data-menu-title="Inspect about page"}
 
-<center><p class="large-body-text">My about page title (as well as my resource page title) are `<h1>` elements</p></center>
+::: {.large-body-text .center-text}
+My about page title (as well as my resource page title) are `<h1>` elements
+:::
 
-<center><img src="images/inspect-about.png" width="750"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/inspect-about.png")
+```
 
 ---
 
 ##  {#write-grouping-selector data-menu-title="Write a CSS grouping selector"}
 
-<center><p class="slide-title">Write a CSS grouping selector to style `<h1>` and `<h3>` elements</p></center>
+[Write a CSS grouping selector to style `<h1>` and `<h3>` elements]{.slide-title-smallest}
+
+<hr>
 
 ::: {.panel-tabset}
 
-## `mystyles.scss` file
+## `styles.scss` file
 
-<div class="body-text topbr bottombr">Here, we have a grouping selector that targets *all* `<h1>` and `<h3>` elements -- it increases both the spacing between each letter and the font weight (makes it bolder), and it colors those header levels gray (reminder: I created a Sass variable: `$gray: #64605f;`).</div>
+::: {.body-text .topbr .bottombr}
+Here, we have a grouping selector that targets *all* `<h1>` and `<h3>` elements -- it increases both the spacing between each letter and the font weight (makes it bolder), and it colors those header levels gray (reminder: I created a Sass variable: `$gray: #64605f;`).
+:::
 
 ```{css}
 #| eval: false
@@ -150,18 +262,40 @@ h1, h3 {
 
 :::: {.columns}
 ::: {.column width="50%"}
-<center><img src="images/without-header-styling.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">No CSS styling on `h1` and `h3` headers</div></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/without-header-styling.png")
+```
+
+::: {.caption-text .gray-text .center-text .topbr}
+No CSS styling on `h1` and `h3` headers
+:::
 :::
 ::: {.column width="50%"}
-<center><img src="images/with-header-styling.png" width="500"/></center>
-<center><div class="caption-text gray-text topbr">With CSS styling on `h1` and `h3` headers</div></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/with-header-styling.png")
+```
+
+::: {.caption-text .gray-text .center-text .topbr}
+With CSS styling on `h1` and `h3` headers
+:::
 :::
 ::::
 
 ## Notes
 
-<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd` since this grouping selector targets *all* `<h1>` and `<h3>` elements across my site. If an element on any of my pages has either of those tags, it will get styled with the declarations included in our CSS rule.</div>
+::: {.body-text}
+**{{< fa angle-right >}}** I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd` since this grouping selector targets *all* `<h1>` and `<h3>` elements across my site. If an element on any of my pages has either of those tags, it will get styled with the declarations included in our CSS rule.
+:::
 
 :::
 
@@ -169,15 +303,21 @@ h1, h3 {
 
 ##  {#title-class data-menu-title="'title' class"}
 
-<center><p class="slide-title">What's with that `title` class selector?</p></center>
+[What's with that `title` class selector?]{.slide-title}
 
-<div class="caption-text topbr">Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class, `title`.</div>
+<hr>
 
-<div class="caption-text topbr">The Quarto framework has defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:</div> 
+::: {.caption-text .topbr}
+Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class, `title`.
+:::
+
+::: {.caption-text .topbr}
+The Quarto framework has defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:
+:::
 
 ::: {.panel-tabset}
 
-## `mystyles.scss` file
+## `styles.scss` file
 ```{css}
 #| eval: false
 #| echo: true
@@ -198,13 +338,37 @@ h1, h3 {
 
 :::: {.columns}
 ::: {.column width="33%"}
-<center><img src="images/red-name.png" width="500"/></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/red-name.png")
+```
+
 :::
 ::: {.column width="33%"}
-<center><img src="images/red-about.png" width="500"/></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/red-about.png")
+```
+
 :::
 ::: {.column width="33%"}
-<center><img src="images/red-resources.png" width="500"/></center>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/red-resources.png")
+```
+
 :::
 ::::
 
@@ -218,9 +382,13 @@ h1, h3 {
 
 ##  {#title-class2 data-menu-title=""}
 
-<p class="slide-title">Okay, but what about `<h1>` elements that are not of class `title`?</p>
+[Okay, but what about `<h1>` elements that are not of class `title`?]{.slide-title-smallest}
 
-<div class="body-text topbr">Let's write a couple of other elements that *are not* of `class="title"` to see what happens. I'll do this on my *about* page:</div>
+<hr>
+
+::: {.body-text .topbr}
+Let's write a couple of other elements that *are not* of `class="title"` to see what happens. I'll do this on my *about* page:
+:::
 
 ::: {.panel-tabset}
 
@@ -245,15 +413,27 @@ title: "about"
 
 ## Output
 
-<center><img src="images/h1-title.png" width="500"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/h1-title.png")
+```
 
 ## Notes
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` You can add elements on your web pages using either RMarkdown/Markdown syntax (e.g. use `# text here` to denote an `<h1>` element) *or* use HTML tags (e.g. use `<h1>text here</h1>`). I tend to use a mix of both Markdown syntax and HTML tags.</div>
+::: {.caption-text .topbr}
+**{{< fa angle-right >}}** You can add elements on your web pages using either Markdown syntax (e.g. use `# text here` to denote an `<h1>` element) *or* use HTML tags (e.g. use `<h1>text here</h1>`). I tend to use a mix of both Markdown syntax and HTML tags.
+:::
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are of class `title` are colored red. Any `<h1>` elements that are not of class `title` are styled according to our `h1, h3 {}` element selector.</div>
+::: {.caption-text .topbr}
+**{{< fa angle-right >}}** Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are of class `title` are colored red. Any `<h1>` elements that are not of class `title` are styled according to our `h1, h3 {}` element selector.
+:::
 
-<div class="caption-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` We can apply the `title` class to any text element. In this example, we apply it both to an `<h1>` element and a `<p>` element.</div>
+::: {.caption-text .topbr}
+**{{< fa angle-right >}}** We can apply the `title` class to any text element. In this example, we apply it both to an `<h1>` element and a `<p>` element.
+:::
 
 :::
 
@@ -261,13 +441,17 @@ title: "about"
 
 ##  {#write-own-class-selector data-menu-title="Write your own class selector"}
 
-<p class="slide-title">Write your own class selector</p>
+[Write your own class selector]{.slide-title}
+
+<hr>
 
 ::: {.panel-tabset}
 
-## `mystyles.scss` file
+## `styles.scss` file
 
-<p class="body-text bottombr">Let's create a class named `custom-subtitle` that styles text in the following ways: increases font size, italicizes it, and colors it purple. We can then add an element to our **resources** page and apply our new class selector:</p>
+::: {.body-text .bottombr}
+Let's create a class named `.custom-subtitle` that styles text in the following ways: increases font size, italicizes it, and colors it purple. We can then add an element to our **resources** page and apply our new class selector:
+:::
 
 ```{css}
 #| eval: false
@@ -294,9 +478,13 @@ h1, h3 {
 
 ## `resources.qmd` file
 
-<p class="body-text bottombr">Here, I'm creating two paragraphs -- one that is styled as a `custom-subtitle` and one that is not.</p>
+::: {.body-text .bottombr}
+Here, I'm creating two paragraphs -- one that is styled with `.custom-subtitle` and one that is not.
+:::
 
-<p class="body-text bottombr">What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?</p>
+::: {.body-text .bottombr}
+What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?
+:::
 
 ```{r}
 #| eval: false
@@ -314,7 +502,13 @@ title: "resources"
 
 ## Output
 
-<center><img src="images/custom-subtitle.png" width="500"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/custom-subtitle.png")
+```
 
 ## Notes
 
@@ -326,15 +520,21 @@ title: "resources"
 
 ##  {#apply-two-class-selectors data-menu-title="Apply two class selectors"}
 
-<p class="slide-title">Apply a second class selector our text styled as a `custom-subtitle`</p>
+[Apply a second class selector to our text styled as a `custom-subtitle`]{.slide-title-smaller}
+
+<hr>
 
 ::: {.panel-tabset}
 
-## `mystyles.scss` file
+## `styles.scss` file
 
-<p class="caption-text bottombr">Let's say we want the option to add a bit of extra space beneath this particular custom subtitle before the element is rendered -- but maybe we don't *always* want that extra space beneath *every* custom subtitle. If we were to add a declaration that increases `margin-bottom` directly to our `.custom-subtitle` class selector, all elements of class `custom-subtitle` would have that extra space.</p>
+::: {.caption-text .bottombr}
+Let's say we want the option to add a bit of extra space beneath this particular custom subtitle before the element is rendered -- but maybe we don't *always* want that extra space beneath *every* custom subtitle. If we were to add a declaration that increases `margin-bottom` directly to our `.custom-subtitle` class selector, all elements of class `custom-subtitle` would have that extra space.
+:::
 
-<p class="caption-text bottombr">One solution, then, is to create a new class selector (we'll call it `.bottombr`, for "bottom break") that we can specifically apply to our custom subtitle on the **resources** page.</p>
+::: {.caption-text .bottombr}
+One solution, then, is to create a new class selector (we'll call it `.bottombr`, for "bottom break") that we can specifically apply to our custom subtitle on the **resources** page.
+:::
 
 ```{css}
 #| eval: false
@@ -357,7 +557,9 @@ title: "resources"
 
 ## `resources.qmd` file
 
-<p class="body-text bottombr">Here, we add our `bottombr` class selector within the `""` after `custom-subtitle` and a space.</p>
+::: {.body-text .bottombr}
+Here, we add our `bottombr` class selector within the `""` after `custom-subtitle` and a space.
+:::
 
 ```{r}
 #| eval: false
@@ -374,11 +576,19 @@ title: "resources"
 
 ## Output
 
-<center><img src="images/bottombr.png" width="500"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/bottombr.png")
+```
 
 ## Notes
 
-<div class="body-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Remember, HTML elements can have more than one class, e.g. `<p class="class1 class2 etc">`</div>
+::: {.body-text .topbr}
+**{{< fa angle-right >}}** Remember, HTML elements can have more than one class, e.g. `<p class="class1 class2 etc">`
+:::
 
 :::
 
@@ -386,13 +596,67 @@ title: "resources"
 
 ##  {#quarto-syntax data-menu-title="Quarto Syntax"}
 
-<p class="slide-title">Apply class selectors to page elements using Quarto's own syntax</p>
+[Quarto also provides its [own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) for applying classes to elements]{.slide-title-smallest}
 
-<p class="caption-text bottombr">The following will be rendered the same way:</p> 
+<hr>
 
-<p class="caption-text bottombr">`<tag class="myclass">Some text</tag>` == `[Some text]{.myclass}`</p>
+::: {.body-text .bottombr}
+You can create both **divs (block-level regions of content)** and **spans (inline content)** using Quarto's syntax. For example:
+:::
 
-<p class="caption-text bottombr">I tend to use a mix of both approaches (HTML & Quarto syntax). In some situations using Quarto's `[]{}` feels cleaner. In other situations, I can get finer control over the styling of elements using HTML.</p>
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.body-text .center-text}
+**Divs**
+:::
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Quarto syntax
+::: {.my-selector}
+Some text to style
+:::
+  
+## HTML syntax
+<div class="my-selector">
+  Some text to style
+</div>
+```
+:::
+
+::: {.column width="50%"}
+::: {.body-text .center-text}
+**Spans**
+:::
+
+```{r}
+#| eval: false
+#| echo: true
+
+# Quarto syntax
+Some other text with just [this section]{.my-selector} styled
+
+# HTML syntax
+<p>Some other text with just <span class="my-selector">this section</span> styled</p>
+```
+:::
+
+::::
+
+---
+
+##  {#mix-match data-menu-title="Mix & match styles"}
+
+[You can mix and match syntaxes in `.qmd` files]{.slide-title}
+
+<hr>
+
+::: {.body-text .bottombr}
+I tend to use a mix of both approaches (HTML & Quarto syntax). For example:
+:::
 
 ::: {.panel-tabset}
 
@@ -417,11 +681,19 @@ Also note that I do not need to wrap this text in the `<p>` tag in order for it 
 
 ## Output
 
-<center><img src="images/quarto-css-syntax.png" width="500"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/quarto-css-syntax.png")
+```
 
 ## Notes
 
-<div class="caption-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` You'll notice the `[]{}` syntax throughout Quarto's documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don't *need* to use it, but it helps to know what it is when you see it!</div>
+::: {.caption-text}
+**{{< fa angle-right >}}** You'll notice the `[]{}` and `::: {} :::` syntax throughout Quarto's documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don't *need* to use it, but it helps to know what it is when you see it!
+:::
 
 :::
 
