@@ -22,14 +22,14 @@ format: revealjs
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "3-20"
 ---
 title: "samantha csik" # if using a built-in template, this title appears under your photo
-image: headshot.jpg # great spot for your professional headshot :) 
+image: media/headshot.jpg # great spot for your professional headshot :) 
+toc: false # remove "On this page" table of contents
 about: 
   template: trestles # see other templates at https://quarto.org/docs/websites/website-about.html#templates
-  image-shape: rounded
-  image-width: 15em
+  image-shape: round
+  image-width: 20em
   links:
     - icon: linkedin # you'll need to the fontawesome extension to include icons: https://github.com/quarto-ext/fontawesome
       text: LinkedIn
@@ -83,15 +83,15 @@ With the `trestles` About Page template
 ## Notes
 
 ::: {.caption-text}
-**{{< fa angle-right >}}** Use the `about` option in the YAML section of `index.qmd` to turn your landing page into an [About Page](https://quarto.org/docs/websites/website-about.html) -- supply it with one of five template options (here, I chose `trestles`). It *is not* necessary to do this (you can fully build/customize your web page layout using CSS), but it's a fast way to create a clean, professional-looking landing page. **NOTE:** Any of your webpages can be turned into an About Page.
+**{{< fa angle-right >}}** Use the `about` option in the YAML section of `index.qmd` to turn your landing page into an [About Page](https://quarto.org/docs/websites/website-about.html) -- supply it with one of five template options (here, I chose `trestles`). It *is not* necessary to do this (you can fully build/customize your web page layout using CSS), but it's a fast way to create a clean, professional-looking landing page. **NOTE:** Any of your web pages can be turned into an About Page.
 :::
 
 ::: {.caption-text}
-**{{< fa angle-right >}}** The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and an `href` (a link), and optionally can supply an icon.
+**{{< fa angle-right >}}** The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and an `href` (a link), and optionally can supply an `icon`.
 :::
 
 ::: {.caption-text}
-**{{< fa angle-right >}}** You'll need to install the quarto fontawesome extension to include icons throughout your site (including your About Page buttons). Run `quarto install extension quarto-ext/fontawesome` in your RStudio terminal. **NOTE:** You'll need to install this for each project where you'd like to use fontawesome icons.
+**{{< fa angle-right >}}** You'll need to install the [Quarto fontawesome extension](https://quarto.org/docs/websites/website-about.html) if you'd like to include icons throughout your site (including your About Page buttons). Run `quarto install extension quarto-ext/fontawesome` in your RStudio Terminal, which downloads the extension files and saves them to your project directory (you should see a new folder, `_extensions/quarto-ext/fontawesome/` in your project directory). **NOTE:** You'll need to install this for each project where you'd like to use [fontawesome icons](https://fontawesome.com/).
 :::
 
 :::
@@ -100,9 +100,13 @@ With the `trestles` About Page template
 
 ## {#add-pages data-menu-title="Add pages"}
 
-[Add additional pages (& clickable icons) to your navbar & add a footer]{.slide-title-smaller}
+[Update your navbar]{.slide-title-smaller}
 
 <hr>
+
+::: {.smaller-body-text}
+Any edits you want to make to your navbar happen under the `website:` > `navbar:` option in your `_quarto.yml` file.
+:::
 
 ::: {.panel-tabset}
 
@@ -111,31 +115,105 @@ With the `trestles` About Page template
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "13-19|20-29"
+#| code-line-numbers: "6-19"
 project:
   type: website
   output-dir: docs
 
 website:
-  title: "samantha csik"
   navbar:
-    title: samanthacsik # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
+    title: "Samantha Csik" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
     right: # align navbar items to the right/left/center
       - href: index.qmd
-        text: home # use 'text' option to update the name as you want it to appear in your navbar
+        text: Home # use 'text' option to update the name as you want it to appear in your navbar
       - about.qmd
-      - resources.qmd
-      - href: CV/SCsik_CV.pdf
-        text: cv
+      - href: resources.qmd
+        text: Resources
+      - href: cv/myCV.pdf
+        text: CV
       - icon: github # add icons that link to social media, etc.
         href: https://github.com/samanthacsik
       - icon: twitter
         href: https://twitter.com/SamanthaCsik
-    page-footer: 
-    background: light
-    left: 
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+## Output
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "75%" 
+knitr::include_graphics("images/add_navbar_items.png")
+```
+
+## Notes
+
+::: {.smaller-body-text}
+**{{< fa angle-right >}}** Right/center/left align your navbar contents using the `website:` > `navbar:` > `right`/`center`/`left:` option. Add navbar pages as an indented list beneath this option.
+:::
+
+::: {.smaller-body-text}
+**{{< fa angle-right >}}** Navbar page names will appear the same as the title given to each `.qmd` file (e.g. in the YAML of `about.qmd`, the `title` option has the value `About`, and therefore appears in the navbar as "**About**"). You can update the name as it appears in your navbar by providing the `text` option when linking your new page in `_quarto.yml` (see "Home" and "Resources" pages as examples).
+:::
+
+
+::: {.smaller-body-text}
+**{{< fa angle-right >}}** Link your resume or CV by providing a file path to the pdf in `href` (e.g. `href: file/path/to/CV.pdf`) and the text as you'd like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked. Be sure to provide the `text` option with the title as you'd like it to appear in your navbar.
+:::
+
+:::
+
+---
+
+## {#add-footer data-menu-title="Add footer"}
+
+[Add a page footer]{.slide-title}
+
+<hr>
+
+::: {.smaller-body-text}
+Any edits you want to make to a website footer happen under the `website:` > `page-footer:` option in your `_quarto.yml` file.
+:::
+
+::: {.panel-tabset}
+
+## `_quarto.yml` file
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "20-28"
+project:
+  type: website
+  output-dir: docs
+
+website:
+  navbar:
+    title: "Samantha Csik" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
+    right: # align navbar items to the right/left/center
+      - href: index.qmd
+        text: Home # use 'text' option to update the name as you want it to appear in your navbar
+      - about.qmd
+      - href: resources.qmd
+        text: Resources
+      - href: cv/myCV.pdf
+        text: CV
+      - icon: github # add icons that link to social media, etc.
+        href: https://github.com/samanthacsik
+      - icon: twitter
+        href: https://twitter.com/SamanthaCsik
+  page-footer:
+    background: light # or dark
+    left:
       - "Copyright 2021, Samantha Csik"
-    right: 
+    right:
       - icon: github
         href: https://github.com/samanthacsik
       - icon: twitter
@@ -150,16 +228,18 @@ format:
 
 ## Output
 
-<center><img src="images/add_navbar_items.png" width="600"/></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "75%" 
+knitr::include_graphics("images/footer.png")
+```
 
 ## Notes
 
 ::: {.smaller-body-text}
-**{{< fa angle-right >}}** The navbar page names will appear as the title given to each `.qmd` file (e.g. in the YAML of `about.qmd`, the `title` option has the value `about`, and therefore appears in the navbar as "**about**"). However you can update the name as it appears in your navbar by providing the `text` option when linking your new page in `_quarto.yml`.
-:::
-
-::: {.smaller-body-text}
-**{{< fa angle-right >}}** Link your resume or CV by providing a file path to the pdf in `href` (e.g. `href: file/path/to/CV.pdf`) and the text as you'd like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked. Be sure to provide the `text` option with the title as you'd like it to appear in your navbar.
+**{{< fa angle-right >}}** Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.
 :::
 
 :::
@@ -173,7 +253,7 @@ format:
 <hr>
 
 ::: {.body-text}
-A favicon is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
+A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
 :::
 
 ::: {.panel-tabset}
@@ -183,13 +263,12 @@ A favicon is a small icon used on web browsers to represent a website or a web p
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "7|8-11"
+#| code-line-numbers: "6|8-10"
 project:
   type: website
   output-dir: docs
 
 website:
-  title: "samantha csik"
   favicon: file/path/to/image.png
   navbar:
     title: false # change this to false!
@@ -197,7 +276,7 @@ website:
     logo-alt: "Alt text for logo"
     right: 
       - href: index.qmd
-        text: home 
+        text: Home 
         
       # ~ additional YAML excluded for brevity ~
 
@@ -206,6 +285,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    page-layout: full
 ```
 
 ## Output
@@ -221,7 +301,7 @@ knitr::include_graphics("images/favicon_logo.png")
 ## Notes
 
 ::: {.smaller-body-text}
-**{{< fa angle-right >}}** Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. **Tip:** You can download logos with a transparent background, or with a background that matches the color you plan to change your navbar to (as in this example). I also recommend making them as large as possible *before* downloading -- doing so may circumvent having to adjust the logo size using CSS (I realized that after the fact `r fontawesome::fa("smile", fill = "#222222", a11y = "sem")`).
+**{{< fa angle-right >}}** Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. **Tip:** You can download logos with a transparent background so that they can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible *before* downloading -- doing so *may* circumvent having to adjust the logo size using CSS.
 :::
 :::
 

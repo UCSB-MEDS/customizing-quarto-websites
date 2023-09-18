@@ -5,7 +5,7 @@ format: revealjs
 ##  {#use-sass data-menu-title="Use Sass" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle2">Use a *Syntactically Awesome Stylesheet* (`r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")`) to define variables for use throughout your website </div></center>
+<center><div class="custom-subtitle2">Use a *Syntactically Awesome Stylesheet* ({{< fa brands sass title="Sass logo" >}}) to define variables and quickly customize your website's appearance</div></center>
 </div>
 
 ---
@@ -44,6 +44,15 @@ knitr::include_graphics("images/sass.png")
 :::
 
 ::::
+
+. . . 
+
+<br>
+
+::: {.body-text .center-text}
+I know it might feel like we're getting ahead of ourselves a bit here, but bear with me!
+:::
+
 
 <!-- ::: {.body-text} -->
 <!-- - [Sass](https://sass-lang.com/) stands for **S**yntactically **A**wesome **S**tyle**s**heets and is an extension to CSS (I know, it seems like we're talking about this in an incorrect order, but bear with me). -->

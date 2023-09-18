@@ -43,7 +43,6 @@ format:
 
 ::: {.column width="50%"}
 [Master of Environmental Data Science |]{.custom-subtitle2}<br>
-<!-- [Fall 2022]{.custom-subtitle2}<br> -->
 [*Bren School of Environmental Science & Management*]{.custom-subtitle3}
 :::
 
