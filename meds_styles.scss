@@ -49,11 +49,19 @@ td {
   font-size: 20px;
 }
 
-// horizontal line
-hr {
-  border: 5px solid $dark-blue;
+hr { // horizontal line
+  border: 4px solid $dark-blue;
   border-radius: 5px;
   margin-bottom: 30px;
+}
+
+
+.hr-teal { // horizontal line
+  border: 4px solid $teal;
+}
+
+.br-smaller { // smaller break
+  line-height: 6px;
 }
 
 // Class selectors //
@@ -86,7 +94,7 @@ hr {
 .custom-subtitle3 { 
   font-family: $font-family-sans-serif;
   color: $baby-blue;
-  font-size: 0.8em;
+  font-size: 0.7em;
   //position: absolute; 
   left: 20px; 
 }
@@ -94,7 +102,7 @@ hr {
 .title-footer { 
   text-align: center !important;
   color: $baby-blue;
-  font-size: 0.4em !important;
+  font-size: 0.5em !important;
 }
 
 .slide-title {
@@ -149,6 +157,10 @@ hr {
 .caption-text {
   font-size: 19px;
 	line-height: 1.7em;
+}
+
+.baby-blue-text {
+  color: $baby-blue;
 }
 
 .gray-text {

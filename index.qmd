@@ -12,14 +12,26 @@ format:
       - meds_styles.scss
 ---
 
-## {#title-slide data-menu-title="Title Slide" background="images/title_background.png"} 
+## {#title-slide data-menu-title="Title Slide" background="#053660"} 
+<!-- background="images/title_background.png" -->
 
 [Customizing Quarto Websites]{.custom-title}
 
 [*Make your website stand out using `r fontawesome::fa("sass", fill = "#d2e3f3", a11y = "sem")` & `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`*]{.custom-subtitle}
 
-<br> 
-<br>
+:::: {.columns}
+
+::: {.column width="50%"}
+[**Published:** Oct 10, 2022]{.smaller-body-text .baby-blue-text}
+:::
+
+::: {.column width="50%"}
+[**Last updated:** `r format(Sys.time(), '%b %d, %Y')`]{.smaller-body-text .baby-blue-text}
+:::
+
+::::
+
+<hr class="hr-teal">
 
 :::: {.columns} 
 
@@ -31,7 +43,7 @@ format:
 
 ::: {.column width="50%"}
 [Master of Environmental Data Science |]{.custom-subtitle2}<br>
-[Fall 2022]{.custom-subtitle2}<br>
+<!-- [Fall 2022]{.custom-subtitle2}<br> -->
 [*Bren School of Environmental Science & Management*]{.custom-subtitle3}
 :::
 
@@ -39,7 +51,9 @@ format:
 
 <br>
 
-<center><span style='font-size: 50%; color: #d2e3f3'>Slides & source code available on [`r fontawesome::fa("github", fill = "#d2e3f3", a11y = "sem")`](https://github.com/UCSB-MEDS/customizing-quarto-websites)</span></center>
+::: {.title-footer}
+Slides & source code available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}](https://github.com/UCSB-MEDS/customizing-quarto-websites)
+:::
 
 ---
 
