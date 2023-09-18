@@ -127,12 +127,12 @@ h1 {
 ```
 
 ::: {.smaller-body-text .topbr}
-**Note:** Sass has two syntaxes – SCSS syntax (`.scss`), shown above, is the most common. It stands for **S**assy **C**ascading **S**tylesheets {{< fa smile >}}
+**Note:** Sass has two syntaxes – SCSS syntax (`.scss`), shown above, is the most common. It stands for **S**assy **C**ascading **S**tylesheets {{< fa smile title="smiling face with two eyes and an upturned mouth>}}
 :::
 
 ---
 
-## {#quarto-compiels data-menu-title="Quarto compiles Sass automatically"}
+## {#quarto-compiles data-menu-title="Quarto compiles Sass automatically"}
 
 [Quarto automatically compiles Sass]{.slide-title}
 
@@ -161,7 +161,7 @@ Let's create our website's `.scss ` stylesheet.
 <hr>
 
 ::: {.caption-text .topbr .bottombr}
-**1.** Create a `.scss` file in the root directory of your website's repo using the `touch` command in the RStudio terminal:
+**1.** Create a `.scss` file in the root directory of your website's repo using the `touch` command in the RStudio Terminal (alternatively, use **New Blank File** > **Text File** in the Files pane):
 :::
 
 ```{bash}
@@ -212,8 +212,6 @@ format:
 
 [Define some color variables]{.slide-title}
 
-<!-- Create Sass variables for your website's primary colors -->
-
 <hr>
 
 ::: {.body-text .topbr}
@@ -228,12 +226,12 @@ Let's first define the colors we want to use throughout our site. For me, that l
 /*-- scss:defaults --*/
 
 // Colors
-$light-sage-green: #D1D9CE;
-$dark-sage-green: #98A08D;
+$light-green: #D1D9CE;
+$dark-green: #98A08D;
 $cream: #FDFBF7;
 $gray: #64605f;
 $light-gray: #949799;
-$purple: #AE8BD1;
+$purple: #9158A2;
 ```
 
 ::: {.body-text .topbr}
@@ -243,7 +241,7 @@ You can also define values with units, e.g. `$my-font-size: 25px;` or `$my-width
 <br>
 
 ::: {.caption-text .center-text .topbr}
-In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.
+**Note:** In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.
 :::
 
 ---
@@ -268,18 +266,18 @@ Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-format
 /*-- scss:defaults --*/
 
 // Colors
-$light-sage-green: #D1D9CE;
-$dark-sage-green: #98A08D;
+$light-green: #D1D9CE;
+$dark-green: #98A08D;
 $cream: #FDFBF7;
 $gray: #64605f;
 $light-gray: #949799;
-$purple: #AE8BD1;
+$purple: #9158A2;
 
 // Base document colors
 $navbar-bg: $cream; // navbar
-$navbar-fg: $dark-sage-green; // navbar foreground elements
+$navbar-fg: $dark-green; // navbar foreground elements
 $navbar-hl: $purple; // highlight color when hovering over navbar links
-$body-bg: $light-sage-green; // page background 
+$body-bg: $light-green; // page background 
 $body-color: $gray; // page text 
 $footer-bg: $cream; // footer 
 $link-color: $purple; // hyperlinks 
@@ -298,7 +296,7 @@ $code-block-bg: $cream; // code block background color
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "45%" 
+#| out-width: "75%" 
 knitr::include_graphics("images/sass_colors.png")
 ```
 
@@ -309,8 +307,24 @@ knitr::include_graphics("images/sass_colors.png")
 :::
 
 ::: {.smaller-body-text .topbr}
-**{{< fa angle-right >}}** You don't have to create a theme entirely from scratch! If you like parts of a pre-built Bootswatch theme (e.g. [cosmo](https://bootswatch.com/cosmo/)), you can modify it by layering on your desired updates. See the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#customizing-themes) for more details.
+**{{< fa angle-right >}}** You don't have to create a theme entirely from scratch! If you like parts of a pre-built Bootswatch theme (e.g. [cosmo](https://bootswatch.com/cosmo/)), you can modify it by layering on your desired updates. See the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#customizing-themes) for more details. 
 :::
+
+```{r filename="_quarto.yml"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5-7"
+# additional metadata excluded for brevity ~
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - styles.scss
+    toc: true
+    page-layout: full
+```
+
 
 :::
 

@@ -17,10 +17,10 @@ format: revealjs
 <hr>
 
 ::: {.body-text .topbr}
-With Quarto, we can define a single primary font directly in our `_quarto.yml` file:
+With Quarto, we can define a primary font directly in our `_quarto.yml` file:
 :::
 
-```{r}
+```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
@@ -33,7 +33,7 @@ format:
 ```
 
 ::: {.body-text .topbr .bottombr}
-To do so, we first need to choose and import any fonts we'd like to use throughout our website. Start by exploring the *many* fonts available at <https://fonts.google.com/>.
+To do so, we first need to choose and import our font(s). Start by exploring the *many* fonts available at <https://fonts.google.com/>.
 :::
 
 <br>
@@ -42,7 +42,7 @@ To do so, we first need to choose and import any fonts we'd like to use througho
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "50%" 
+#| out-width: "70%" 
 knitr::include_graphics("images/google-fonts.png")
 ```
 
@@ -55,14 +55,20 @@ knitr::include_graphics("images/google-fonts.png")
 <hr>
 
 ::: {.caption-text .topbr .bottombr}
-**1.** Once you've found a font you'd like to use, scroll down to the **Styles** section of that font's page -- here you'll (typically) find a number of different weights (e.g. thin, light, regular, bold) and styles (e.g. italic). Click on the **+** button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, to the right of the style you want. In this example, I choose *Nunito* in the *Light 300* style, though you can choose as many fonts and styles to import as you'd like. **Note:** You *must* import a higher weight font style if you plan to use **bolded** text.
+**1.** Once you've found a font you'd like to use, scroll down to the **Styles** section of that font's page -- here you'll (typically) find a number of different weights (e.g. thin, light, regular, bold) and styles (e.g. italic). Click on the **+** button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, to the right of the style you want. In this example, I choose *Nunito* in the *Light 400* and *ExtraBold 800* styles, though you can choose as many fonts and styles to import as you'd like. **Note:** You *must* import a higher weight font style if you plan to use **bolded** text.
 :::
 
 ::: {.caption-text .topbr .bottombr}
 **2.** Click on the **View selected families** button, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, in the top right corner to see all of your selected fonts. Under the **Use on the web** section, select the radio button for **@import** and copy everything between the `<style> </style>` tags (starting with `@import` and ending with `;`) to your clipboard.
 :::
 
-<center><iframe width="550" height="290" src="images/google-fonts.gif" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "60%" 
+knitr::include_graphics("images/google-fonts.gif")
+```
 
 ---
 
@@ -76,14 +82,14 @@ knitr::include_graphics("images/google-fonts.png")
 To import a font, paste your copied clipboard into `styles.scss` under `/*-- scss:defaults --*/`
 :::
 
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "3-4"
 /*-- scss:defaults --*/
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
 // Colors
 $light-sage-green: #D1D9CE;
@@ -126,7 +132,7 @@ $code-block-bg: $cream; // code block background color
 To apply an imported font as a primary font, update `_quarto.yml` with the font name.
 :::
 
-```{r}
+```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
@@ -136,6 +142,7 @@ format:
       - styles.scss
     mainfont: Nunito
     toc: true
+    page-layout: full
 ```
 
 ## Output
@@ -162,12 +169,12 @@ knitr::include_graphics("images/nunito.png")
 
 // Fonts
 $font-family-serif: 'Sanchez', serif; 
-$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-sans-serif: 'Montserrat', sans-serif; 
 $font-family-monospace: 'Roboto Mono', monospace;
 ```
 
 ::: {.body-text .topbr .bottombr}
-**{{< fa angle-right >}}** You *must* import a higher font weight (e.g. 800), in addition to your standard "regular" weight, if you wish to **bold** text. 
+**{{< fa angle-right >}}** You *must* import a higher font weight (e.g. 800), in addition to your standard "regular" weight, if you wish to **bold** text -- even bolding text using markdown syntax (e.g. `**this text is bold**`) will not work unless a higher font weight style is imported). 
 :::
 
 :::
