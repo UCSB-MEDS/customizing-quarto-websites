@@ -92,12 +92,12 @@ To import a font, paste your copied clipboard into `styles.scss` under `/*-- scs
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
 // Colors
-$light-sage-green: #D1D9CE;
-$dark-sage-green: #98A08D;
+$dark-green: #98A08D;
+$light-green: #D1D9CE;
 $cream: #FDFBF7;
 $gray: #64605f;
-$light-gray: #949799;
 $purple: #AE8BD1;
+$orange: #ad7237;
 
 // Base document colors
 $navbar-bg: $cream; // navbar

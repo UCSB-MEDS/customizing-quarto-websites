@@ -226,12 +226,12 @@ Let's first define the colors we want to use throughout our site. For me, that l
 /*-- scss:defaults --*/
 
 // Colors
+$dark-green: #858E79;
 $light-green: #D1D9CE;
-$dark-green: #98A08D;
 $cream: #FDFBF7;
 $gray: #64605f;
-$light-gray: #949799;
 $purple: #9158A2;
+$orange: #ad7237;
 ```
 
 ::: {.body-text .topbr}
@@ -266,12 +266,12 @@ Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-format
 /*-- scss:defaults --*/
 
 // Colors
+$dark-green: #858E79;
 $light-green: #D1D9CE;
-$dark-green: #98A08D;
 $cream: #FDFBF7;
 $gray: #64605f;
-$light-gray: #949799;
 $purple: #9158A2;
+$orange: #ad7237;
 
 // Base document colors
 $navbar-bg: $cream; // navbar

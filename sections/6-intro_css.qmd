@@ -517,15 +517,15 @@ knitr::include_graphics("images/specificity_arrow.png")
 Some great resources for learning more about CSS specificity: the [CSS Specificity](https://www.w3schools.com/css/css_specificity.asp) chapter by W3Schools, the [Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) article by mdn web docs, the [CSS Specificity explained](https://www.youtube.com/watch?v=c0kfcP_nD9E) YouTube video by Kevin Powell, and the [Specificity Calculator](https://specificity.keegan.st/) by Keegan Street.
 :::
 
----
+<!-- --- -->
 
-##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"}
+<!-- ##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"} -->
 
-<div class = "vertical-center">
+<!-- <div class = "vertical-center"> -->
 
-<center><div class="custom-subtitle2">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some CSS rules to style your HTML elements `r fontawesome::fa("css3-alt", fill = "#d2e3f3", a11y = "sem")`</div></center>
+<!-- <center><div class="custom-subtitle2">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing and applying some CSS rules</div></center> -->
 
-</div>
+<!-- </div> -->
 
 ---
 
@@ -580,11 +580,11 @@ touch practice-styles.css
 <hr>
 
 ::: {.body-text .topbr}
-**3.** Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file accordingly to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
+**3.** Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
 :::
 
 ::: {.caption-text .topbr}
-**(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
+**(a)** create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/) allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
 :::
 
 ::: {.caption-text .topbr}
@@ -603,8 +603,6 @@ touch practice-styles.css
 ::: {.caption-text .topbr}
 **(e)** use your class selector from **Step c** *inline* to color just the word "very" (in your third paragraph) blue
 :::
-
-<br>
 
 ::: {.body-text .center-text .important-text-bg}
 It'll be especially helpful to explore this list of available [CSS properties](https://www.w3schools.com/cssref/).
@@ -688,7 +686,7 @@ a {
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "100%" 
+#| out-width: "90%" 
 knitr::include_graphics("images/solution.png")
 ```
 
