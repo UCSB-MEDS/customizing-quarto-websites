@@ -411,7 +411,7 @@
 <div class="column" style="width:50%;">
 <p><span class="custom-subtitle2">Sam Csik |</span><br><span class="custom-subtitle2">Data Training Coordinator</span><br><span class="custom-subtitle3"><em>National Center for Ecological Analysis &amp; Synthesis</em></span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="custom-subtitle2">Master of Environmental Data Science |</span><br><span class="custom-subtitle3"><em>Bren School of Environmental Science &amp; Management</em></span></p>
+<p><span class="custom-subtitle2">Master of Environmental Data Science |</span><br><!-- [Fall 2022]{.custom-subtitle2}<br> --><span class="custom-subtitle3"><em>Bren School of Environmental Science &amp; Management</em></span></p>
 </div>
 </div>
 <p><br></p>
@@ -1200,7 +1200,7 @@ Import and apply new fonts <svg aria-label="Font" role="img" viewbox="0 0 448 51
 <span id="cb17-3"><a href="#cb17-3"></a></span>
 <span id="cb17-4"><a href="#cb17-4"></a><span class="er">// Fonts</span></span>
 <span id="cb17-5"><a href="#cb17-5"></a>$font-family-serif<span class="in">: 'Sanchez</span>'<span class="op">,</span> serif; </span>
-<span id="cb17-6"><a href="#cb17-6"></a>$font-family-sans-serif<span class="in">: 'Montserrat</span>'<span class="op">,</span> sans-serif;</span>
+<span id="cb17-6"><a href="#cb17-6"></a>$font-family-sans-serif<span class="in">: 'Montserrat</span>'<span class="op">,</span> sans-serif; </span>
 <span id="cb17-7"><a href="#cb17-7"></a>$font-family-monospace<span class="in">: 'Roboto</span> Mono'<span class="op">,</span> monospace;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="body-text topbr bottombr">
@@ -1225,7 +1225,7 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 </div>
 
 <img data-src="images/html_css.png" style="width:60.0%" alt="The CSS 3 and Sass logos" class="r-stretch quarto-figure-center"><div class="body-text topbr">
-<p>Some of you may have already heard of/written HTML and/or CSS – that’s great! We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.</p>
+<p>We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.</p>
 </div>
 </section><section id="building-blocks-html" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (1/2)"><h2></h2>
 <p><span class="slide-title-smaller">HTML &amp; CSS are the building blocks of web pages</span></p>
@@ -1324,10 +1324,10 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 </div>
 </div>
 </section><section id="html-elements1" class="slide level2" data-menu-title="HTML elements"><h2></h2>
-<p><span class="slide-title">HTML elements</span></p>
+<p><span class="slide-title">HTML consists of a series of elements</span></p>
 <hr>
 <div class="body-text topbr">
-<p>HTML consists of a series of <a href="https://www.w3schools.com/html/html_elements.asp">elements</a> comprising <strong>start tags</strong> and <strong>end tags</strong> that render some form of content in a particular way.</p>
+<p><a href="https://www.w3schools.com/html/html_elements.asp">Elements</a> comprise <strong>start tags</strong> and <strong>end tags</strong> that render some form of content in a particular way.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -1410,10 +1410,10 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 </tr>
 </tbody>
 </table></section><section id="nested-html-elements" class="slide level2" data-menu-title="Nested HTML elements"><h2></h2>
-<p><span class="slide-title">HTML nested elements</span></p>
+<p><span class="slide-title">HTML elements can be <em>nested</em></span></p>
 <hr>
 <div class="body-text topbr">
-<p>You can also <em>nest</em> elements. Remember to close out tags from the inside-out to avoid unexpected renderings.</p>
+<p>Remember to close out tags from the inside-out to avoid unexpected renderings.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:70%;">
@@ -1452,114 +1452,109 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp;<strong><code>class</code></strong> or <strong><code>id</code></strong> attributes) – more on this soon.
 </div>
 </div>
-<div class="body-text center-text">
-<p><strong>The basic anatomy of an HTML attribute:</strong></p>
-</div>
+<!-- ::: {.body-text .center-text} -->
+<!-- **The basic anatomy of an HTML attribute:** -->
+<!-- ::: -->
 
-<img data-src="images/html_attribute.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="html-practice0" class="slide level2" data-menu-title="Practice HTML (0/2)" data-background="#053660"><h2></h2>
-<div class="page-center vertical-center">
-<p class="custom-subtitle bottombr">
-<svg aria-label="Laptop Code" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Laptop Code</title>
-<path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path></svg> Practice writing some HTML <svg aria-label="HTML 5 Logo" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>HTML 5 Logo</title>
-<path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg></p>
-<p class="smaller-body-text">
-<em>In the following exercise, we’ll be creating a <code>.html</code> file (and eventually, a <code>.css</code> file to style it). This is meant only to help us familiarize ourselves with HTML syntax and does not have anything to directly do with our Quarto websites — feel free to delete this file(s) later, or keep as a reference!</em>
-</p>
-</div>
-</section><section id="html-practice1" class="slide level2" data-menu-title="Practice HTML (1/2)"><h2></h2>
-<p><span class="slide-title">Exercise: practice writing HTML (1/2)</span></p>
+<img data-src="images/html_attribute.png" style="width:90.0%" class="r-stretch quarto-figure-center"></section><section id="write-html" class="slide level2" data-menu-title="Write HTML"><h2></h2>
+<p><span class="slide-title">Let’s take a look at some HTML</span></p>
 <hr>
-<div class="body-text topbr">
-<p>You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you’re working in RStudio. Later, we’ll link an external (separate) CSS stylesheet within our HTML file to style our elements.</p>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-7-1">Write HTML</a></li>
+<li><a href="#tabset-7-2">Render HTML</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="smaller-body-text center-text">
+<p><em>You can use any text editor to write HTML, but the following steps assume you’re working in RStudio (you can continue to work on your branch in your website’s project directory).</em></p>
 </div>
-<div class="caption-text topbr">
-<p><strong>1.</strong> Open an RProject (it’s fine to work on your website branch!). In your terminal window, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</p>
-</div>
+<p><span class="caption-text"><strong>1.</strong> In the RStudio Terminal, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">touch</span> practice-html.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="fragment">
-<div class="caption-text topbr">
-<p><strong>2.</strong> Create the skeleton of your HTML file.</p>
-</div>
+<p><span class="caption-text"><strong>2.</strong> Type or copy/paste the following into your <code>practice-html.html</code> file:</span></p>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice-html.html</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="kw">&lt;head&gt;</span> </span>
-<span id="cb19-4"><a href="#cb19-4"></a>  <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
 <span id="cb19-5"><a href="#cb19-5"></a><span class="kw">&lt;/head&gt;</span></span>
 <span id="cb19-6"><a href="#cb19-6"></a><span class="kw">&lt;body&gt;</span> </span>
 <span id="cb19-7"><a href="#cb19-7"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
-<span id="cb19-8"><a href="#cb19-8"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb19-9"><a href="#cb19-9"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-8"><a href="#cb19-8"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a>  <span class="kw">&lt;p&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-10"><a href="#cb19-10"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph, where you can read more about <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://ucsb-meds.github.io/"</span><span class="kw">&gt;</span>MEDS<span class="kw">&lt;/a&gt;</span>.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a>  <span class="kw">&lt;p&gt;</span>This is very important text!<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb19-12"><a href="#cb19-12"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb19-13"><a href="#cb19-13"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</section><section id="html-practice2" class="slide level2" data-menu-title="Practice HTML (2/2)"><h2></h2>
-<!-- auto-animate="true" -->
-<p><span class="slide-title">Exercise: practice writing HTML (2/2)</span></p>
-<hr>
-<div class="body-text topbr">
-<p>Write some HTML! <em>We’ll practice styling our HTML in the next section.</em></p>
 </div>
-<div class="caption-text topbr">
-<p><strong>3.</strong> Create a level one header, two paragraphs (these can just be sentences), and a button (<a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html">here’s one good resource</a> on how to do that) that takes you to the MEDS website within the <code>&lt;body&gt;</code> of your html file.</p>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="8-11"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb20-1"><a href="#cb20-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
-<span id="cb20-3"><a href="#cb20-3"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb20-4"><a href="#cb20-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
-<span id="cb20-5"><a href="#cb20-5"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb20-6"><a href="#cb20-6"></a><span class="kw">&lt;body&gt;</span> </span>
-<span id="cb20-7"><a href="#cb20-7"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
-<span id="cb20-8"><a href="#cb20-8"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb20-9"><a href="#cb20-9"></a>  <span class="kw">&lt;p&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb20-10"><a href="#cb20-10"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb20-11"><a href="#cb20-11"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
-<span id="cb20-12"><a href="#cb20-12"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb20-13"><a href="#cb20-13"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
-<div class="caption-text topbr">
-<p><strong>4.</strong> Click on the <strong>Preview</strong> button at the top of your source pane to see the rendered output.</p>
+<div id="tabset-7-2">
+<div class="body-text center-text">
+<p>Click <strong>Preview</strong> to render the HTML</p>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/practice-html.png" style="width:30.0%"></p>
+<figure><p><img data-src="images/rendered-practice-html.png" style="width:65.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<!-- ##  {#html-practice3 data-menu-title="Practice HTML Solution (2/2)" auto-animate=true visibility="uncounted"} -->
-<!-- [Exercise: practice writing HTML (2/2)]{.slide-title} -->
-<!-- <hr> -->
-<!-- ::: {.body-text .topbr} -->
-<!-- Write some HTML! *We'll practice styling our HTML in the next section.* -->
-<!-- ::: -->
-<!-- ::: {.caption-text .topbr} -->
-<!-- **3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file. -->
-<!-- ::: -->
-<!-- ```{html} -->
-<!-- #| eval: false -->
-<!-- #| echo: true -->
-<!-- <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
-<!-- <html> <!-- This tag represents the root of the HTML doc -->
-<!-- <head> -->
-<!--  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
-<!-- </head> -->
-<!-- <body>  -->
-<!--   <!-- Write all the contents of the HTML doc here -->
-<!--   <h1>Here is my level one header</h1> -->
-<!--   <p>Here is my first paragraph</p> -->
-<!--   <p>Here is my second paragraph</p> -->
-<!--   <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button> -->
-<!-- </body> -->
-<!-- </html> -->
-<!-- ``` -->
-<!-- ::: {.caption-text .topbr} -->
-<!-- **4.** Click on the **Preview** button at the top of your source pane to see the rendered output. -->
-<!-- ::: -->
+</div>
+</div>
+</div>
+</section><section id="write-md" class="slide level2" data-menu-title="Write Markdown"><h2></h2>
+<p><span class="slide-title-smaller">markdown makes it easy to “write” HTML</span></p>
+<hr>
+<div class="smaller-body-text center-text">
+<p>Quarto (<code>.qmd</code>) files allow us to write markdown, then <em>Render</em> that markdown as HTML (we can also write HTML directly in <code>.qmd</code> files).</p>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-8-1">Write markdown</a></li>
+<li><a href="#tabset-8-2">Render HTML</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<p><span class="caption-text"><strong>1.</strong> Now, use the <code>touch</code> command (or <strong>New Blank File</strong> &gt; <strong>Quarto Doc…</strong> in the Files pane) to create a new <code>.qmd</code> file.</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">touch</span> practice-markdown.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><span class="caption-text"><strong>2.</strong> Type or copy/paste the following into your <code>practice-markdown.qmd</code> file:</span></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice-markdown.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu"># Here is my level one header</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a></span>
+<span id="cb21-3"><a href="#cb21-3"></a>Here is my first paragraph</span>
+<span id="cb21-4"><a href="#cb21-4"></a></span>
+<span id="cb21-5"><a href="#cb21-5"></a>Here is my second paragraph, where you can read more about <span class="co">[</span><span class="ot">MEDS</span><span class="co">](https://ucsb-meds.github.io/)</span>.</span>
+<span id="cb21-6"><a href="#cb21-6"></a></span>
+<span id="cb21-7"><a href="#cb21-7"></a>This is very important text!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-8-2">
+<div class="smaller-body-text center-text">
+<p>Click <strong>Render</strong> to render the markdown as HTML (it will render it as a web page if you’re in your website’s project directory)</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/rendered-practice-markdown.png" style="width:55.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section><section id="light-intro-css" class="slide level2" data-menu-title="Light intro to CSS" data-background="#053660"><h2></h2>
 <div class="page-center">
@@ -1624,12 +1619,12 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title">Select an element(s) based on its tag</span></p>
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-7-1">Element Selectors</a></li>
-<li><a href="#tabset-7-2">Grouping Selectors</a></li>
+<ul id="tabset-9" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-9-1">Element Selectors</a></li>
+<li><a href="#tabset-9-2">Grouping Selectors</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-7-1">
+<div id="tabset-9-1">
 <div class="body-text">
 <p>Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</p>
 </div>
@@ -1637,17 +1632,17 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:60%;">
 <p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb21-1"><a href="#cb21-1"></a>h1 {</span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb22-1"><a href="#cb22-1"></a>h1 {</span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will not be styled<span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb22-3"><a href="#cb22-3"></a><span class="kw">&lt;p&gt;</span>Neither will this paragaph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb22-4"><a href="#cb22-4"></a><span class="kw">&lt;h1&gt;</span>But this second level one header will be<span class="kw">&lt;/h1&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will not be styled<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="kw">&lt;p&gt;</span>Neither will this paragaph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="kw">&lt;h1&gt;</span>But this second level one header will be<span class="kw">&lt;/h1&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <p><br><br></p>
@@ -1665,7 +1660,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-7-2">
+<div id="tabset-9-2">
 <div class="body-text">
 <p>Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.</p>
 </div>
@@ -1673,17 +1668,17 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:60%;">
 <p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> p {</span>
-<span id="cb23-2"><a href="#cb23-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb24-1"><a href="#cb24-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> p {</span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb24-2"><a href="#cb24-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb24-3"><a href="#cb24-3"></a><span class="kw">&lt;h3&gt;</span>This level three header will not be styled<span class="kw">&lt;/h3&gt;</span></span>
-<span id="cb24-4"><a href="#cb24-4"></a><span class="kw">&lt;p&gt;</span>This paragraph will be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="kw">&lt;h3&gt;</span>This level three header will not be styled<span class="kw">&lt;/h3&gt;</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="kw">&lt;p&gt;</span>This paragraph will be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <p><br><br></p>
@@ -1708,12 +1703,12 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <!-- Select an element(s) using attributes -->
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-8" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-8-1">ID Selectors</a></li>
-<li><a href="#tabset-8-2">Class Selectors</a></li>
+<ul id="tabset-10" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-10-1">ID Selectors</a></li>
+<li><a href="#tabset-10-2">Class Selectors</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-8-1">
+<div id="tabset-10-1">
 <div class="body-text">
 <p>An ID selector uses the <em><code>id</code> attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a <code>#</code> followed by the selector name, e.g.&nbsp;<code>#selector</code>.</p>
 </div>
@@ -1721,15 +1716,15 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:60%;">
 <p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb25-1"><a href="#cb25-1"></a><span class="pp">#para1</span> {</span>
-<span id="cb25-2"><a href="#cb25-2"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb25-3"><a href="#cb25-3"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb26-1"><a href="#cb26-1"></a><span class="pp">#para1</span> {</span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"para1"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb27-1"><a href="#cb27-1"></a><span class="kw">&lt;p</span> <span class="er">id</span><span class="ot">=</span><span class="st">"para1"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:40%;">
 <p><br><br></p>
@@ -1747,7 +1742,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-8-2">
+<div id="tabset-10-2">
 <div class="smaller-body-text">
 <p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
 </div>
@@ -1755,15 +1750,15 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">.blue-italicized</span> {</span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb27-3"><a href="#cb27-3"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
-<span id="cb27-4"><a href="#cb27-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">.blue-italicized</span> {</span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb28-3"><a href="#cb28-3"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb28-4"><a href="#cb28-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb28-1"><a href="#cb28-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-italicized"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-italicized"</span><span class="kw">&gt;</span>My first paragraph is styled<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="kw">&lt;p&gt;</span>But my second paragraph is not<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
@@ -1792,12 +1787,12 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title">Select all elements or style inline</span></p>
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-9" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-9-1">Universal Selector</a></li>
-<li><a href="#tabset-9-2">Inline styling</a></li>
+<ul id="tabset-11" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-11-1">Universal Selector</a></li>
+<li><a href="#tabset-11-2">Inline styling</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-9-1">
+<div id="tabset-11-1">
 <div class="body-text">
 <p>The universal selector selects <em>all</em> HTML elements on the page. It is written using only an asterisk, <code>*</code>.</p>
 </div>
@@ -1805,16 +1800,16 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb29-1"><a href="#cb29-1"></a><span class="op">*</span> {</span>
-<span id="cb29-2"><a href="#cb29-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb29-3"><a href="#cb29-3"></a>  <span class="kw">color</span>: <span class="cn">orange</span><span class="op">;</span></span>
-<span id="cb29-4"><a href="#cb29-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb30-1"><a href="#cb30-1"></a><span class="op">*</span> {</span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="kw">color</span>: <span class="cn">orange</span><span class="op">;</span></span>
+<span id="cb30-4"><a href="#cb30-4"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
-<span id="cb30-3"><a href="#cb30-3"></a><span class="kw">&lt;p&gt;</span>This paragaph will also be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">&lt;h1&gt;</span>My level one header will be styled<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="kw">&lt;h2&gt;</span>This level two header will be styled<span class="kw">&lt;/h2&gt;</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="kw">&lt;p&gt;</span>This paragaph will also be styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><br><br></p>
@@ -1832,7 +1827,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-9-2">
+<div id="tabset-11-2">
 <div class="smaller-body-text">
 <p>The <em><code>style</code> attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</p>
 </div>
@@ -1840,9 +1835,9 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>HTML with inline styling</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb31-1"><a href="#cb31-1"></a><span class="kw">&lt;p&gt;</span>This is a normal paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color: red; font-style: italic;"</span><span class="kw">&gt;</span>This paragraph has inline styling<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb31-3"><a href="#cb31-3"></a><span class="kw">&lt;p&gt;</span>Here, only the word <span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color: red; font-style: italic;"</span><span class="kw">&gt;</span>paragraph<span class="kw">&lt;/span&gt;</span> is styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">&lt;p&gt;</span>This is a normal paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a><span class="kw">&lt;p</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color: red; font-style: italic;"</span><span class="kw">&gt;</span>This paragraph has inline styling<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a><span class="kw">&lt;p&gt;</span>Here, only the word <span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">"color: red; font-style: italic;"</span><span class="kw">&gt;</span>paragraph<span class="kw">&lt;/span&gt;</span> is styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>Output</strong></span></p>
@@ -1872,23 +1867,23 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb32-1"><a href="#cb32-1"></a><span class="op">*</span> {</span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="kw">color</span>: <span class="cn">orange</span><span class="op">;</span></span>
-<span id="cb32-3"><a href="#cb32-3"></a>}</span>
-<span id="cb32-4"><a href="#cb32-4"></a></span>
-<span id="cb32-5"><a href="#cb32-5"></a>h1 {</span>
-<span id="cb32-6"><a href="#cb32-6"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb32-7"><a href="#cb32-7"></a>}</span>
-<span id="cb32-8"><a href="#cb32-8"></a></span>
-<span id="cb32-9"><a href="#cb32-9"></a><span class="fu">.green-text</span> {</span>
-<span id="cb32-10"><a href="#cb32-10"></a>  <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
-<span id="cb32-11"><a href="#cb32-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb33-1"><a href="#cb33-1"></a><span class="op">*</span> {</span>
+<span id="cb33-2"><a href="#cb33-2"></a>  <span class="kw">color</span>: <span class="cn">orange</span><span class="op">;</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a>}</span>
+<span id="cb33-4"><a href="#cb33-4"></a></span>
+<span id="cb33-5"><a href="#cb33-5"></a>h1 {</span>
+<span id="cb33-6"><a href="#cb33-6"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb33-7"><a href="#cb33-7"></a>}</span>
+<span id="cb33-8"><a href="#cb33-8"></a></span>
+<span id="cb33-9"><a href="#cb33-9"></a><span class="fu">.green-text</span> {</span>
+<span id="cb33-10"><a href="#cb33-10"></a>  <span class="kw">color</span>: <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb33-11"><a href="#cb33-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb33-1"><a href="#cb33-1"></a><span class="kw">&lt;h1&gt;</span>This is my header<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="kw">&lt;p&gt;</span>This is my paragraph with <span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">"green-text"</span><span class="kw">&gt;</span>some green text<span class="kw">&lt;/span&gt;&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb34-1"><a href="#cb34-1"></a><span class="kw">&lt;h1&gt;</span>This is my header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="kw">&lt;p&gt;</span>This is my paragraph with <span class="kw">&lt;span</span> <span class="er">style</span><span class="ot">=</span><span class="st">"green-text"</span><span class="kw">&gt;</span>some green text<span class="kw">&lt;/span&gt;&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1958,27 +1953,27 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><strong>1.</strong> Return to your RProject (where you created your <code>practice-html.html</code> file). In your terminal window, use the <code>touch</code> command to create a CSS file in the same location as your html file:</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">touch</span> practice-styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">touch</span> practice-styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="caption-text topbr">
 <p><strong>2.</strong> Link your CSS file inside the <code>&lt;head&gt;</code> of your HTML file (read more about inserting style sheets <a href="https://www.w3schools.com/css/css_howto.asp">here</a>).</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb35-1"><a href="#cb35-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
-<span id="cb35-3"><a href="#cb35-3"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb35-4"><a href="#cb35-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
-<span id="cb35-5"><a href="#cb35-5"></a> <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles.css"</span><span class="kw">&gt;</span> </span>
-<span id="cb35-6"><a href="#cb35-6"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb35-7"><a href="#cb35-7"></a><span class="kw">&lt;body&gt;</span> </span>
-<span id="cb35-8"><a href="#cb35-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
-<span id="cb35-9"><a href="#cb35-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb35-10"><a href="#cb35-10"></a>  <span class="kw">&lt;p&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb35-11"><a href="#cb35-11"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb35-12"><a href="#cb35-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
-<span id="cb35-13"><a href="#cb35-13"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb35-14"><a href="#cb35-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb36-1"><a href="#cb36-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
+<span id="cb36-5"><a href="#cb36-5"></a> <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles.css"</span><span class="kw">&gt;</span> </span>
+<span id="cb36-6"><a href="#cb36-6"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb36-7"><a href="#cb36-7"></a><span class="kw">&lt;body&gt;</span> </span>
+<span id="cb36-8"><a href="#cb36-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
+<span id="cb36-9"><a href="#cb36-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb36-10"><a href="#cb36-10"></a>  <span class="kw">&lt;p&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb36-11"><a href="#cb36-11"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb36-12"><a href="#cb36-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb36-13"><a href="#cb36-13"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb36-14"><a href="#cb36-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section><section id="css-practice2" class="slide level2" data-menu-title="Practice CSS (2/3)"><h2></h2>
@@ -2017,48 +2012,48 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>Below is one solution – yours may look different!</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-10" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-10-1">CSS</a></li>
-<li><a href="#tabset-10-2">HTML</a></li>
-<li><a href="#tabset-10-3">Output</a></li>
+<ul id="tabset-12" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-12-1">CSS</a></li>
+<li><a href="#tabset-12-2">HTML</a></li>
+<li><a href="#tabset-12-3">Output</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-10-1">
+<div id="tabset-12-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb36-1"><a href="#cb36-1"></a>h1 {</span>
-<span id="cb36-2"><a href="#cb36-2"></a>  <span class="kw">background-color</span>: <span class="cn">#49bf96</span><span class="op">;</span></span>
-<span id="cb36-3"><a href="#cb36-3"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb36-4"><a href="#cb36-4"></a>}</span>
-<span id="cb36-5"><a href="#cb36-5"></a></span>
-<span id="cb36-6"><a href="#cb36-6"></a><span class="fu">.blue-text</span> {</span>
-<span id="cb36-7"><a href="#cb36-7"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb36-8"><a href="#cb36-8"></a>}</span>
-<span id="cb36-9"><a href="#cb36-9"></a></span>
-<span id="cb36-10"><a href="#cb36-10"></a><span class="fu">.large-red-text</span>{</span>
-<span id="cb36-11"><a href="#cb36-11"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb36-12"><a href="#cb36-12"></a>  <span class="kw">font-size</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb36-13"><a href="#cb36-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb37-1"><a href="#cb37-1"></a>h1 {</span>
+<span id="cb37-2"><a href="#cb37-2"></a>  <span class="kw">background-color</span>: <span class="cn">#49bf96</span><span class="op">;</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a>}</span>
+<span id="cb37-5"><a href="#cb37-5"></a></span>
+<span id="cb37-6"><a href="#cb37-6"></a><span class="fu">.blue-text</span> {</span>
+<span id="cb37-7"><a href="#cb37-7"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb37-8"><a href="#cb37-8"></a>}</span>
+<span id="cb37-9"><a href="#cb37-9"></a></span>
+<span id="cb37-10"><a href="#cb37-10"></a><span class="fu">.large-red-text</span>{</span>
+<span id="cb37-11"><a href="#cb37-11"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb37-12"><a href="#cb37-12"></a>  <span class="kw">font-size</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb37-13"><a href="#cb37-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-10-2">
+<div id="tabset-12-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb37-1"><a href="#cb37-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
-<span id="cb37-3"><a href="#cb37-3"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb37-4"><a href="#cb37-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
-<span id="cb37-5"><a href="#cb37-5"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles.css"</span><span class="kw">&gt;</span> </span>
-<span id="cb37-6"><a href="#cb37-6"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb37-7"><a href="#cb37-7"></a><span class="kw">&lt;body&gt;</span> </span>
-<span id="cb37-8"><a href="#cb37-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
-<span id="cb37-9"><a href="#cb37-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
-<span id="cb37-10"><a href="#cb37-10"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb37-11"><a href="#cb37-11"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"large-red-text"</span><span class="kw">&gt;</span>Here is my <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>second<span class="kw">&lt;/span&gt;</span> paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb37-12"><a href="#cb37-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"large-red-text"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
-<span id="cb37-13"><a href="#cb37-13"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb37-14"><a href="#cb37-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb38-1"><a href="#cb38-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
+<span id="cb38-3"><a href="#cb38-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb38-4"><a href="#cb38-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
+<span id="cb38-5"><a href="#cb38-5"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles.css"</span><span class="kw">&gt;</span> </span>
+<span id="cb38-6"><a href="#cb38-6"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb38-7"><a href="#cb38-7"></a><span class="kw">&lt;body&gt;</span> </span>
+<span id="cb38-8"><a href="#cb38-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
+<span id="cb38-9"><a href="#cb38-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb38-10"><a href="#cb38-10"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb38-11"><a href="#cb38-11"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"large-red-text"</span><span class="kw">&gt;</span>Here is my <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>second<span class="kw">&lt;/span&gt;</span> paragraph<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb38-12"><a href="#cb38-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"large-red-text"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb38-13"><a href="#cb38-13"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb38-14"><a href="#cb38-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-10-3">
+<div id="tabset-12-3">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2108,17 +2103,17 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>To start defining CSS rules in <code>styles.scss</code> you first need to add the <code>/*-- scss:rules --*/</code> region decorator beneath your Sass variables section:</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb38-1"><a href="#cb38-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
-<span id="cb38-2"><a href="#cb38-2"></a><span class="er">// Fonts</span></span>
-<span id="cb38-3"><a href="#cb38-3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:wght@300&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb38-4"><a href="#cb38-4"></a></span>
-<span id="cb38-5"><a href="#cb38-5"></a><span class="er">// Colors</span></span>
-<span id="cb38-6"><a href="#cb38-6"></a>$light-sage-green<span class="in">: #D1D9CE</span>;</span>
-<span id="cb38-7"><a href="#cb38-7"></a>$dark-sage-green<span class="in">: #98A08D;</span></span>
-<span id="cb38-8"><a href="#cb38-8"></a></span>
-<span id="cb38-9"><a href="#cb38-9"></a><span class="er">// additional Sass variables omitted for brevity</span></span>
-<span id="cb38-10"><a href="#cb38-10"></a></span>
-<span id="cb38-11"><a href="#cb38-11"></a><span class="co">/*-- scss:rules --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb39-1"><a href="#cb39-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="er">// Fonts</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:wght@300&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb39-4"><a href="#cb39-4"></a></span>
+<span id="cb39-5"><a href="#cb39-5"></a><span class="er">// Colors</span></span>
+<span id="cb39-6"><a href="#cb39-6"></a>$light-sage-green<span class="in">: #D1D9CE</span>;</span>
+<span id="cb39-7"><a href="#cb39-7"></a>$dark-sage-green<span class="in">: #98A08D;</span></span>
+<span id="cb39-8"><a href="#cb39-8"></a></span>
+<span id="cb39-9"><a href="#cb39-9"></a><span class="er">// additional Sass variables omitted for brevity</span></span>
+<span id="cb39-10"><a href="#cb39-10"></a></span>
+<span id="cb39-11"><a href="#cb39-11"></a><span class="co">/*-- scss:rules --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="body-text topbr">
 <p>Next, we’ll walk through some examples of how to modify your site with your own CSS rules.</p>
@@ -2217,27 +2212,27 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title-smallest">Write a CSS grouping selector to style <code>&lt;h1&gt;</code> and <code>&lt;h3&gt;</code> elements</span></p>
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-11" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-11-1"><code>styles.scss</code> file</a></li>
-<li><a href="#tabset-11-2">Output</a></li>
-<li><a href="#tabset-11-3">Notes</a></li>
+<ul id="tabset-13" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-13-1"><code>styles.scss</code> file</a></li>
+<li><a href="#tabset-13-2">Output</a></li>
+<li><a href="#tabset-13-3">Notes</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-11-1">
+<div id="tabset-13-1">
 <div class="body-text topbr bottombr">
 <p>Here, we have a grouping selector that targets <em>all</em> <code>&lt;h1&gt;</code> and <code>&lt;h3&gt;</code> elements – it increases both the spacing between each letter and the font weight (makes it bolder), and it colors those header levels gray (reminder: I created a Sass variable: <code>$gray: #64605f;</code>).</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb39-1"><a href="#cb39-1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a></span>
-<span id="cb39-3"><a href="#cb39-3"></a>h1<span class="op">,</span> h3 {</span>
-<span id="cb39-4"><a href="#cb39-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb39-5"><a href="#cb39-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
-<span id="cb39-6"><a href="#cb39-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
-<span id="cb39-7"><a href="#cb39-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb40-1"><a href="#cb40-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a></span>
+<span id="cb40-3"><a href="#cb40-3"></a>h1<span class="op">,</span> h3 {</span>
+<span id="cb40-4"><a href="#cb40-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb40-5"><a href="#cb40-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb40-6"><a href="#cb40-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
+<span id="cb40-7"><a href="#cb40-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-11-2">
+<div id="tabset-13-2">
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
@@ -2266,7 +2261,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-11-3">
+<div id="tabset-13-3">
 <div class="body-text">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> I don’t need to make any changes to the HTML (in <code>index.qmd</code>, <code>about.qmd</code>, and <code>resources.qmd</code> since this grouping selector targets <em>all</em> <code>&lt;h1&gt;</code> and <code>&lt;h3&gt;</code> elements across my site. If an element on any of my pages has either of those tags, it will get styled with the declarations included in our CSS rule.</p>
 </div>
@@ -2283,28 +2278,28 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>The Quarto framework has defined a class selector called <code>.title</code> and applied that class to the above elements. We can modify it however we’d like. For example, let’s turn text elements of class <code>title</code> the color red:</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-12" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-12-1"><code>styles.scss</code> file</a></li>
-<li><a href="#tabset-12-2">Output</a></li>
-<li><a href="#tabset-12-3">Notes</a></li>
+<ul id="tabset-14" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-14-1"><code>styles.scss</code> file</a></li>
+<li><a href="#tabset-14-2">Output</a></li>
+<li><a href="#tabset-14-3">Notes</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-12-1">
+<div id="tabset-14-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb40-1"><a href="#cb40-1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb40-2"><a href="#cb40-2"></a></span>
-<span id="cb40-3"><a href="#cb40-3"></a>h1<span class="op">,</span> h3 {</span>
-<span id="cb40-4"><a href="#cb40-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb40-5"><a href="#cb40-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
-<span id="cb40-6"><a href="#cb40-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
-<span id="cb40-7"><a href="#cb40-7"></a>}</span>
-<span id="cb40-8"><a href="#cb40-8"></a></span>
-<span id="cb40-9"><a href="#cb40-9"></a><span class="fu">.title</span> {</span>
-<span id="cb40-10"><a href="#cb40-10"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb40-11"><a href="#cb40-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb41-1"><a href="#cb41-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb41-2"><a href="#cb41-2"></a></span>
+<span id="cb41-3"><a href="#cb41-3"></a>h1<span class="op">,</span> h3 {</span>
+<span id="cb41-4"><a href="#cb41-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb41-5"><a href="#cb41-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb41-6"><a href="#cb41-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
+<span id="cb41-7"><a href="#cb41-7"></a>}</span>
+<span id="cb41-8"><a href="#cb41-8"></a></span>
+<span id="cb41-9"><a href="#cb41-9"></a><span class="fu">.title</span> {</span>
+<span id="cb41-10"><a href="#cb41-10"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb41-11"><a href="#cb41-11"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-12-2">
+<div id="tabset-14-2">
 <div class="columns">
 <div class="column" style="width:33%;">
 <div class="cell" data-layout-align="center">
@@ -2336,7 +2331,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-12-3">
+<div id="tabset-14-3">
 <div class="body-text">
 <svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
 <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> In this case, I don’t need to make any changes to the HTML (in <code>index.qmd</code>, <code>about.qmd</code>, and <code>resources.qmd</code>) since those <code>&lt;h1&gt;</code> elements are <em>already</em> assigned the class, <code>title</code>.
@@ -2351,28 +2346,28 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>Let’s write a couple of other elements that <em>are not</em> of <code>class="title"</code> to see what happens. I’ll do this on my <em>about</em> page:</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-13" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-13-1"><code>about.qmd</code> file</a></li>
-<li><a href="#tabset-13-2">Output</a></li>
-<li><a href="#tabset-13-3">Notes</a></li>
+<ul id="tabset-15" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-15-1"><code>about.qmd</code> file</a></li>
+<li><a href="#tabset-15-2">Output</a></li>
+<li><a href="#tabset-15-3">Notes</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-13-1">
+<div id="tabset-15-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="5-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="sc">---</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a>title<span class="sc">:</span> <span class="st">"about"</span></span>
-<span id="cb41-3"><a href="#cb41-3"></a><span class="sc">---</span></span>
-<span id="cb41-4"><a href="#cb41-4"></a></span>
-<span id="cb41-5"><a href="#cb41-5"></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> <span class="co"># alternatively, you can write &lt;h1&gt; elements using markdown (`# this is an `&lt;h1&gt;` element`)</span></span>
-<span id="cb41-6"><a href="#cb41-6"></a></span>
-<span id="cb41-7"><a href="#cb41-7"></a><span class="er">&lt;</span>h1 class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
-<span id="cb41-8"><a href="#cb41-8"></a></span>
-<span id="cb41-9"><a href="#cb41-9"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb41-10"><a href="#cb41-10"></a></span>
-<span id="cb41-11"><a href="#cb41-11"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="5-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="sc">---</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>title<span class="sc">:</span> <span class="st">"about"</span></span>
+<span id="cb42-3"><a href="#cb42-3"></a><span class="sc">---</span></span>
+<span id="cb42-4"><a href="#cb42-4"></a></span>
+<span id="cb42-5"><a href="#cb42-5"></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> <span class="co"># alternatively, you can write &lt;h1&gt; elements using markdown (`# this is an `&lt;h1&gt;` element`)</span></span>
+<span id="cb42-6"><a href="#cb42-6"></a></span>
+<span id="cb42-7"><a href="#cb42-7"></a><span class="er">&lt;</span>h1 class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
+<span id="cb42-8"><a href="#cb42-8"></a></span>
+<span id="cb42-9"><a href="#cb42-9"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb42-10"><a href="#cb42-10"></a></span>
+<span id="cb42-11"><a href="#cb42-11"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-13-2">
+<div id="tabset-15-2">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2382,7 +2377,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-13-3">
+<div id="tabset-15-3">
 <div class="caption-text topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You can add elements on your web pages using either Markdown syntax (e.g.&nbsp;use <code># text here</code> to denote an <code>&lt;h1&gt;</code> element) <em>or</em> use HTML tags (e.g.&nbsp;use <code>&lt;h1&gt;text here&lt;/h1&gt;</code>). I tend to use a mix of both Markdown syntax and HTML tags.</p>
 </div>
@@ -2399,38 +2394,38 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title">Write your own class selector</span></p>
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-14" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-14-1"><code>styles.scss</code> file</a></li>
-<li><a href="#tabset-14-2"><code>resources.qmd</code> file</a></li>
-<li><a href="#tabset-14-3">Output</a></li>
-<li><a href="#tabset-14-4">Notes</a></li>
+<ul id="tabset-16" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-16-1"><code>styles.scss</code> file</a></li>
+<li><a href="#tabset-16-2"><code>resources.qmd</code> file</a></li>
+<li><a href="#tabset-16-3">Output</a></li>
+<li><a href="#tabset-16-4">Notes</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-14-1">
+<div id="tabset-16-1">
 <div class="body-text bottombr">
 <p>Let’s create a class named <code>.custom-subtitle</code> that styles text in the following ways: increases font size, italicizes it, and colors it purple. We can then add an element to our <strong>resources</strong> page and apply our new class selector:</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="13-17"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb42-1"><a href="#cb42-1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb42-2"><a href="#cb42-2"></a></span>
-<span id="cb42-3"><a href="#cb42-3"></a>h1<span class="op">,</span> h3 {</span>
-<span id="cb42-4"><a href="#cb42-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb42-5"><a href="#cb42-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
-<span id="cb42-6"><a href="#cb42-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
-<span id="cb42-7"><a href="#cb42-7"></a>}</span>
-<span id="cb42-8"><a href="#cb42-8"></a></span>
-<span id="cb42-9"><a href="#cb42-9"></a><span class="fu">.title</span> {</span>
-<span id="cb42-10"><a href="#cb42-10"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb42-11"><a href="#cb42-11"></a>}</span>
-<span id="cb42-12"><a href="#cb42-12"></a></span>
-<span id="cb42-13"><a href="#cb42-13"></a><span class="fu">.custom-subtitle</span> {</span>
-<span id="cb42-14"><a href="#cb42-14"></a>  <span class="kw">font-size</span>: <span class="dv">22</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb42-15"><a href="#cb42-15"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
-<span id="cb42-16"><a href="#cb42-16"></a>  <span class="kw">color</span>: $purple<span class="op">;</span></span>
-<span id="cb42-17"><a href="#cb42-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="13-17"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb43-1"><a href="#cb43-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb43-2"><a href="#cb43-2"></a></span>
+<span id="cb43-3"><a href="#cb43-3"></a>h1<span class="op">,</span> h3 {</span>
+<span id="cb43-4"><a href="#cb43-4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb43-5"><a href="#cb43-5"></a>  <span class="kw">font-weight</span>: <span class="dv">700</span><span class="op">;</span></span>
+<span id="cb43-6"><a href="#cb43-6"></a>  <span class="kw">color</span>: $gray<span class="op">;</span></span>
+<span id="cb43-7"><a href="#cb43-7"></a>}</span>
+<span id="cb43-8"><a href="#cb43-8"></a></span>
+<span id="cb43-9"><a href="#cb43-9"></a><span class="fu">.title</span> {</span>
+<span id="cb43-10"><a href="#cb43-10"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb43-11"><a href="#cb43-11"></a>}</span>
+<span id="cb43-12"><a href="#cb43-12"></a></span>
+<span id="cb43-13"><a href="#cb43-13"></a><span class="fu">.custom-subtitle</span> {</span>
+<span id="cb43-14"><a href="#cb43-14"></a>  <span class="kw">font-size</span>: <span class="dv">22</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb43-15"><a href="#cb43-15"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb43-16"><a href="#cb43-16"></a>  <span class="kw">color</span>: $purple<span class="op">;</span></span>
+<span id="cb43-17"><a href="#cb43-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-14-2">
+<div id="tabset-16-2">
 <div class="body-text bottombr">
 <p>Here, I’m creating two paragraphs – one that is styled with <code>.custom-subtitle</code> and one that is not.</p>
 </div>
@@ -2438,16 +2433,16 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>What happens if you create your custom subtitle using an <code>&lt;h1&gt;</code> tag instead of <code>&lt;p&gt;</code>? Why do you think this happens?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="5,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="sc">---</span></span>
-<span id="cb43-2"><a href="#cb43-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
-<span id="cb43-3"><a href="#cb43-3"></a><span class="sc">---</span></span>
-<span id="cb43-4"><a href="#cb43-4"></a></span>
-<span id="cb43-5"><a href="#cb43-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb43-6"><a href="#cb43-6"></a></span>
-<span id="cb43-7"><a href="#cb43-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="5,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="sc">---</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
+<span id="cb44-3"><a href="#cb44-3"></a><span class="sc">---</span></span>
+<span id="cb44-4"><a href="#cb44-4"></a></span>
+<span id="cb44-5"><a href="#cb44-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb44-6"><a href="#cb44-6"></a></span>
+<span id="cb44-7"><a href="#cb44-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-14-3">
+<div id="tabset-16-3">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2457,7 +2452,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-14-4">
+<div id="tabset-16-4">
 <div class="body-text topbr">
 <svg aria-label="Angle Right" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#05859B;overflow:visible;position:relative;"><title>Angle Right</title>
 <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg> Remember, class selectors take the form <code>.selector-name {}</code>
@@ -2469,14 +2464,14 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title-smaller">Apply a second class selector to our text styled as a <code>custom-subtitle</code></span></p>
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-15" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-15-1"><code>styles.scss</code> file</a></li>
-<li><a href="#tabset-15-2"><code>resources.qmd</code> file</a></li>
-<li><a href="#tabset-15-3">Output</a></li>
-<li><a href="#tabset-15-4">Notes</a></li>
+<ul id="tabset-17" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-17-1"><code>styles.scss</code> file</a></li>
+<li><a href="#tabset-17-2"><code>resources.qmd</code> file</a></li>
+<li><a href="#tabset-17-3">Output</a></li>
+<li><a href="#tabset-17-4">Notes</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-15-1">
+<div id="tabset-17-1">
 <div class="caption-text bottombr">
 <p>Let’s say we want the option to add a bit of extra space beneath this particular custom subtitle before the element is rendered – but maybe we don’t <em>always</em> want that extra space beneath <em>every</em> custom subtitle. If we were to add a declaration that increases <code>margin-bottom</code> directly to our <code>.custom-subtitle</code> class selector, all elements of class <code>custom-subtitle</code> would have that extra space.</p>
 </div>
@@ -2484,36 +2479,36 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>One solution, then, is to create a new class selector (we’ll call it <code>.bottombr</code>, for “bottom break”) that we can specifically apply to our custom subtitle on the <strong>resources</strong> page.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="10-12"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb44-1"><a href="#cb44-1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb44-2"><a href="#cb44-2"></a></span>
-<span id="cb44-3"><a href="#cb44-3"></a><span class="co">/* Additional rules/electors omitted for brevity */</span></span>
-<span id="cb44-4"><a href="#cb44-4"></a></span>
-<span id="cb44-5"><a href="#cb44-5"></a><span class="fu">.custom-subtitle</span> {</span>
-<span id="cb44-6"><a href="#cb44-6"></a>  <span class="kw">font-size</span>: <span class="dv">22</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb44-7"><a href="#cb44-7"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
-<span id="cb44-8"><a href="#cb44-8"></a>  <span class="kw">color</span>: $purple<span class="op">;</span></span>
-<span id="cb44-9"><a href="#cb44-9"></a>}</span>
-<span id="cb44-10"><a href="#cb44-10"></a></span>
-<span id="cb44-11"><a href="#cb44-11"></a><span class="fu">.bottombr</span> {</span>
-<span id="cb44-12"><a href="#cb44-12"></a>  <span class="kw">margin-bottom</span>: <span class="dv">3</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb44-13"><a href="#cb44-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="10-12"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb45-1"><a href="#cb45-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb45-2"><a href="#cb45-2"></a></span>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="co">/* Additional rules/electors omitted for brevity */</span></span>
+<span id="cb45-4"><a href="#cb45-4"></a></span>
+<span id="cb45-5"><a href="#cb45-5"></a><span class="fu">.custom-subtitle</span> {</span>
+<span id="cb45-6"><a href="#cb45-6"></a>  <span class="kw">font-size</span>: <span class="dv">22</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb45-7"><a href="#cb45-7"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb45-8"><a href="#cb45-8"></a>  <span class="kw">color</span>: $purple<span class="op">;</span></span>
+<span id="cb45-9"><a href="#cb45-9"></a>}</span>
+<span id="cb45-10"><a href="#cb45-10"></a></span>
+<span id="cb45-11"><a href="#cb45-11"></a><span class="fu">.bottombr</span> {</span>
+<span id="cb45-12"><a href="#cb45-12"></a>  <span class="kw">margin-bottom</span>: <span class="dv">3</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb45-13"><a href="#cb45-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-15-2">
+<div id="tabset-17-2">
 <div class="body-text bottombr">
 <p>Here, we add our <code>bottombr</code> class selector within the <code>""</code> after <code>custom-subtitle</code> and a space.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="sc">---</span></span>
-<span id="cb45-2"><a href="#cb45-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
-<span id="cb45-3"><a href="#cb45-3"></a><span class="sc">---</span></span>
-<span id="cb45-4"><a href="#cb45-4"></a></span>
-<span id="cb45-5"><a href="#cb45-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle bottombr"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb45-6"><a href="#cb45-6"></a></span>
-<span id="cb45-7"><a href="#cb45-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="sc">---</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a><span class="sc">---</span></span>
+<span id="cb46-4"><a href="#cb46-4"></a></span>
+<span id="cb46-5"><a href="#cb46-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle bottombr"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb46-6"><a href="#cb46-6"></a></span>
+<span id="cb46-7"><a href="#cb46-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-15-3">
+<div id="tabset-17-3">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2523,7 +2518,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-15-4">
+<div id="tabset-17-4">
 <div class="body-text topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Remember, HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2 etc"&gt;</code></p>
 </div>
@@ -2541,24 +2536,24 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="body-text center-text">
 <p><strong>Divs</strong></p>
 </div>
-<div class="sourceCode" id="cb46"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu"># Quarto syntax</span></span>
-<span id="cb46-2"><a href="#cb46-2"></a>::: {.my-selector}</span>
-<span id="cb46-3"><a href="#cb46-3"></a>Some element (e.g. text) to style</span>
-<span id="cb46-4"><a href="#cb46-4"></a>:::</span>
-<span id="cb46-5"><a href="#cb46-5"></a>  </span>
-<span id="cb46-6"><a href="#cb46-6"></a><span class="fu"># HTML syntax</span></span>
-<span id="cb46-7"><a href="#cb46-7"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"my-selector"</span><span class="kw">&gt;</span></span>
-<span id="cb46-8"><a href="#cb46-8"></a>  Some element (e.g. text) to style</span>
-<span id="cb46-9"><a href="#cb46-9"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu"># Quarto syntax</span></span>
+<span id="cb47-2"><a href="#cb47-2"></a>::: {.my-selector}</span>
+<span id="cb47-3"><a href="#cb47-3"></a>Some element (e.g. text) to style</span>
+<span id="cb47-4"><a href="#cb47-4"></a>:::</span>
+<span id="cb47-5"><a href="#cb47-5"></a>  </span>
+<span id="cb47-6"><a href="#cb47-6"></a><span class="fu"># HTML syntax</span></span>
+<span id="cb47-7"><a href="#cb47-7"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">"my-selector"</span><span class="kw">&gt;</span></span>
+<span id="cb47-8"><a href="#cb47-8"></a>  Some element (e.g. text) to style</span>
+<span id="cb47-9"><a href="#cb47-9"></a><span class="kw">&lt;/div&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
 <div class="body-text center-text">
 <p><strong>Spans</strong></p>
 </div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu"># Quarto syntax</span></span>
-<span id="cb47-2"><a href="#cb47-2"></a>Some text with just <span class="co">[</span><span class="ot">this section</span><span class="co">]</span>{.my-selector} styled</span>
-<span id="cb47-3"><a href="#cb47-3"></a></span>
-<span id="cb47-4"><a href="#cb47-4"></a><span class="fu"># HTML syntax</span></span>
-<span id="cb47-5"><a href="#cb47-5"></a><span class="kw">&lt;p&gt;</span>Some text with just <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"my-selector"</span><span class="kw">&gt;</span>this section<span class="kw">&lt;/span&gt;</span> styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb48-1"><a href="#cb48-1"></a><span class="fu"># Quarto syntax</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>Some text with just <span class="co">[</span><span class="ot">this section</span><span class="co">]</span>{.my-selector} styled</span>
+<span id="cb48-3"><a href="#cb48-3"></a></span>
+<span id="cb48-4"><a href="#cb48-4"></a><span class="fu"># HTML syntax</span></span>
+<span id="cb48-5"><a href="#cb48-5"></a><span class="kw">&lt;p&gt;</span>Some text with just <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"my-selector"</span><span class="kw">&gt;</span>this section<span class="kw">&lt;/span&gt;</span> styled<span class="kw">&lt;/p&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section><section id="mix-match" class="slide level2" data-menu-title="Mix &amp; match styles"><h2></h2>
@@ -2568,28 +2563,28 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>I tend to use a mix of both approaches (HTML &amp; Quarto syntax). For example:</p>
 </div>
 <div class="panel-tabset">
-<ul id="tabset-16" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-16-1"><code>resources.qmd</code> file</a></li>
-<li><a href="#tabset-16-2">Output</a></li>
-<li><a href="#tabset-16-3">Notes</a></li>
+<ul id="tabset-18" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-18-1"><code>resources.qmd</code> file</a></li>
+<li><a href="#tabset-18-2">Output</a></li>
+<li><a href="#tabset-18-3">Notes</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-16-1">
+<div id="tabset-18-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="sc">---</span></span>
-<span id="cb48-2"><a href="#cb48-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
-<span id="cb48-3"><a href="#cb48-3"></a><span class="sc">---</span></span>
-<span id="cb48-4"><a href="#cb48-4"></a></span>
-<span id="cb48-5"><a href="#cb48-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb48-6"><a href="#cb48-6"></a></span>
-<span id="cb48-7"><a href="#cb48-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb48-8"><a href="#cb48-8"></a></span>
-<span id="cb48-9"><a href="#cb48-9"></a>[Here is another custom subtitle written with Quarto syntax]{.custom<span class="sc">-</span>subtitle}</span>
-<span id="cb48-10"><a href="#cb48-10"></a></span>
-<span id="cb48-11"><a href="#cb48-11"></a>Also note that I do not need to wrap this text <span class="cf">in</span> the <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> tag <span class="cf">in</span> order <span class="cf">for</span> it to render as normal text. <span class="st">`</span><span class="at">.qmd</span><span class="st">`</span> files allow us to seamlessly blend markdown syntax with HTML.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="sc">---</span></span>
+<span id="cb49-2"><a href="#cb49-2"></a>title<span class="sc">:</span> <span class="st">"resources"</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a><span class="sc">---</span></span>
+<span id="cb49-4"><a href="#cb49-4"></a></span>
+<span id="cb49-5"><a href="#cb49-5"></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"custom-subtitle"</span><span class="sc">&gt;</span>Here is my custom subtitle.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb49-6"><a href="#cb49-6"></a></span>
+<span id="cb49-7"><a href="#cb49-7"></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>And here is some normal text beneath it.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb49-8"><a href="#cb49-8"></a></span>
+<span id="cb49-9"><a href="#cb49-9"></a>[Here is another custom subtitle written with Quarto syntax]{.custom<span class="sc">-</span>subtitle}</span>
+<span id="cb49-10"><a href="#cb49-10"></a></span>
+<span id="cb49-11"><a href="#cb49-11"></a>Also note that I do not need to wrap this text <span class="cf">in</span> the <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> tag <span class="cf">in</span> order <span class="cf">for</span> it to render as normal text. <span class="st">`</span><span class="at">.qmd</span><span class="st">`</span> files allow us to seamlessly blend markdown syntax with HTML.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-16-2">
+<div id="tabset-18-2">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2599,7 +2594,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div id="tabset-16-3">
+<div id="tabset-18-3">
 <div class="caption-text">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You’ll notice the <code>[]{}</code> and <code>::: {} :::</code> syntax throughout Quarto’s documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don’t <em>need</em> to use it, but it helps to know what it is when you see it!</p>
 </div>

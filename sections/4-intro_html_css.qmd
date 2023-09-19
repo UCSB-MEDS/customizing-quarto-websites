@@ -30,7 +30,7 @@ knitr::include_graphics("images/html_css.png")
 ```
 
 ::: {.body-text .topbr}
-Some of you may have already heard of/written HTML and/or CSS -- that's great! We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.
+We're going to spend a few minutes first learning about what makes a web page...look like a web page, then apply what we learn to our own Quarto sites.
 :::
 
 ---

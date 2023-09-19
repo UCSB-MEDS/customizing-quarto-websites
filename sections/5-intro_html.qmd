@@ -12,12 +12,12 @@ format: revealjs
 
 ##  {#html-elements1 data-menu-title="HTML elements"}
 
-[HTML elements]{.slide-title}
+[HTML consists of a series of elements]{.slide-title}
 
 <hr>
 
 ::: {.body-text .topbr}
-HTML consists of a series of [elements](https://www.w3schools.com/html/html_elements.asp) comprising **start tags** and **end tags** that render some form of content in a particular way.
+[Elements](https://www.w3schools.com/html/html_elements.asp) comprise **start tags** and **end tags** that render some form of content in a particular way.
 :::
 
 :::: {.columns}
@@ -80,12 +80,12 @@ Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp
 
 ##  {#nested-html-elements data-menu-title="Nested HTML elements"}
 
-[HTML nested elements]{.slide-title}
+[HTML elements can be *nested*]{.slide-title}
 
 <hr>
 
 ::: {.body-text .topbr}
-You can also *nest* elements. Remember to close out tags from the inside-out to avoid unexpected renderings.
+Remember to close out tags from the inside-out to avoid unexpected renderings.
 :::
 
 :::: {.columns}
@@ -135,9 +135,9 @@ In Markdown syntax, this HTML element would be written as: <br> `# Welcome to yo
 <div class="body-text">Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon.</div>
 :::
 
-::: {.body-text .center-text}
-**The basic anatomy of an HTML attribute:**
-:::
+<!-- ::: {.body-text .center-text} -->
+<!-- **The basic anatomy of an HTML attribute:** -->
+<!-- ::: -->
 
 ```{r}
 #| eval: true 
@@ -149,28 +149,21 @@ knitr::include_graphics("images/html_attribute.png")
 
 ---
 
-##  {#html-practice0 data-menu-title="Practice HTML (0/2)" background="#053660"}
+##  {#write-html data-menu-title="Write HTML"}
 
-<div class="page-center vertical-center">
-<p class="custom-subtitle bottombr">`r fontawesome::fa("laptop-code", fill = "#d2e3f3", a11y = "sem")` Practice writing some HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</p>
-<p class="smaller-body-text">*In the following exercise, we’ll be creating a `.html` file (and eventually, a `.css` file to style it). This is meant only to help us familiarize ourselves with HTML syntax and does not have anything to directly do with our Quarto websites — feel free to delete this file(s) later, or keep as a reference!*</p>
-</div>
-
----
-
-##  {#html-practice1 data-menu-title="Practice HTML (1/2)"}
-
-[Exercise: practice writing HTML (1/2)]{.slide-title}
+[Let's take a look at some HTML]{.slide-title}
 
 <hr>
 
-::: {.body-text .topbr}
-You can use any text editor to do so (RStudio and VS Code work too!). The following steps assume you're working in RStudio. Later, we'll link an external (separate) CSS stylesheet within our HTML file to style our elements.
+::: {.panel-tabset}
+
+## Write HTML
+
+::: {.smaller-body-text .center-text}
+*You can use any text editor to write HTML, but the following steps assume you're working in RStudio (you can continue to work on your branch in your website's project directory).*
 :::
 
-::: {.caption-text .topbr}
-**1.** Open an RProject (it's fine to work on your website branch!). In your terminal window, use the `touch` command to create an HTML file (for simplicity, I did this in my project's root directory), then choose **Open in Editor**.
-:::
+[**1.** In the RStudio Terminal, use the `touch` command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose **Open in Editor**.]{.caption-text}
 
 ```{bash}
 #| eval: false
@@ -178,47 +171,11 @@ You can use any text editor to do so (RStudio and VS Code work too!). The follow
 touch practice-html.html
 ```
 
-. . .
+[**2.** Type or copy/paste the following into your `practice-html.html` file:]{.caption-text}
 
-::: {.caption-text .topbr}
-**2.** Create the skeleton of your HTML file.
-:::
-
-```{html}
+```{html filename="practice-html.html"}
 #| eval: false
 #| echo: true
-<!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
-<html> <!-- This tag represents the root of the HTML doc -->
-<head> 
-  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
-</head>
-<body> 
-  <!-- Write all the contents of the HTML doc here -->
-</body>
-</html>
-```
-
----
-
-##  {#html-practice2 data-menu-title="Practice HTML (2/2)"} 
-<!-- auto-animate="true" -->
-
-[Exercise: practice writing HTML (2/2)]{.slide-title}
-
-<hr>
-
-::: {.body-text .topbr}
-Write some HTML! *We'll practice styling our HTML in the next section.*
-:::
-
-::: {.caption-text .topbr}
-**3.** Create a level one header, two paragraphs (these can just be sentences), and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file.
-:::
-
-```{html}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "8-11"
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>
@@ -228,59 +185,77 @@ Write some HTML! *We'll practice styling our HTML in the next section.*
   <!-- Write all the contents of the HTML doc here -->
   <h1>Here is my level one header</h1>
   <p>Here is my first paragraph</p>
-  <p>Here is my second paragraph</p>
-  <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button>
+  <p>Here is my second paragraph, where you can read more about <a href="https://ucsb-meds.github.io/">MEDS</a>.</p>
+  <p>This is very important text!</p>
 </body>
 </html>
 ```
 
-. . . 
+## Render HTML
 
-::: {.caption-text .topbr}
-**4.** Click on the **Preview** button at the top of your source pane to see the rendered output.
+::: {.body-text .center-text}
+Click **Preview** to render the HTML
 :::
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "30%" 
-knitr::include_graphics("images/practice-html.png")
+#| out-width: "65%" 
+knitr::include_graphics("images/rendered-practice-html.png")
 ```
 
+:::
 
-<!-- ##  {#html-practice3 data-menu-title="Practice HTML Solution (2/2)" auto-animate=true visibility="uncounted"} -->
+---
 
-<!-- [Exercise: practice writing HTML (2/2)]{.slide-title} -->
+##  {#write-md data-menu-title="Write Markdown"}
 
-<!-- <hr> -->
+[markdown makes it easy to "write" HTML]{.slide-title-smaller}
 
-<!-- ::: {.body-text .topbr} -->
-<!-- Write some HTML! *We'll practice styling our HTML in the next section.* -->
-<!-- ::: -->
+<hr>
 
-<!-- ::: {.caption-text .topbr} -->
-<!-- **3.** Create a level one header, a paragraph, and a button  ([here's one good resource](https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html) on how to do that) that takes you to the MEDS website within the `<body>` of your html file. -->
-<!-- ::: -->
+::: {.smaller-body-text .center-text}
+Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as HTML (we can also write HTML directly in `.qmd` files).
+:::
 
-<!-- ```{html} -->
-<!-- #| eval: false -->
-<!-- #| echo: true -->
-<!-- <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration--> 
-<!-- <html> <!-- This tag represents the root of the HTML doc --> 
-<!-- <head> -->
-<!--  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --> 
-<!-- </head> -->
-<!-- <body>  -->
-<!--   <!-- Write all the contents of the HTML doc here --> 
-<!--   <h1>Here is my level one header</h1> -->
-<!--   <p>Here is my first paragraph</p> -->
-<!--   <p>Here is my second paragraph</p> -->
-<!--   <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button> -->
-<!-- </body> -->
-<!-- </html> -->
-<!-- ``` -->
+::: {.panel-tabset}
 
-<!-- ::: {.caption-text .topbr} -->
-<!-- **4.** Click on the **Preview** button at the top of your source pane to see the rendered output. -->
-<!-- ::: -->
+## Write markdown
+
+[**1.** Now, use the `touch` command (or **New Blank File** > **Quarto Doc...** in the Files pane) to create a new `.qmd` file.]{.caption-text}
+
+```{bash}
+#| eval: false
+#| echo: true
+touch practice-markdown.qmd
+```
+
+[**2.** Type or copy/paste the following into your `practice-markdown.qmd` file:]{.caption-text}
+
+```{.md filename="practice-markdown.qmd"}
+# Here is my level one header
+
+Here is my first paragraph
+
+Here is my second paragraph, where you can read more about [MEDS](https://ucsb-meds.github.io/).
+
+This is very important text!
+```
+
+## Render HTML
+
+::: {.smaller-body-text .center-text}
+Click **Render** to render the markdown as HTML (it will render it as a web page if you're in your website's project directory)
+:::
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "55%" 
+knitr::include_graphics("images/rendered-practice-markdown.png")
+```
+
+:::
+
