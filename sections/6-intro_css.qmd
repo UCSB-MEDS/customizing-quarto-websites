@@ -536,10 +536,10 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 <hr>
 
 ::: {.caption-text .topbr}
-**1.** Return to your R Project (where you created your `practice-html.html` file). In the RStudio Terminal, use the `touch` command to create a CSS file in the same location as your html file:
+**1.** Return to your R Project (where you created your `practice-html.html` file). In the RStudio Terminal, use the `touch` command to create a **CSS** file in the same location as your html file:
 :::
 
-```{bash}
+```{bash filename="Command line/RStudio Terminal"}
 #| eval: false
 #| echo: true
 touch practice-styles.css

@@ -109,14 +109,14 @@ Approaching this in the following order worked best for me:
 :::
 
 ::: {.smaller-body-text}
-To create a branch, first ensure that you're on `main` by typing either `git branch` or `git status` into your RStudio terminal (either will tell you which branch you're currently on). If you're not on `main`, you can switch by running `git checkout main`.
+To create a branch, first ensure that you're on `main` by typing either `git branch` or `git status` into the RStudio Terminal (either will tell you which branch you're currently on). If you're not on `main`, you can switch by running `git checkout main`.
 :::
 
 ::: {.smaller-body-text}
-Create a local git branch from `main` by running the following in your terminal:
+Create a local git branch from `main` by running the following in your Terminal:
 :::
 
-```{bash}
+```{bash filename="Command line/RStudio Terminal"}
 #| eval: false
 #| echo: true
 git checkout -b my-new-branch
@@ -126,7 +126,7 @@ git checkout -b my-new-branch
 Push your new local branch to GitHub by running the following in your terminal:
 :::
 
-```{bash}
+```{bash filename="Command line/RStudio Terminal"}
 #| eval: false
 #| echo: true
 git push -u origin my-new-branch

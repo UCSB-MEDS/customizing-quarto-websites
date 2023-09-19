@@ -101,11 +101,11 @@ You might imagine how often you'll need to type those HEX codes out as you devel
 <hr>
 
 ::: {.smaller-body-text}
-Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (e.g. only need to change HEX codes in one spot, not multiple!)
+Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (e.g. only need to change HEX codes in one spot, not multiple!).
 <!-- Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time: -->
 :::
 
-```{css}
+```{css filename="Example stylesheet"}
 #| eval: false
 #| echo: true
 
@@ -164,7 +164,7 @@ Let's create our website's `.scss ` stylesheet.
 **1.** Create a `.scss` file in the root directory of your website's repo using the `touch` command in the RStudio Terminal (alternatively, use **New Blank File** > **Text File** in the Files pane):
 :::
 
-```{bash}
+```{bash filename="Command line/RStudio Terminal"}
 #| eval: false
 #| echo: true
 touch styles.scss # name it whatever you want (you can apply more than one stylesheet to your website)
@@ -176,7 +176,7 @@ touch styles.scss # name it whatever you want (you can apply more than one style
 **2.** Add the `/*-- scss:defaults --*/` region decorator to the top of `styles.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)) -- you'll write all your Sass variables underneath this.
 :::
 
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
 
@@ -189,7 +189,7 @@ touch styles.scss # name it whatever you want (you can apply more than one style
 **3.** Apply your `styles.scss` stylesheet to your website by updating the `_quarto.yml` under the `format` section:
 :::
 
-```{r}
+```{r filename="styles.scss"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "9-10"
@@ -219,7 +219,7 @@ format:
 Let's first define the colors we want to use throughout our site. For me, that looks like this:
 :::
 
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
 
@@ -258,8 +258,8 @@ Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-format
 
 ::: {.panel-tabset}
 
-## `styles.scss` file
-```{css}
+## `styles.scss`
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "11-25"
@@ -296,7 +296,7 @@ $code-block-bg: $cream; // code block background color
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "75%" 
+#| out-width: "60%" 
 knitr::include_graphics("images/sass_colors.png")
 ```
 

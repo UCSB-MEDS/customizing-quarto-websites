@@ -50,7 +50,7 @@ knitr::include_graphics("images/google-fonts.png")
 
 ## {#select-fonts data-menu-title="Select Fonts"}
 
-[Selecting a Google font(s)]{.slide-title}
+[Selecting a Google font(s)]{.slide-title-smaller}
 
 <hr>
 

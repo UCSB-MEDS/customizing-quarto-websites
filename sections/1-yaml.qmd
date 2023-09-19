@@ -12,18 +12,18 @@ format: revealjs
 
 ## {#about-page data-menu-title="Create a nice landing page"}
 
-[Turn your landing page into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo]{.slide-title-smaller}
+[Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo]{.slide-title-smallest}
 
 <hr>
 
 ::: {.panel-tabset}
 
-## `index.qmd` YAML
-```{r}
+## `index.qmd` (YAML)
+```{r filename="index.qmd"}
 #| eval: false
 #| echo: true
 ---
-title: "samantha csik" # if using a built-in template, this title appears under your photo
+title: "Samantha Csik" # if using a built-in template, this title appears under your photo
 image: media/headshot.jpg # great spot for your professional headshot :) 
 toc: false # remove "On this page" table of contents
 about: 
@@ -100,7 +100,7 @@ With the `trestles` About Page template
 
 ## {#add-pages data-menu-title="Add pages"}
 
-[Update your navbar]{.slide-title-smaller}
+[Update your navbar in `_quarto.yml`]{.slide-title-smaller}
 
 <hr>
 
@@ -110,9 +110,9 @@ Any edits you want to make to your navbar happen under the `website:` > `navbar:
 
 ::: {.panel-tabset}
 
-## `_quarto.yml` file
+## `_quarto.yml` 
 
-```{r}
+```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "6-19"
@@ -174,7 +174,7 @@ knitr::include_graphics("images/add_navbar_items.png")
 
 ## {#add-footer data-menu-title="Add footer"}
 
-[Add a page footer]{.slide-title}
+[Add a page footer in `_quarto.yml`]{.slide-title}
 
 <hr>
 
@@ -184,9 +184,9 @@ Any edits you want to make to a website footer happen under the `website:` > `pa
 
 ::: {.panel-tabset}
 
-## `_quarto.yml` file
+## `_quarto.yml` 
 
-```{r}
+```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "20-28"
@@ -248,7 +248,7 @@ knitr::include_graphics("images/footer.png")
 
 ## {#add-favicon data-menu-title="Add favicon & logo"}
 
-[Add a favicon & personal logo]{.slide-title}
+[Add a favicon & personal logo in `_quarto.yml`]{.slide-title-smallest}
 
 <hr>
 
@@ -258,9 +258,9 @@ A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web b
 
 ::: {.panel-tabset}
 
-## `_quarto.yml` file
+## `_quarto.yml` 
 
-```{r}
+```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "6|8-10"

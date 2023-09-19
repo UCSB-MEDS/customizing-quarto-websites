@@ -484,19 +484,29 @@
 <p><em>I almost always work on a branch when making changes to my website – this way I can safely test changes before deploying them to my live site.</em></p>
 </div>
 <div class="smaller-body-text">
-<p>To create a branch, first ensure that you’re on <code>main</code> by typing either <code>git branch</code> or <code>git status</code> into your RStudio terminal (either will tell you which branch you’re currently on). If you’re not on <code>main</code>, you can switch by running <code>git checkout main</code>.</p>
+<p>To create a branch, first ensure that you’re on <code>main</code> by typing either <code>git branch</code> or <code>git status</code> into the RStudio Terminal (either will tell you which branch you’re currently on). If you’re not on <code>main</code>, you can switch by running <code>git checkout main</code>.</p>
 </div>
 <div class="smaller-body-text">
-<p>Create a local git branch from <code>main</code> by running the following in your terminal:</p>
+<p>Create a local git branch from <code>main</code> by running the following in your Terminal:</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command line/RStudio Terminal</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> my-new-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="smaller-body-text">
 <p>Push your new local branch to GitHub by running the following in your terminal:</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command line/RStudio Terminal</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin my-new-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="smaller-body-text topbr">
 <p>You’re now ready to work as normal! Once satisfied with your changes, you can <code>git add</code>, <code>git commit -m "my commit message"</code>, and <code>git push</code> (or use the RStudio GUI buttons in the <strong>Git</strong> tab) your files. Open a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> from GitHub and <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">merge</a> into <code>main</code> to integrate your changes.</p>
@@ -543,19 +553,23 @@ Add a template to your <code>index.qmd</code> and edit <code>_quarto.qmd</code>
 </center>
 </div>
 </section><section id="about-page" class="slide level2" data-menu-title="Create a nice landing page"><h2></h2>
-<p><span class="slide-title-smaller">Turn your landing page into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</span></p>
+<p><span class="slide-title-smallest">Turn your landing page (<code>index.qmd</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</span></p>
 <hr>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1"><code>index.qmd</code> YAML</a></li>
+<li><a data-tabby-default="" href="#tabset-1-1"><code>index.qmd</code> (YAML)</a></li>
 <li><a href="#tabset-1-2">Output</a></li>
 <li><a href="#tabset-1-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>index.qmd</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="sc">---</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>title<span class="sc">:</span> <span class="st">"samantha csik"</span> <span class="co"># if using a built-in template, this title appears under your photo</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>title<span class="sc">:</span> <span class="st">"Samantha Csik"</span> <span class="co"># if using a built-in template, this title appears under your photo</span></span>
 <span id="cb3-3"><a href="#cb3-3"></a>image<span class="sc">:</span> media<span class="sc">/</span>headshot.jpg <span class="co"># great spot for your professional headshot :) </span></span>
 <span id="cb3-4"><a href="#cb3-4"></a>toc<span class="sc">:</span> false <span class="co"># remove "On this page" table of contents</span></span>
 <span id="cb3-5"><a href="#cb3-5"></a>about<span class="sc">:</span> </span>
@@ -576,6 +590,7 @@ Add a template to your <code>index.qmd</code> and edit <code>_quarto.qmd</code>
 <span id="cb3-20"><a href="#cb3-20"></a>      text<span class="sc">:</span> Email</span>
 <span id="cb3-21"><a href="#cb3-21"></a>      href<span class="sc">:</span> mailto<span class="sc">:</span>scsik<span class="sc">@</span>ucsb.edu</span>
 <span id="cb3-22"><a href="#cb3-22"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="body-text center-text">
 <p class="important-text-bg">
@@ -626,20 +641,24 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 </div>
 </div>
 </section><section id="add-pages" class="slide level2" data-menu-title="Add pages"><h2></h2>
-<p><span class="slide-title-smaller">Update your navbar</span></p>
+<p><span class="slide-title-smaller">Update your navbar in <code>_quarto.yml</code></span></p>
 <hr>
 <div class="smaller-body-text">
 <p>Any edits you want to make to your navbar happen under the <code>website:</code> &gt; <code>navbar:</code> option in your <code>_quarto.yml</code> file.</p>
 </div>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1"><code>_quarto.yml</code> file</a></li>
+<li><a data-tabby-default="" href="#tabset-2-1"><code>_quarto.yml</code></a></li>
 <li><a href="#tabset-2-2">Output</a></li>
 <li><a href="#tabset-2-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-2-1">
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb4" data-code-line-numbers="6-19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>project<span class="sc">:</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>  type<span class="sc">:</span> website</span>
 <span id="cb4-3"><a href="#cb4-3"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
@@ -667,6 +686,7 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 <span id="cb4-25"><a href="#cb4-25"></a>    toc<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
 <div id="tabset-2-2">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -691,20 +711,24 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 </div>
 </div>
 </section><section id="add-footer" class="slide level2" data-menu-title="Add footer"><h2></h2>
-<p><span class="slide-title">Add a page footer</span></p>
+<p><span class="slide-title">Add a page footer in <code>_quarto.yml</code></span></p>
 <hr>
 <div class="smaller-body-text">
 <p>Any edits you want to make to a website footer happen under the <code>website:</code> &gt; <code>page-footer:</code> option in your <code>_quarto.yml</code> file.</p>
 </div>
 <div class="panel-tabset">
 <ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1"><code>_quarto.yml</code> file</a></li>
+<li><a data-tabby-default="" href="#tabset-3-1"><code>_quarto.yml</code></a></li>
 <li><a href="#tabset-3-2">Output</a></li>
 <li><a href="#tabset-3-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-3-1">
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb5" data-code-line-numbers="20-28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>project<span class="sc">:</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>  type<span class="sc">:</span> website</span>
 <span id="cb5-3"><a href="#cb5-3"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
@@ -741,6 +765,7 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 <span id="cb5-34"><a href="#cb5-34"></a>    toc<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
 <div id="tabset-3-2">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -759,20 +784,24 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 </div>
 </div>
 </section><section id="add-favicon" class="slide level2" data-menu-title="Add favicon &amp; logo"><h2></h2>
-<p><span class="slide-title">Add a favicon &amp; personal logo</span></p>
+<p><span class="slide-title-smallest">Add a favicon &amp; personal logo in <code>_quarto.yml</code></span></p>
 <hr>
 <div class="body-text">
 <p>A <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.</p>
 </div>
 <div class="panel-tabset">
 <ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1"><code>_quarto.yml</code> file</a></li>
+<li><a data-tabby-default="" href="#tabset-4-1"><code>_quarto.yml</code></a></li>
 <li><a href="#tabset-4-2">Output</a></li>
 <li><a href="#tabset-4-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-4-1">
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb6" data-code-line-numbers="6|8-10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>project<span class="sc">:</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  type<span class="sc">:</span> website</span>
 <span id="cb6-3"><a href="#cb6-3"></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
@@ -795,6 +824,7 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 <span id="cb6-20"><a href="#cb6-20"></a>    css<span class="sc">:</span> styles.css</span>
 <span id="cb6-21"><a href="#cb6-21"></a>    toc<span class="sc">:</span> true</span>
 <span id="cb6-22"><a href="#cb6-22"></a>    page<span class="sc">-</span>layout<span class="sc">:</span> full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <div id="tabset-4-2">
@@ -887,9 +917,13 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <p><span class="slide-title-smaller">Define Sass variables to reduce repetition</span></p>
 <hr>
 <div class="smaller-body-text">
-<p>Sass allows us to <strong>define variables</strong> (in the form <code>$var-name: value;</code>) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet <strong>more readable and easier to update</strong> (e.g.&nbsp;only need to change HEX codes in one spot, not multiple!) <!-- Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time: --></p>
+<p>Sass allows us to <strong>define variables</strong> (in the form <code>$var-name: value;</code>) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet <strong>more readable and easier to update</strong> (e.g.&nbsp;only need to change HEX codes in one spot, not multiple!). <!-- Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time: --></p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Example stylesheet</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">/* -- define Sass vars --*/</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>$darkblue<span class="in">: #053660;</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>$teal<span class="in">: #147C91;</span></span>
@@ -905,6 +939,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <span id="cb7-13"><a href="#cb7-13"></a>  <span class="kw">color</span>: $darkblue<span class="op">;</span> </span>
 <span id="cb7-14"><a href="#cb7-14"></a>  <span class="kw">border-color</span>: $darkgray<span class="op">;</span></span>
 <span id="cb7-15"><a href="#cb7-15"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="smaller-body-text topbr">
 <p><strong>Note:</strong> Sass has two syntaxes – SCSS syntax (<code>.scss</code>), shown above, is the most common. It stands for <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tylesheets </p>
@@ -929,14 +964,24 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <p><strong>1.</strong> Create a <code>.scss</code> file in the root directory of your website’s repo using the <code>touch</code> command in the RStudio Terminal (alternatively, use <strong>New Blank File</strong> &gt; <strong>Text File</strong> in the Files pane):</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command line/RStudio Terminal</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">touch</span> styles.scss <span class="co"># name it whatever you want (you can apply more than one stylesheet to your website)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="fragment">
 <div class="caption-text topbr bottombr">
 <p><strong>2.</strong> Add the <code>/*-- scss:defaults --*/</code> region decorator to the top of <code>styles.scss</code> (<a href="https://quarto.org/docs/output-formats/html-themes-more.html">required by Quarto</a>) – you’ll write all your Sass variables underneath this.</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>styles.scss</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">/*-- scss:defaults --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <div class="fragment">
@@ -944,6 +989,10 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <p><strong>3.</strong> Apply your <code>styles.scss</code> stylesheet to your website by updating the <code>_quarto.yml</code> under the <code>format</code> section:</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>styles.scss</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb10" data-code-line-numbers="9-10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>project<span class="sc">:</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>   <span class="co"># ~ additional YAML omitted for brevity ~</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a></span>
@@ -957,6 +1006,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <span id="cb10-11"><a href="#cb10-11"></a>    toc<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
 </section><section id="sass-colors" class="slide level2" data-menu-title="Sass Colors"><h2></h2>
 <p><span class="slide-title">Define some color variables</span></p>
 <hr>
@@ -965,6 +1015,10 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <p>Let’s first define the colors we want to use throughout our site. For me, that looks like this:</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>styles.scss</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="er">// Colors</span></span>
@@ -974,6 +1028,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <span id="cb11-7"><a href="#cb11-7"></a>$gray<span class="in">: #64605f;</span></span>
 <span id="cb11-8"><a href="#cb11-8"></a>$purple<span class="in">: #9158A2;</span></span>
 <span id="cb11-9"><a href="#cb11-9"></a>$orange<span class="in">: #ad7237</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="body-text topbr">
 <p>You can also define values with units, e.g.&nbsp;<code>$my-font-size: 25px;</code> or <code>$my-width: 500px;</code>.</p>
@@ -990,13 +1045,17 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 </div>
 <div class="panel-tabset">
 <ul id="tabset-5" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-5-1"><code>styles.scss</code> file</a></li>
+<li><a data-tabby-default="" href="#tabset-5-1"><code>styles.scss</code></a></li>
 <li><a href="#tabset-5-2">Output</a></li>
 <li><a href="#tabset-5-3">Notes</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-5-1">
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>styles.scss</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb12" data-code-line-numbers="11-25"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a></span>
 <span id="cb12-3"><a href="#cb12-3"></a><span class="er">// Colors</span></span>
@@ -1024,11 +1083,12 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <span id="cb12-25"><a href="#cb12-25"></a>$code-block-bg<span class="in">: $cream</span>; <span class="er">// code block background color</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+</div>
 <div id="tabset-5-2">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/sass_colors.png" style="width:75.0%"></p>
+<figure><p><img data-src="images/sass_colors.png" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -1094,7 +1154,7 @@ Import and apply new fonts <svg aria-label="Font" role="img" viewbox="0 0 448 51
 <p><br></p>
 
 <img data-src="images/google-fonts.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="select-fonts" class="slide level2" data-menu-title="Select Fonts"><h2></h2>
-<p><span class="slide-title">Selecting a Google font(s)</span></p>
+<p><span class="slide-title-smaller">Selecting a Google font(s)</span></p>
 <hr>
 <div class="caption-text topbr bottombr">
 <p><strong>1.</strong> Once you’ve found a font you’d like to use, scroll down to the <strong>Styles</strong> section of that font’s page – here you’ll (typically) find a number of different weights (e.g.&nbsp;thin, light, regular, bold) and styles (e.g.&nbsp;italic). Click on the <strong>+</strong> button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, to the right of the style you want. In this example, I choose <em>Nunito</em> in the <em>Light 400</em> and <em>ExtraBold 800</em> styles, though you can choose as many fonts and styles to import as you’d like. <strong>Note:</strong> You <em>must</em> import a higher weight font style if you plan to use <strong>bolded</strong> text.</p>
@@ -1471,7 +1531,12 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 </div>
 <p><span class="caption-text"><strong>1.</strong> In the RStudio Terminal, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</span></p>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command line/RStudio Terminal</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">touch</span> practice-html.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <p><span class="caption-text"><strong>2.</strong> Type or copy/paste the following into your <code>practice-html.html</code> file:</span></p>
 <div class="cell">
@@ -1525,7 +1590,12 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 <div id="tabset-8-1">
 <p><span class="caption-text"><strong>1.</strong> Now, use the <code>touch</code> command (or <strong>New Blank File</strong> &gt; <strong>Quarto Doc…</strong> in the Files pane) to create a new <code>.qmd</code> file.</span></p>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command line/RStudio Terminal</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">touch</span> practice-markdown.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <p><span class="caption-text"><strong>2.</strong> Type or copy/paste the following into your <code>practice-markdown.qmd</code> file:</span></p>
 <div class="code-with-filename">
@@ -1940,10 +2010,15 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title">Exercise: practice writing CSS (1/3)</span></p>
 <hr>
 <div class="caption-text topbr">
-<p><strong>1.</strong> Return to your R Project (where you created your <code>practice-html.html</code> file). In the RStudio Terminal, use the <code>touch</code> command to create a CSS file in the same location as your html file:</p>
+<p><strong>1.</strong> Return to your R Project (where you created your <code>practice-html.html</code> file). In the RStudio Terminal, use the <code>touch</code> command to create a <strong>CSS</strong> file in the same location as your html file:</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command line/RStudio Terminal</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">touch</span> practice-styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="fragment">
 <div class="caption-text topbr">
@@ -2121,6 +2196,10 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>To start defining CSS rules in <code>styles.scss</code> you first need to add the <code>/*-- scss:rules --*/</code> region decorator beneath your Sass variables section:</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>styles.scss</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb39" data-code-line-numbers="11"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb39-1"><a href="#cb39-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb39-2"><a href="#cb39-2"></a></span>
 <span id="cb39-3"><a href="#cb39-3"></a><span class="er">// Fonts</span></span>
@@ -2132,6 +2211,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <span id="cb39-9"><a href="#cb39-9"></a><span class="er">// additional Sass variables omitted for brevity ~</span></span>
 <span id="cb39-10"><a href="#cb39-10"></a></span>
 <span id="cb39-11"><a href="#cb39-11"></a><span class="co">/*-- scss:rules --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div class="body-text topbr">
 <p>Next, we’ll walk through some examples of how to modify your site with your own CSS rules.</p>

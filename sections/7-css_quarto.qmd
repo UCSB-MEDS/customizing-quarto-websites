@@ -54,7 +54,7 @@ You can delete `styles.css` if you don't plan to use it, or leave it be (it's ea
 To start defining CSS rules in `styles.scss` you first need to add the `/*-- scss:rules --*/` region decorator beneath your Sass variables section:
 :::
 
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "11"
