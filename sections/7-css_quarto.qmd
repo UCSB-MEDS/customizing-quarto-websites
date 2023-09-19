@@ -5,7 +5,7 @@ format: revealjs
 ##  {#css-quarto data-menu-title="CSS + Quarto" background="#053660"}
 
 <div class="page-center">
-<div class="custom-subtitle">`r fontawesome::fa("question", fill = "#d2e3f3", a11y = "sem")` Okay, but what about Quarto?</div>
+<div class="custom-subtitle">`r fontawesome::fa("question", fill = "#d2e3f3", a11y = "sem")` Okay, that's cool...but what about Quarto?</div>
 </div>
 
 ---

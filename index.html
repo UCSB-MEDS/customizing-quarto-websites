@@ -1662,7 +1662,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 <div id="tabset-9-2">
 <div class="body-text">
-<p>Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.</p>
+<p>Group multiple element selectors together (separated by commas) if you want them all styled the same way.</p>
 </div>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -1699,7 +1699,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="select-attributes" class="slide level2" data-menu-title="ID &amp; Class Selectors"><h2></h2>
-<p><span class="slide-title">Target element(s) using attributes</span></p>
+<p><span class="slide-title-smaller">Target element(s) using HTML attributes</span></p>
 <!-- Select an element(s) using attributes -->
 <hr>
 <div class="panel-tabset">
@@ -1950,7 +1950,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><span class="slide-title">Exercise: practice writing CSS (1/3)</span></p>
 <hr>
 <div class="caption-text topbr">
-<p><strong>1.</strong> Return to your RProject (where you created your <code>practice-html.html</code> file). In your terminal window, use the <code>touch</code> command to create a CSS file in the same location as your html file:</p>
+<p><strong>1.</strong> Return to your R Project (where you created your <code>practice-html.html</code> file). In the RStudio Terminal, use the <code>touch</code> command to create a CSS file in the same location as your html file:</p>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">touch</span> practice-styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1960,6 +1960,10 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><strong>2.</strong> Link your CSS file inside the <code>&lt;head&gt;</code> of your HTML file (read more about inserting style sheets <a href="https://www.w3schools.com/css/css_howto.asp">here</a>).</p>
 </div>
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice-html.html</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb36" data-code-line-numbers="5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb36-1"><a href="#cb36-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb36-2"><a href="#cb36-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
 <span id="cb36-3"><a href="#cb36-3"></a><span class="kw">&lt;head&gt;</span></span>
@@ -1970,10 +1974,11 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <span id="cb36-8"><a href="#cb36-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
 <span id="cb36-9"><a href="#cb36-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb36-10"><a href="#cb36-10"></a>  <span class="kw">&lt;p&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb36-11"><a href="#cb36-11"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb36-12"><a href="#cb36-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb36-11"><a href="#cb36-11"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph, where you can read more about <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://ucsb-meds.github.io/"</span><span class="kw">&gt;</span>MEDS<span class="kw">&lt;/a&gt;</span>.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb36-12"><a href="#cb36-12"></a>  <span class="kw">&lt;p&gt;</span>This is very important text!<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb36-13"><a href="#cb36-13"></a><span class="kw">&lt;/body&gt;</span></span>
 <span id="cb36-14"><a href="#cb36-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </section><section id="css-practice2" class="slide level2" data-menu-title="Practice CSS (2/3)"><h2></h2>
@@ -1983,25 +1988,24 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p><strong>3.</strong> Write some CSS selectors in your <code>practice-styles.css</code> file and save. Update your HTML file accordingly to apply your styles and <strong>Preview</strong> <code>practice-html.html</code> to see the updates. Some suggestions:</p>
 </div>
 <div class="caption-text topbr">
-<p><strong>(a)</strong> create an <code>&lt;h1&gt;</code> element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) <em>and</em> centers the text on the page,</p>
+<p><strong>(a)</strong> create an <code>&lt;h1&gt;</code> element selector that styles the background color to something of your choosing (hex and rgb codes allowed!), rounds the edges of the background box, increases the spacing between each letter, <em>and</em> centers the text on the page,</p>
 </div>
 <div class="caption-text topbr">
-<p><strong>(b)</strong> create a class selector to color the text of your first paragraph blue,</p>
+<p><strong>(b)</strong> create an element selector that changes the color of hyperlinked text and italicizes it</p>
 </div>
 <div class="caption-text topbr">
-<p><strong>(c)</strong> use that same class selector <em>inline</em> to style just the word <strong>second</strong> (in your second paragraph) blue,</p>
+<p><strong>(c)</strong> create a class selector that you can use to color your first paragraph (“Here is my first paragraph”) blue,</p>
 </div>
 <div class="caption-text topbr">
-<p><strong>(d)</strong> create a class selector to color your button text red and enlarge the font size (try <code>20px</code>),</p>
+<p><strong>(d)</strong> create a class selector to that you can use to color your third paragraph (“This is very important text!”) red and enlarge the font size (try <code>20px</code>),</p>
 </div>
 <div class="caption-text topbr">
-<p><strong>(bonus)</strong> What happens if you also apply that red/large font selector (from part <strong>(d)</strong>) to your second paragraph?</p>
+<p><strong>(e)</strong> use your class selector from <strong>Step c</strong> <em>inline</em> to color just the word “very” (in your third paragraph) blue</p>
 </div>
 <p><br></p>
-<div class="caption-text center-text">
-<p>Explore a list of all CSS properties <a href="https://www.w3schools.com/cssref/">here</a>.</p>
+<div class="body-text center-text important-text-bg">
+<p>It’ll be especially helpful to explore this list of available <a href="https://www.w3schools.com/cssref/">CSS properties</a>.</p>
 </div>
-<p><br></p>
 <div class="large-body-text center-text">
 <p>(One) solution on next slide!</p>
 </div>
@@ -2015,42 +2019,67 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <ul id="tabset-12" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-12-1">CSS</a></li>
 <li><a href="#tabset-12-2">HTML</a></li>
-<li><a href="#tabset-12-3">Output</a></li>
+<li><a href="#tabset-12-3">Rendered HTML</a></li>
 </ul>
 <div class="tab-content">
 <div id="tabset-12-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb37-1"><a href="#cb37-1"></a>h1 {</span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="kw">background-color</span>: <span class="cn">#49bf96</span><span class="op">;</span></span>
-<span id="cb37-3"><a href="#cb37-3"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb37-4"><a href="#cb37-4"></a>}</span>
-<span id="cb37-5"><a href="#cb37-5"></a></span>
-<span id="cb37-6"><a href="#cb37-6"></a><span class="fu">.blue-text</span> {</span>
-<span id="cb37-7"><a href="#cb37-7"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb37-8"><a href="#cb37-8"></a>}</span>
-<span id="cb37-9"><a href="#cb37-9"></a></span>
-<span id="cb37-10"><a href="#cb37-10"></a><span class="fu">.large-red-text</span>{</span>
-<span id="cb37-11"><a href="#cb37-11"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb37-12"><a href="#cb37-12"></a>  <span class="kw">font-size</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb37-13"><a href="#cb37-13"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice-styles.css</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb37-1"><a href="#cb37-1"></a><span class="co">/* ------- element selectors ------- */</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="co">/* style level one headers */</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a>h1 {</span>
+<span id="cb37-5"><a href="#cb37-5"></a>  <span class="kw">background-color</span>: <span class="cn">#49bf96</span><span class="op">;</span></span>
+<span id="cb37-6"><a href="#cb37-6"></a>  <span class="kw">border-radius</span>: <span class="dv">25</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb37-7"><a href="#cb37-7"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb37-8"><a href="#cb37-8"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb37-9"><a href="#cb37-9"></a>}</span>
+<span id="cb37-10"><a href="#cb37-10"></a></span>
+<span id="cb37-11"><a href="#cb37-11"></a><span class="co">/* purple italicized hyperlinks */</span></span>
+<span id="cb37-12"><a href="#cb37-12"></a>a {</span>
+<span id="cb37-13"><a href="#cb37-13"></a>  <span class="kw">color</span>: <span class="cn">purple</span><span class="op">;</span></span>
+<span id="cb37-14"><a href="#cb37-14"></a>  <span class="kw">font-style</span>: <span class="dv">italic</span><span class="op">;</span></span>
+<span id="cb37-15"><a href="#cb37-15"></a>}</span>
+<span id="cb37-16"><a href="#cb37-16"></a></span>
+<span id="cb37-17"><a href="#cb37-17"></a><span class="co">/* ------- class selectors ------- */</span></span>
+<span id="cb37-18"><a href="#cb37-18"></a></span>
+<span id="cb37-19"><a href="#cb37-19"></a><span class="co">/* blue text */</span></span>
+<span id="cb37-20"><a href="#cb37-20"></a><span class="fu">.blue-text</span> {</span>
+<span id="cb37-21"><a href="#cb37-21"></a>  <span class="kw">color</span>: <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb37-22"><a href="#cb37-22"></a>}</span>
+<span id="cb37-23"><a href="#cb37-23"></a></span>
+<span id="cb37-24"><a href="#cb37-24"></a><span class="co">/* large red text */</span></span>
+<span id="cb37-25"><a href="#cb37-25"></a><span class="fu">.important-text</span> {</span>
+<span id="cb37-26"><a href="#cb37-26"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb37-27"><a href="#cb37-27"></a>  <span class="kw">font-size</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb37-28"><a href="#cb37-28"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <div id="tabset-12-2">
 <div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>practice-html.html</strong></pre>
+</div>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb38-1"><a href="#cb38-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb38-2"><a href="#cb38-2"></a><span class="kw">&lt;html&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
 <span id="cb38-3"><a href="#cb38-3"></a><span class="kw">&lt;head&gt;</span></span>
 <span id="cb38-4"><a href="#cb38-4"></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
-<span id="cb38-5"><a href="#cb38-5"></a>  <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles.css"</span><span class="kw">&gt;</span> </span>
+<span id="cb38-5"><a href="#cb38-5"></a> <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"practice-styles.css"</span><span class="kw">&gt;</span></span>
 <span id="cb38-6"><a href="#cb38-6"></a><span class="kw">&lt;/head&gt;</span></span>
 <span id="cb38-7"><a href="#cb38-7"></a><span class="kw">&lt;body&gt;</span> </span>
 <span id="cb38-8"><a href="#cb38-8"></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
 <span id="cb38-9"><a href="#cb38-9"></a>  <span class="kw">&lt;h1&gt;</span>Here is my level one header<span class="kw">&lt;/h1&gt;</span></span>
 <span id="cb38-10"><a href="#cb38-10"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>Here is my first paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb38-11"><a href="#cb38-11"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"large-red-text"</span><span class="kw">&gt;</span>Here is my <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>second<span class="kw">&lt;/span&gt;</span> paragraph<span class="kw">&lt;/p&gt;</span></span>
-<span id="cb38-12"><a href="#cb38-12"></a>  <span class="kw">&lt;button</span> <span class="er">type</span><span class="ot">=</span><span class="st">"button"</span> <span class="er">class</span><span class="ot">=</span><span class="st">"large-red-text"</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">window.location.href=</span><span class="er">'https://ucsb-meds.github.io'</span><span class="kw">&gt;</span>Go to MEDS website<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb38-11"><a href="#cb38-11"></a>  <span class="kw">&lt;p&gt;</span>Here is my second paragraph, where you can read more about <span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://ucsb-meds.github.io/"</span><span class="kw">&gt;</span>MEDS<span class="kw">&lt;/a&gt;</span>.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb38-12"><a href="#cb38-12"></a>  <span class="kw">&lt;p</span> <span class="er">class</span><span class="ot">=</span><span class="st">"important-text"</span><span class="kw">&gt;</span>This is <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">"blue-text"</span><span class="kw">&gt;</span>very<span class="kw">&lt;/span&gt;</span> important text!<span class="kw">&lt;/p&gt;</span></span>
 <span id="cb38-13"><a href="#cb38-13"></a><span class="kw">&lt;/body&gt;</span></span>
 <span id="cb38-14"><a href="#cb38-14"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 <div id="tabset-12-3">
@@ -2069,7 +2098,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="page-center">
 <div class="custom-subtitle">
 <svg aria-label="Question" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Question</title>
-<path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg> Okay, but what about Quarto?
+<path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg> Okay, that’s cool…but what about Quarto?
 </div>
 </div>
 </section><section id="styles.css" class="slide level2" data-menu-title="Quarto comes with `styles.css`"><h2></h2>

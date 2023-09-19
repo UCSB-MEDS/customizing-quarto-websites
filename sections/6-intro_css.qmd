@@ -152,7 +152,7 @@ knitr::include_graphics("images/element_selector.png")
 ## Grouping Selectors
 
 ::: {.body-text}
-Rather than defining separate rules for multiple element selectors that you want styled the same way, you can group them together. Simply separate each selector by a comma.
+Group multiple element selectors together (separated by commas) if you want them all styled the same way.
 :::
 
 :::: {.columns}
@@ -206,7 +206,7 @@ knitr::include_graphics("images/grouping_selector.png")
 
 ##  {#select-attributes data-menu-title="ID & Class Selectors"}
 
-[Target element(s) using attributes]{.slide-title}
+[Target element(s) using HTML attributes]{.slide-title-smaller}
 
 <!-- Select an element(s) using attributes -->
 
@@ -536,7 +536,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 <hr>
 
 ::: {.caption-text .topbr}
-**1.** Return to your RProject (where you created your `practice-html.html` file). In your terminal window, use the `touch` command to create a CSS file in the same location as your html file:
+**1.** Return to your R Project (where you created your `practice-html.html` file). In the RStudio Terminal, use the `touch` command to create a CSS file in the same location as your html file:
 :::
 
 ```{bash}
@@ -551,7 +551,7 @@ touch practice-styles.css
 **2.** Link your CSS file inside the `<head>` of your HTML file (read more about inserting style sheets [here](https://www.w3schools.com/css/css_howto.asp)).
 :::
 
-```{html} 
+```{html filename="practice-html.html"} 
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
@@ -565,8 +565,8 @@ touch practice-styles.css
   <!-- Write all the contents of the HTML doc here -->
   <h1>Here is my level one header</h1>
   <p>Here is my first paragraph</p>
-  <p>Here is my second paragraph</p>
-  <button type="button" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button>
+  <p>Here is my second paragraph, where you can read more about <a href="https://ucsb-meds.github.io/">MEDS</a>.</p>
+  <p>This is very important text!</p>
 </body>
 </html>
 ```
@@ -584,32 +584,31 @@ touch practice-styles.css
 :::
 
 ::: {.caption-text .topbr}
-**(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!) *and* centers the text on the page,
+**(a)** create an `<h1>` element selector that styles the background color to something of your choosing (hex and rgb codes allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
 :::
 
 ::: {.caption-text .topbr}
-**(b)** create a class selector to color the text of your first paragraph blue,
+**(b)** create an element selector that changes the color of hyperlinked text and italicizes it
+:::
+
+
+::: {.caption-text .topbr}
+**(c)** create a class selector that you can use to color your first paragraph ("Here is my first paragraph") blue,
 :::
 
 ::: {.caption-text .topbr}
-**(c)** use that same class selector *inline* to style just the word **second** (in your second paragraph) blue,
+**(d)** create a class selector to that you can use to color your third paragraph ("This is very important text!") red and enlarge the font size (try `20px`),
 :::
 
 ::: {.caption-text .topbr}
-**(d)** create a class selector to color your button text red and enlarge the font size (try `20px`),
-:::
-
-::: {.caption-text .topbr}
-**(bonus)** What happens if you also apply that red/large font selector (from part **(d)**) to your second paragraph?
+**(e)** use your class selector from **Step c** *inline* to color just the word "very" (in your third paragraph) blue
 :::
 
 <br>
 
-::: {.caption-text .center-text}
-Explore a list of all CSS properties [here](https://www.w3schools.com/cssref/).
+::: {.body-text .center-text .important-text-bg}
+It'll be especially helpful to explore this list of available [CSS properties](https://www.w3schools.com/cssref/).
 :::
-
-<br>
 
 ::: {.large-body-text .center-text}
 (One) solution on next slide!
@@ -630,45 +629,60 @@ Below is one solution -- yours may look different!
 ::: {.panel-tabset}
 
 ## CSS
-```{css}
+```{css filename="practice-styles.css"}
 #| eval: false
 #| echo: true
+/* ------- element selectors ------- */
+
+/* style level one headers */
 h1 {
   background-color: #49bf96;
+  border-radius: 25px;
+  letter-spacing: 5px;
   text-align: center;
 }
 
+/* purple italicized hyperlinks */
+a {
+  color: purple;
+  font-style: italic;
+}
+
+/* ------- class selectors ------- */
+
+/* blue text */
 .blue-text {
   color: blue;
 }
 
-.large-red-text{
+/* large red text */
+.important-text {
   color: red;
-  font-size: 20px;
+  font-size: 30px;
 }
 ```
 
 ## HTML 
-```{html}
+```{html filename="practice-html.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>
  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
-  <link rel="stylesheet" href="practice-styles.css"> 
+ <link rel="stylesheet" href="practice-styles.css">
 </head>
 <body> 
   <!-- Write all the contents of the HTML doc here -->
   <h1>Here is my level one header</h1>
   <p class="blue-text">Here is my first paragraph</p>
-  <p class="large-red-text">Here is my <span class="blue-text">second</span> paragraph</p>
-  <button type="button" class="large-red-text" onclick=window.location.href='https://ucsb-meds.github.io'>Go to MEDS website</button>
+  <p>Here is my second paragraph, where you can read more about <a href="https://ucsb-meds.github.io/">MEDS</a>.</p>
+  <p class="important-text">This is <span class="blue-text">very</span> important text!</p>
 </body>
 </html>
 ```
 
-## Output
+## Rendered HTML
 
 ```{r}
 #| eval: true 
