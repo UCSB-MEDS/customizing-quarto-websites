@@ -156,7 +156,7 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 ::: {.body-text}
 <br>
 <br>
-[Quarto](https://quarto.org/) gives us with an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.
+[Quarto](https://quarto.org/) gives us an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.
 :::
 :::
 
@@ -174,7 +174,7 @@ knitr::include_graphics("images/website_noCSS.png")
 ```
 
 ::: {.caption-text .gray-text .center-text}
-An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/)
+An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/) *and* `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
 :::
 
 :::

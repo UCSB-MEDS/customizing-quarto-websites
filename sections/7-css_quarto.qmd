@@ -5,14 +5,14 @@ format: revealjs
 ##  {#css-quarto data-menu-title="CSS + Quarto" background="#053660"}
 
 <div class="page-center">
-<div class="custom-subtitle">`r fontawesome::fa("question", fill = "#d2e3f3", a11y = "sem")` Okay, but what about Quarto?</div>
+<div class="custom-subtitle">`r fontawesome::fa("question", fill = "#d2e3f3", a11y = "sem")` Okay, that's cool...but what about Quarto?</div>
 </div>
 
 ---
 
 ##  {#styles.css data-menu-title="Quarto comes with `styles.css`"}
 
-[When you create a new Quarto site, it automatically creates a `styles.css` file]{.slide-title-smallest}
+[A `styles.css` file is automatically generated when you create a new Quarto site]{.slide-title-smallest}
 
 <hr>
 
@@ -33,7 +33,7 @@ knitr::include_graphics("images/quarto_files.png")
 <br>
 
 ::: {.body-text}
-We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `styles.scss` file ***(remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file)***. 
+**We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `styles.scss` file** *(remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file)*. 
 :::
 
 ::: {.body-text}
@@ -60,14 +60,14 @@ To start defining CSS rules in `styles.scss` you first need to add the `/*-- scs
 #| code-line-numbers: "11"
 
 /*-- scss:defaults --*/
+
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
 // Colors
-$light-sage-green: #D1D9CE;
-$dark-sage-green: #98A08D;
+$dark-green: #98A08D;
 
-// additional Sass variables omitted for brevity
+// additional Sass variables omitted for brevity ~
 
 /*-- scss:rules --*/
 ```
@@ -101,7 +101,7 @@ knitr::include_graphics("images/index-font.png")
 ```
 
 ::: {.caption-text .center-text .gray-text .topbr}
-On my landing page, I want to style my name, "samantha csik", and the three section headers, "hi there!", "education", and "experience"
+On my landing page, I want to style my name, "Samantha Csik", and the three section headers, "Hi there!", "Education", and "Experience"
 :::
 
 :::
@@ -117,7 +117,7 @@ knitr::include_graphics("images/about-font.png")
 ```
 
 ::: {.caption-text .center-text .gray-text .topbr}
-On my about page, I want to style the top header, "about"
+On my About page, I want to style the page title, "About"
 :::
 
 :::
@@ -133,7 +133,7 @@ knitr::include_graphics("images/resources-font.png")
 ```
 
 ::: {.caption-text .center-text .gray-text .topbr}
-On my resources page, I want to style the top header, "resources"
+On my Resources page, I want to style the page title, "All of my favorite resources!"
 :::
 
 :::
@@ -169,7 +169,7 @@ Using the **Inspect** tool is a great way to get a better sense of how CSS is us
 :::
 
 ::: {.caption-text .topbr}
-In your website preview, **right click on an element of interest** (in this case, let's start with my name, "samantha csik") and **choose Inspect** to pull up the underlying HTML & CSS files.
+In your website preview, **right click on an element of interest** (in this case, let's start with my name, "Samantha Csik") and **choose Inspect** to pull up the underlying HTML & CSS files.
 :::
 
 ::: {.caption-text .topbr}
@@ -203,7 +203,7 @@ knitr::include_graphics("images/inspect-name.png")
 ##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"}
 
 ::: {.large-body-text .center-text}
-My landing page section, "education" (as well as "hi there!" and "experience") are `<h3>` elements
+My landing page sections, "Hi there!", "Education" and "Experience", are `<h2>` elements
 :::
 
 ```{r}
@@ -219,42 +219,52 @@ knitr::include_graphics("images/inspect-education.png")
 ##  {#inspect-about data-menu-title="Inspect about page"}
 
 ::: {.large-body-text .center-text}
-My about page title (as well as my resource page title) are `<h1>` elements
+My About page and Resource page titles are `<h1>` elements
 :::
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "100%" 
+#| out-width: "90%" 
 knitr::include_graphics("images/inspect-about.png")
 ```
 
+::: {.caption-text .gray-text .center-text}
+**Note:** These `<h1>` elements also have a class, `title`-- we'll come back to that shortly.
+:::
 ---
 
 ##  {#write-grouping-selector data-menu-title="Write a CSS grouping selector"}
 
-[Write a CSS grouping selector to style `<h1>` and `<h3>` elements]{.slide-title-smallest}
+[Write a CSS grouping selector to style `<h1>` and `<h2>` elements]{.slide-title-smallest}
 
 <hr>
 
 ::: {.panel-tabset}
 
-## `styles.scss` file
+## `styles.scss`
 
 ::: {.body-text .topbr .bottombr}
-Here, we have a grouping selector that targets *all* `<h1>` and `<h3>` elements -- it increases both the spacing between each letter and the font weight (makes it bolder), and it colors those header levels gray (reminder: I created a Sass variable: `$gray: #64605f;`).
+Here, we have a grouping selector that targets *all* `<h1>` and `<h2>` elements -- it increases both the spacing between each letter and it colors those text elements dark green.
 :::
 
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
+#| code-line-numbers: "10-14"
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+
+// other variables omitted for brevity ~
+
 /*-- scss:rules --*/
 
-h1, h3 {
+h1, h2 {
   letter-spacing: 5px;
-  font-weight: 700;
-  color: $gray;
+  color: $dark-green;
 }
 ```
 
@@ -272,7 +282,7 @@ knitr::include_graphics("images/without-header-styling.png")
 ```
 
 ::: {.caption-text .gray-text .center-text .topbr}
-No CSS styling on `h1` and `h3` headers
+No CSS styling on `h1` and `h2` headers
 :::
 :::
 ::: {.column width="50%"}
@@ -286,7 +296,7 @@ knitr::include_graphics("images/with-header-styling.png")
 ```
 
 ::: {.caption-text .gray-text .center-text .topbr}
-With CSS styling on `h1` and `h3` headers
+With CSS styling on `h1` and `h2` headers
 :::
 :::
 ::::
@@ -294,7 +304,7 @@ With CSS styling on `h1` and `h3` headers
 ## Notes
 
 ::: {.body-text}
-**{{< fa angle-right >}}** I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd` since this grouping selector targets *all* `<h1>` and `<h3>` elements across my site. If an element on any of my pages has either of those tags, it will get styled with the declarations included in our CSS rule.
+**{{< fa angle-right >}}** I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd` since this grouping selector targets *all* `<h1>` and `<h2>` elements across my site. If an element on any of my pages has either of those tags, it will get styled according to the declarations included in our CSS rule.
 :::
 
 :::
@@ -303,30 +313,37 @@ With CSS styling on `h1` and `h3` headers
 
 ##  {#title-class data-menu-title="'title' class"}
 
-[What's with that `title` class selector?]{.slide-title}
+[We can modify existing class (or ID) selectors]{.slide-title-smallest}
 
 <hr>
 
 ::: {.caption-text .topbr}
-Note how the page headers ("samantha csik" on the landing page, and "about" and "resources" on those respective pages), which all happen to be `<h1>` elements, are also of class, `title`.
+Earlier, we noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* also are given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`).
 :::
 
 ::: {.caption-text .topbr}
-The Quarto framework has defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's turn text elements of class `title` the color red:
+The Quarto framework has already defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's color any text elements that are assigned the class `.title`  red:
 :::
 
 ::: {.panel-tabset}
 
-## `styles.scss` file
-```{css}
+## `styles.scss`
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
+#| code-line-numbers: "15-17"
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+
+// other variables omitted for brevity ~
+
 /*-- scss:rules --*/
 
-h1, h3 {
+h1, h2 {
   letter-spacing: 5px;
-  font-weight: 700;
-  color: $gray;
+  color: $dark-green;
 }
 
 .title {
@@ -374,32 +391,32 @@ knitr::include_graphics("images/red-resources.png")
 
 ## Notes
 
-<div class="body-text">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` In this case, I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`.</div>
+[**{{< fa angle-right >}}** In this case, I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`.]{.body-text}
 
 :::
 
 ---
 
-##  {#title-class2 data-menu-title=""}
+##  {#title-class2 data-menu-title="Elements w/o title class"}
 
-[Okay, but what about `<h1>` elements that are not of class `title`?]{.slide-title-smallest}
+[What about `<h1>` elements that are *not* assigned the `title` class?]{.slide-title-smallest}
 
 <hr>
 
 ::: {.body-text .topbr}
-Let's write a couple of other elements that *are not* of `class="title"` to see what happens. I'll do this on my *about* page:
+Let's write a couple of other elements that *are not* assigned the `title` class to see what happens. I'll do this on my *About* page:
 :::
 
 ::: {.panel-tabset}
 
-## `about.qmd` file
+## `about.qmd`
 
-```{r}
+```{r filename="about.qmd"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5-11"
 ---
-title: "about"
+title: "About"
 ---
 
 <h1>this is an `<h1>` element</h1> # alternatively, you can write <h1> elements using markdown (`# this is an `<h1>` element`)
@@ -424,11 +441,7 @@ knitr::include_graphics("images/h1-title.png")
 ## Notes
 
 ::: {.caption-text .topbr}
-**{{< fa angle-right >}}** You can add elements on your web pages using either Markdown syntax (e.g. use `# text here` to denote an `<h1>` element) *or* use HTML tags (e.g. use `<h1>text here</h1>`). I tend to use a mix of both Markdown syntax and HTML tags.
-:::
-
-::: {.caption-text .topbr}
-**{{< fa angle-right >}}** Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are of class `title` are colored red. Any `<h1>` elements that are not of class `title` are styled according to our `h1, h3 {}` element selector.
+**{{< fa angle-right >}}** Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are assigned the class, `title`, are colored red. Any `<h1>` elements that are not assigned the class, `title`, are styled according to our `h1, h2 {}` element selector.
 :::
 
 ::: {.caption-text .topbr}
@@ -439,65 +452,76 @@ knitr::include_graphics("images/h1-title.png")
 
 ---
 
-##  {#write-own-class-selector data-menu-title="Write your own class selector"}
+##  {#write-own-class-selector data-menu-title="Write your own class selectors"}
 
-[Write your own class selector]{.slide-title}
+[We can write and apply our own class selectors]{.slide-title-smallest}
 
 <hr>
 
 ::: {.panel-tabset}
 
-## `styles.scss` file
+## `styles.scss`
 
-::: {.body-text .bottombr}
-Let's create a class named `.custom-subtitle` that styles text in the following ways: increases font size, italicizes it, and colors it purple. We can then add an element to our **resources** page and apply our new class selector:
+::: {.smaller-body-text .bottombr}
+Let's first create two different classes: one to center text on the page, and another to color text orange. Then, we'll add elements to our **Resources** page to test out our new class selectors:
 :::
 
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "13-17"
+#| code-line-numbers: "20-26"
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+$orange: #ad7237;
+
+// other variables omitted for brevity ~
+
 /*-- scss:rules --*/
 
-h1, h3 {
+h1, h2 {
   letter-spacing: 5px;
-  font-weight: 700;
-  color: $gray;
+  color: $dark-green;
 }
 
 .title {
   color: red;
 }
 
-.custom-subtitle {
-  font-size: 22px;
-  font-style: italic;
-  color: $purple;
+.center-text {
+  text-align: center;
+}
+
+.orange-text {
+  color: $orange;
 }
 ```
 
-## `resources.qmd` file
+## `resources.qmd`
 
 ::: {.body-text .bottombr}
-Here, I'm creating two paragraphs -- one that is styled with `.custom-subtitle` and one that is not.
+Here, I'm creating three paragraphs -- **(1)** a paragraph that is assigned just the `.orange-text` class, **(2)** a paragraph that is assigned just the `.center-text` class, and **(3)** a paragraph has no classes.
 :::
 
 ::: {.body-text .bottombr}
 What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?
 :::
 
-```{r}
+```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "5,7"
+#| code-line-numbers: "5-9"
 
 ---
-title: "resources"
+title: "All my favorite resources!"
 ---
 
-<p class="custom-subtitle">Here is my custom subtitle.</p>
-
-<p>And here is some normal text beneath it.</p>
+<p class="orange-text">This paragraph is orange.</p>
+  
+<p class="center-text">This paragraph is centered.</p>
+  
+<p>This paragraph has no styling.</p>
 ```
 
 ## Output
@@ -507,12 +531,15 @@ title: "resources"
 #| echo: false
 #| fig-align: "center"
 #| out-width: "60%" 
-knitr::include_graphics("images/custom-subtitle.png")
+knitr::include_graphics("images/custom-classes.png")
 ```
 
 ## Notes
 
-<div class="body-text topbr">`r fontawesome::fa("angle-right", fill = "#05859B", a11y = "sem")` Remember, class selectors take the form `.selector-name {}`</div>
+[**{{< fa angle-right >}}** Class selectors take the form `.selector-name {}`]{.body-text .topbr}
+
+[**{{< fa angle-right >}}** Unlike element selectors, class selectors must be applied to the elements that we want to style, e.g. `<h1 class="selector-name">Content</h1>`]{.body-text .topbr}
+
 
 :::
 
@@ -520,58 +547,73 @@ knitr::include_graphics("images/custom-subtitle.png")
 
 ##  {#apply-two-class-selectors data-menu-title="Apply two class selectors"}
 
-[Apply a second class selector to our text styled as a `custom-subtitle`]{.slide-title-smaller}
+[Elements can have more than one class selector]{.slide-title-smallest}
 
 <hr>
 
 ::: {.panel-tabset}
 
-## `styles.scss` file
+## `styles.scss`
 
-::: {.caption-text .bottombr}
-Let's say we want the option to add a bit of extra space beneath this particular custom subtitle before the element is rendered -- but maybe we don't *always* want that extra space beneath *every* custom subtitle. If we were to add a declaration that increases `margin-bottom` directly to our `.custom-subtitle` class selector, all elements of class `custom-subtitle` would have that extra space.
+::: {.body-text}
+Using the same element selectors as in our previous example:
 :::
 
-::: {.caption-text .bottombr}
-One solution, then, is to create a new class selector (we'll call it `.bottombr`, for "bottom break") that we can specifically apply to our custom subtitle on the **resources** page.
-:::
-
-```{css}
+```{css filename="styles.scss"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "10-12"
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+$orange: #ad7237;
+
+// other variables omitted for brevity ~
+
 /*-- scss:rules --*/
 
-/* Additional rules/electors omitted for brevity */
-
-.custom-subtitle {
-  font-size: 22px;
-  font-style: italic;
-  color: $purple;
+h1, h2 {
+  letter-spacing: 5px;
+  color: $dark-green;
 }
 
-.bottombr {
-  margin-bottom: 3em;
+.title {
+  color: red;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.orange-text {
+  color: $orange;
 }
 ```
 
-## `resources.qmd` file
+## `resources.qmd`
 
 ::: {.body-text .bottombr}
-Here, we add our `bottombr` class selector within the `""` after `custom-subtitle` and a space.
+Let's add a couple more paragraphs to try out using more than one class selector on a particular element:
 :::
 
-```{r}
+```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "5"
+#| code-line-numbers: "11-13"
+
 ---
-title: "resources"
+title: "All my favorite resources!"
 ---
 
-<p class="custom-subtitle bottombr">Here is my custom subtitle.</p>
-
-<p>And here is some normal text beneath it.</p>
+<p class="orange-text">This paragraph is orange.</p>
+  
+<p class="center-text">This paragraph is centered.</p>
+  
+<p>This paragraph has no styling.</p>
+  
+<p class="center-text orange-text">This paragraph is centered and orange.</p>
+  
+<p class="orange-text">**This paragraph is orange and bolded using markdown syntax, though you can also write and apply a selector to bold text.**</p>
 ```
 
 ## Output
@@ -581,13 +623,13 @@ title: "resources"
 #| echo: false
 #| fig-align: "center"
 #| out-width: "60%" 
-knitr::include_graphics("images/bottombr.png")
+knitr::include_graphics("images/two-classes.png")
 ```
 
 ## Notes
 
 ::: {.body-text .topbr}
-**{{< fa angle-right >}}** Remember, HTML elements can have more than one class, e.g. `<p class="class1 class2 etc">`
+**{{< fa angle-right >}}** HTML elements can have more than one class, e.g. `<p class="class1 class2 class3 etc">`
 :::
 
 :::
@@ -654,21 +696,21 @@ I tend to use a mix of both approaches (HTML & Quarto syntax). For example:
 
 ::: {.panel-tabset}
 
-## `resources.qmd` file
+## `resources.qmd`
 
-```{r}
+```{md filename="resources.qmd"}
 #| eval: false
 #| echo: true
 
 ---
-title: "resources"
+title: "All my favorite resources!"
 ---
 
-<p class="custom-subtitle">Here is my custom subtitle.</p>
+<p class="orange-text">Here is some orange text.</p>
 
 <p>And here is some normal text beneath it.</p>
 
-[Here is another custom subtitle written with Quarto syntax]{.custom-subtitle}
+[Here is more orange text written using Quarto's syntax]{.orange-text}
 
 Also note that I do not need to wrap this text in the `<p>` tag in order for it to render as normal text. `.qmd` files allow us to seamlessly blend markdown syntax with HTML.
 ```
