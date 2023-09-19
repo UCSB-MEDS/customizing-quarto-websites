@@ -454,7 +454,7 @@ knitr::include_graphics("images/h1-title.png")
 
 ##  {#write-own-class-selector data-menu-title="Write your own class selectors"}
 
-[We can write our own class selectors]{.slide-title}
+[We can write and apply our own class selectors]{.slide-title-smallest}
 
 <hr>
 
@@ -463,7 +463,7 @@ knitr::include_graphics("images/h1-title.png")
 ## `styles.scss`
 
 ::: {.smaller-body-text .bottombr}
-Let's first create two different classes: one to center text on the page, and another to color text orange. We can add elements to our **Resources** page to test out our new class selectors:
+Let's first create two different classes: one to center text on the page, and another to color text orange. Then, we'll add elements to our **Resources** page to test out our new class selectors:
 :::
 
 ```{css filename="styles.scss"}
@@ -536,7 +536,10 @@ knitr::include_graphics("images/custom-classes.png")
 
 ## Notes
 
-<div class="body-text topbr">**{{< fa angle-right >}}** Remember, class selectors take the form `.selector-name {}`</div>
+[**{{< fa angle-right >}}** Class selectors take the form `.selector-name {}`]{.body-text .topbr}
+
+[**{{< fa angle-right >}}** Unlike element selectors, class selectors must be applied to the elements that we want to style, e.g. `<h1 class="selector-name">Content</h1>`]{.body-text .topbr}
+
 
 :::
 
