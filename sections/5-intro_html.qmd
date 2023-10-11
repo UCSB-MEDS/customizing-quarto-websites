@@ -40,14 +40,14 @@ knitr::include_graphics("images/html_element.png")
 <br> 
 <br>
 
-::: {.caption-text}
+::: {.body-text-s}
 In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your website customization workshop`
 :::
 
 :::
 :::
 
-::: {.caption-text .gray-text .center-text .topbr}
+::: {.body-text-s .gray-text .center-text .topbr}
 **Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.
 :::
 
@@ -108,22 +108,22 @@ knitr::include_graphics("images/nested_html_elements.png")
 <br> 
 <br>
 
-::: {.caption-text}
+::: {.body-text-s}
 In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`
 :::
 
 :::
 ::::
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 <div class="important-text-bg">*Important:* Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
 :::
 
 ---
 
-##  {#html-attribures data-menu-title="HTML attributes"}
+##  {#html-attributes data-menu-title="HTML attributes"}
 
-[HTML attributes can be used for targetted styling]{.slide-title-smallest}
+[HTML attributes can be used for targeted styling]{.slide-title3}
 
 <hr>
 
@@ -159,11 +159,11 @@ knitr::include_graphics("images/html_attribute.png")
 
 ## Write HTML
 
-::: {.smaller-body-text .center-text}
+::: {.body-text-s .center-text}
 *You can use any text editor to write HTML, but the following steps assume you're working in RStudio (you can continue to work on your branch in your website's project directory).*
 :::
 
-[**1.** In the RStudio Terminal, use the `touch` command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose **Open in Editor**.]{.caption-text}
+[**1.** In the RStudio Terminal, use the `touch` command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose **Open in Editor**.]{.body-text-s}
 
 ```{bash filename="Command line/RStudio Terminal"}
 #| eval: false
@@ -171,7 +171,7 @@ knitr::include_graphics("images/html_attribute.png")
 touch practice-html.html
 ```
 
-[**2.** Type or copy/paste the following into your `practice-html.html` file:]{.caption-text}
+[**2.** Type or copy/paste the following into your `practice-html.html` file:]{.body-text-s}
 
 ```{html filename="practice-html.html"}
 #| eval: false
@@ -211,11 +211,11 @@ knitr::include_graphics("images/rendered-practice-html.png")
 
 ##  {#write-md data-menu-title="Write Markdown"}
 
-[markdown makes it easy to "write" HTML]{.slide-title-smaller}
+[markdown makes it easy to "write" HTML]{.slide-title2}
 
 <hr>
 
-::: {.smaller-body-text .center-text}
+::: {.body-text-s .center-text}
 Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as HTML (we can also write HTML directly in `.qmd` files).
 :::
 
@@ -223,7 +223,7 @@ Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as
 
 ## Write markdown
 
-[**1.** Now, use the `touch` command (or **New Blank File** > **Quarto Doc...** in the Files pane) to create a new `.qmd` file.]{.caption-text}
+[**1.** Now, use the `touch` command (or **New Blank File** > **Quarto Doc...** in the Files pane) to create a new `.qmd` file.]{.body-text-s}
 
 ```{bash filename="Command line/RStudio Terminal"}
 #| eval: false
@@ -231,7 +231,7 @@ Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as
 touch practice-markdown.qmd
 ```
 
-[**2.** Type or copy/paste the following into your `practice-markdown.qmd` file:]{.caption-text}
+[**2.** Type or copy/paste the following into your `practice-markdown.qmd` file:]{.body-text-s}
 
 ```{.md filename="practice-markdown.qmd"}
 # Here is my level one header
@@ -245,7 +245,7 @@ This is very important text!
 
 ## Render HTML
 
-::: {.smaller-body-text .center-text}
+::: {.body-text-s .center-text}
 Click **Render** to render the markdown as HTML (it will render it as a web page if you're in your website's project directory)
 :::
 

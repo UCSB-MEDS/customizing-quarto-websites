@@ -12,7 +12,7 @@ format: revealjs
 
 ## {#about-page data-menu-title="Create a nice landing page"}
 
-[Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo]{.slide-title-smallest}
+[Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo]{.slide-title3}
 
 <hr>
 
@@ -61,7 +61,7 @@ about:
 #| out-width: "85%" 
 knitr::include_graphics("images/no_about_page.png")
 ```
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 Without an About Page template
 :::
 :::
@@ -74,7 +74,7 @@ Without an About Page template
 #| out-width: "85%" 
 knitr::include_graphics("images/trestles_template.png")
 ```
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 With the `trestles` About Page template
 :::
 :::
@@ -82,15 +82,15 @@ With the `trestles` About Page template
 
 ## Notes
 
-::: {.caption-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** Use the `about` option in the YAML section of `index.qmd` to turn your landing page into an [About Page](https://quarto.org/docs/websites/website-about.html) -- supply it with one of five template options (here, I chose `trestles`). It *is not* necessary to do this (you can fully build/customize your web page layout using CSS), but it's a fast way to create a clean, professional-looking landing page. **NOTE:** Any of your web pages can be turned into an About Page.
 :::
 
-::: {.caption-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and an `href` (a link), and optionally can supply an `icon`.
 :::
 
-::: {.caption-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** You'll need to install the [Quarto fontawesome extension](https://quarto.org/docs/websites/website-about.html) if you'd like to include icons throughout your site (including your About Page buttons). Run `quarto install extension quarto-ext/fontawesome` in your RStudio Terminal, which downloads the extension files and saves them to your project directory (you should see a new folder, `_extensions/quarto-ext/fontawesome/` in your project directory). **NOTE:** You'll need to install this for each project where you'd like to use [fontawesome icons](https://fontawesome.com/).
 :::
 
@@ -100,11 +100,11 @@ With the `trestles` About Page template
 
 ## {#add-pages data-menu-title="Add pages"}
 
-[Update your navbar in `_quarto.yml`]{.slide-title-smaller}
+[Update your navbar in `_quarto.yml`]{.slide-title2}
 
 <hr>
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 Any edits you want to make to your navbar happen under the `website:` > `navbar:` option in your `_quarto.yml` file.
 :::
 
@@ -149,22 +149,22 @@ format:
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "75%" 
+#| out-width: "65%" 
 knitr::include_graphics("images/add_navbar_items.png")
 ```
 
 ## Notes
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** Right/center/left align your navbar contents using the `website:` > `navbar:` > `right`/`center`/`left:` option. Add navbar pages as an indented list beneath this option.
 :::
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** Navbar page names will appear the same as the title given to each `.qmd` file (e.g. in the YAML of `about.qmd`, the `title` option has the value `About`, and therefore appears in the navbar as "**About**"). You can update the name as it appears in your navbar by providing the `text` option when linking your new page in `_quarto.yml` (see "Home" and "Resources" pages as examples).
 :::
 
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** Link your resume or CV by providing a file path to the pdf in `href` (e.g. `href: file/path/to/CV.pdf`) and the text as you'd like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked. Be sure to provide the `text` option with the title as you'd like it to appear in your navbar.
 :::
 
@@ -174,11 +174,11 @@ knitr::include_graphics("images/add_navbar_items.png")
 
 ## {#add-footer data-menu-title="Add footer"}
 
-[Add a page footer in `_quarto.yml`]{.slide-title}
+[Add a page footer in `_quarto.yml`]{.slide-title3}
 
 <hr>
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 Any edits you want to make to a website footer happen under the `website:` > `page-footer:` option in your `_quarto.yml` file.
 :::
 
@@ -232,13 +232,13 @@ format:
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "75%" 
+#| out-width: "65%" 
 knitr::include_graphics("images/footer.png")
 ```
 
 ## Notes
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.
 :::
 
@@ -248,7 +248,7 @@ knitr::include_graphics("images/footer.png")
 
 ## {#add-favicon data-menu-title="Add favicon & logo"}
 
-[Add a favicon & personal logo in `_quarto.yml`]{.slide-title-smallest}
+[Add a favicon & personal logo in `_quarto.yml`]{.slide-title3}
 
 <hr>
 
@@ -300,7 +300,7 @@ knitr::include_graphics("images/favicon_logo.png")
 
 ## Notes
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. **Tip:** You can download logos with a transparent background so that they can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible *before* downloading -- doing so *may* circumvent having to adjust the logo size using CSS.
 :::
 :::

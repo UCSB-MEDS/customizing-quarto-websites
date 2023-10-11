@@ -22,11 +22,11 @@ format:
 :::: {.columns}
 
 ::: {.column width="50%"}
-[**Published:** Oct 10, 2022]{.smaller-body-text .baby-blue-text}
+[**Published:** Oct 10, 2022]{.body-text-s .baby-blue-text}
 :::
 
 ::: {.column width="50%"}
-[**Last updated:** `r format(Sys.time(), '%b %d, %Y')`]{.smaller-body-text .baby-blue-text}
+[**Last updated:** `r format(Sys.time(), '%b %d, %Y')`]{.body-text-s .baby-blue-text}
 :::
 
 ::::
@@ -103,15 +103,15 @@ Happy Styling!
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "60%" 
+#| out-width: "50%" 
 knitr::include_graphics("images/bob-ross.gif")
 ```
 
-::: {.center-text .medium-body-text .gray-text}
+::: {.center-text .body-text-l .gray-text}
 This is a Quarto Presentation. To learn more, visit <https://quarto.org>.
 :::
 
-::: {.center-text .smaller-body-text .gray-text}
+::: {.center-text .body-text-s .gray-text}
 *If you see mistakes or want to suggest changes, please create an [issue](https://github.com/UCSB-MEDS/customizing-quarto-websites/issues) on the source repository.*
 :::
 

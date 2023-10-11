@@ -5,7 +5,7 @@ format: revealjs
 ##  {#fonts data-menu-title="Fonts" background="#053660"}
 
 <div class="page-center">
-<center><div class="custom-subtitle2">Import and apply new fonts `r fontawesome::fa("font", fill = "#d2e3f3", a11y = "sem")` </div></center>
+<center><div class="custom-subtitle2">Import and apply new fonts {{< fa font title="a stylized letter 'A'" >}}</div></center>
 </div>
 
 ---
@@ -50,15 +50,15 @@ knitr::include_graphics("images/google-fonts.png")
 
 ## {#select-fonts data-menu-title="Select Fonts"}
 
-[Selecting a Google font(s)]{.slide-title-smaller}
+[Selecting a Google font(s)]{.slide-title2}
 
 <hr>
 
-::: {.caption-text .topbr .bottombr}
+::: {.body-text-s .topbr .bottombr}
 **1.** Once you've found a font you'd like to use, scroll down to the **Styles** section of that font's page -- here you'll (typically) find a number of different weights (e.g. thin, light, regular, bold) and styles (e.g. italic). Click on the **+** button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, to the right of the style you want. In this example, I choose *Nunito* in the *Light 400* and *ExtraBold 800* styles, though you can choose as many fonts and styles to import as you'd like. **Note:** You *must* import a higher weight font style if you plan to use **bolded** text.
 :::
 
-::: {.caption-text .topbr .bottombr}
+::: {.body-text-s .topbr .bottombr}
 **2.** Click on the **View selected families** button, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;"/>, in the top right corner to see all of your selected fonts. Under the **Use on the web** section, select the radio button for **@import** and copy everything between the `<style> </style>` tags (starting with `@import` and ending with `;`) to your clipboard.
 :::
 

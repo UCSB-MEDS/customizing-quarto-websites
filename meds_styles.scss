@@ -1,8 +1,6 @@
 /*-- scss:defaults --*/
 
 // fonts
-//@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@300;800&family=Roboto+Mono:wght@300;400&family=Sanchez&display=swap');
 
 // Fonts (CSS rules)
@@ -24,48 +22,44 @@ $gray: #ADADAD;
 
 // scss variables
 $presentation-title-slide-text-align: "left";
-//$presentation-font-size-root: 23px;
 $body-bg: $white;
 $link-color: $green; 
 $code-color: $magenta;
-$code-bg: $white;
+$code-bg: $off-white;  // was $white
 $code-block-font-size: 0.4em;
 $code-block-bg: $off-white;
 
 /*-- scss:rules --*/
 
-// HTML selectors //
-
+// bold styling
 strong, b {
-  font-weight: 900; // does not change weight?
+  font-weight: 900;
   color: $teal;
 }
 
+// table header font size
 th {
 font-size: 35px;  
 }
 
+// table text font size
 td {
   font-size: 20px;
 }
 
-hr { // horizontal line
+// horizontal line (default dark blue)
+hr { 
   border: 4px solid $dark-blue;
   border-radius: 5px;
   margin-bottom: 30px;
 }
 
-
-.hr-teal { // horizontal line
+// teal horizontal line
+.hr-teal { 
   border: 4px solid $teal;
 }
 
-.br-smaller { // smaller break
-  line-height: 6px;
-}
-
-// Class selectors //
-
+// custom slide title
 .custom-title { 
   font-family: $font-family-serif;
   color: $baby-blue;
@@ -74,37 +68,38 @@ hr { // horizontal line
   left: 20px; 
 }
 
+// cover slide subtitle (large)
 .custom-subtitle { 
   font-family: $font-family-sans-serif;
   color: $baby-blue;
   font-size: 1.2em;
-  //font-weight: 600;
-  //position: absolute; 
   left: 20px; 
 }
 
+// cover slide subtitle (medium)
 .custom-subtitle2 { 
   font-family: $font-family-sans-serif;
   color: $baby-blue;
   font-size: 1em;
-  //position: absolute; 
   left: 20px; 
 }
 
+// cover slide subtitle (small)
 .custom-subtitle3 { 
   font-family: $font-family-sans-serif;
   color: $baby-blue;
   font-size: 0.7em;
-  //position: absolute; 
   left: 20px; 
 }
 
+// cover slide footer text
 .title-footer { 
   text-align: center !important;
   color: $baby-blue;
   font-size: 0.5em !important;
 }
 
+// slide title (large)
 .slide-title {
   font-family: $font-family-serif;
   color: $teal;
@@ -112,57 +107,65 @@ hr { // horizontal line
   font-weight: 700;
 }
 
-.slide-title-smaller {
+// slide title (medium)
+.slide-title2 { // FORMALLY: .slide-title-smaller
   font-family: $font-family-serif;
   color: $teal;
   font-size: 1.3em;
   font-weight: 700;
 }
 
-.slide-title-smallest {
+// slide title (small)
+.slide-title3 { // FORMALLY: .slide-title-smallest
   font-family: $font-family-serif;
   color: $teal;
   font-size: 1.1em;
   font-weight: 700;
 }
 
-.large-body-text {
+// XL body text
+.body-text-xl { // FORMALLY: .large-body-text
   font-family: $font-family-sans-serif;
-  color: $teal;
   font-size: 1em;
 }
 
-.medium-body-text {
+// L body text
+.body-text-l { // FORMALLLY: .medium-body-text
   font-size: 25px;
 	line-height: 1.7em;
 	margin-bottom: 1em;
 }
 
+// normal body text
 .body-text {
 	font-size: 23px;
 	line-height: 1.7em;
 	margin-bottom: 1em;
 }
 
-.smaller-body-text{
-  font-size: 21px;
-	line-height: 1.7em;
-	margin-bottom: 1em;
+// S body text
+.body-text-s { // OLD NAME: .small-text (also includes .smaller-body-text @ 21px)
+  font-size: 20px; // 19px
+	line-height: 1.6em;
 }
 
-.center-text{
-  text-align: center;
+// XS body text
+.body-text-xs { // OLD NAME: .smallest-text
+  font-size: 14px;
+	line-height: 1.5em;
 }
 
-.caption-text {
-  font-size: 19px;
-	line-height: 1.7em;
-}
-
+// baby blue text
 .baby-blue-text {
   color: $baby-blue;
 }
 
+// teal text
+.teal-text {
+  color: $teal;
+}
+
+// gray text
 .gray-text {
   color: $gray;
 }
@@ -182,6 +185,12 @@ hr { // horizontal line
   text-decoration-thickness: 4px;
 }
 
+// center text (horizontally)
+.center-text{
+  text-align: center;
+}
+
+// center text vertically (??)
 .vertical-center {
   margin: 0;
   position: absolute;
@@ -190,22 +199,30 @@ hr { // horizontal line
   transform: translateY(-50%);
 }
 
+// center text vertically and horizontally (??)
 .page-center {
-  //padding: 70px 0;
   line-height: 700px;
   text-align: center;
 }
 
+// extra space above line
  .topbr {
     display: block;
     margin-top: 1em;
 }
 
+// extra space below line
  .bottombr {
     display: block;
     margin-bottom: 1em;
 }
 
+// smaller break
+.br-smaller { 
+  line-height: 6px;
+}
+
+// idk?
 .panel-tabset {
   font-size: 30px;
 }

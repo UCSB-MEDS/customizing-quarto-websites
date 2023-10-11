@@ -5,14 +5,14 @@ format: revealjs
 ##  {#css-quarto data-menu-title="CSS + Quarto" background="#053660"}
 
 <div class="page-center">
-<div class="custom-subtitle">`r fontawesome::fa("question", fill = "#d2e3f3", a11y = "sem")` Okay, that's cool...but what about Quarto?</div>
+<div class="custom-subtitle">{{< fa question title="question mark" >}} Okay, that's cool...but what about Quarto?</div>
 </div>
 
 ---
 
 ##  {#styles.css data-menu-title="Quarto comes with `styles.css`"}
 
-[A `styles.css` file is automatically generated when you create a new Quarto site]{.slide-title-smallest}
+[A `styles.css` file is automatically generated when you create a new Quarto site]{.slide-title3}
 
 <hr>
 
@@ -80,7 +80,7 @@ Next, we'll walk through some examples of how to modify your site with your own 
 
 ##  {#determine-element-to-style data-menu-title="Determine element(s) to style"}
 
-[Determine which element you want to style]{.slide-title-smallest}
+[Determine which element you want to style]{.slide-title3}
 
 <hr>
 
@@ -100,7 +100,7 @@ Let's say I want to similarly style (add spacing between each letter, increase t
 knitr::include_graphics("images/index-font.png")
 ```
 
-::: {.caption-text .center-text .gray-text .topbr}
+::: {.body-text-s .center-text .gray-text .topbr}
 On my landing page, I want to style my name, "Samantha Csik", and the three section headers, "Hi there!", "Education", and "Experience"
 :::
 
@@ -116,7 +116,7 @@ On my landing page, I want to style my name, "Samantha Csik", and the three sect
 knitr::include_graphics("images/about-font.png")
 ```
 
-::: {.caption-text .center-text .gray-text .topbr}
+::: {.body-text-s .center-text .gray-text .topbr}
 On my About page, I want to style the page title, "About"
 :::
 
@@ -132,7 +132,7 @@ On my About page, I want to style the page title, "About"
 knitr::include_graphics("images/resources-font.png")
 ```
 
-::: {.caption-text .center-text .gray-text .topbr}
+::: {.body-text-s .center-text .gray-text .topbr}
 On my Resources page, I want to style the page title, "All of my favorite resources!"
 :::
 
@@ -144,7 +144,7 @@ On my Resources page, I want to style the page title, "All of my favorite resour
 
 ##  {#dont-know-element data-menu-title="Don't know element?"}
 
-[But what if I don't know what HTML element type this is? Inspect!]{.slide-title-smallest}
+[But what if I don't know what HTML element type this is? Inspect!]{.slide-title3}
 
 <hr>
 
@@ -164,15 +164,15 @@ knitr::include_graphics("images/inspect.gif")
 ::: {.column width="50%"}
 <br>
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 Using the **Inspect** tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview).
 :::
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 In your website preview, **right click on an element of interest** (in this case, let's start with my name, "Samantha Csik") and **choose Inspect** to pull up the underlying HTML & CSS files.
 :::
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.
 :::
 :::
@@ -182,7 +182,7 @@ Hovering your mouse over different lines of HTML highlights the corresponding el
 
 ##  {#inspect-name data-menu-title="Inspect landing page name"}
 
-::: {.large-body-text .center-text}
+::: {.body-text-xl .teal-text .center-text}
 My name is an `<h1>` element
 :::
 
@@ -194,7 +194,7 @@ My name is an `<h1>` element
 knitr::include_graphics("images/inspect-name.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 **Note:** This `<h1>` element also has a class `title` -- more on that in a minute.
 :::
 
@@ -202,7 +202,7 @@ knitr::include_graphics("images/inspect-name.png")
 
 ##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"}
 
-::: {.large-body-text .center-text}
+::: {.body-text-xl .teal-text .center-text}
 My landing page sections, "Hi there!", "Education" and "Experience", are `<h2>` elements
 :::
 
@@ -218,7 +218,7 @@ knitr::include_graphics("images/inspect-education.png")
 
 ##  {#inspect-about data-menu-title="Inspect about page"}
 
-::: {.large-body-text .center-text}
+::: {.body-text-xl .teal-text .center-text}
 My About page and Resource page titles are `<h1>` elements
 :::
 
@@ -230,14 +230,14 @@ My About page and Resource page titles are `<h1>` elements
 knitr::include_graphics("images/inspect-about.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 **Note:** These `<h1>` elements also have a class, `title`-- we'll come back to that shortly.
 :::
 ---
 
 ##  {#write-grouping-selector data-menu-title="Write a CSS grouping selector"}
 
-[Write a CSS grouping selector to style `<h1>` and `<h2>` elements]{.slide-title-smallest}
+[Write a CSS grouping selector to style `<h1>` and `<h2>` elements]{.slide-title3}
 
 <hr>
 
@@ -281,7 +281,7 @@ h1, h2 {
 knitr::include_graphics("images/without-header-styling.png")
 ```
 
-::: {.caption-text .gray-text .center-text .topbr}
+::: {.body-text-s .gray-text .center-text .topbr}
 No CSS styling on `h1` and `h2` headers
 :::
 :::
@@ -295,7 +295,7 @@ No CSS styling on `h1` and `h2` headers
 knitr::include_graphics("images/with-header-styling.png")
 ```
 
-::: {.caption-text .gray-text .center-text .topbr}
+::: {.body-text-s .gray-text .center-text .topbr}
 With CSS styling on `h1` and `h2` headers
 :::
 :::
@@ -313,15 +313,15 @@ With CSS styling on `h1` and `h2` headers
 
 ##  {#title-class data-menu-title="'title' class"}
 
-[We can modify existing class (or ID) selectors]{.slide-title-smallest}
+[We can modify existing class (or ID) selectors]{.slide-title3}
 
 <hr>
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 Earlier, we noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* also are given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`).
 :::
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 The Quarto framework has already defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's color any text elements that are assigned the class `.title`  red:
 :::
 
@@ -399,7 +399,7 @@ knitr::include_graphics("images/red-resources.png")
 
 ##  {#title-class2 data-menu-title="Elements w/o title class"}
 
-[What about `<h1>` elements that are *not* assigned the `title` class?]{.slide-title-smallest}
+[What about `<h1>` elements that are *not* assigned the `title` class?]{.slide-title3}
 
 <hr>
 
@@ -440,11 +440,11 @@ knitr::include_graphics("images/h1-title.png")
 
 ## Notes
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 **{{< fa angle-right >}}** Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are assigned the class, `title`, are colored red. Any `<h1>` elements that are not assigned the class, `title`, are styled according to our `h1, h2 {}` element selector.
 :::
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 **{{< fa angle-right >}}** We can apply the `title` class to any text element. In this example, we apply it both to an `<h1>` element and a `<p>` element.
 :::
 
@@ -454,7 +454,7 @@ knitr::include_graphics("images/h1-title.png")
 
 ##  {#write-own-class-selector data-menu-title="Write your own class selectors"}
 
-[We can write and apply our own class selectors]{.slide-title-smallest}
+[We can write and apply our own class selectors]{.slide-title3}
 
 <hr>
 
@@ -462,7 +462,7 @@ knitr::include_graphics("images/h1-title.png")
 
 ## `styles.scss`
 
-::: {.smaller-body-text .bottombr}
+::: {.body-text-s .bottombr}
 Let's first create two different classes: one to center text on the page, and another to color text orange. Then, we'll add elements to our **Resources** page to test out our new class selectors:
 :::
 
@@ -547,7 +547,7 @@ knitr::include_graphics("images/custom-classes.png")
 
 ##  {#apply-two-class-selectors data-menu-title="Apply two class selectors"}
 
-[Elements can have more than one class selector]{.slide-title-smallest}
+[Elements can have more than one class selector]{.slide-title3}
 
 <hr>
 
@@ -638,7 +638,7 @@ knitr::include_graphics("images/two-classes.png")
 
 ##  {#quarto-syntax data-menu-title="Quarto Syntax"}
 
-[Quarto also provides its [own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) for applying classes to elements]{.slide-title-smallest}
+[Quarto also provides its [own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) for applying classes to elements]{.slide-title3}
 
 <hr>
 
@@ -727,7 +727,7 @@ knitr::include_graphics("images/quarto-css-syntax.png")
 
 ## Notes
 
-::: {.caption-text}
+::: {.body-text-s}
 **{{< fa angle-right >}}** You'll notice the `[]{}` and `::: {} :::` syntax throughout Quarto's documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don't *need* to use it, but it helps to know what it is when you see it!
 :::
 

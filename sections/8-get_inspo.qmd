@@ -12,7 +12,7 @@ format: revealjs
 
 ##  {#trial-error data-menu-title="Styling = lots of trial & error"}
 
-[Styling your website can be challenging]{.slide-title-smallest}
+[Styling your website can be challenging]{.slide-title3}
 
 <hr>
 
@@ -30,7 +30,7 @@ format: revealjs
 knitr::include_graphics("images/dont-know.gif")
 ```
 
-::: {.caption-text .gray-text .center-text .topbr}
+::: {.body-text-s .gray-text .center-text .topbr}
 ^ How I feel most of the time while trying to write CSS
 :::
 
@@ -60,7 +60,7 @@ For me, it’s **a lot** of it is trial and error. Inspecting your website can t
 
 ##  {#look-at-other-sites data-menu-title="Look at other websites"}
 
-[Check out source code (specifically the stylesheets) of other sites]{.slide-title-smaller}
+[Check out source code (specifically the stylesheets) of other sites]{.slide-title2}
 
 <hr>
 
@@ -86,11 +86,11 @@ For me, it’s **a lot** of it is trial and error. Inspecting your website can t
 
 ##  {#inspect-edit data-menu-title="'Edit' while you Inspect"}
 
-[Inspecting web pages allows you to temporarily "edit" CSS]{.slide-title-smallest}
+[Inspecting web pages allows you to temporarily "edit" CSS]{.slide-title3}
 
 <hr>
 
-::: {.caption-text .bottombr}
+::: {.body-text-s .bottombr}
 Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This allows you to try out styles before actually hard-coding them, and *also* helps you identify exactly which elements different selectors are manipulating. It can sometimes take a little digging in the Inspect pane to find what you're looking for. **Note** that these changes are only *temporary* -- refreshing your web browser will revert your site back to its original state.
 :::
 
