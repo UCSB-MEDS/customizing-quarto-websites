@@ -4,7 +4,7 @@ format: revealjs
 
 ## {#prerequisites data-menu-title="Prerequisites"}
 
-[{{< fa check >}} Prerequisites]{.slide-title}
+[{{< fa check title="check mark" >}} Prerequisites]{.slide-title}
 
 <hr>
 
@@ -31,8 +31,8 @@ knitr::include_graphics("images/penguins_meteor.png")
 Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 :::
 
-::: {.caption-text .center-text}
-If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.
+::: {.body-text-s .center-text .topbr}
+*If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.*
 :::
 
 ---
@@ -48,7 +48,7 @@ When we render a new Quarto site, it converts all of our markdown into HTML and 
 :::
 
 ::: incremental
-::: {.caption-text}
+::: {.body-text-s}
 - **Editing the `index.qmd` YAML** -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
 
 - **Editing the `_quarto.yml` file** -- here we can easily update our top navigation bar (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
@@ -62,7 +62,7 @@ When we render a new Quarto site, it converts all of our markdown into HTML and 
 
 . . . 
 
-::: {.large-body-text .center-text}
+::: {.body-text-xl .teal-text .center-text}
 Or...
 :::
 
@@ -76,11 +76,11 @@ Or...
 
 <br>
 
-::: {.large-body-text .center-text .bottombr}
+::: {.body-text-xl .teal-text .center-text .bottombr}
 Combine all of the above!
 :::
 
-::: {.medium-body-text .center-text}
+::: {.body-text-l .center-text}
 Approaching this in the following order worked best for me:
 :::
 
@@ -100,19 +100,19 @@ Approaching this in the following order worked best for me:
 
 ## {#branches data-menu-title="Use branches!"}
 
-[{{< fa code-branch >}} Working on branches is recommended!]{.slide-title-smaller}
+[{{< fa code-branch >}} Working on branches is recommended!]{.slide-title2}
 
 <hr>
 
-::: {.medium-body-text .center-text}
+::: {.body-text-l .center-text}
 *I almost always work on a branch when making changes to my website -- this way I can safely test changes before deploying them to my live site.*
 :::
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 To create a branch, first ensure that you're on `main` by typing either `git branch` or `git status` into the RStudio Terminal (either will tell you which branch you're currently on). If you're not on `main`, you can switch by running `git checkout main`.
 :::
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 Create a local git branch from `main` by running the following in your Terminal:
 :::
 
@@ -122,7 +122,7 @@ Create a local git branch from `main` by running the following in your Terminal:
 git checkout -b my-new-branch
 ```
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 Push your new local branch to GitHub by running the following in your terminal:
 :::
 
@@ -132,7 +132,7 @@ Push your new local branch to GitHub by running the following in your terminal:
 git push -u origin my-new-branch
 ```
 
-::: {.smaller-body-text .topbr}
+::: {.body-text-s .topbr}
 You're now ready to work as normal! Once satisfied with your changes, you can `git add`, `git commit -m "my commit message"`, and `git push` (or use the RStudio GUI buttons in the **Git** tab) your files. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from GitHub and [merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into `main` to integrate your changes.
 :::
 
@@ -141,7 +141,7 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 ##  {#lets-start-styling data-menu-title="Let's start styling" background="#053660"}
 
 <div class="page-center">
-<div class="custom-subtitle">`r fontawesome::fa("palette", fill = "#d2e3f3", a11y = "sem")` Let's start styling</div>
+<div class="custom-subtitle">{{< fa palette title="a painter's palette" >}} Let's start styling</div>
 </div>
 
 ---
@@ -173,7 +173,7 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 knitr::include_graphics("images/website_noCSS.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/) *and* `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
 :::
 
@@ -183,7 +183,7 @@ An example Quarto website styled using the built-in [Bootswatch](https://bootswa
 
 ## {#modify-to-stand-out data-menu-title="Make your website stand stand out"}
 
-[But some additional modifications can make *your* website stand out from the rest]{.slide-title-smallest}
+[But some additional modifications can make *your* website stand out from the rest]{.slide-title3}
 
 <hr>
 

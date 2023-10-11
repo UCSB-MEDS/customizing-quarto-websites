@@ -401,9 +401,9 @@
 <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg></em></span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span class="smaller-body-text baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="smaller-body-text baby-blue-text"><strong>Last updated:</strong> Sep 19, 2023</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 10, 2023</span></p>
 </div>
 </div>
 <hr class="hr-teal">
@@ -419,7 +419,7 @@
 <p>Slides &amp; source code available on <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites">GitHub <i class="fa-brands fa-github" title="GitHub Octocat logo" aria-hidden="true"></i></a></p>
 </div>
 </section><section id="prerequisites" class="slide level2" data-menu-title="Prerequisites"><h2></h2>
-<p><span class="slide-title"><i class="fa-solid fa-check" aria-hidden="true"></i> Prerequisites</span></p>
+<p><span class="slide-title"><i class="fa-solid fa-check" title="check mark" aria-hidden="true"></i> Prerequisites</span></p>
 <hr>
 <div class="body-text">
 <p>You should already have a Quarto website (or at least the bones of one) that:</p>
@@ -432,8 +432,8 @@
 <img data-src="images/penguins_meteor.png" style="width:85.0%" alt="Two penguins looking happily up at a Quarto logo 'meteor' that is flying overhead." class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text">
 <p>Art by <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a></p>
 </div>
-<div class="caption-text center-text">
-<p>If you first need to get your website up and running, follow along with these <a href="https://ucsb-meds.github.io/creating-quarto-websites/">step-by-step instructions</a> before moving forward.</p>
+<div class="body-text-s center-text topbr">
+<p><em>If you first need to get your website up and running, follow along with these <a href="https://ucsb-meds.github.io/creating-quarto-websites/">step-by-step instructions</a> before moving forward.</em></p>
 </div>
 </section><section id="tldr1" class="slide level2" data-menu-title="TL;DR"><h2></h2>
 <p><span class="slide-title">TL;DR</span></p>
@@ -442,7 +442,7 @@
 <p>When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch <a href="https://bootswatch.com/cosmo/">Cosmo theme</a>). We can modify the appearance of our website in a number of ways. We’ll learn a bit about the following (but know that this is just a starting point!):</p>
 </div>
 <div>
-<div class="caption-text">
+<div class="body-text-s">
 <ul>
 <li class="fragment"><p><strong>Editing the <code>index.qmd</code> YAML</strong> – you can apply a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).</p></li>
 <li class="fragment"><p><strong>Editing the <code>_quarto.yml</code> file</strong> – here we can easily update our top navigation bar (e.g.&nbsp;add new pages), add a page footer, a <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a>, Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built <a href="https://bootswatch.com/">Bootswatch theme</a> (by replacing <code>cosmo</code> with an alternative theme name).</p></li>
@@ -452,7 +452,7 @@
 </div>
 </div>
 <div class="fragment">
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p>Or…</p>
 </div>
 </div>
@@ -460,10 +460,10 @@
 <p><span class="slide-title">TL;DR</span></p>
 <hr>
 <p><br></p>
-<div class="large-body-text center-text bottombr">
+<div class="body-text-xl teal-text center-text bottombr">
 <p>Combine all of the above!</p>
 </div>
-<div class="medium-body-text center-text">
+<div class="body-text-l center-text">
 <p>Approaching this in the following order worked best for me:</p>
 </div>
 <div class="fragment">
@@ -478,15 +478,15 @@
 </div>
 </div>
 </section><section id="branches" class="slide level2" data-menu-title="Use branches!"><h2></h2>
-<p><span class="slide-title-smaller"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Working on branches is recommended!</span></p>
+<p><span class="slide-title2"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Working on branches is recommended!</span></p>
 <hr>
-<div class="medium-body-text center-text">
+<div class="body-text-l center-text">
 <p><em>I almost always work on a branch when making changes to my website – this way I can safely test changes before deploying them to my live site.</em></p>
 </div>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>To create a branch, first ensure that you’re on <code>main</code> by typing either <code>git branch</code> or <code>git status</code> into the RStudio Terminal (either will tell you which branch you’re currently on). If you’re not on <code>main</code>, you can switch by running <code>git checkout main</code>.</p>
 </div>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>Create a local git branch from <code>main</code> by running the following in your Terminal:</p>
 </div>
 <div class="cell">
@@ -497,7 +497,7 @@
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> my-new-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>Push your new local branch to GitHub by running the following in your terminal:</p>
 </div>
 <div class="cell">
@@ -508,14 +508,13 @@
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin my-new-branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p>You’re now ready to work as normal! Once satisfied with your changes, you can <code>git add</code>, <code>git commit -m "my commit message"</code>, and <code>git push</code> (or use the RStudio GUI buttons in the <strong>Git</strong> tab) your files. Open a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> from GitHub and <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request">merge</a> into <code>main</code> to integrate your changes.</p>
 </div>
 </section><section id="lets-start-styling" class="slide level2" data-menu-title="Let's start styling" data-background="#053660"><h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
-<svg aria-label="Palette" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Palette</title>
-<path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path></svg> Let’s start styling
+<i class="fa-solid fa-palette" title="a painter’s palette" aria-hidden="true"></i> Let’s start styling
 </div>
 </div>
 </section><section id="so-youve-created-a-website" class="slide level2" data-menu-title="So you've created a Quarto website..."><h2></h2>
@@ -536,12 +535,12 @@
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>An example Quarto website styled using the built-in <a href="https://bootswatch.com/">Bootswatch</a> theme, <a href="https://bootswatch.com/cosmo/">Cosmo</a> <em>and</em> <code>trestles</code> <a href="https://quarto.org/docs/websites/website-about.html">layout template</a> applied</p>
 </div>
 </div>
 </section><section id="modify-to-stand-out" class="slide level2" data-menu-title="Make your website stand stand out"><h2></h2>
-<p><span class="slide-title-smallest">But some additional modifications can make <em>your</em> website stand out from the rest</span></p>
+<p><span class="slide-title3">But some additional modifications can make <em>your</em> website stand out from the rest</span></p>
 <hr>
 
 <img data-src="images/unique.gif" alt="Alecia Keys, a judge on the TV show, The Voice, excited slams her hands down and stands up saying, 'There is nobody like you!'" class="r-stretch quarto-figure-center"></section><section id="edit-quarto-yml" class="slide level2" data-menu-title="Edit YAML" data-background="#053660"><h2></h2>
@@ -553,7 +552,7 @@ Add a template to your <code>index.qmd</code> and edit <code>_quarto.qmd</code>
 </center>
 </div>
 </section><section id="about-page" class="slide level2" data-menu-title="Create a nice landing page"><h2></h2>
-<p><span class="slide-title-smallest">Turn your landing page (<code>index.qmd</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</span></p>
+<p><span class="slide-title3">Turn your landing page (<code>index.qmd</code>) into an “<a href="https://quarto.org/docs/websites/website-about.html">About Page</a>” with a photo</span></p>
 <hr>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby">
@@ -609,7 +608,7 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>Without an About Page template</p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -621,29 +620,29 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>With the <code>trestles</code> About Page template</p>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-1-3">
-<div class="caption-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Use the <code>about</code> option in the YAML section of <code>index.qmd</code> to turn your landing page into an <a href="https://quarto.org/docs/websites/website-about.html">About Page</a> – supply it with one of five template options (here, I chose <code>trestles</code>). It <em>is not</em> necessary to do this (you can fully build/customize your web page layout using CSS), but it’s a fast way to create a clean, professional-looking landing page. <strong>NOTE:</strong> Any of your web pages can be turned into an About Page.</p>
 </div>
-<div class="caption-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> The <code>links</code> option under <code>about</code> allows you to create buttons underneath your landing page photo. You need to supply a <code>text</code> (as you’d like it to appear on the button) and an <code>href</code> (a link), and optionally can supply an <code>icon</code>.</p>
 </div>
-<div class="caption-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You’ll need to install the <a href="https://quarto.org/docs/websites/website-about.html">Quarto fontawesome extension</a> if you’d like to include icons throughout your site (including your About Page buttons). Run <code>quarto install extension quarto-ext/fontawesome</code> in your RStudio Terminal, which downloads the extension files and saves them to your project directory (you should see a new folder, <code>_extensions/quarto-ext/fontawesome/</code> in your project directory). <strong>NOTE:</strong> You’ll need to install this for each project where you’d like to use <a href="https://fontawesome.com/">fontawesome icons</a>.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="add-pages" class="slide level2" data-menu-title="Add pages"><h2></h2>
-<p><span class="slide-title-smaller">Update your navbar in <code>_quarto.yml</code></span></p>
+<p><span class="slide-title2">Update your navbar in <code>_quarto.yml</code></span></p>
 <hr>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>Any edits you want to make to your navbar happen under the <code>website:</code> &gt; <code>navbar:</code> option in your <code>_quarto.yml</code> file.</p>
 </div>
 <div class="panel-tabset">
@@ -691,29 +690,29 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/add_navbar_items.png" style="width:75.0%"></p>
+<figure><p><img data-src="images/add_navbar_items.png" style="width:65.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-2-3">
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Right/center/left align your navbar contents using the <code>website:</code> &gt; <code>navbar:</code> &gt; <code>right</code>/<code>center</code>/<code>left:</code> option. Add navbar pages as an indented list beneath this option.</p>
 </div>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Navbar page names will appear the same as the title given to each <code>.qmd</code> file (e.g.&nbsp;in the YAML of <code>about.qmd</code>, the <code>title</code> option has the value <code>About</code>, and therefore appears in the navbar as “<strong>About</strong>”). You can update the name as it appears in your navbar by providing the <code>text</code> option when linking your new page in <code>_quarto.yml</code> (see “Home” and “Resources” pages as examples).</p>
 </div>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Link your resume or CV by providing a file path to the pdf in <code>href</code> (e.g.&nbsp;<code>href: file/path/to/CV.pdf</code>) and the text as you’d like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked. Be sure to provide the <code>text</code> option with the title as you’d like it to appear in your navbar.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="add-footer" class="slide level2" data-menu-title="Add footer"><h2></h2>
-<p><span class="slide-title">Add a page footer in <code>_quarto.yml</code></span></p>
+<p><span class="slide-title3">Add a page footer in <code>_quarto.yml</code></span></p>
 <hr>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>Any edits you want to make to a website footer happen under the <code>website:</code> &gt; <code>page-footer:</code> option in your <code>_quarto.yml</code> file.</p>
 </div>
 <div class="panel-tabset">
@@ -770,21 +769,21 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/footer.png" style="width:75.0%"></p>
+<figure><p><img data-src="images/footer.png" style="width:65.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-3-3">
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="add-favicon" class="slide level2" data-menu-title="Add favicon &amp; logo"><h2></h2>
-<p><span class="slide-title-smallest">Add a favicon &amp; personal logo in <code>_quarto.yml</code></span></p>
+<p><span class="slide-title3">Add a favicon &amp; personal logo in <code>_quarto.yml</code></span></p>
 <hr>
 <div class="body-text">
 <p>A <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.</p>
@@ -838,7 +837,7 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 </div>
 </div>
 <div id="tabset-4-3">
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Create your own logo using the free <a href="https://www.adobe.com/express/create/logo">Adobe Express Logo Maker</a> to include in the top left corner of your website (clicking on this will take you back to your site’s landing page) – provide Adobe with a little info about yourself, and it’ll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. <strong>Tip:</strong> You can download logos with a transparent background so that they can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible <em>before</em> downloading – doing so <em>may</em> circumvent having to adjust the logo size using CSS.</p>
 </div>
 </div>
@@ -874,7 +873,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 </div>
 </div>
 </div>
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p><strong>S</strong>yntactically <strong>A</strong>wesome <strong>S</strong>tyle<strong>s</strong>heets</p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -914,9 +913,9 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <p>You might imagine how often you’ll need to type those HEX codes out as you developing your stylesheet…it can get annoying rather quickly.</p>
 </div>
 </section><section id="why-use-sass2" class="slide level2" data-menu-title="Define Sass variables"><h2></h2>
-<p><span class="slide-title-smaller">Define Sass variables to reduce repetition</span></p>
+<p><span class="slide-title2">Define Sass variables to reduce repetition</span></p>
 <hr>
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>Sass allows us to <strong>define variables</strong> (in the form <code>$var-name: value;</code>) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet <strong>more readable and easier to update</strong> (e.g.&nbsp;only need to change HEX codes in one spot, not multiple!). <!-- Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time: --></p>
 </div>
 <div class="cell">
@@ -941,26 +940,26 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <span id="cb7-15"><a href="#cb7-15"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong>Note:</strong> Sass has two syntaxes – SCSS syntax (<code>.scss</code>), shown above, is the most common. It stands for <strong>S</strong>assy <strong>C</strong>ascading <strong>S</strong>tylesheets </p>
 </div>
 </section><section id="quarto-compiles" class="slide level2" data-menu-title="Quarto compiles Sass automatically"><h2></h2>
 <p><span class="slide-title">Quarto automatically compiles Sass</span></p>
 <hr>
 <div class="body-text">
-<p><strong>Recall:</strong> Web browsers can interpret CSS (<i class="fa-solid fa-check" aria-hidden="true"></i> <code>.css</code>) but <em>not</em> Sass (<i class="fa-solid fa-xmark" aria-hidden="true"></i> <code>.scss</code> or <code>.sass</code>). Typically, you’d need to <strong>compile (aka convert) Sass to CSS</strong>, then link the resulting <code>.css</code> file in your HTML.</p>
+<p><strong>Recall:</strong> Web browsers can interpret CSS (<span class="teal-text"><i class="fa-solid fa-check" aria-hidden="true"></i></span> <code>.css</code>) but <em>not</em> Sass (<span class="teal-text"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span> <code>.scss</code> or <code>.sass</code>). Typically, you’d need to <strong>compile (aka convert) Sass to CSS</strong>, then link the resulting <code>.css</code> file in your HTML.</p>
 </div>
 <div class="body-text">
 <p>Lucky for us, <strong>Quarto compiles the contents of a <code>.scss</code> file into CSS without any extra steps</strong> – meaning we can include a <code>.scss</code> file directly in our website’s <code>_quarto.yml</code> file.</p>
 </div>
 <p><br></p>
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p>Let’s create our website’s <code>.scss</code> stylesheet.</p>
 </div>
 </section><section id="quarto-sass-vars" class="slide level2" data-menu-title="Quarto Sass Variables"><h2></h2>
-<p><span class="slide-title">Create a <code>.scss</code> file for your website</span></p>
+<p><span class="slide-title3">Create a <code>.scss</code> file for your website</span></p>
 <hr>
-<div class="caption-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong>1.</strong> Create a <code>.scss</code> file in the root directory of your website’s repo using the <code>touch</code> command in the RStudio Terminal (alternatively, use <strong>New Blank File</strong> &gt; <strong>Text File</strong> in the Files pane):</p>
 </div>
 <div class="cell">
@@ -972,7 +971,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 </div>
 </div>
 <div class="fragment">
-<div class="caption-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong>2.</strong> Add the <code>/*-- scss:defaults --*/</code> region decorator to the top of <code>styles.scss</code> (<a href="https://quarto.org/docs/output-formats/html-themes-more.html">required by Quarto</a>) – you’ll write all your Sass variables underneath this.</p>
 </div>
 <div class="cell">
@@ -985,7 +984,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 </div>
 </div>
 <div class="fragment">
-<div class="caption-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong>3.</strong> Apply your <code>styles.scss</code> stylesheet to your website by updating the <code>_quarto.yml</code> under the <code>format</code> section:</p>
 </div>
 <div class="cell">
@@ -1033,14 +1032,14 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <div class="body-text topbr">
 <p>You can also define values with units, e.g.&nbsp;<code>$my-font-size: 25px;</code> or <code>$my-width: 500px;</code>.</p>
 </div>
-<p><br></p>
-<div class="caption-text center-text topbr">
+<p><br><br></p>
+<div class="body-text-s gray-text center-text topbr">
 <p><strong>Note:</strong> In <code>.scss</code> files, <code>//</code> denote single line comments. Multi-line comments start with <code>/*</code> and end at the next <code>*/</code>.</p>
 </div>
 </section><section id="use-sass-colors" class="slide level2" data-menu-title="Use Sass Colors"><h2></h2>
-<p><span class="slide-title-smallest">Use your color variables as values for Quarto’s Sass variables</span></p>
+<p><span class="slide-title3">Use your color variables as values for Quarto’s Sass variables</span></p>
 <hr>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">list of Sass Variables</a> that can be specified within <code>.scss</code> files. Let’s use our newly minted Sass color variables to change things like the background color, navbar &amp; footer colors, hyperlink color, and more.</p>
 </div>
 <div class="panel-tabset">
@@ -1088,17 +1087,17 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/sass_colors.png" style="width:60.0%"></p>
+<figure><p><img data-src="images/sass_colors.png" style="width:55.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <div id="tabset-5-3">
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Okay, tell me that that doesn’t already look so much better?!</p>
 </div>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You don’t have to create a theme entirely from scratch! If you like parts of a pre-built Bootswatch theme (e.g.&nbsp;<a href="https://bootswatch.com/cosmo/">cosmo</a>), you can modify it by layering on your desired updates. See the <a href="https://quarto.org/docs/output-formats/html-themes.html#customizing-themes">Quarto documentation</a> for more details.</p>
 </div>
 <div class="cell">
@@ -1124,8 +1123,7 @@ Use a <em>Syntactically Awesome Stylesheet</em> (<i class="fa-brands fa-sass" ti
 <div class="page-center">
 <center>
 <div class="custom-subtitle2">
-Import and apply new fonts <svg aria-label="Font" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Font</title>
-<path d="M254 52.8C249.3 40.3 237.3 32 224 32s-25.3 8.3-30 20.8L57.8 416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32h-1.8l18-48H303.8l18 48H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H390.2L254 52.8zM279.8 304H168.2L224 155.1 279.8 304z"></path></svg>
+Import and apply new fonts <i class="fa-solid fa-font" title="a stylized letter ‘A’" aria-hidden="true"></i>
 </div>
 </center>
 </div>
@@ -1154,12 +1152,12 @@ Import and apply new fonts <svg aria-label="Font" role="img" viewbox="0 0 448 51
 <p><br></p>
 
 <img data-src="images/google-fonts.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="select-fonts" class="slide level2" data-menu-title="Select Fonts"><h2></h2>
-<p><span class="slide-title-smaller">Selecting a Google font(s)</span></p>
+<p><span class="slide-title2">Selecting a Google font(s)</span></p>
 <hr>
-<div class="caption-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong>1.</strong> Once you’ve found a font you’d like to use, scroll down to the <strong>Styles</strong> section of that font’s page – here you’ll (typically) find a number of different weights (e.g.&nbsp;thin, light, regular, bold) and styles (e.g.&nbsp;italic). Click on the <strong>+</strong> button, <img src="images/gf+.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, to the right of the style you want. In this example, I choose <em>Nunito</em> in the <em>Light 400</em> and <em>ExtraBold 800</em> styles, though you can choose as many fonts and styles to import as you’d like. <strong>Note:</strong> You <em>must</em> import a higher weight font style if you plan to use <strong>bolded</strong> text.</p>
 </div>
-<div class="caption-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong>2.</strong> Click on the <strong>View selected families</strong> button, <img src="images/view-fonts.png" alt="" style="display: inline-block; margin: 0; position: relative; top: 3px; width:25px;height:25px;">, in the top right corner to see all of your selected fonts. Under the <strong>Use on the web</strong> section, select the radio button for <strong><span class="citation" data-cites="import">@import</span></strong> and copy everything between the <code>&lt;style&gt; &lt;/style&gt;</code> tags (starting with <code>@import</code> and ending with <code>;</code>) to your clipboard.</p>
 </div>
 <div class="cell" data-layout-align="center">
@@ -1272,8 +1270,8 @@ Import and apply new fonts <svg aria-label="Font" role="img" viewbox="0 0 448 51
 </section><section id="refining" class="slide level2" data-menu-title="Time to Refine" data-background="#053660"><h2></h2>
 <div class="vertical-center">
 <center>
-<div class="custom-subtitle3">
-With just a few YAML additions and a handful of Sass variables, we’ve already really transformed the appearance of our website. Next up: refining.
+<div class="custom-subtitle2">
+With just a few YAML additions and a handful of Sass variables, we’ve already really transformed the appearance of our website. <em>Next up: refining.</em>
 </div>
 </center>
 </div>
@@ -1288,30 +1286,30 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 <p>We’re going to spend a few minutes first learning about what makes a web page…look like a web page, then apply what we learn to our own Quarto sites.</p>
 </div>
 </section><section id="building-blocks-html" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (1/2)"><h2></h2>
-<p><span class="slide-title-smaller">HTML &amp; CSS are the building blocks of web pages</span></p>
+<p><span class="slide-title2">HTML &amp; CSS are the building blocks of web pages</span></p>
 <hr>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong>HTML</strong> (Hypertext Markup Language) is a <em>markup language</em><sup>1</sup> that tells web browsers how to <em>structure</em> web pages. You can think of HTML as the <em>skeleton</em> of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.</p>
 </div>
 
-<img data-src="images/html.png" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text topbr">
+<img data-src="images/html.png" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="body-text-s gray-text center-text topbr">
 <p>Source: Adapted from <a href="https://github.com/nkarasiak/Illustration">Nicolas Karasiak</a></p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><sup>1</sup><a href="https://www.markdownguide.org/"><strong>Markdown</strong></a> and <a href="https://rmarkdown.rstudio.com/"><strong>R Markdown</strong></a> are both lightweight markup languages – they’re a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.</p>
 </div>
 </section><section id="building-blocks-css" class="slide level2" data-menu-title="HTML &amp; CSS = building blocks (2/2)"><h2></h2>
-<p><span class="slide-title-smaller">HTML &amp; CSS are the building blocks of web pages</span></p>
+<p><span class="slide-title2">HTML &amp; CSS are the building blocks of web pages</span></p>
 <hr>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong>CSS</strong> (Cascading Style Sheets) is a programming language that allows you to control how HTML elements <em>look</em> on a web page. You can think of CSS as the <em>outfit</em> that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.</p>
 </div>
 
-<img data-src="images/css.png" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text bottombr">
+<img data-src="images/css.png" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="body-text-s gray-text center-text bottombr">
 <p>Source: Adapted from <a href="https://github.com/nkarasiak/Illustration">Nicolas Karasiak</a></p>
 </div>
 </section><section id="browser-styling" class="slide level2" data-menu-title="Browser styling"><h2></h2>
-<p><span class="slide-title-smaller">Your browser has its own internal style sheet to render HTML</span></p>
+<p><span class="slide-title2">Your browser has its own internal style sheet to render HTML</span></p>
 <hr>
 <div class="body-text topbr">
 <p>Your browser will style HTML documents using an internal style sheet, which ensures that headings are larger than normal text, links are highlighted, lists and tables are structured correctly, etc.</p>
@@ -1326,7 +1324,7 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>HTML</p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1338,13 +1336,13 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>Browser default styling</p>
 </div>
 </div>
 </div>
 </section><section id="css-styling" class="slide level2" data-menu-title="CSS styling"><h2></h2>
-<p><span class="slide-title-smaller">CSS adds <em>pizzazz</em> to web page renderings</span></p>
+<p><span class="slide-title2">CSS adds <em>pizzazz</em> to web page renderings</span></p>
 <hr>
 <div class="body-text topbr">
 <p>CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they’d all generally look the same).</p>
@@ -1359,7 +1357,7 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>Browser default styling</p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1371,7 +1369,7 @@ With just a few YAML additions and a handful of Sass variables, we’ve already 
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text">
+<div class="body-text-s gray-text center-text">
 <p>CSS styling</p>
 </div>
 </div>
@@ -1404,12 +1402,12 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 </div>
 </div><div class="column" style="width:30%;">
 <p><br><br></p>
-<div class="caption-text">
+<div class="body-text-s">
 <p>In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your website customization workshop</code></p>
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text topbr">
+<div class="body-text-s gray-text center-text topbr">
 <p><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.</p>
 </div>
 </section><section id="html-elements2" class="slide level2" data-menu-title="Commonly used HTML tags"><h2></h2>
@@ -1490,19 +1488,19 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 </div>
 </div><div class="column" style="width:30%;">
 <p><br><br></p>
-<div class="caption-text">
+<div class="body-text-s">
 <p>In Markdown syntax, this HTML element would be written as: <br><code># Welcome to your **website customization** workshop</code></p>
 </div>
 </div>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <div class="important-text-bg">
 <em>Important:</em> Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors <svg aria-label="Face Grin Beam Sweat" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#222222;overflow:visible;position:relative;"><title>Face Grin Beam Sweat</title>
 <path d="M476.8 126.3C497.1 120.8 512 102.7 512 81c0-20-28.6-60.4-41.6-77.7c-3.2-4.4-9.6-4.4-12.8 0c-9.5 12.6-27.1 37.2-36 57.5c-.3 .7-.6 1.4-.9 2.1C417.8 69.7 416 76 416 81c0 26 21.5 47 48 47c4.4 0 8.7-.6 12.8-1.7zM395.4 41.2C355.3 15.2 307.4 0 256 0C114.6 0 0 114.6 0 256S114.6 512 256 512s256-114.6 256-256c0-35.8-7.3-69.9-20.6-100.8c-8.6 3.1-17.8 4.8-27.4 4.8c-8.9 0-17.6-1.5-25.7-4.2C454.7 185.5 464 219.7 464 256c0 114.9-93.1 208-208 208S48 370.9 48 256S141.1 48 256 48c48.7 0 93.4 16.7 128.9 44.7c-.6-3.8-.9-7.7-.9-11.7c0-11.4 3.8-22.4 7.1-30.5c1.3-3.1 2.7-6.2 4.3-9.3zM375 336.5c10.4-16.1-6.8-32.5-25.5-28.1c-28.9 6.8-60.5 10.5-93.6 10.5s-64.7-3.7-93.6-10.5c-18.7-4.4-35.9 12-25.5 28.1c24.6 38.1 68.7 63.5 119.1 63.5s94.5-25.4 119.1-63.5zM217.6 228.8l0 0 0 0 0 0c2.1 2.8 5.7 3.9 8.9 2.8s5.5-4.1 5.5-7.6c0-17.9-6.7-35.6-16.6-48.8c-9.8-13-23.9-23.2-39.4-23.2s-29.6 10.2-39.4 23.2C126.7 188.4 120 206.1 120 224c0 3.4 2.2 6.5 5.5 7.6s6.9 0 8.9-2.8l0 0 0 0 0 0 .2-.2c.2-.2 .4-.5 .7-.9c.6-.8 1.6-2 2.8-3.4c2.5-2.8 6-6.6 10.2-10.3c8.8-7.8 18.8-14 27.7-14s18.9 6.2 27.7 14c4.2 3.7 7.7 7.5 10.2 10.3c1.2 1.4 2.2 2.6 2.8 3.4c.3 .4 .6 .7 .7 .9l.2 .2 0 0zm160 0l0 0 0 0c2.1 2.8 5.7 3.9 8.9 2.8s5.5-4.1 5.5-7.6c0-17.9-6.7-35.6-16.6-48.8c-9.8-13-23.9-23.2-39.4-23.2s-29.6 10.2-39.4 23.2C286.7 188.4 280 206.1 280 224c0 3.4 2.2 6.5 5.5 7.6s6.9 0 8.9-2.8l0 0 0 0 0 0 .2-.2c.2-.2 .4-.5 .7-.9c.6-.8 1.6-2 2.8-3.4c2.5-2.8 6-6.6 10.2-10.3c8.8-7.8 18.8-14 27.7-14s18.9 6.2 27.7 14c4.2 3.7 7.7 7.5 10.2 10.3c1.2 1.4 2.2 2.6 2.8 3.4c.3 .4 .6 .7 .7 .9l.2 .2 0 0 0 0z"></path></svg>.
 </div>
 </div>
-</section><section id="html-attribures" class="slide level2" data-menu-title="HTML attributes"><h2></h2>
-<p><span class="slide-title-smallest">HTML attributes can be used for targetted styling</span></p>
+</section><section id="html-attributes" class="slide level2" data-menu-title="HTML attributes"><h2></h2>
+<p><span class="slide-title3">HTML attributes can be used for targeted styling</span></p>
 <hr>
 <div class="body-text topbr">
 <p><a href="https://www.w3schools.com/html/html_attributes.asp">Attributes</a> provide extra information about elements. They are always <strong>specified in the start tag</strong> and usually come in <strong>value/name pairs</strong> (e.g.&nbsp;<code>attributeName="attributeValue"</code>).</p>
@@ -1526,10 +1524,10 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 </ul>
 <div class="tab-content">
 <div id="tabset-7-1">
-<div class="smaller-body-text center-text">
+<div class="body-text-s center-text">
 <p><em>You can use any text editor to write HTML, but the following steps assume you’re working in RStudio (you can continue to work on your branch in your website’s project directory).</em></p>
 </div>
-<p><span class="caption-text"><strong>1.</strong> In the RStudio Terminal, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</span></p>
+<p><span class="body-text-s"><strong>1.</strong> In the RStudio Terminal, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</span></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -1538,7 +1536,7 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">touch</span> practice-html.html</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p><span class="caption-text"><strong>2.</strong> Type or copy/paste the following into your <code>practice-html.html</code> file:</span></p>
+<p><span class="body-text-s"><strong>2.</strong> Type or copy/paste the following into your <code>practice-html.html</code> file:</span></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -1576,9 +1574,9 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 </div>
 </div>
 </section><section id="write-md" class="slide level2" data-menu-title="Write Markdown"><h2></h2>
-<p><span class="slide-title-smaller">markdown makes it easy to “write” HTML</span></p>
+<p><span class="slide-title2">markdown makes it easy to “write” HTML</span></p>
 <hr>
-<div class="smaller-body-text center-text">
+<div class="body-text-s center-text">
 <p>Quarto (<code>.qmd</code>) files allow us to write markdown, then <em>Render</em> that markdown as HTML (we can also write HTML directly in <code>.qmd</code> files).</p>
 </div>
 <div class="panel-tabset">
@@ -1588,7 +1586,7 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 </ul>
 <div class="tab-content">
 <div id="tabset-8-1">
-<p><span class="caption-text"><strong>1.</strong> Now, use the <code>touch</code> command (or <strong>New Blank File</strong> &gt; <strong>Quarto Doc…</strong> in the Files pane) to create a new <code>.qmd</code> file.</span></p>
+<p><span class="body-text-s"><strong>1.</strong> Now, use the <code>touch</code> command (or <strong>New Blank File</strong> &gt; <strong>Quarto Doc…</strong> in the Files pane) to create a new <code>.qmd</code> file.</span></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -1597,7 +1595,7 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">touch</span> practice-markdown.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p><span class="caption-text"><strong>2.</strong> Type or copy/paste the following into your <code>practice-markdown.qmd</code> file:</span></p>
+<p><span class="body-text-s"><strong>2.</strong> Type or copy/paste the following into your <code>practice-markdown.qmd</code> file:</span></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>practice-markdown.qmd</strong></pre>
@@ -1612,7 +1610,7 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 </div>
 </div>
 <div id="tabset-8-2">
-<div class="smaller-body-text center-text">
+<div class="body-text-s center-text">
 <p>Click <strong>Render</strong> to render the markdown as HTML (it will render it as a web page if you’re in your website’s project directory)</p>
 </div>
 <div class="cell" data-layout-align="center">
@@ -1629,8 +1627,7 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 </section><section id="light-intro-css" class="slide level2" data-menu-title="Light intro to CSS" data-background="#053660"><h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
-A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Alternate CSS3 Logo</title>
-<path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
+A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the CSS 3 logo" aria-hidden="true"></i>
 </div>
 </div>
 </section><section id="css-rules" class="slide level2" data-menu-title="CSS rules"><h2></h2>
@@ -1650,39 +1647,39 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> <strong>Selectors</strong> select the HTML element(s) you want to style <em>(e.g.&nbsp;level one headings, <code>&lt;h1&gt;</code>)</em></p>
 </div>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> <strong>Declarations</strong> sit inside curly brackets, <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, and are made up of <strong>property</strong> and <strong>value</strong> pairs. Each pair specifies the property of the HTML element(s) you’re selecting <em>(e.g.&nbsp;the color property of the element <code>&lt;h1&gt;</code>)</em>, and a value you’d like to assign to that property <em>(e.g.&nbsp;green)</em></p>
 </div>
-<div class="smaller-body-text topbr">
+<div class="body-text-s topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> A property and its corresponding value are separated by a colon, <code>:</code>. Declarations end with a semicolon, <code>;</code></p>
 </div>
 </div>
 </div>
 </section><section id="selector-types" class="slide level2" data-menu-title="Types of Selectors"><h2></h2>
-<p><span class="slide-title-smaller">There are a number of different CSS selector types</span></p>
+<p><span class="slide-title2">There are a number of different CSS selector types</span></p>
 <hr>
 <div class="body-text topbr">
 <p>The next few slides review just a few basic CSS selector types for styling HTML elements – these will get you far in your website customization journey (but check out you can learn more about all the <a href="https://www.w3schools.com/css/css_selectors.asp">different categories of CSS selectors here</a>):</p>
 </div>
-<div class="smaller-body-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Element selectors</p>
 </div>
-<div class="smaller-body-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Grouping selectors</p>
 </div>
-<div class="smaller-body-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> ID selectors</p>
 </div>
-<div class="smaller-body-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Class selectors</p>
 </div>
-<div class="smaller-body-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Universal selector</p>
 </div>
-<div class="smaller-body-text topbr bottombr">
+<div class="body-text-s topbr bottombr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Inline styling (not a selector type, but an alternative way to apply CSS styling)</p>
 </div>
 </section><section id="select-tags" class="slide level2" data-menu-title="Element &amp; Grouping Selectors"><h2></h2>
@@ -1769,7 +1766,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="select-attributes" class="slide level2" data-menu-title="ID &amp; Class Selectors"><h2></h2>
-<p><span class="slide-title-smaller">Target element(s) using HTML attributes</span></p>
+<p><span class="slide-title2">Target element(s) using HTML attributes</span></p>
 <!-- Select an element(s) using attributes -->
 <hr>
 <div class="panel-tabset">
@@ -1813,7 +1810,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 <div id="tabset-10-2">
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
 </div>
 <div class="columns">
@@ -1845,7 +1842,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text center-text topbr">
+<div class="body-text-s center-text topbr">
 <div class="important-text-bg">
 <em>If you’re like me, you’ll probably find yourself using <strong>class selectors</strong> most often!</em>
 </div>
@@ -1898,7 +1895,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 <div id="tabset-11-2">
-<div class="smaller-body-text">
+<div class="body-text-s">
 <p>The <em><code>style</code> attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</p>
 </div>
 <div class="columns">
@@ -1921,7 +1918,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text">
+<div class="body-text-s">
 <p><strong>Note:</strong> You can also use the <code>&lt;span&gt;</code> tag to apply class or ID selectors to <em>part</em> of an element (e.g.&nbsp;let’s say I have a class selector, <code>.blue-text{color: blue;}</code>. I can target parts of HTML elements using this selector in conjunction with the <code>&lt;span&gt;</code> tag: <code>&lt;p&gt;In this sentence, only the word &lt;span class="blue-text"&gt;blue&lt;/span&gt; is styled.&lt;/p&gt;</code>)</p>
 </div>
 </div>
@@ -1930,7 +1927,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </section><section id="conflicting-css" class="slide level2" data-menu-title="Conflicting CSS rules"><h2></h2>
 <p><span class="slide-title">Conflicting CSS rules?</span></p>
 <hr>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>It is often the case that more than one CSS rule will point to the same element. For example, say you have a style sheet and HTML that look like the following:</p>
 </div>
 <div class="columns">
@@ -1957,13 +1954,13 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>In this case, we have a universal selector that styles all of our text orange, but we also have an element selector that colors our <code>&lt;h1&gt;</code> elements blue and a class selector that is applied inline to color a subset of text green. How do you know which style will be declared and applied to each of our HTML elements?</p>
 </div>
 </section><section id="css-specificity" class="slide level2" data-menu-title="CSS Specificity"><h2></h2>
 <p><span class="slide-title">The highest specificity value “wins”</span></p>
 <hr>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><a href="https://www.w3schools.com/css/css_specificity.asp">Specificity</a> can be complicated (especially when you consider all the other types of selectors we haven’t covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override element selectors, etc. The order that rules are written in your stylesheet matters as well – since rules are read top to bottom, a directly competing rule farther down your stylesheet will take precedent.</p>
 </div>
 <div class="columns">
@@ -2009,7 +2006,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
       }</style></aside><!-- --- --><!-- ##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"} --><!-- <div class = "vertical-center"> --><!-- <center><div class="custom-subtitle2">`<svg aria-label="Laptop Code" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Laptop Code</title><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>`{=html} Practice writing and applying some CSS rules</div></center> --><!-- </div> --></section><section id="css-practice1" class="slide level2" data-menu-title="Practice CSS (1/3)"><h2></h2>
 <p><span class="slide-title">Exercise: practice writing CSS (1/3)</span></p>
 <hr>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>1.</strong> Return to your R Project (where you created your <code>practice-html.html</code> file). In the RStudio Terminal, use the <code>touch</code> command to create a <strong>CSS</strong> file in the same location as your html file:</p>
 </div>
 <div class="cell">
@@ -2021,7 +2018,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 <div class="fragment">
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>2.</strong> Link your CSS file inside the <code>&lt;head&gt;</code> of your HTML file (read more about inserting style sheets <a href="https://www.w3schools.com/css/css_howto.asp">here</a>).</p>
 </div>
 <div class="cell">
@@ -2052,25 +2049,25 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <div class="body-text topbr">
 <p><strong>3.</strong> Write some CSS selectors in your <code>practice-styles.css</code> file and save. Update your HTML file as necessary (e.g.&nbsp;using class selectors) to apply your styles and <strong>Preview</strong> <code>practice-html.html</code> to see the updates. Some suggestions:</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>(a)</strong> create an <code>&lt;h1&gt;</code> element selector that styles the background color to something of your choosing (<a href="https://htmlcolorcodes.com/">hex and rgb codes</a> allowed!), rounds the edges of the background box, increases the spacing between each letter, <em>and</em> centers the text on the page,</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>(b)</strong> create an element selector that changes the color of hyperlinked text and italicizes it</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>(c)</strong> create a class selector that you can use to color your first paragraph (“Here is my first paragraph”) blue,</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>(d)</strong> create a class selector to that you can use to color your third paragraph (“This is very important text!”) red and enlarge the font size (try <code>20px</code>),</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong>(e)</strong> use your class selector from <strong>Step c</strong> <em>inline</em> to color just the word “very” (in your third paragraph) blue</p>
 </div>
 <div class="body-text center-text important-text-bg">
 <p>It’ll be especially helpful to explore this list of available <a href="https://www.w3schools.com/cssref/">CSS properties</a>.</p>
 </div>
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p>(One) solution on next slide!</p>
 </div>
 </section><section id="css-practice-answer" class="slide level2" data-menu-title="Practice CSS (3/3)"><h2></h2>
@@ -2161,12 +2158,11 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </section><section id="css-quarto" class="slide level2" data-menu-title="CSS + Quarto" data-background="#053660"><h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
-<svg aria-label="Question" role="img" viewbox="0 0 320 512" style="height:1em;width:0.62em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Question</title>
-<path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"></path></svg> Okay, that’s cool…but what about Quarto?
+<i class="fa-solid fa-question" title="question mark" aria-hidden="true"></i> Okay, that’s cool…but what about Quarto?
 </div>
 </div>
 </section><section id="styles.css" class="slide level2" data-menu-title="Quarto comes with `styles.css`"><h2></h2>
-<p><span class="slide-title-smallest">A <code>styles.css</code> file is automatically generated when you create a new Quarto site</span></p>
+<p><span class="slide-title3">A <code>styles.css</code> file is automatically generated when you create a new Quarto site</span></p>
 <hr>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2217,7 +2213,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>Next, we’ll walk through some examples of how to modify your site with your own CSS rules.</p>
 </div>
 </section><section id="determine-element-to-style" class="slide level2" data-menu-title="Determine element(s) to style"><h2></h2>
-<p><span class="slide-title-smallest">Determine which element you want to style</span></p>
+<p><span class="slide-title3">Determine which element you want to style</span></p>
 <hr>
 <div class="body-text topbr">
 <p>Let’s say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:</p>
@@ -2232,7 +2228,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text center-text gray-text topbr">
+<div class="body-text-s center-text gray-text topbr">
 <p>On my landing page, I want to style my name, “Samantha Csik”, and the three section headers, “Hi there!”, “Education”, and “Experience”</p>
 </div>
 </div><div class="column" style="width:33%;">
@@ -2244,7 +2240,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text center-text gray-text topbr">
+<div class="body-text-s center-text gray-text topbr">
 <p>On my About page, I want to style the page title, “About”</p>
 </div>
 </div><div class="column" style="width:33%;">
@@ -2256,13 +2252,13 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text center-text gray-text topbr">
+<div class="body-text-s center-text gray-text topbr">
 <p>On my Resources page, I want to style the page title, “All of my favorite resources!”</p>
 </div>
 </div>
 </div>
 </section><section id="dont-know-element" class="slide level2" data-menu-title="Don't know element?"><h2></h2>
-<p><span class="slide-title-smallest">But what if I don’t know what HTML element type this is? Inspect!</span></p>
+<p><span class="slide-title3">But what if I don’t know what HTML element type this is? Inspect!</span></p>
 <hr>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2277,40 +2273,40 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>Using the <strong>Inspect</strong> tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and <em>also</em> your locally hosted website preview).</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>In your website preview, <strong>right click on an element of interest</strong> (in this case, let’s start with my name, “Samantha Csik”) and <strong>choose Inspect</strong> to pull up the underlying HTML &amp; CSS files.</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.</p>
 </div>
 </div>
 </div>
 </section><section id="inspect-name" class="slide level2" data-menu-title="Inspect landing page name"><h2></h2>
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p>My name is an <code>&lt;h1&gt;</code> element</p>
 </div>
 
-<img data-src="images/inspect-name.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text">
+<img data-src="images/inspect-name.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="body-text-s gray-text center-text">
 <p><strong>Note:</strong> This <code>&lt;h1&gt;</code> element also has a class <code>title</code> – more on that in a minute.</p>
 </div>
 </section><section id="inspect-landing-page-sections" class="slide level2" data-menu-title="Inspect landing page sections"><h2></h2>
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p>My landing page sections, “Hi there!”, “Education” and “Experience”, are <code>&lt;h2&gt;</code> elements</p>
 </div>
 
 <img data-src="images/inspect-education.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="inspect-about" class="slide level2" data-menu-title="Inspect about page"><h2></h2>
-<div class="large-body-text center-text">
+<div class="body-text-xl teal-text center-text">
 <p>My About page and Resource page titles are <code>&lt;h1&gt;</code> elements</p>
 </div>
 
-<img data-src="images/inspect-about.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="caption-text gray-text center-text">
+<img data-src="images/inspect-about.png" style="width:90.0%" class="r-stretch quarto-figure-center"><div class="body-text-s gray-text center-text">
 <p><strong>Note:</strong> These <code>&lt;h1&gt;</code> elements also have a class, <code>title</code>– we’ll come back to that shortly.</p>
 </div>
 </section><section id="write-grouping-selector" class="slide level2" data-menu-title="Write a CSS grouping selector"><h2></h2>
-<p><span class="slide-title-smallest">Write a CSS grouping selector to style <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements</span></p>
+<p><span class="slide-title3">Write a CSS grouping selector to style <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements</span></p>
 <hr>
 <div class="panel-tabset">
 <ul id="tabset-13" class="panel-tabset-tabby">
@@ -2355,7 +2351,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text topbr">
+<div class="body-text-s gray-text center-text topbr">
 <p>No CSS styling on <code>h1</code> and <code>h2</code> headers</p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -2367,7 +2363,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text topbr">
+<div class="body-text-s gray-text center-text topbr">
 <p>With CSS styling on <code>h1</code> and <code>h2</code> headers</p>
 </div>
 </div>
@@ -2381,12 +2377,12 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="title-class" class="slide level2" data-menu-title="'title' class"><h2></h2>
-<p><span class="slide-title-smallest">We can modify existing class (or ID) selectors</span></p>
+<p><span class="slide-title3">We can modify existing class (or ID) selectors</span></p>
 <hr>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>Earlier, we noted that the page titles (“Samantha Csik” on the landing page, “About” on the About page and “All my favorite resources!” on the Resources page), are all <code>&lt;h1&gt;</code> elements <em>and</em> also are given the class, <code>title</code> (e.g.&nbsp;<code>&lt;h1&gt; class="title"&gt;All of my favorite resources!&lt;/h1&gt;</code>).</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p>The Quarto framework has already defined a class selector called <code>.title</code> and applied that class to the above elements. We can modify it however we’d like. For example, let’s color any text elements that are assigned the class <code>.title</code> red:</p>
 </div>
 <div class="panel-tabset">
@@ -2460,7 +2456,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="title-class2" class="slide level2" data-menu-title="Elements w/o title class"><h2></h2>
-<p><span class="slide-title-smallest">What about <code>&lt;h1&gt;</code> elements that are <em>not</em> assigned the <code>title</code> class?</span></p>
+<p><span class="slide-title3">What about <code>&lt;h1&gt;</code> elements that are <em>not</em> assigned the <code>title</code> class?</span></p>
 <hr>
 <div class="body-text topbr">
 <p>Let’s write a couple of other elements that <em>are not</em> assigned the <code>title</code> class to see what happens. I’ll do this on my <em>About</em> page:</p>
@@ -2503,17 +2499,17 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 <div id="tabset-15-3">
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only <code>&lt;h1&gt;</code> elements that are assigned the class, <code>title</code>, are colored red. Any <code>&lt;h1&gt;</code> elements that are not assigned the class, <code>title</code>, are styled according to our <code>h1, h2 {}</code> element selector.</p>
 </div>
-<div class="caption-text topbr">
+<div class="body-text-s topbr">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> We can apply the <code>title</code> class to any text element. In this example, we apply it both to an <code>&lt;h1&gt;</code> element and a <code>&lt;p&gt;</code> element.</p>
 </div>
 </div>
 </div>
 </div>
 </section><section id="write-own-class-selector" class="slide level2" data-menu-title="Write your own class selectors"><h2></h2>
-<p><span class="slide-title-smallest">We can write and apply our own class selectors</span></p>
+<p><span class="slide-title3">We can write and apply our own class selectors</span></p>
 <hr>
 <div class="panel-tabset">
 <ul id="tabset-16" class="panel-tabset-tabby">
@@ -2524,7 +2520,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </ul>
 <div class="tab-content">
 <div id="tabset-16-1">
-<div class="smaller-body-text bottombr">
+<div class="body-text-s bottombr">
 <p>Let’s first create two different classes: one to center text on the page, and another to color text orange. Then, we’ll add elements to our <strong>Resources</strong> page to test out our new class selectors:</p>
 </div>
 <div class="cell">
@@ -2602,7 +2598,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="apply-two-class-selectors" class="slide level2" data-menu-title="Apply two class selectors"><h2></h2>
-<p><span class="slide-title-smallest">Elements can have more than one class selector</span></p>
+<p><span class="slide-title3">Elements can have more than one class selector</span></p>
 <hr>
 <div class="panel-tabset">
 <ul id="tabset-17" class="panel-tabset-tabby">
@@ -2693,7 +2689,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="quarto-syntax" class="slide level2" data-menu-title="Quarto Syntax"><h2></h2>
-<p><span class="slide-title-smallest">Quarto also provides its <a href="https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans">own syntax</a> for applying classes to elements</span></p>
+<p><span class="slide-title3">Quarto also provides its <a href="https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans">own syntax</a> for applying classes to elements</span></p>
 <hr>
 <div class="body-text bottombr">
 <p>You can create both <strong>divs (block-level regions of content)</strong> and <strong>spans (inline content)</strong> using Quarto’s syntax. For example:</p>
@@ -2767,7 +2763,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 <div id="tabset-18-3">
-<div class="caption-text">
+<div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You’ll notice the <code>[]{}</code> and <code>::: {} :::</code> syntax throughout Quarto’s documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don’t <em>need</em> to use it, but it helps to know what it is when you see it!</p>
 </div>
 </div>
@@ -2781,7 +2777,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="trial-error" class="slide level2" data-menu-title="Styling = lots of trial &amp; error"><h2></h2>
-<p><span class="slide-title-smallest">Styling your website can be challenging</span></p>
+<p><span class="slide-title3">Styling your website can be challenging</span></p>
 <hr>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2794,7 +2790,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </div>
-<div class="caption-text gray-text center-text topbr">
+<div class="body-text-s gray-text center-text topbr">
 <p>^ How I feel most of the time while trying to write CSS</p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -2815,7 +2811,7 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="look-at-other-sites" class="slide level2" data-menu-title="Look at other websites"><h2></h2>
-<p><span class="slide-title-smaller">Check out source code (specifically the stylesheets) of other sites</span></p>
+<p><span class="slide-title2">Check out source code (specifically the stylesheets) of other sites</span></p>
 <hr>
 <div class="fragment">
 <div class="body-text topbr bottombr">
@@ -2833,9 +2829,9 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 </div>
 </div>
 </section><section id="inspect-edit" class="slide level2" data-menu-title="'Edit' while you Inspect"><h2></h2>
-<p><span class="slide-title-smallest">Inspecting web pages allows you to temporarily “edit” CSS</span></p>
+<p><span class="slide-title3">Inspecting web pages allows you to temporarily “edit” CSS</span></p>
 <hr>
-<div class="caption-text bottombr">
+<div class="body-text-s bottombr">
 <p>Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This allows you to try out styles before actually hard-coding them, and <em>also</em> helps you identify exactly which elements different selectors are manipulating. It can sometimes take a little digging in the Inspect pane to find what you’re looking for. <strong>Note</strong> that these changes are only <em>temporary</em> – refreshing your web browser will revert your site back to its original state.</p>
 </div>
 
@@ -2852,10 +2848,10 @@ A <em>light</em> introduction to CSS <svg aria-label="Alternate CSS3 Logo" role=
 <p>Happy Styling!</p>
 </div>
 
-<img data-src="images/bob-ross.gif" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="center-text medium-body-text gray-text">
+<img data-src="images/bob-ross.gif" style="width:50.0%" class="r-stretch quarto-figure-center"><div class="center-text body-text-l gray-text">
 <p>This is a Quarto Presentation. To learn more, visit <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
 </div>
-<div class="center-text smaller-body-text gray-text">
+<div class="center-text body-text-s gray-text">
 <p><em>If you see mistakes or want to suggest changes, please create an <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites/issues">issue</a> on the source repository.</em></p>
 </div>
 <div class="footer footer-default">

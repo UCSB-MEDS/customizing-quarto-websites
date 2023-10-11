@@ -5,7 +5,7 @@ format: revealjs
 ##  {#refining data-menu-title="Time to Refine" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle3">With just a few YAML additions and a handful of Sass variables, we've already really transformed the appearance of our website. Next up: refining.</div></center>
+<center><div class="custom-subtitle2">With just a few YAML additions and a handful of Sass variables, we've already really transformed the appearance of our website. *Next up: refining.*</div></center>
 </div>
 
 ---
@@ -37,11 +37,11 @@ We're going to spend a few minutes first learning about what makes a web page...
 
 ##  {#building-blocks-html data-menu-title="HTML & CSS = building blocks (1/2)"}
 
-[HTML & CSS are the building blocks of web pages]{.slide-title-smaller}
+[HTML & CSS are the building blocks of web pages]{.slide-title2}
 
 <hr>
 
-::: {.smaller-body-text .topbr}
+::: {.body-text-s .topbr}
 **HTML** (Hypertext Markup Language) is a *markup language*<sup>1</sup> that tells web browsers how to *structure* web pages. You can think of HTML as the *skeleton* of a web page. It gives authors the means to create elements like headings, text, tables, lists, add media, etc.
 :::
 
@@ -53,11 +53,11 @@ We're going to spend a few minutes first learning about what makes a web page...
 knitr::include_graphics("images/html.png")
 ```
 
-::: {.caption-text .gray-text .center-text .topbr}
+::: {.body-text-s .gray-text .center-text .topbr}
 Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
 :::
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 <sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
 :::
 
@@ -65,11 +65,11 @@ Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustratio
 
 ##  {#building-blocks-css data-menu-title="HTML & CSS = building blocks (2/2)"}
 
-[HTML & CSS are the building blocks of web pages]{.slide-title-smaller}
+[HTML & CSS are the building blocks of web pages]{.slide-title2}
 
 <hr>
 
-::: {.smaller-body-text .topbr}
+::: {.body-text-s .topbr}
 **CSS** (Cascading Style Sheets) is a programming language that allows you to control how HTML elements *look* on a web page. You can think of CSS as the *outfit* that is styling the skeleton. It allows authors to control aspects such as the colors, layout, and font style.
 :::
 
@@ -81,7 +81,7 @@ Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustratio
 knitr::include_graphics("images/css.png")
 ```
 
-::: {.caption-text .gray-text .center-text .bottombr}
+::: {.body-text-s .gray-text .center-text .bottombr}
 Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
 :::
 
@@ -89,7 +89,7 @@ Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustratio
 
 ##  {#browser-styling data-menu-title="Browser styling"}
 
-[Your browser has its own internal style sheet to render HTML]{.slide-title-smaller}
+[Your browser has its own internal style sheet to render HTML]{.slide-title2}
 
 <hr>
 
@@ -107,7 +107,7 @@ Your browser will style HTML documents using an internal style sheet, which ensu
 knitr::include_graphics("images/html_github.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 HTML
 :::
 :::
@@ -120,7 +120,7 @@ HTML
 knitr::include_graphics("images/browser_styling_github.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 Browser default styling
 :::
 :::
@@ -130,7 +130,7 @@ Browser default styling
 
 ##  {#css-styling data-menu-title="CSS styling"}
 
-[CSS adds *pizzazz* to web page renderings]{.slide-title-smaller}
+[CSS adds *pizzazz* to web page renderings]{.slide-title2}
 
 <hr>
 
@@ -148,7 +148,7 @@ CSS allows website developers to add additional styling to web browser defaults.
 knitr::include_graphics("images/browser_styling_github.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 Browser default styling
 :::
 :::
@@ -161,7 +161,7 @@ Browser default styling
 knitr::include_graphics("images/css_styling_github.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 CSS styling
 :::
 :::

@@ -28,7 +28,7 @@ format: revealjs
 knitr::include_graphics("images/sass.png")
 ```
 
-::: {.large-body-text .center-text}
+::: {.body-text-xl .teal-text .center-text}
 **S**yntactically **A**wesome **S**tyle**s**heets
 :::
 :::
@@ -96,11 +96,11 @@ You might imagine how often you'll need to type those HEX codes out as you devel
 
 ## {#why-use-sass2 data-menu-title="Define Sass variables"}
 
-[Define Sass variables to reduce repetition]{.slide-title-smaller}
+[Define Sass variables to reduce repetition]{.slide-title2}
 
 <hr>
 
-::: {.smaller-body-text}
+::: {.body-text-s}
 Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (e.g. only need to change HEX codes in one spot, not multiple!).
 <!-- Sass allows us to define variables (in the form `$var-name: value;`) for our colors to reference instead of writing out their HEX codes each time: -->
 :::
@@ -126,7 +126,7 @@ h1 {
 }
 ```
 
-::: {.smaller-body-text .topbr}
+::: {.body-text-s .topbr}
 **Note:** Sass has two syntaxes – SCSS syntax (`.scss`), shown above, is the most common. It stands for **S**assy **C**ascading **S**tylesheets {{< fa smile title="smiling face with two eyes and an upturned mouth>}}
 :::
 
@@ -139,7 +139,7 @@ h1 {
 <hr>
 
 ::: {.body-text}
-**Recall:** Web browsers can interpret CSS ({{< fa check >}} `.css`) but *not* Sass ({{< fa xmark >}} `.scss` or `.sass`). Typically, you’d need to **compile (aka convert) Sass to CSS**, then link the resulting `.css` file in your HTML.
+**Recall:** Web browsers can interpret CSS ([{{< fa check >}}]{.teal-text} `.css`) but *not* Sass ([{{< fa xmark >}}]{.teal-text} `.scss` or `.sass`). Typically, you’d need to **compile (aka convert) Sass to CSS**, then link the resulting `.css` file in your HTML.
 :::
 
 ::: {.body-text}
@@ -148,7 +148,7 @@ Lucky for us, **Quarto compiles the contents of a `.scss` file into CSS without 
 
 <br>
 
-::: {.large-body-text .center-text}
+::: {.body-text-xl .teal-text .center-text}
 Let's create our website's `.scss ` stylesheet.
 :::
 
@@ -156,11 +156,11 @@ Let's create our website's `.scss ` stylesheet.
 
 ## {#quarto-sass-vars data-menu-title="Quarto Sass Variables"}
 
-[Create a `.scss` file for your website]{.slide-title}
+[Create a `.scss` file for your website]{.slide-title3}
 
 <hr>
 
-::: {.caption-text .topbr .bottombr}
+::: {.body-text-s .topbr .bottombr}
 **1.** Create a `.scss` file in the root directory of your website's repo using the `touch` command in the RStudio Terminal (alternatively, use **New Blank File** > **Text File** in the Files pane):
 :::
 
@@ -172,7 +172,7 @@ touch styles.scss # name it whatever you want (you can apply more than one style
 
 . . .
 
-::: {.caption-text .topbr .bottombr}
+::: {.body-text-s .topbr .bottombr}
 **2.** Add the `/*-- scss:defaults --*/` region decorator to the top of `styles.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)) -- you'll write all your Sass variables underneath this.
 :::
 
@@ -185,7 +185,7 @@ touch styles.scss # name it whatever you want (you can apply more than one style
 
 . . .
 
-::: {.caption-text .topbr .bottombr}
+::: {.body-text-s .topbr .bottombr}
 **3.** Apply your `styles.scss` stylesheet to your website by updating the `_quarto.yml` under the `format` section:
 :::
 
@@ -239,8 +239,9 @@ You can also define values with units, e.g. `$my-font-size: 25px;` or `$my-width
 :::
 
 <br>
+<br>
 
-::: {.caption-text .center-text .topbr}
+::: {.body-text-s .gray-text .center-text .topbr}
 **Note:** In `.scss` files, `//` denote single line comments. Multi-line comments start with `/*` and end at the next `*/`.
 :::
 
@@ -248,11 +249,11 @@ You can also define values with units, e.g. `$my-font-size: 25px;` or `$my-width
 
 ## {#use-sass-colors data-menu-title="Use Sass Colors"}
 
-[Use your color variables as values for Quarto's Sass variables]{.slide-title-smallest}
+[Use your color variables as values for Quarto's Sass variables]{.slide-title3}
 
 <hr>
 
-::: {.caption-text .topbr}
+::: {.body-text-s .topbr}
 Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified within `.scss` files. Let's use our newly minted Sass color variables to change things like the background color, navbar & footer colors, hyperlink color, and more.
 :::
 
@@ -296,17 +297,17 @@ $code-block-bg: $cream; // code block background color
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "60%" 
+#| out-width: "55%" 
 knitr::include_graphics("images/sass_colors.png")
 ```
 
 ## Notes
 
-::: {.smaller-body-text .topbr}
+::: {.body-text-s .topbr}
 **{{< fa angle-right >}}** Okay, tell me that that doesn't already look so much better?!
 :::
 
-::: {.smaller-body-text .topbr}
+::: {.body-text-s .topbr}
 **{{< fa angle-right >}}** You don't have to create a theme entirely from scratch! If you like parts of a pre-built Bootswatch theme (e.g. [cosmo](https://bootswatch.com/cosmo/)), you can modify it by layering on your desired updates. See the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#customizing-themes) for more details. 
 :::
 
