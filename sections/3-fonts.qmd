@@ -88,7 +88,7 @@ To import a font, paste your copied clipboard into `styles.scss` under `/*-- scs
 #| code-line-numbers: "3-4"
 /*-- scss:defaults --*/
 
-// Fonts
+// Import fonts
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
 // Colors
@@ -164,7 +164,7 @@ knitr::include_graphics("images/nunito.png")
 ```{css}
 #| eval: false
 #| echo: true
-// Fonts
+// Import fonts
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Nunito+Sans:wght@200&family=Roboto+Mono:wght@300&family=Sanchez&display=swap');
 
 // Fonts
@@ -172,6 +172,8 @@ $font-family-serif: 'Sanchez', serif;
 $font-family-sans-serif: 'Montserrat', sans-serif; 
 $font-family-monospace: 'Roboto Mono', monospace;
 ```
+
+
 
 ::: {.body-text .topbr .bottombr}
 **{{< fa angle-right >}}** You *must* import a higher font weight (e.g. 800), in addition to your standard "regular" weight, if you wish to **bold** text -- even bolding text using markdown syntax (e.g. `**this text is bold**`) will not work unless a higher font weight style is imported). 

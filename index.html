@@ -403,7 +403,7 @@
 <div class="column" style="width:50%;">
 <p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 10, 2023</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 16, 2023</span></p>
 </div>
 </div>
 <hr class="hr-teal">
@@ -631,7 +631,7 @@ Run <code>quarto preview</code> in your terminal window to view changes in near 
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Use the <code>about</code> option in the YAML section of <code>index.qmd</code> to turn your landing page into an <a href="https://quarto.org/docs/websites/website-about.html">About Page</a> – supply it with one of five template options (here, I chose <code>trestles</code>). It <em>is not</em> necessary to do this (you can fully build/customize your web page layout using CSS), but it’s a fast way to create a clean, professional-looking landing page. <strong>NOTE:</strong> Any of your web pages can be turned into an About Page.</p>
 </div>
 <div class="body-text-s">
-<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> The <code>links</code> option under <code>about</code> allows you to create buttons underneath your landing page photo. You need to supply a <code>text</code> (as you’d like it to appear on the button) and an <code>href</code> (a link), and optionally can supply an <code>icon</code>.</p>
+<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> The <code>links</code> option under <code>about</code> allows you to create buttons underneath your landing page photo. You need to supply a <code>text</code> (as you’d like it to appear on the button) and/or an <code>icon</code>, as well as an <code>href</code> (a URL or file path to another page or file) for your button to redirect to.</p>
 </div>
 <div class="body-text-s">
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> You’ll need to install the <a href="https://quarto.org/docs/websites/website-about.html">Quarto fontawesome extension</a> if you’d like to include icons throughout your site (including your About Page buttons). Run <code>quarto install extension quarto-ext/fontawesome</code> in your RStudio Terminal, which downloads the extension files and saves them to your project directory (you should see a new folder, <code>_extensions/quarto-ext/fontawesome/</code> in your project directory). <strong>NOTE:</strong> You’ll need to install this for each project where you’d like to use <a href="https://fontawesome.com/">fontawesome icons</a>.</p>
@@ -1181,7 +1181,7 @@ Import and apply new fonts <i class="fa-solid fa-font" title="a stylized letter 
 </div>
 <div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3-4"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="er">// Fonts</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="er">// Import fonts</span></span>
 <span id="cb15-4"><a href="#cb15-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb15-5"><a href="#cb15-5"></a></span>
 <span id="cb15-6"><a href="#cb15-6"></a><span class="er">// Colors</span></span>
@@ -1253,7 +1253,7 @@ Import and apply new fonts <i class="fa-solid fa-font" title="a stylized letter 
 <p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> If you plan to use multiple fonts, you can create Sass variables for each font type, then use those variables as you construct your CSS rules. For example, this slide deck uses three fonts (Sanchez, Montserrat, and Roboto Mono):</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1"></a><span class="er">// Fonts</span></span>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1"></a><span class="er">// Import fonts</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Lato&amp;family=Montserrat&amp;family=Nunito+Sans:wght@200&amp;family=Roboto+Mono:wght@300&amp;family=Sanchez&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb17-3"><a href="#cb17-3"></a></span>
 <span id="cb17-4"><a href="#cb17-4"></a><span class="er">// Fonts</span></span>
@@ -1527,7 +1527,7 @@ Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp
 <div class="body-text-s center-text">
 <p><em>You can use any text editor to write HTML, but the following steps assume you’re working in RStudio (you can continue to work on your branch in your website’s project directory).</em></p>
 </div>
-<p><span class="body-text-s"><strong>1.</strong> In the RStudio Terminal, use the <code>touch</code> command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</span></p>
+<p><span class="body-text-s"><strong>1.</strong> In the RStudio Terminal, use the <code>touch</code> command (alternatively, use <strong>New Blank File</strong> &gt; <strong>Text File</strong> in the Files pane) to create an HTML file (for simplicity, I did this in my project’s root directory), then choose <strong>Open in Editor</strong>.</span></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -2216,7 +2216,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <p><span class="slide-title3">Determine which element you want to style</span></p>
 <hr>
 <div class="body-text topbr">
-<p>Let’s say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:</p>
+<p>Let’s say I want to similarly style (add spacing between each letter, increase the font weight, make a dark green color) the following text on my website:</p>
 </div>
 <div class="columns">
 <div class="column" style="width:33%;">

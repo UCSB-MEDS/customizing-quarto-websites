@@ -163,7 +163,7 @@ knitr::include_graphics("images/html_attribute.png")
 *You can use any text editor to write HTML, but the following steps assume you're working in RStudio (you can continue to work on your branch in your website's project directory).*
 :::
 
-[**1.** In the RStudio Terminal, use the `touch` command to create an HTML file (for simplicity, I did this in my project’s root directory), then choose **Open in Editor**.]{.body-text-s}
+[**1.** In the RStudio Terminal, use the `touch` command (alternatively, use **New Blank File** > **Text File** in the Files pane) to create an HTML file (for simplicity, I did this in my project’s root directory), then choose **Open in Editor**.]{.body-text-s}
 
 ```{bash filename="Command line/RStudio Terminal"}
 #| eval: false

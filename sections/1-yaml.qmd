@@ -87,7 +87,7 @@ With the `trestles` About Page template
 :::
 
 ::: {.body-text-s}
-**{{< fa angle-right >}}** The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and an `href` (a link), and optionally can supply an `icon`.
+**{{< fa angle-right >}}** The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and/or an `icon`, as well as an `href` (a URL or file path to another page or file) for your button to redirect to.
 :::
 
 ::: {.body-text-s}

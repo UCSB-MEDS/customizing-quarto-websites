@@ -85,7 +85,7 @@ Next, we'll walk through some examples of how to modify your site with your own 
 <hr>
 
 ::: {.body-text .topbr}
-Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark gray color) the following text on my website:
+Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark green color) the following text on my website:
 :::
 
 :::: {.columns}
