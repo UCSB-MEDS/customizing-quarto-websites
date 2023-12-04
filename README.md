@@ -10,3 +10,4 @@ Presentation slides are available [here](https://ucsb-meds.github.io/customizing
 
 ### Taught on the following dates:
 - October 10, 2022 ([Release v.1.0.0-meds-2023](https://github.com/UCSB-MEDS/customizing-quarto-websites/releases/tag/v.1.0.0-meds-2023))
+- October 16, 2023 
