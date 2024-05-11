@@ -9,11 +9,10 @@ format:
     # self-contained: true
     # scrollable: true
     theme: 
-      - meds_styles.scss
+      - meds-slides-styles.scss
 ---
 
 ## {#title-slide data-menu-title="Title Slide" background="#053660"} 
-<!-- background="images/title_background.png" -->
 
 [Customizing Quarto Websites]{.custom-title}
 
@@ -43,7 +42,6 @@ format:
 
 ::: {.column width="50%"}
 [Master of Environmental Data Science |]{.custom-subtitle2}<br>
-<!-- [Fall 2022]{.custom-subtitle2}<br> -->
 [*Bren School of Environmental Science & Management*]{.custom-subtitle3}
 :::
 
