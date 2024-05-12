@@ -360,9 +360,13 @@ knitr::include_graphics("images/github-icon.png")
 
 ## {#favicon-logo data-menu-title="Favicons & logos"}
 
-[Favicons & personal logos can add a nice personal touch]{.slide-title2}
+[Favicons & personal logos can add a nice personal touch]{.slide-title3}
 
 <hr>
+
+You can add a personal logo in the top left corner of your navbar in place of your title. The free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) is a great tool for creating your own logo!
+
+<!-- -- provide a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. -->
 
 A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
 
@@ -371,41 +375,52 @@ A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web b
 #| echo: false
 #| fig-align: "center"
 #| out-width: "60%" 
-knitr::include_graphics("images/favicon_logo.png")
+knitr::include_graphics("images/logo-favicon.png")
 ```
 
-::: {.body-text-s}
-**{{< fa angle-right >}}** Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. **Tip:** You can download logos with a transparent background so that they can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible *before* downloading -- doing so *may* circumvent having to adjust the logo size using CSS.
+::: {.footer}
+**Tip:** Download your logo with a transparent background so that it can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible *before* downloading -- doing so can help mitigate the need for drastic resizing using CSS.
 :::
 
 ---
 
 ## {#add-favicon-logo data-menu-title="Add favicon & logo"}
 
-[Add a favicon & personal logo in `_quarto.yml`]{.slide-title3}
+[Add a favicon & personal logo in `_quarto.yml`]{.slide-title2}
 
 <hr>
-
 
 ```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "6|8-10"
+#| code-line-numbers: "6,8-10"
 project:
   type: website
   output-dir: docs
 
 website:
-  favicon: file/path/to/image.png
+  favicon: file/path/to/image.png # NOTE: that the `favicon` is a `website` level option (not under `navbar`)
   navbar:
     title: false # change this to false!
     logo: file/path/to/logo.png
     logo-alt: "Alt text for logo"
-    right: 
+    right:
       - href: index.qmd
-        text: Home 
-        
-      # ~ additional YAML excluded for brevity ~
+        text: Home
+      - about.qmd
+      - href: resources.qmd
+        text: Resources
+      - href: cv/myCV.pdf
+        text: CV
+        target: _blank
+      - icon: github
+        href: https://github.com/samanthacsik
+        target: _blank
+  page-footer:
+    background: light
+    left: Copyright 2021, Samantha Csik
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
+
 
 format:
   html:
@@ -424,7 +439,7 @@ format:
 <hr>
 
 ::: {.body-text}
-Explore the [Quarto documentation](https://quarto.org/docs/websites/website-tools.html) to learn more about enabling [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards), [Google Analytics](https://analytics.google.com/), [Open Graph protocol](https://ogp.me/), and more.
+Explore Quarto's [documentation](https://quarto.org/docs/websites/website-tools.html) to learn more about enabling [Google Analytics](https://analytics.google.com/), [Open Graph protocol](https://ogp.me/), and more.
 :::
 
 <br>
