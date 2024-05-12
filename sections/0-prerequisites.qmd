@@ -53,7 +53,7 @@ When we render a new Quarto site, it converts all of our markdown into HTML and 
 ::: {.body-text-s}
 - [**Editing the `index.qmd` YAML**]{.teal-text} -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
 
-- [**Editing the `_quarto.yml` file**]{.teal-text} -- here we can easily update our website navigation (e.g. add new pages to our navbar), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
+- [**Editing the `_quarto.yml` file**]{.teal-text} -- this is our website configuration file,  where we can easily update our website's navigation (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), and much more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
 
 - [**Defining CSS rules in the `styles.css` file**]{.teal-text} that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
 
@@ -91,7 +91,7 @@ Approaching this in the following order worked best for me:
 . . .
 
 ::: incremental
-- [**First**]{.teal-text}, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd`, then fill out as much of the `_quarto.yml` file as you can / want -- this is the easiest way to add some really cool features with minimal effort.
+- [**First**]{.teal-text}, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.
 
 - [**Next**]{.teal-text}, create a `styles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
 
@@ -142,6 +142,16 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 
 ---
 
+## {#quarto-preview data-menu-title="quarto preview"}
+
+[Preview your site for fast iteration]{.slide-title}
+
+<hr>
+
+Run `quarto preview` in your terminal window to view changes in near real time – each time you save your work, the preview will update in your browser.
+
+---
+
 ##  {#lets-start-styling data-menu-title="Let's start styling" background="#053660"}
 
 <div class="page-center">
@@ -152,11 +162,11 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 
 ## {#so-youve-created-a-website data-menu-title="So you've created a Quarto website..."}
 
-[So you've created your personal website using Quarto...]{.slide-title}
+[So you've created your personal website using Quarto . . .]{.slide-title}
 
 <hr>
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 ::: {.body-text}
 <br>
 <br>
@@ -164,10 +174,7 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 :::
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
+::: {.column width="50%"}
 
 ```{r}
 #| eval: true 
@@ -178,9 +185,13 @@ knitr::include_graphics("images/website_noCSS.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/) *and* `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
+An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/), *and* the `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
 :::
 
+:::
+
+::: {.center-text}
+[**Please note:** these materials assume you've already worked through the materials, [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/), and picks up where those instructions left off.]{.teal-text}
 :::
 
 ---

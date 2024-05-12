@@ -5,52 +5,19 @@ format: revealjs
 ##  {#edit-quarto-yml data-menu-title="Edit YAML" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle2">Add a template to your `index.qmd` and edit `_quarto.qmd`</div></center>
+<!-- <center><div class="custom-subtitle2">Add a template to your `index.qmd` and edit `_quarto.qmd`</div></center> -->
+<center><div class="custom-subtitle2">First, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.</div></center>
 </div>
 
 ---
 
-## {#about-page data-menu-title="Create a nice landing page"}
+## {#index-template data-menu-title="Create a nice landing page"}
 
-[Turn your landing page (`index.qmd`) into an "[About Page](https://quarto.org/docs/websites/website-about.html)" with a photo]{.slide-title3}
+[Arrange your landing page content using a pre-built template]{.slide-title3}
 
 <hr>
 
-::: {.panel-tabset}
-
-## `index.qmd` (YAML)
-```{r filename="index.qmd"}
-#| eval: false
-#| echo: true
----
-title: "Samantha Csik" # if using a built-in template, this title appears under your photo
-image: media/headshot.jpg # great spot for your professional headshot :) 
-toc: false # remove "On this page" table of contents
-about: 
-  template: trestles # see other templates at https://quarto.org/docs/websites/website-about.html#templates
-  image-shape: round
-  image-width: 20em
-  links:
-    - icon: linkedin # you'll need to the fontawesome extension to include icons: https://github.com/quarto-ext/fontawesome
-      text: LinkedIn
-      href: https://www.linkedin.com/in/samanthacsik/
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/SamanthaCsik
-    - icon: github
-      text: GitHub
-      href: https://github.com/samanthacsik
-    - icon: envelope
-      text: Email
-      href: mailto:scsik@ucsb.edu
----
-```
-
-::: {.body-text .center-text}
-<p class="important-text-bg">Run `quarto preview` in your terminal window to view changes in near real time -- each time you save your work, the preview will update in your browser.</p>
-:::
-
-## Output
+Quarto has 5 pre-built template "[about pages](https://quarto.org/docs/websites/website-about.html)", which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example: 
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -58,8 +25,8 @@ about:
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "85%" 
-knitr::include_graphics("images/no_about_page.png")
+#| out-width: "90%" 
+knitr::include_graphics("images/no-about-page.png")
 ```
 ::: {.body-text-s .gray-text .center-text}
 Without an About Page template
@@ -71,8 +38,8 @@ Without an About Page template
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "85%" 
-knitr::include_graphics("images/trestles_template.png")
+#| out-width: "92%" 
+knitr::include_graphics("images/trestles-template.png")
 ```
 ::: {.body-text-s .gray-text .center-text}
 With the `trestles` About Page template
@@ -80,37 +47,120 @@ With the `trestles` About Page template
 :::
 ::::
 
-## Notes
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** Use the `about` option in the YAML section of `index.qmd` to turn your landing page into an [About Page](https://quarto.org/docs/websites/website-about.html) -- supply it with one of five template options (here, I chose `trestles`). It *is not* necessary to do this (you can fully build/customize your web page layout using CSS), but it's a fast way to create a clean, professional-looking landing page. **NOTE:** Any of your web pages can be turned into an About Page.
-:::
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** The `links` option under `about` allows you to create buttons underneath your landing page photo. You need to supply a `text` (as you'd like it to appear on the button) and/or an `icon`, as well as an `href` (a URL or file path to another page or file) for your button to redirect to.
-:::
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** You'll need to install the [Quarto fontawesome extension](https://quarto.org/docs/websites/website-about.html) if you'd like to include icons throughout your site (including your About Page buttons). Run `quarto install extension quarto-ext/fontawesome` in your RStudio Terminal, which downloads the extension files and saves them to your project directory (you should see a new folder, `_extensions/quarto-ext/fontawesome/` in your project directory). **NOTE:** You'll need to install this for each project where you'd like to use [fontawesome icons](https://fontawesome.com/).
-:::
-
+::: {.center-text}
+**Note:** You can apply a template to *any* of your website's pages, though they are particularly awesome for creating a clean, professional-looking landing page.
 :::
 
 ---
 
-## {#add-pages data-menu-title="Add pages"}
+## {#index-yaml data-menu-title="Add template to index.qmd"}
 
-[Update your navbar in `_quarto.yml`]{.slide-title2}
+[Apply a template in `index.qmd`'s YAML]{.slide-title}
 
 <hr>
 
-::: {.body-text-s}
-Any edits you want to make to your navbar happen under the `website:` > `navbar:` option in your `_quarto.yml` file.
+Use the `about` option to apply a template to your landing page:
+
+```{r filename="index.qmd"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+---
+title: "Samantha Csik" # if using a built-in template, this title appears under your photo
+image: media/headshot.jpg # great spot for your professional headshot :) 
+toc: false # disable table of contents for this page
+about: 
+  template: trestles # see other templates at https://quarto.org/docs/websites/website-about.html#templates
+  image-shape: round
+  image-width: 20em
+  links: # create buttons; need to supply a `text` and/or `icon`, as well as `href` (the URL or file path that your button redirects to)
+    - icon: linkedin # optionally include a FontAwesome icon
+      text: LinkedIn
+      href: https://www.linkedin.com/in/samanthacsik/
+    - icon: github
+      text: GitHub
+      href: https://github.com/samanthacsik
+    - icon: envelope
+      text: Email
+      href: mailto:scsik@ucsb.edu
+---
+        
+# ~ landing page content / text omitted for brevity ~        
+```
+
+---
+
+## {#fa-icons data-menu-title="fontawesome icons"}
+
+[Optionally add FontAwesome icons to your buttons]{.slide-title3}
+
+<hr>
+
+Add any [**free** FontAwesome icons](https://fontawesome.com/search?o=r&m=free) to your buttons using the `icon` option. For example:
+
+<br>
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/button-icons.png")
+```
 :::
 
-::: {.panel-tabset}
+::: {.column width="50%"}
+<br>
+<br>
 
-## `_quarto.yml` 
+```{r filename="_quarto.yml"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+# ~ additional YAML excluded for brevity ~
+links: 
+    - icon: linkedin 
+      text: LinkedIn
+      href: https://www.linkedin.com/in/yourlinkedinname/
+```
+:::
+::::
+
+Be sure to spell the icon name exactly as it appears on FontAwesome's website (e.g. the [LinkedIn icon](https://fontawesome.com/icons/linkedin?f=brands&s=solid), {{< fa brands linkedin >}}, is all lowercase and spelled, `linkedin`).
+
+---
+
+## {#add-pages data-menu-title="Add / arrange pages"}
+
+[Add / arrange pages in your navbar]{.slide-title}
+
+<hr>
+
+We configure website navigation in `_quarto.yml`, including the type of navigation menu (`navbar`, `sidebar`), how pages are ordered, etc.
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "65%" 
+knitr::include_graphics("images/update-navigation.png")
+```
+
+::: {.center-text .gray-text .body-text-s}
+Here, we moved our navbar items to the right side, link to curriculum vitae (pdf), and also add a GitHub icon which links to a GitHub profile.
+:::
+
+---
+
+## {#modify-nav data-menu-title="Modify navigation in _quarto.yml"}
+
+[Modify website navigation in `_quarto.yml`]{.slide-title}
+
+<hr>
+
+Make edits to a website's navigation bar under the `website` > `navbar` option:
 
 ```{r filename="_quarto.yml"}
 #| eval: false
@@ -122,143 +172,220 @@ project:
 
 website:
   navbar:
-    title: "Samantha Csik" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
-    right: # align navbar items to the right/left/center
+    title: "Samantha Csik"
+    right: # accepts right/left/center; you can also place items individually on the left, right, and center
       - href: index.qmd
-        text: Home # use 'text' option to update the name as you want it to appear in your navbar
+        text: Home
       - about.qmd
       - href: resources.qmd
         text: Resources
-      - href: cv/myCV.pdf
+      - href: cv/myCV.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: CV
-      - icon: github # add icons that link to social media, etc.
+        target: _blank # opens link (or page) in a new tab
+      - icon: github # add icons as navbar buttons
         href: https://github.com/samanthacsik
-      - icon: twitter
-        href: https://twitter.com/SamanthaCsik
+        target: _blank
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    page-layout: full
 ```
 
-## Output
+---
+
+## {#page-footer data-menu-title="Page footer"}
+
+[Add a page footer]{.slide-title}
+
+<hr>
+
+Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "65%" 
-knitr::include_graphics("images/add_navbar_items.png")
+knitr::include_graphics("images/page-footer.png")
 ```
-
-## Notes
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** Right/center/left align your navbar contents using the `website:` > `navbar:` > `right`/`center`/`left:` option. Add navbar pages as an indented list beneath this option.
-:::
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** Navbar page names will appear the same as the title given to each `.qmd` file (e.g. in the YAML of `about.qmd`, the `title` option has the value `About`, and therefore appears in the navbar as "**About**"). You can update the name as it appears in your navbar by providing the `text` option when linking your new page in `_quarto.yml` (see "Home" and "Resources" pages as examples).
-:::
-
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** Link your resume or CV by providing a file path to the pdf in `href` (e.g. `href: file/path/to/CV.pdf`) and the text as you'd like it to appear in your navbar (see example provided). This will open up the browser-based pdf viewer when clicked. Be sure to provide the `text` option with the title as you'd like it to appear in your navbar.
-:::
-
-:::
 
 ---
 
 ## {#add-footer data-menu-title="Add footer"}
 
-[Add a page footer in `_quarto.yml`]{.slide-title3}
+[Configure your page footer in `_quarto.yml`]{.slide-title2}
 
 <hr>
 
-::: {.body-text-s}
-Any edits you want to make to a website footer happen under the `website:` > `page-footer:` option in your `_quarto.yml` file.
-:::
+Make edits to a website's footer under the `website` > `page-footer` option:
 
-::: {.panel-tabset}
-
-## `_quarto.yml` 
-
-```{r filename="_quarto.yml"}
+```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "20-28"
+#| code-line-numbers: "20-23"
 project:
   type: website
   output-dir: docs
 
 website:
   navbar:
-    title: "Samantha Csik" # this is the website title as it appears in the top left corner -- clicking on this will jump you back to your landing page from where ever you are
-    right: # align navbar items to the right/left/center
+    title: "Samantha Csik"
+    right:
       - href: index.qmd
-        text: Home # use 'text' option to update the name as you want it to appear in your navbar
+        text: Home
       - about.qmd
       - href: resources.qmd
         text: Resources
       - href: cv/myCV.pdf
         text: CV
-      - icon: github # add icons that link to social media, etc.
+        target: _blank 
+      - icon: github 
         href: https://github.com/samanthacsik
-      - icon: twitter
-        href: https://twitter.com/SamanthaCsik
+        target: _blank
   page-footer:
-    background: light # or dark
-    left:
-      - "Copyright 2021, Samantha Csik"
-    right:
-      - icon: github
-        href: https://github.com/samanthacsik
-      - icon: twitter
-        href: https://twitter.com/SamanthaCsik
+    background: light # or `dark`
+    left: Copyright 2021, Samantha Csik
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    page-layout: full
 ```
 
-## Output
+::: {.footer}
+**Note:** If you plan to use FontAwesome icons outside of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html) (more info on the next slide).
+:::
+
+---
+
+## {#fa-extension data-menu-title="fontawesome extension"}
+
+[Install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html)]{.slide-title}
+
+<hr>
+
+<br>
+
+If you want to use FontAwesome icons anywhere else on your website (i.e. outside of the `icon` YAML option), you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html).
+
+<br>
+
+Running the following in your RStudio Terminal will download and save the extension to a folder named `_extensions` in your repo's root directory. Be sure to push this new folder (and its contents) to GitHub:
+
+```{bash filename="RStudio Terminal"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+quarto add quarto-ext/fontawesome
+```
+
+<br>
+
+**Note:** You'll need to install this extension for each new project where you'd like to use icons (e.g. if you create a different website).
+
+---
+
+## {#fa-shortcode data-menu-title="fontawesome shortcode"}
+
+[Use the fontawesome shortcode to embed icons]{.slide-title2}
+
+<hr>
+
+<br>
+
+To embed an icon, look up the icon’s name on FontAwesome (be sure to only choose from the [Free icons]((https://fontawesome.com/search?o=r&m=free))), then use the fontawesome shortcode:
+
+```{markdown}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+{{< fa icon-name title="descriptive text for accessibility" >}}
+```
+
+<br>
+
+For example, the following shortcodes...
+
+```{markdown}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+{{< fa face-smile title="A smiling face" >}}
+{{< fa laptop title="An open laptop" >}}
+{{< fa file-code title="A code file" >}}
+```
+
+<br>
+
+...will render as {{< fa face-smile title="A smiling face" >}}, {{< fa laptop title="An open laptop" >}}, {{< fa file-code title="A code file" >}}
+
+---
+
+## {#fa-brands data-menu-title="fontawesome brands"}
+
+[Pay attention for icons in the `brands` collection]{.slide-title2}
+
+<hr>
+
+<br>
+
+Some icons fall within the `brands` collection and must be prefixed with `brands` inside the shortcode. For example, the GitHub icon {{< fa brands github title="The GitHub octocat logo" >}}:
+
+```{markdown}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+{{< fa brands github title="The GitHub octocat logo" >}}
+```
+
+<br>
+
+You can identify if an icon falls within the `brands` collection by clicking on its preview (e.g. the [github icon](https://fontawesome.com/icons/github?f=brands&s=solid)) and checking to see if the HTML class is `fa-brands`:
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+knitr::include_graphics("images/github-icon.png")
+```
+
+---
+
+## {#favicon-logo data-menu-title="Favicons & logos"}
+
+[Favicons & personal logos can add a nice personal touch]{.slide-title2}
+
+<hr>
+
+A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "65%" 
-knitr::include_graphics("images/footer.png")
+#| out-width: "60%" 
+knitr::include_graphics("images/favicon_logo.png")
 ```
 
-## Notes
-
 ::: {.body-text-s}
-**{{< fa angle-right >}}** Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.
-:::
-
+**{{< fa angle-right >}}** Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. **Tip:** You can download logos with a transparent background so that they can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible *before* downloading -- doing so *may* circumvent having to adjust the logo size using CSS.
 :::
 
 ---
 
-## {#add-favicon data-menu-title="Add favicon & logo"}
+## {#add-favicon-logo data-menu-title="Add favicon & logo"}
 
 [Add a favicon & personal logo in `_quarto.yml`]{.slide-title3}
 
 <hr>
 
-::: {.body-text}
-A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
-:::
-
-::: {.panel-tabset}
-
-## `_quarto.yml` 
 
 ```{r filename="_quarto.yml"}
 #| eval: false
@@ -288,22 +415,7 @@ format:
     page-layout: full
 ```
 
-## Output
-
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "60%" 
-knitr::include_graphics("images/favicon_logo.png")
-```
-
-## Notes
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** Create your own logo using the free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) to include in the top left corner of your website (clicking on this will take you back to your site's landing page) -- provide Adobe with a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. I used this service to also create my favicon. **Tip:** You can download logos with a transparent background so that they can be placed anywhere on your site without having to deal with mismatched background colors. I also recommend making them as large as possible *before* downloading -- doing so *may* circumvent having to adjust the logo size using CSS.
-:::
-:::
+---
 
 ## {#website-tools data-menu-title="Website Tools"}
 
