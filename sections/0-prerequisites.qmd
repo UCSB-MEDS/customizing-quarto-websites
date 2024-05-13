@@ -148,7 +148,18 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 
 <hr>
 
-Run `quarto preview` in your terminal window to view changes in near real time – each time you save your work, the preview will update in your browser.
+Run `quarto preview` in the RStudio Terminal to view changes in near real time – each time edit and save your work, the preview will update in your browser.
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/quarto-preview.gif")
+```
+
 
 ---
 
@@ -180,8 +191,8 @@ Run `quarto preview` in your terminal window to view changes in near real time �
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "75%" 
-knitr::include_graphics("images/website_noCSS.png")
+#| out-width: "85%" 
+knitr::include_graphics("images/trestles-template.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
@@ -191,7 +202,7 @@ An example Quarto website styled using the built-in [Bootswatch](https://bootswa
 :::
 
 ::: {.center-text}
-[**Please note:** these materials assume you've already worked through the materials, [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/), and picks up where those instructions left off.]{.teal-text}
+[**Please note:** these materials assume you've already worked through [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and picks up where those instructions left off.]{.teal-text}
 :::
 
 ---

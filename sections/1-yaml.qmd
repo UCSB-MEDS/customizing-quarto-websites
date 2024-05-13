@@ -2,7 +2,7 @@
 format: revealjs
 ---
 
-##  {#edit-quarto-yml data-menu-title="Edit YAML" background="#053660"}
+##  {#edit-quarto-yml data-menu-title="## Edit YAML ##" background="#053660"}
 
 <div class="vertical-center">
 <!-- <center><div class="custom-subtitle2">Add a template to your `index.qmd` and edit `_quarto.qmd`</div></center> -->
@@ -149,7 +149,7 @@ knitr::include_graphics("images/update-navigation.png")
 ```
 
 ::: {.center-text .gray-text .body-text-s}
-Here, we moved our navbar items to the right side, link to curriculum vitae (pdf), and also add a GitHub icon which links to a GitHub profile.
+Here, we moved our navbar items to the right side, link to a curriculum vitae (pdf), and also add a GitHub icon which links to a GitHub profile.
 :::
 
 ---
@@ -179,7 +179,7 @@ website:
       - about.qmd
       - href: resources.qmd
         text: Resources
-      - href: cv/myCV.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
+      - href: file/path/to/myCV.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: CV
         target: _blank # opens link (or page) in a new tab
       - icon: github # add icons as navbar buttons
@@ -410,7 +410,7 @@ website:
       - about.qmd
       - href: resources.qmd
         text: Resources
-      - href: cv/myCV.pdf
+      - href: file/path/to/myCV.pdf
         text: CV
         target: _blank
       - icon: github

@@ -5,7 +5,8 @@ format: revealjs
 ##  {#refining data-menu-title="Time to Refine" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle2">With just a few YAML additions and a handful of Sass variables, we've already really transformed the appearance of our website. *Next up: refining.*</div></center>
+<center><div class="custom-subtitle2">Finally, make fine-tuned adjustments by defining CSS rules directly in your `styles.scss` file (you can write CSS in `.scss` files, but not Sass in `.css` files).</div></center>
+<!-- <center><div class="custom-subtitle2">With just a few YAML additions and a handful of Sass variables, we've already really transformed the appearance of our website. *Next up: refining.*</div></center> -->
 </div>
 
 ---
@@ -104,7 +105,7 @@ Your browser will style HTML documents using an internal style sheet, which ensu
 #| echo: false
 #| fig-align: "center"
 #| out-width: "90%" 
-knitr::include_graphics("images/html_github.png")
+knitr::include_graphics("images/html-github.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
@@ -117,7 +118,7 @@ HTML
 #| echo: false
 #| fig-align: "center"
 #| out-width: "90%" 
-knitr::include_graphics("images/browser_styling_github.png")
+knitr::include_graphics("images/browser-styling-github.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
@@ -138,6 +139,8 @@ Browser default styling
 CSS allows website developers to add additional styling to web browser defaults. Otherwise, websites would be pretty boring to look at (and they'd all generally look the same).
 :::
 
+<br>
+
 :::: {.columns}
 ::: {.column width="50%"}
 ```{r}
@@ -145,7 +148,7 @@ CSS allows website developers to add additional styling to web browser defaults.
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%" 
-knitr::include_graphics("images/browser_styling_github.png")
+knitr::include_graphics("images/browser-styling-github.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
@@ -158,7 +161,7 @@ Browser default styling
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%" 
-knitr::include_graphics("images/css_styling_github.png")
+knitr::include_graphics("images/css-styling-github.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}

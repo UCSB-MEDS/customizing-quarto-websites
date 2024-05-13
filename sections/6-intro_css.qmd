@@ -2,7 +2,7 @@
 format: revealjs
 ---
 
-##  {#light-intro-css data-menu-title="Light intro to CSS" background="#053660"}
+##  {#light-intro-css data-menu-title="Light intro to CSS" background="#047C90"}
 
 <div class="page-center">
 <div class="custom-subtitle">A *light* introduction to CSS {{< fa brands css3-alt title="the CSS 3 logo" >}}</div>
