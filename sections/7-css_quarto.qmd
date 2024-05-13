@@ -5,7 +5,7 @@ format: revealjs
 ##  {#css-quarto data-menu-title="CSS + Quarto" background="#047C90"}
 
 <div class="page-center">
-<div class="custom-subtitle">{{< fa question title="question mark" >}} Okay, that's cool...but what about Quarto?</div>
+<div class="custom-subtitle">Okay, that's cool...but what about Quarto?</div>
 </div>
 
 ---
@@ -16,8 +16,8 @@ format: revealjs
 
 <hr>
 
-:::: {.columns}
-::: {.column width="50%"}
+**We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `styles.scss` file** *(remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file)*. 
+
 <br>
 
 ```{r}
@@ -28,19 +28,9 @@ format: revealjs
 knitr::include_graphics("images/quarto_files.png")
 ```
 
-:::
-::: {.column width="50%"}
 <br>
 
-::: {.body-text}
-**We can write our CSS rules in `styles.css`, *but alternatively*, we can write them directly in our `styles.scss` file** *(remember, you can write CSS in a `.scss` file but you can't write Sass in a `.css` file)*. 
-:::
-
-::: {.body-text}
-You can delete `styles.css` if you don't plan to use it, or leave it be (it's easy to create a new one using the `touch` command in your terminal).
-:::
-:::
-::::
+You can delete `styles.css` if you don't plan to use it, or leave it be (it won't impact your Quarto site since it's not linked as our stylesheet in `_quarto.yml`).
 
 ---
 
@@ -50,43 +40,43 @@ You can delete `styles.css` if you don't plan to use it, or leave it be (it's ea
 
 <hr>
 
-::: {.body-text .topbr}
-To start defining CSS rules in `styles.scss` you first need to add the `/*-- scss:rules --*/` region decorator beneath your Sass variables section:
-:::
+To start defining CSS rules in `styles.scss` you first need to add the `/*-- scss:rules --*/` region decorator beneath your Sass variables section (this is important! your CSS won't be recognized without this region decorator in place):
 
-```{css filename="styles.scss"}
+```{sass filename="styles.scss"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "11"
 
 /*-- scss:defaults --*/
 
-// Fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
 
 // Colors
-$dark-green: #98A08D;
+$dark-green: #858E79;
 
 // additional Sass variables omitted for brevity ~
 
 /*-- scss:rules --*/
 ```
 
-::: {.body-text .topbr}
+<br>
+
 Next, we'll walk through some examples of how to modify your site with your own CSS rules.
-:::
 
 ---
 
 ##  {#determine-element-to-style data-menu-title="Determine element(s) to style"}
 
-[Determine which element you want to style]{.slide-title3}
+[Determine which element(s) you want to style]{.slide-title2}
 
 <hr>
 
-::: {.body-text .topbr}
+<br>
+
 Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark green color) the following text on my website:
-:::
+
+<br>
 
 :::: {.columns}
 
@@ -100,7 +90,7 @@ Let's say I want to similarly style (add spacing between each letter, increase t
 knitr::include_graphics("images/index-font.png")
 ```
 
-::: {.body-text-s .center-text .gray-text .topbr}
+::: {.body-text-s .center-text .gray-text}
 On my landing page, I want to style my name, "Samantha Csik", and the three section headers, "Hi there!", "Education", and "Experience"
 :::
 
@@ -116,7 +106,7 @@ On my landing page, I want to style my name, "Samantha Csik", and the three sect
 knitr::include_graphics("images/about-font.png")
 ```
 
-::: {.body-text-s .center-text .gray-text .topbr}
+::: {.body-text-s .center-text .gray-text}
 On my About page, I want to style the page title, "About"
 :::
 
@@ -132,7 +122,7 @@ On my About page, I want to style the page title, "About"
 knitr::include_graphics("images/resources-font.png")
 ```
 
-::: {.body-text-s .center-text .gray-text .topbr}
+::: {.body-text-s .center-text .gray-text}
 On my Resources page, I want to style the page title, "All of my favorite resources!"
 :::
 
@@ -144,9 +134,11 @@ On my Resources page, I want to style the page title, "All of my favorite resour
 
 ##  {#dont-know-element data-menu-title="Don't know element?"}
 
-[But what if I don't know what HTML element type this is? Inspect!]{.slide-title3}
+[But what if I don't know what HTML element type this is? Inspect!]{.slide-title2}
 
 <hr>
+
+Using the **Inspect** tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview).
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -163,16 +155,14 @@ knitr::include_graphics("images/inspect.gif")
 :::
 ::: {.column width="50%"}
 <br>
+<br>
+<br>
 
-::: {.body-text-s .topbr}
-Using the **Inspect** tool is a great way to get a better sense of how CSS is used to modify particular HTML elements (this works with any web page, and *also* your locally hosted website preview).
-:::
-
-::: {.body-text-s .topbr}
+::: {.body-text-s}
 In your website preview, **right click on an element of interest** (in this case, let's start with my name, "Samantha Csik") and **choose Inspect** to pull up the underlying HTML & CSS files.
 :::
 
-::: {.body-text-s .topbr}
+::: {.body-text-s}
 Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.
 :::
 :::
@@ -233,42 +223,16 @@ knitr::include_graphics("images/inspect-about.png")
 ::: {.body-text-s .gray-text .center-text}
 **Note:** These `<h1>` elements also have a class, `title`-- we'll come back to that shortly.
 :::
+
 ---
 
-##  {#write-grouping-selector data-menu-title="Write a CSS grouping selector"}
+##  {#grouping-selector1 data-menu-title="Grouping selector 1"}
 
-[Write a CSS grouping selector to style `<h1>` and `<h2>` elements]{.slide-title3}
+[tbd]{.slide-title}
 
 <hr>
 
-::: {.panel-tabset}
-
-## `styles.scss`
-
-::: {.body-text .topbr .bottombr}
-Here, we have a grouping selector that targets *all* `<h1>` and `<h2>` elements -- it increases both the spacing between each letter and it colors those text elements dark green.
-:::
-
-```{css filename="styles.scss"}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "10-14"
-/*-- scss:defaults --*/
-
-// Colors
-$dark-green: #858E79;
-
-// other variables omitted for brevity ~
-
-/*-- scss:rules --*/
-
-h1, h2 {
-  letter-spacing: 5px;
-  color: $dark-green;
-}
-```
-
-## Output
+Let's say we want to add a bit of space between each letter of our `<h1>` and `<h2>` elements so that they look like this:
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -301,12 +265,53 @@ With CSS styling on `h1` and `h2` headers
 :::
 ::::
 
-## Notes
+---
 
-::: {.body-text}
-**{{< fa angle-right >}}** I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd` since this grouping selector targets *all* `<h1>` and `<h2>` elements across my site. If an element on any of my pages has either of those tags, it will get styled according to the declarations included in our CSS rule.
-:::
+##  {#grouping-selector2 data-menu-title="Grouping selector 2"}
 
+[Write a `<h1>` and `<h2>` grouping selector]{.slide-title}
+<!-- We can use a grouping selector! -->
+<hr>
+
+```{css filename="styles.scss"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "29-31"
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$purple: #9158A2;
+$orange: #ad7237;
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $cream; // code block background color 
+
+/*-- scss:rules --*/
+
+h1, h2 {
+  letter-spacing: 5px;
+}
+```
+
+::: {.footer}
+**Note:** We don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since this grouping selector targets *all* `<h1>` and `<h2>` elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.
 :::
 
 ---

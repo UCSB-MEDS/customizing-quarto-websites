@@ -149,14 +149,14 @@ knitr::include_graphics("images/html_attribute.png")
 
 <br>
 
-[**0.**]{.teal-text} I'm going to create a new subdirectory called, `DELETE-LATER/`, to save the following few practice files to (you can delete this whole folder afterwards) -- from your repo's root directory, click on the **folder button** in the **Files** pane to add your new subdirectory.
+[**0.**]{.teal-text} I'm going to create a new subdirectory in my repo's root directory called, `DELETE-LATER/`. We'll save the following practice files to this folder, then delete it after (these files are purely for demonstration and aren't needed for your website). To do so, click on the **folder button** in the **Files** pane to add your new subdirectory.
 
 <br>
 
 [**1.**]{.teal-text} Add a new file named `practice-html.html` to your new folder using either the `touch` command or the **Blank File** > **Text File** option.
 
 ::: {.footer}
-As the name implies, you can delete the `DELETE-LATER/` subdirectory after the next few exercises. These files will not be incorporated into our website.
+**Reminder:** You can delete the `DELETE-LATER/` subdirectory after the next few exercises. These files will not be incorporated into our website.
 :::
 
 ---
@@ -171,7 +171,7 @@ As the name implies, you can delete the `DELETE-LATER/` subdirectory after the n
 
 [**2.**]{.teal-text} Type or copy / paste the following HTML into your `practice-html.html` file:
 
-```{html filename="practice-html.html"}
+```{html filename="~/DELETE-LATER/practice-html.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
@@ -227,7 +227,7 @@ Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as
 
 [**2.**]{.teal-text} Type or copy / paste the following into your `practice-markdown.qmd` file:
 
-```{.md filename="practice-markdown.qmd"}
+```{.md filename="~/DELETE-LATER/practice-markdown.qmd"}
 # Here is my level one header
 
 Here is my first paragraph
@@ -258,6 +258,6 @@ knitr::include_graphics("images/rendered-practice-markdown.png")
 ```
 
 ::: {.center-text}
-***Note:** Because we are in our website repo, the resulting file will be rendered as a web page.*
+***Note:** Because we are in our website repo, the resulting file will be rendered as a web page and styled according to our `styles.scss` stylesheet.*
 :::
 
