@@ -74,7 +74,7 @@ Next, we'll walk through some examples of how to modify your site with your own 
 
 <br>
 
-Let's say I want to similarly style (add spacing between each letter, increase the font weight, make a dark green color) the following text on my website:
+Let's say I want to similarly style (add a bit of spacing between each letter, increase font weight) the following text on my website:
 
 <br>
 
@@ -226,13 +226,65 @@ knitr::include_graphics("images/inspect-about.png")
 
 ---
 
-##  {#grouping-selector1 data-menu-title="Grouping selector 1"}
+##  {#write-grouping-selector data-menu-title="Write grouping selector"}
 
-[tbd]{.slide-title}
+[Write a `<h1>` and `<h2>` grouping selector]{.slide-title}
+<!-- We can use a grouping selector! -->
+<hr>
+
+```{sass filename="styles.scss"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "29-32"
+/*-- scss:defaults --*/
+
+// Colors
+$dark-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$purple: #9158A2;
+$orange: #ad7237;
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $cream; // code block background color 
+
+/*-- scss:rules --*/
+
+h1, h2 {
+  letter-spacing: 5px;
+  font-weight: 800; # Google fonts tells you which weights your chosen font family allows for!
+}
+```
+
+::: {.footer}
+**Note:** We don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since this grouping selector targets *all* `<h1>` and `<h2>` elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.
+:::
+
+---
+
+##  {#preview-grouping-selector data-menu-title="Preview grouping selector"}
+
+[Preview your updated styling]{.slide-title}
 
 <hr>
 
-Let's say we want to add a bit of space between each letter of our `<h1>` and `<h2>` elements so that they look like this:
+<br>
+
+Our updated `<h1>` and `<h2>` elements should now look like this:
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -267,16 +319,36 @@ With CSS styling on `h1` and `h2` headers
 
 ---
 
-##  {#grouping-selector2 data-menu-title="Grouping selector 2"}
+##  {#predefined-title-class data-menu-title="Predefined 'title' class"}
 
-[Write a `<h1>` and `<h2>` grouping selector]{.slide-title}
-<!-- We can use a grouping selector! -->
+[Recall those `.title` class selectors we noted earlier?]{.slide-title3}
+
 <hr>
 
-```{css filename="styles.scss"}
+[We noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* are also given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`). This means that the Quarto framework has already defined a class selector called `.title` and applied that class to the above elements.]{.body-text-s}
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/title-class.png")
+```
+
+---
+
+##  {#modify-title-class data-menu-title="Modify 'title' class"}
+
+[We can modify existing class (or ID) selectors]{.slide-title2}
+
+<hr>
+
+For example, let's make any text elements that are assigned the class, `.title`, the color maroon:
+
+```{sass filename="styles.scss"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "29-31"
+#| code-line-numbers: "34-36"
 /*-- scss:defaults --*/
 
 // Colors
@@ -307,114 +379,45 @@ $code-block-bg: $cream; // code block background color
 
 h1, h2 {
   letter-spacing: 5px;
-}
-```
-
-::: {.footer}
-**Note:** We don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since this grouping selector targets *all* `<h1>` and `<h2>` elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.
-:::
-
----
-
-##  {#title-class data-menu-title="'title' class"}
-
-[We can modify existing class (or ID) selectors]{.slide-title3}
-
-<hr>
-
-::: {.body-text-s .topbr}
-Earlier, we noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* also are given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`).
-:::
-
-::: {.body-text-s .topbr}
-The Quarto framework has already defined a class selector called `.title` and applied that class to the above elements. We can modify it however we'd like. For example, let's color any text elements that are assigned the class `.title`  red:
-:::
-
-::: {.panel-tabset}
-
-## `styles.scss`
-```{css filename="styles.scss"}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "15-17"
-/*-- scss:defaults --*/
-
-// Colors
-$dark-green: #858E79;
-
-// other variables omitted for brevity ~
-
-/*-- scss:rules --*/
-
-h1, h2 {
-  letter-spacing: 5px;
-  color: $dark-green;
+  font-weight: 800; 
 }
 
 .title {
-  color: red;
+  color: maroon;
 }
 ```
 
-## Output
-
-:::: {.columns}
-::: {.column width="33%"}
-
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%" 
-knitr::include_graphics("images/red-name.png")
-```
-
-:::
-::: {.column width="33%"}
-
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%" 
-knitr::include_graphics("images/red-about.png")
-```
-
-:::
-::: {.column width="33%"}
-
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%" 
-knitr::include_graphics("images/red-resources.png")
-```
-
-:::
-::::
-
-## Notes
-
-[**{{< fa angle-right >}}** In this case, I don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`.]{.body-text}
-
-:::
-
 ---
 
-##  {#title-class2 data-menu-title="Elements w/o title class"}
+##  {#maroon-titles data-menu-title="Maroon titles"}
 
-[What about `<h1>` elements that are *not* assigned the `title` class?]{.slide-title3}
+[Check out your new maroon `title`s]{.slide-title}
 
 <hr>
 
-::: {.body-text .topbr}
-Let's write a couple of other elements that *are not* assigned the `title` class to see what happens. I'll do this on my *About* page:
-:::
+[**It's important to note that we didn't need to make any changes to the HTML** (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`. Updates are automatically applied to any elements that the Quarto framework has already assigned as that class.]{.body-text-s}
 
-::: {.panel-tabset}
+<br>
 
-## `about.qmd`
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/maroon-text.gif")
+```
+
+---
+
+##  {#non-titles data-menu-title="Elements w/o title class"}
+
+[Can we apply the `title` class to other elements?]{.slide-title2}
+
+<hr>
+
+Yes! To demonstrate, let's write a couple of HTML elements that *are not by default* assigned the `title` class to see what happens -- in other words, let's apply the `title` class to some elements beyond just our website's landing page name and page titles. I'll do this on my **About** page (`about.qmd`):
+
+<br>
 
 ```{r filename="about.qmd"}
 #| eval: false
@@ -433,65 +436,83 @@ title: "About"
 <p class="title">this is a `<p>` element of class `title`</p>
 ```
 
-## Output
+::: {.footer}
+**Reminder:** Use the syntax, `<tag class="class-name">Content</tag>`, to apply a class selector to an HTML element. 
+:::
+
+---
+
+##  {#about-page-html data-menu-title="Write some HTML on About page"}
+
+[Class selectors allow us fine-tuned control over styling]{.slide-title3}
+
+<hr>
+
+[Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are assigned the class, `title`, are colored maroon. Any `<h1>` elements that are not assigned the class, `title`, are styled according to our `h1, h2 {}` element selector.]{.body-text-s}
+
+[Note that we can also apply the `title` class to *any* text element (not *just* `<h1>` elements). In this example, we apply it both to an `<h1>` element and a `<p>` element.]{.body-text-s}
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "60%" 
+#| out-width: "100%" 
 knitr::include_graphics("images/h1-title.png")
 ```
-
-## Notes
-
-::: {.body-text-s .topbr}
-**{{< fa angle-right >}}** Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are assigned the class, `title`, are colored red. Any `<h1>` elements that are not assigned the class, `title`, are styled according to our `h1, h2 {}` element selector.
-:::
-
-::: {.body-text-s .topbr}
-**{{< fa angle-right >}}** We can apply the `title` class to any text element. In this example, we apply it both to an `<h1>` element and a `<p>` element.
-:::
-
-:::
 
 ---
 
 ##  {#write-own-class-selector data-menu-title="Write your own class selectors"}
 
-[We can write and apply our own class selectors]{.slide-title3}
+[We can also write our own class selectors]{.slide-title}
 
 <hr>
 
-::: {.panel-tabset}
+Let's first create two different classes: one to center text on the page, and another to color text orange:
+<!-- Then, we'll add elements to our **Resources** page (`resources.qmd`) to test out our new class selectors: -->
 
-## `styles.scss`
-
-::: {.body-text-s .bottombr}
-Let's first create two different classes: one to center text on the page, and another to color text orange. Then, we'll add elements to our **Resources** page to test out our new class selectors:
-:::
-
-```{css filename="styles.scss"}
+```{sass filename="styles.scss"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "20-26"
+#| code-line-numbers: "41-47"
 /*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
 
 // Colors
 $dark-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$purple: #9158A2;
 $orange: #ad7237;
 
-// other variables omitted for brevity ~
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $cream; // code block background color 
 
 /*-- scss:rules --*/
 
 h1, h2 {
   letter-spacing: 5px;
-  color: $dark-green;
+  font-weight: 800;
 }
 
 .title {
-  color: red;
+  color: maroon;
 }
 
 .center-text {
@@ -503,20 +524,24 @@ h1, h2 {
 }
 ```
 
-## `resources.qmd`
+---
 
-::: {.body-text .bottombr}
-Here, I'm creating three paragraphs -- **(1)** a paragraph that is assigned just the `.orange-text` class, **(2)** a paragraph that is assigned just the `.center-text` class, and **(3)** a paragraph has no classes.
-:::
+##  {#write-resources-html data-menu-title="Write HTML for Resources page"}
 
-::: {.body-text .bottombr}
-What happens if you create your custom subtitle using an `<h1>` tag instead of `<p>`? Why do you think this happens?
-:::
+[Write some HTML elements and apply class selectors]{.slide-title3}
+
+<hr>
+
+<br>
+
+Next, let's write a few different elements in `resources.qmd` and apply our custom class selectors: 
+
+<br>
 
 ```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "5-9"
+#| code-line-numbers: "5-13"
 
 ---
 title: "All my favorite resources!"
@@ -527,101 +552,75 @@ title: "All my favorite resources!"
 <p class="center-text">This paragraph is centered.</p>
   
 <p>This paragraph has no styling.</p>
+
+<h2 class="center-text">This level-2 header is centered</h2>
 ```
 
-## Output
+::: {.footer}
+**Don't forget:** Unlike element selectors, **class selectors must be applied to the elements that we want to style** (meaning, we need to update our HTML!).
+:::
+
+---
+
+##  {#orange-center-text data-menu-title="Oranged / centered text"}
+
+[Check out your new orange / centered text]{.slide-title}
+
+<hr>
+
+<br>
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "60%" 
-knitr::include_graphics("images/custom-classes.png")
+knitr::include_graphics("images/orange-center.png")
 ```
-
-## Notes
-
-[**{{< fa angle-right >}}** Class selectors take the form `.selector-name {}`]{.body-text .topbr}
-
-[**{{< fa angle-right >}}** Unlike element selectors, class selectors must be applied to the elements that we want to style, e.g. `<h1 class="selector-name">Content</h1>`]{.body-text .topbr}
-
-
-:::
 
 ---
 
 ##  {#apply-two-class-selectors data-menu-title="Apply two class selectors"}
 
-[Elements can have more than one class selector]{.slide-title3}
+[Elements can have more than one class selector]{.slide-title2}
 
 <hr>
 
-::: {.panel-tabset}
+Simply list the names of the class selectors one after the next inside `""` -- for example, `<tag class="class1 class2">Content</tag>`.
 
-## `styles.scss`
-
-::: {.body-text}
-Using the same element selectors as in our previous example:
-:::
-
-```{css filename="styles.scss"}
-#| eval: false
-#| echo: true
-/*-- scss:defaults --*/
-
-// Colors
-$dark-green: #858E79;
-$orange: #ad7237;
-
-// other variables omitted for brevity ~
-
-/*-- scss:rules --*/
-
-h1, h2 {
-  letter-spacing: 5px;
-  color: $dark-green;
-}
-
-.title {
-  color: red;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.orange-text {
-  color: $orange;
-}
-```
-
-## `resources.qmd`
-
-::: {.body-text .bottombr}
-Let's add a couple more paragraphs to try out using more than one class selector on a particular element:
-:::
+<br>
 
 ```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "11-13"
+#| code-line-numbers: "13-15"
 
 ---
 title: "All my favorite resources!"
 ---
-
+  
 <p class="orange-text">This paragraph is orange.</p>
   
 <p class="center-text">This paragraph is centered.</p>
   
 <p>This paragraph has no styling.</p>
+
+<h2 class="center-text">This level-2 header is centered</h2>
   
-<p class="center-text orange-text">This paragraph is centered and orange.</p>
+<h2 class="center-text orange-text">This level-2 header is both centered and orange</h2>
   
-<p class="orange-text">**This paragraph is orange and bolded using markdown syntax, though you can also write and apply a selector to bold text.**</p>
+<p class="orange-text">**This paragraph is orange and bolded using markdown syntax (yes, you can combine markdown and html!).**</p>
 ```
 
-## Output
+---
+
+##  {#two-classes data-menu-title="2+ classes"}
+
+[Admire your updated page!]{.slide-title}
+
+<hr>
+
+<br>
 
 ```{r}
 #| eval: true 
@@ -631,14 +630,6 @@ title: "All my favorite resources!"
 knitr::include_graphics("images/two-classes.png")
 ```
 
-## Notes
-
-::: {.body-text .topbr}
-**{{< fa angle-right >}}** HTML elements can have more than one class, e.g. `<p class="class1 class2 class3 etc">`
-:::
-
-:::
-
 ---
 
 ##  {#quarto-syntax data-menu-title="Quarto Syntax"}
@@ -647,14 +638,16 @@ knitr::include_graphics("images/two-classes.png")
 
 <hr>
 
-::: {.body-text .bottombr}
+<br>
+
 You can create both **divs (block-level regions of content)** and **spans (inline content)** using Quarto's syntax. For example:
-:::
+
+<br>
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-::: {.body-text .center-text}
+::: {.center-text}
 **Divs**
 :::
 
@@ -672,7 +665,7 @@ Some element (e.g. text) to style
 :::
 
 ::: {.column width="50%"}
-::: {.body-text .center-text}
+::: {.center-text}
 **Spans**
 :::
 
@@ -691,17 +684,11 @@ Some text with just [this section]{.my-selector} styled
 
 ##  {#mix-match data-menu-title="Mix & match styles"}
 
-[You can mix and match syntaxes in `.qmd` files]{.slide-title}
+[You can mix and match syntaxes in `.qmd` files]{.slide-title2}
 
 <hr>
 
-::: {.body-text .bottombr}
-I tend to use a mix of both approaches (HTML & Quarto syntax). For example:
-:::
-
-::: {.panel-tabset}
-
-## `resources.qmd`
+I tend to use a mix of both approaches (HTML & Quarto syntax). An example:
 
 ```{md filename="resources.qmd"}
 #| eval: false
@@ -720,21 +707,41 @@ title: "All my favorite resources!"
 Also note that I do not need to wrap this text in the `<p>` tag in order for it to render as normal text. `.qmd` files allow us to seamlessly blend markdown syntax with HTML.
 ```
 
-## Output
+::: {.footer}
+Screenshot not included, but feel free to copy this content into your `resources.qmd` file to check out how it renders!
+:::
+
+---
+
+##  {#couple-more-tips data-menu-title="A couple more styling tips" background="#047C90"}
+
+<div class="page-center">
+<center><div class="custom-subtitle2">Let's close out this section with just a couple more tips...</div></center>
+</div>
+
+---
+
+##  {#more-fonts data-menu-title="More than 1 font family"}
+
+[Want to use more than one font family?]{.slide-title}
+
+<hr>
+
+[Recall that we **(a)** imported two font families from Google Fonts -- [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen) (though you can import and use as many as you'd like), and **(b)** set Nunito as our `mainfont` in `_quarto.yml` (which applies Nunito as the default font for all text elements). To also apply, Sen, we can **(a)** create a Sass variable for Sen, then **(b)** write a CSS rule(s) to apply Sen to our desired text elements.]{.body-text-s}
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "60%" 
-knitr::include_graphics("images/quarto-css-syntax.png")
+#| out-width: "100%" 
+knitr::include_graphics("images/sen-font-family.png")
 ```
 
-## Notes
-
-::: {.body-text-s}
-**{{< fa angle-right >}}** You'll notice the `[]{}` and `::: {} :::` syntax throughout Quarto's documentation, and also if you explore the source code of other Quarto websites/presentations/etc. You don't *need* to use it, but it helps to know what it is when you see it!
+::: {.footer}
+Look for the code chunk titled, **Sen: CSS class for a variable style** on the **Embed code** page. We'll want to grab the value specified after the **`font-family` property** (here, that value is, `"Sen", sans-serif;`). 
 :::
 
-:::
+---
+
+Modify the size of your logo
 
