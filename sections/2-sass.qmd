@@ -166,6 +166,10 @@ Lucky for us, **Quarto compiles the contents of a `.scss` file into CSS without 
 Let's create our website's `.scss ` stylesheet.
 :::
 
+::: {.center-text .teal-text}
+(The following slides break this down into ~7 steps)
+:::
+
 ---
 
 ## {#create-scss data-menu-title="Create .scss file"}
@@ -284,13 +288,14 @@ You can also define values with units, e.g. `$my-font-size: 25px;`.
 
 ---
 
-## {#quarto-sass-vars data-menu-title="Quarto Sass variables"}
+## {#define-quarto-sass1 data-menu-title="Define Quarto Sass variables (rendered)"}
 
-[Make sweeping colorful updates using Quarto's Sass variables]{.slide-title3}
+[Define Quarto's Sass variables]{.slide-title}
+<!-- [Make sweeping colorful updates using Quarto's Sass variables]{.slide-title3} -->
 
 <hr>
 
-Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified within `.scss` files. We can assign our newly minted color variables *as values* to specific Quarto Sass variables to easily update things like the background color, navbar & footer colors, hyperlink color, and more.
+[**5.**]{.teal-text} Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified within `.scss` files. We can assign our newly minted color variables *as values* to specific Quarto Sass variables to easily update things like the background color, navbar & footer colors, hyperlink color, and more.
 
 <br>
 
@@ -304,7 +309,8 @@ knitr::include_graphics("images/quarto-sass-updates.png")
 
 ---
 
-## {#define-quarto-sass-vars data-menu-title="Define Quarto Sass variables"}
+## {#define-quarto-sass2 data-menu-title="Define Quarto Sass variables (code)"}
+<!-- ## {#define-quarto-sass-vars data-menu-title="Define Quarto Sass variables"} -->
 
 [Define Quarto's Sass variables]{.slide-title}
 

@@ -11,7 +11,7 @@ format: revealjs
 
 ---
 
-## {#index-template data-menu-title="Create a nice landing page"}
+## {#add-template1 data-menu-title="Add a landing page template (rendered)"}
 
 [Arrange your landing page content using a pre-built template]{.slide-title3}
 
@@ -53,9 +53,10 @@ With the `trestles` About Page template
 
 ---
 
-## {#index-yaml data-menu-title="Add template to index.qmd"}
+## {#add-template2 data-menu-title="Add a landing page template (code)"}
 
-[Apply a template in `index.qmd`'s YAML]{.slide-title}
+[Arrange your landing page content using a pre-built template]{.slide-title3}
+<!-- [Apply a template in index.qmd’s YAML]{.slide-title} -->
 
 <hr>
 
@@ -132,7 +133,7 @@ Be sure to spell the icon name exactly as it appears on FontAwesome's website (e
 
 ---
 
-## {#add-pages data-menu-title="Add / arrange pages"}
+## {#add-pages1 data-menu-title="Add / arrange pages (rendered)"}
 
 [Add / arrange pages in your navbar]{.slide-title}
 
@@ -154,9 +155,10 @@ Here, we moved our navbar items to the right side, link to a curriculum vitae (p
 
 ---
 
-## {#modify-nav data-menu-title="Modify navigation in _quarto.yml"}
+## {#add-pages2 data-menu-title="Add / arrange pages (code)"}
 
-[Modify website navigation in `_quarto.yml`]{.slide-title}
+[Add / arrange pages in your navbar]{.slide-title}
+<!-- [Modify website navigation in `_quarto.yml`]{.slide-title} -->
 
 <hr>
 
@@ -196,7 +198,7 @@ format:
 
 ---
 
-## {#page-footer data-menu-title="Page footer"}
+## {#page-footer1 data-menu-title="Add page footer (rendered)"}
 
 [Add a page footer]{.slide-title}
 
@@ -214,9 +216,10 @@ knitr::include_graphics("images/page-footer.png")
 
 ---
 
-## {#add-footer data-menu-title="Add footer"}
+## {#add-footer2 data-menu-title="Add page footer (code)"}
 
-[Configure your page footer in `_quarto.yml`]{.slide-title2}
+[Add a page footer]{.slide-title}
+<!-- [Configure your page footer in `_quarto.yml`]{.slide-title2} -->
 
 <hr>
 
@@ -358,7 +361,7 @@ knitr::include_graphics("images/github-icon.png")
 
 ---
 
-## {#favicon-logo data-menu-title="Favicons & logos"}
+## {#favicon-logo1 data-menu-title="Favicons & logos (rendered)"}
 
 [Favicons & personal logos can add a nice personal touch]{.slide-title3}
 
@@ -384,9 +387,10 @@ knitr::include_graphics("images/logo-favicon.png")
 
 ---
 
-## {#add-favicon-logo data-menu-title="Add favicon & logo"}
+## {#favicon-logo2 data-menu-title="Favicons & logos (code)"}
 
-[Add a favicon & personal logo in `_quarto.yml`]{.slide-title2}
+[Favicons & personal logos can add a nice personal touch]{.slide-title3}
+<!-- [Add a favicon & personal logo in `_quarto.yml`]{.slide-title2} -->
 
 <hr>
 

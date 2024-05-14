@@ -517,7 +517,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 ##  {#css-practice1 data-menu-title="Practice CSS (1/3)"}
 
-[Let's practice writing CSS (1/3)]{.slide-title}
+[Practice writing CSS (1/3)]{.slide-title}
 
 <hr>
 

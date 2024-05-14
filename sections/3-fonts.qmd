@@ -14,7 +14,7 @@ Fonts are just as important as color in expressing yourself and your brand -- yo
 
 <br>
 
-Browse the *many* available Google fonts at <https://fonts.google.com/> and choose 1-3 fonts (two is, in my option, the sweet spot). Click on the **Filters** button in the top left corner of the page to help narrow your choices.
+[**6a.**]{.teal-text} Browse the *many* available Google fonts at <https://fonts.google.com/> and choose 1-3 fonts (two is, in my option, the sweet spot). Click on the **Filters** button in the top left corner of the page to help narrow your choices.
 
 <br>
 
@@ -34,7 +34,7 @@ knitr::include_graphics("images/google-fonts.png")
 
 <hr>
 
-Select a Google font family by clicking the blue **Get Font** button in the top right corner of the page, which adds your font family to your “bag.” You can add as many font families to your bag as you’d like to import -- here, we select both [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen).
+[**6b.**]{.teal-text} Select a Google font family by clicking the blue **Get Font** button in the top right corner of the page, which adds your font family to your “bag.” You can add as many font families to your bag as you’d like to import -- here, we select both [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen).
 
 :::: {.columns}
 
@@ -78,7 +78,7 @@ knitr::include_graphics("images/font-bag.png")
 
 <hr>
 
-Click **Get embed code**, then choose the **@import** radio button (beneath the **Web** menu option), which will provide your import code chunk. Copy everything between the `<style> </style>` tags (starting with `@import` and ending with `;`) to your clipboard.
+[**6c.**]{.teal-text} Click **Get embed code**, then choose the **@import** radio button (beneath the **Web** menu option), which will provide your import code chunk. Copy everything between the `<style> </style>` tags (starting with `@import` and ending with `;`) to your clipboard.
 
 <br>
 
@@ -98,7 +98,7 @@ knitr::include_graphics("images/embed-code.png")
 
 <hr>
 
-Paste the import code into `styles.scss` (I always place this at the top of my stylesheet, beneath `/*-- scss:defaults --*/`).
+[**6d.**]{.teal-text} Paste the import code into `styles.scss` (I always place this at the top of my stylesheet, beneath `/*-- scss:defaults --*/`).
 
 <br>
 
@@ -132,7 +132,7 @@ knitr::include_graphics("images/import-google-fonts.gif")
 
 ---
 
-## {#font-scss data-menu-title="styles.scss with fonts"}
+## {#import-fonts-code data-menu-title="Import fonts (code)"}
 
 [Import fonts into `styles.scss`]{.slide-title}
 
@@ -176,13 +176,13 @@ $code-block-bg: $cream; // code block background color
 
 ---
 
-## {#default-font data-menu-title="Set default font"}
+## {#set-mainfont data-menu-title="Set mainfont"}
 
 [Set your main (default) font in `_quarto.yml`]{.slide-title2}
 
 <hr>
 
-The easiest way to apply a main (i.e. default) font for all text elements on your website is in `_quarto.yml` using the `mainfont` option: 
+[**7.**]{.teal-text} The easiest way to apply a main (i.e. default) font for all text elements on your website is in `_quarto.yml` using the `mainfont` option: 
  
 :::: {.columns}
 
@@ -259,7 +259,7 @@ All text elements on our website are now Nunito
 <br>
 
 ::: {.body-text-xl .center-text}
-Great question, and hang tight! This requires some CSS, which is the perfect segue into our next section {{< fa face-smile-wink title="a smiling winking face" >}}
+Great question, and hang tight! This requires some CSS, which is the perfect segue into our next section.
 :::
 
 <!-- --- -->
