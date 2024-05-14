@@ -2,7 +2,7 @@
 format: revealjs
 ---
 
-##  {#light-intro-css data-menu-title="Light intro to CSS" background="#053660"}
+##  {#light-intro-css data-menu-title="Light intro to CSS" background="#047C90"}
 
 <div class="page-center">
 <div class="custom-subtitle">A *light* introduction to CSS {{< fa brands css3-alt title="the CSS 3 logo" >}}</div>
@@ -16,9 +16,11 @@ format: revealjs
 
 <hr>
 
-::: {.body-text .topbr}
-CSS is a rule-based language, meaning that it allows you to **define groups of styles that should be applied to particular elements or groups of elements on a web page.** For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:
-:::
+CSS is a rule-based language, meaning that it allows you to **define groups of styles that should be applied to particular elements or groups of elements on a web page.** 
+
+For example, *"I want all level one (`<h1>`) headings to be green text with a bit of extra space between each letter"* could be coded as:
+
+<br>
 
 :::: {.columns}
 
@@ -36,17 +38,11 @@ knitr::include_graphics("images/CSS_syntax.png")
 
 ::: {.column width="50%"}
 
-::: {.body-text-s}
-**{{< fa angle-right >}}** **Selectors** select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*
-:::
+- [[**Selectors**]{.teal-text} select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*]{.body-text-s}
 
-::: {.body-text-s .topbr}
-**{{< fa angle-right >}}** **Declarations** sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*
-:::
+- [[**Declarations**]{.teal-text} sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*]{.body-text-s}
 
-::: {.body-text-s .topbr}
-**{{< fa angle-right >}}** A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`
-:::
+- [A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`]{.body-text-s}
 
 :::
 
@@ -60,33 +56,21 @@ knitr::include_graphics("images/CSS_syntax.png")
 
 <hr>
 
-::: {.body-text .topbr}
 The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but check out you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)):
-:::
 
-::: {.body-text-s .topbr .bottombr}
-**{{< fa angle-right >}}** Element selectors
-:::
+<br>
 
-::: {.body-text-s .topbr .bottombr}
-**{{< fa angle-right >}}** Grouping selectors
-:::
+- [**Element selectors:**]{.teal-text} selects all HTML elements with the specified element name
 
-::: {.body-text-s .topbr .bottombr}
-**{{< fa angle-right >}}** ID selectors
-:::
+- [**Grouping selectors:**]{.teal-text} selects all HTML elements with the same style definitions
 
-::: {.body-text-s .topbr .bottombr}
-**{{< fa angle-right >}}** Class selectors
-:::
+- [**ID selectors:**]{.teal-text} uses the id attribute of an HTML element to select a specific element; id of an element is unique within a page, so the id selector is used to select one unique element
 
-::: {.body-text-s .topbr .bottombr}
-**{{< fa angle-right >}}** Universal selector
-:::
+- [**Class selectors:**]{.teal-text} selects HTML elements with a specific class attribute
 
-::: {.body-text-s .topbr .bottombr}
-**{{< fa angle-right >}}** Inline styling (not a selector type, but an alternative way to apply CSS styling)
-:::
+- [**Universal selector:**]{.teal-text} selects all HTML elements on the page
+
+- [**Inline styling:**]{.teal-text} (not a selector type, but an alternative way to apply CSS styling)
 
 ---
 
@@ -309,8 +293,10 @@ knitr::include_graphics("images/class_selector.png")
 :::
 ::::
 
-::: {.body-text-s .center-text .topbr}
-<div class="important-text-bg">*If you're like me, you'll probably find yourself using **class selectors** most often!*</div>
+<br>
+
+::: {.center-text}
+*If you're like me, you'll probably find yourself using **class selectors** most often!*
 :::
 
 :::
@@ -531,27 +517,19 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 ##  {#css-practice1 data-menu-title="Practice CSS (1/3)"}
 
-[Exercise: practice writing CSS (1/3)]{.slide-title}
+[Let's practice writing CSS (1/3)]{.slide-title}
 
 <hr>
 
-::: {.body-text-s .topbr}
-**1.** Return to your R Project (where you created your `practice-html.html` file). In the RStudio Terminal, use the `touch` command to create a **CSS** file in the same location as your html file:
-:::
+[**1.**]{.teal-text} Create a new CSS file inside `DELETE-LATER/` named `practcies-styles.css` using either the `touch` command or the **Blank File** > **Text File** option.
 
-```{bash filename="Command line/RStudio Terminal"}
-#| eval: false
-#| echo: true
-touch practice-styles.css
-```
+<br>
 
 . . .
 
-::: {.body-text-s .topbr}
-**2.** Link your CSS file inside the `<head>` of your HTML file (read more about inserting style sheets [here](https://www.w3schools.com/css/css_howto.asp)).
-:::
+[**2.**]{.teal-text} Link your CSS file inside the `<head>` of your HTML file (you can [read more](https://www.w3schools.com/css/css_howto.asp) about inserting style sheets).
 
-```{html filename="practice-html.html"} 
+```{html filename="~/DELETE-LATER/practice-html.html"} 
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
@@ -575,38 +553,39 @@ touch practice-styles.css
 
 ##  {#css-practice2 data-menu-title="Practice CSS (2/3)"}
 
-[Exercise: practice writing CSS (2/3)]{.slide-title}
+[Practice writing CSS (2/3)]{.slide-title}
 
 <hr>
 
-::: {.body-text .topbr}
-**3.** Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
-:::
+[**3.**]{.teal-text} Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
 
 ::: {.body-text-s .topbr}
-**(a)** create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/) allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
+[**(a)**]{.teal-text} create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/) allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
 :::
 
-::: {.body-text-s .topbr}
-**(b)** create an element selector that changes the color of hyperlinked text and italicizes it
+::: {.body-text-s}
+[**(b)**]{.teal-text} create an element selector that changes the color of hyperlinked text and italicizes it
 :::
 
-
-::: {.body-text-s .topbr}
-**(c)** create a class selector that you can use to color your first paragraph ("Here is my first paragraph") blue,
+::: {.body-text-s}
+[**(c)**]{.teal-text} create a class selector that you can use to color your first paragraph ("Here is my first paragraph") blue,
 :::
 
-::: {.body-text-s .topbr}
-**(d)** create a class selector to that you can use to color your third paragraph ("This is very important text!") red and enlarge the font size (try `20px`),
+::: {.body-text-s}
+[**(d)**]{.teal-text} create a class selector to that you can use to color your third paragraph ("This is very important text!") red and enlarge the font size (try `20px`),
 :::
 
-::: {.body-text-s .topbr}
-**(e)** use your class selector from **Step c** *inline* to color just the word "very" (in your third paragraph) blue
+::: {.body-text-s}
+[**(e)**]{.teal-text} use your class selector from **Step c** *inline* to color just the word "very" (in your third paragraph) blue
 :::
 
-::: {.body-text .center-text .important-text-bg}
+<br>
+
+::: {.center-text}
 It'll be especially helpful to explore this list of available [CSS properties](https://www.w3schools.com/cssref/).
 :::
+
+<br>
 
 ::: {.body-text-xl .teal-text .center-text}
 (One) solution on next slide!
@@ -616,18 +595,14 @@ It'll be especially helpful to explore this list of available [CSS properties](h
 
 ##  {#css-practice-answer data-menu-title="Practice CSS (3/3)"}
 
-[Exercise: practice writing CSS (3/3)]{.slide-title}
+[Practice writing CSS (3/3)]{.slide-title}
 
 <hr>
-
-::: {.body-text .topb .bottombr}
-Below is one solution -- yours may look different!
-:::
 
 ::: {.panel-tabset}
 
 ## CSS
-```{css filename="practice-styles.css"}
+```{css filename="~/DELETE-LATER/practice-styles.css"}
 #| eval: false
 #| echo: true
 /* ------- element selectors ------- */
@@ -661,7 +636,7 @@ a {
 ```
 
 ## HTML 
-```{html filename="practice-html.html"}
+```{html filename="~/DELETE-LATER/practice-html.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->

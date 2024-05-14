@@ -1,45 +1,47 @@
 /*-- scss:defaults --*/
 
-// fonts
+// Import fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@300;800&family=Roboto+Mono:wght@300;400&family=Sanchez&display=swap');
 
-// Fonts (CSS rules)
+// fonts
 $font-family-sans-serif: 'Nunito', sans-serif;
-$font-family-serif: 'Sanchez', serif; 
-//$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-serif: 'Sanchez', serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 
-// Colors
+// colors
 $baby-blue: #d2e3f3;
 $teal: #047C90;
 $dark-blue: #003660;
 $white: #FFFFFF;
-$green: #78A540; 
+$green: #78A540;
 $magenta: #900C3F;
 $white: #FFFFFF;
-$off-white: #F7F7F7; 
-$gray: #ADADAD; 
+$off-white: #F7F7F7;
+$gray: #ADADAD;
+$dark-gray: #373A3E;
+$peach: #DF8073;
 
 // scss variables
 $presentation-title-slide-text-align: "left";
 $body-bg: $white;
-$link-color: $green; 
+$link-color: $green;
 $code-color: $magenta;
 $code-bg: $off-white;  // was $white
-$code-block-font-size: 0.4em;
+$code-block-font-size: 0.8em;
 $code-block-bg: $off-white;
+$presentation-font-size-root: 25px;
 
 /*-- scss:rules --*/
 
 // bold styling
-//strong, b {
-  //font-weight: 900;
+strong, b {
+  font-weight: 900;
   //color: $teal;
-//}
+}
 
 // table header font size
 th {
-font-size: 35px;  
+font-size: 30px;
 }
 
 // table text font size
@@ -48,116 +50,148 @@ td {
 }
 
 // horizontal line (default dark blue)
-hr { 
+hr {
   border: 4px solid $dark-blue;
   border-radius: 5px;
   margin-bottom: 30px;
 }
 
 // teal horizontal line
-.hr-teal { 
+.hr-teal {
   border: 4px solid $teal;
 }
 
+// teal horizontal line
+.hr-dark-blue {
+  border: 4px solid $dark-blue;
+}
+
 // custom slide title
-.custom-title { 
+.custom-title {
   font-family: $font-family-serif;
   color: $baby-blue;
-  font-size: 1.7em;
-  //position: absolute; 
-  left: 20px; 
+  font-size: 2.7em; //1.7em;
+  //position: absolute;
+  left: 20px;
 }
 
 // cover slide subtitle (large)
-.custom-subtitle { 
+.custom-subtitle {
   font-family: $font-family-sans-serif;
   color: $baby-blue;
-  font-size: 1.2em;
-  left: 20px; 
+  font-size: 2.2em;
+  left: 20px;
 }
 
 // cover slide subtitle (medium)
-.custom-subtitle2 { 
+.custom-subtitle2 {
   font-family: $font-family-sans-serif;
   color: $baby-blue;
-  font-size: 1em;
-  left: 20px; 
+  font-size: 1.7em;
+  left: 20px;
 }
 
 // cover slide subtitle (small)
-.custom-subtitle3 { 
+.custom-subtitle3 {
   font-family: $font-family-sans-serif;
   color: $baby-blue;
-  font-size: 0.7em;
-  left: 20px; 
+  font-size: 1.1em;
+  left: 20px;
 }
 
 // cover slide footer text
-.title-footer { 
+.title-footer {
   text-align: center !important;
   color: $baby-blue;
-  font-size: 0.5em !important;
+  font-size: 0.9em !important;
+}
+
+// slide title (large)
+.slide-title-xl {
+  font-family: $font-family-serif;
+  color: $teal;
+  font-size: 3em;
+  font-weight: 700;
 }
 
 // slide title (large)
 .slide-title {
   font-family: $font-family-serif;
   color: $teal;
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: 700;
 }
 
 // slide title (medium)
-.slide-title2 { // FORMALLY: .slide-title-smaller
+.slide-title2 {
   font-family: $font-family-serif;
   color: $teal;
-  font-size: 1.3em;
+  font-size: 1.7em;
   font-weight: 700;
 }
 
 // slide title (small)
-.slide-title3 { // FORMALLY: .slide-title-smallest
+.slide-title3 {
   font-family: $font-family-serif;
   color: $teal;
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
+.large-fa-icon {
+  font-size: 2.5em;
+}
+
 // XL body text
-.body-text-xl { // FORMALLY: .large-body-text
+.body-text-xl {
   font-family: $font-family-sans-serif;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 // L body text
-.body-text-l { // FORMALLLY: .medium-body-text
-  font-size: 25px;
-	line-height: 1.7em;
+.body-text-l {
+  font-size: 1.5em;
+	line-height: 1.9em;
 	margin-bottom: 1em;
 }
 
-// normal body text
-.body-text {
-	font-size: 23px;
-	line-height: 1.7em;
+// M body text
+.body-text-m {
+	font-size: 1.3em;
+	line-height: 1.3em;
 	margin-bottom: 1em;
 }
 
 // S body text
-.body-text-s { // OLD NAME: .small-text (also includes .smaller-body-text @ 21px)
-  font-size: 20px; // 19px
-	line-height: 1.6em;
+.body-text-s {
+  font-size: 20px;
+	line-height: 0.5em;
 }
 
 // XS body text
-.body-text-xs { // OLD NAME: .smallest-text
-  font-size: 14px;
-	line-height: 1.5em;
+.body-text-xs {
+  font-size: 0.5em;
+	line-height: 1.8em;
+}
+
+// sanchez font family
+.sanchez-font {
+  font-family: $font-family-serif;
 }
 
 // baby blue text
 .baby-blue-text {
   color: $baby-blue;
+}
+
+// dark blue text
+.dark-blue-text {
+  color: $dark-blue;
+}
+
+// white text
+.white-text {
+  color: $white;
 }
 
 // teal text
@@ -170,16 +204,21 @@ hr {
   color: $gray;
 }
 
-.important-text-bg {
-  background-color: rgba(217, 178, 189, 0.5); 
-  padding-top: 5px; 
-  padding-bottom: 5px; 
-  padding-right: 5px; 
-  padding-left: 8px; 
+// magenta text
+.magenta-text {
+  color: $magenta;
+}
+
+.pink-highlight {
+  background-color: rgba(217, 178, 189, 0.5);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 8px;
   border-radius: 25px;
 }
 
-.blue-underline { 
+.blue-underline {
   text-decoration: underline $dark-blue;
   text-underline-offset: 10px; // https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset
   text-decoration-thickness: 4px;
@@ -190,9 +229,19 @@ hr {
   text-align: center;
 }
 
+// right-align text
+.right-align-text{
+  text-align: right;
+}
+
+// left-align text
+.left-align-text{
+  text-align: left;
+}
+
 // center text vertically (??)
 .vertical-center {
-  margin: 0;
+  margin: auto;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -218,11 +267,11 @@ hr {
 }
 
 // smaller break
-.br-smaller { 
+.br-smaller {
   line-height: 6px;
 }
 
-// idk?
+// tab font sizes
 .panel-tabset {
-  font-size: 30px;
+  font-size: 25px;
 }

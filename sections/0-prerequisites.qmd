@@ -13,9 +13,9 @@ You should already have a Quarto website (or at least the bones of one) that:
 :::
 
 ::: {.body-text}
-**{{< fa angle-right >}}** is deployed using GitHub Pages **and**
+- is deployed using GitHub Pages **and**
 
-**{{< fa angle-right >}}** contains *some* content (e.g. text, headings, etc.) for us to customize
+- contains *some* content (e.g. text, headings, etc.) for us to customize
 :::
 
 ```{r}
@@ -27,12 +27,14 @@ You should already have a Quarto website (or at least the bones of one) that:
 knitr::include_graphics("images/penguins_meteor.png")
 ```
 
-::: {.caption-text .gray-text .center-text}
+::: {.body-text-s .gray-text .center-text}
 Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 :::
 
-::: {.body-text-s .center-text .topbr}
-*If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.*
+<br>
+
+::: {.footer}
+**If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.**
 :::
 
 ---
@@ -43,22 +45,24 @@ Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 
 <hr>
 
-::: {.body-text}
-When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). We can modify the appearance of our website in a number of ways. We'll learn a bit about the following (but know that this is just a starting point!):
-:::
+When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). We can modify the appearance of our website in a number of ways. We'll learn a bit about the following:
 
-::: incremental
+<br>
+
+::: {.incremental}
 ::: {.body-text-s}
-- **Editing the `index.qmd` YAML** -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
+- [**Editing the `index.qmd` YAML**]{.teal-text} -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
 
-- **Editing the `_quarto.yml` file** -- here we can easily update our top navigation bar (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), Google Analytics, declare a main font, and more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
+- [**Editing the `_quarto.yml` file**]{.teal-text} -- this is our website configuration file,  where we can easily update our website's navigation (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), and much more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
 
-- **Defining CSS rules in the `styles.css` file** that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
+- [**Defining CSS rules in the `styles.css` file**]{.teal-text} that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
 
-- **Creating a `.scss` file(s)** that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).
+- [**Creating a `.scss` file(s)**]{.teal-text} that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).
 
 :::
 :::
+
+<br>
 
 . . . 
 
@@ -87,13 +91,11 @@ Approaching this in the following order worked best for me:
 . . .
 
 ::: incremental
-::: {.body-text .bottombr}
-- **First**, add a template to `index.qmd`, then fill out as much of the `_quarto.yml` file as you can/want -- this is the easiest way to add some really cool features with minimal effort.
+- [**First**]{.teal-text}, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.
 
-- **Next**, create a `styles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
+- [**Next**]{.teal-text}, create a `styles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
 
-- **Finally**, make fine-tuned adjustments by defining CSS rules directly in your `styles.scss` file (you can write CSS in `.scss` files, but not Sass in `.css` files).
-:::
+- [**Finally**]{.teal-text}, make fine-tuned adjustments by defining CSS rules directly in your `styles.scss` file (you can write CSS in `.scss` files, but not Sass in `.css` files).
 :::
 
 ---
@@ -104,7 +106,7 @@ Approaching this in the following order worked best for me:
 
 <hr>
 
-::: {.body-text-l .center-text}
+::: {.body-text-m .center-text}
 *I almost always work on a branch when making changes to my website -- this way I can safely test changes before deploying them to my live site.*
 :::
 
@@ -116,9 +118,10 @@ To create a branch, first ensure that you're on `main` by typing either `git bra
 Create a local git branch from `main` by running the following in your Terminal:
 :::
 
-```{bash filename="Command line/RStudio Terminal"}
+```{bash filename="Command line / RStudio Terminal"}
 #| eval: false
 #| echo: true
+#| code-line-numbers: false
 git checkout -b my-new-branch
 ```
 
@@ -126,15 +129,37 @@ git checkout -b my-new-branch
 Push your new local branch to GitHub by running the following in your terminal:
 :::
 
-```{bash filename="Command line/RStudio Terminal"}
+```{bash filename="Command line / RStudio Terminal"}
 #| eval: false
 #| echo: true
+#| code-line-numbers: false
 git push -u origin my-new-branch
 ```
 
 ::: {.body-text-s .topbr}
 You're now ready to work as normal! Once satisfied with your changes, you can `git add`, `git commit -m "my commit message"`, and `git push` (or use the RStudio GUI buttons in the **Git** tab) your files. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from GitHub and [merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into `main` to integrate your changes.
 :::
+
+---
+
+## {#quarto-preview data-menu-title="quarto preview"}
+
+[Preview your site for fast iteration]{.slide-title}
+
+<hr>
+
+Run `quarto preview` in the RStudio Terminal to view changes in near real time – each time edit and save your work, the preview will update in your browser.
+
+<br>
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/quarto-preview.gif")
+```
+
 
 ---
 
@@ -148,11 +173,11 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 
 ## {#so-youve-created-a-website data-menu-title="So you've created a Quarto website..."}
 
-[So you've created your personal website using Quarto...]{.slide-title}
+[So you've created your personal website using Quarto . . .]{.slide-title}
 
 <hr>
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 ::: {.body-text}
 <br>
 <br>
@@ -160,23 +185,24 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 :::
 :::
 
-::: {.column width="5%"}
-:::
-
-::: {.column width="55%"}
+::: {.column width="50%"}
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
-#| out-width: "75%" 
-knitr::include_graphics("images/website_noCSS.png")
+#| out-width: "85%" 
+knitr::include_graphics("images/trestles-template.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/) *and* `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
+An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/), *and* the `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
 :::
 
+:::
+
+::: {.center-text}
+[**Please note:** these materials assume you've already worked through [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and picks up where those instructions left off.]{.teal-text}
 :::
 
 ---

@@ -2,7 +2,7 @@
 format: revealjs
 ---
 
-##  {#light-intro-html data-menu-title="Light intro to HTML" background="#053660"}
+##  {#light-intro-html data-menu-title="Light intro to HTML" background="#047C90"}
 
 <div class="page-center">
 <div class="custom-subtitle">A *light* introduction to HTML `r fontawesome::fa("html5", fill = "#d2e3f3", a11y = "sem")`</div>
@@ -16,15 +16,10 @@ format: revealjs
 
 <hr>
 
-::: {.body-text .topbr}
 [Elements](https://www.w3schools.com/html/html_elements.asp) comprise **start tags** and **end tags** that render some form of content in a particular way.
-:::
 
-:::: {.columns}
-::: {.column width="70%"}
-
-::: {.body-text .center-text}
-**The basic anatomy of an HTML element:**
+::: {.center-text}
+[**The basic anatomy of an HTML element:**]{.teal-text}
 :::
 
 ```{r}
@@ -35,19 +30,15 @@ format: revealjs
 knitr::include_graphics("images/html_element.png")
 ```
 
-:::
-::: {.column width="30%"}
-<br> 
 <br>
 
-::: {.body-text-s}
-In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your website customization workshop`
+::: {.center-text}
+In Markdown syntax, this HTML element would be written as, `# Welcome to your website customization workshop`
 :::
 
-:::
-:::
+<br>
 
-::: {.body-text-s .gray-text .center-text .topbr}
+::: {.footer}
 **Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.
 :::
 
@@ -59,9 +50,13 @@ In Markdown syntax, this HTML element would be written as: <br> `# Welcome to yo
 
 <hr>
 
-::: {.body-text .center-text .topbr}
+<br>
+
+::: {.center-text .body-text-m}
 Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp).
 :::
+
+<br>
 
 | Tag                 | What it does                                                 |
 |---------------------|--------------------------------------------------------------|
@@ -84,14 +79,11 @@ Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp
 
 <hr>
 
-::: {.body-text .topbr}
 Remember to close out tags from the inside-out to avoid unexpected renderings.
-:::
 
-:::: {.columns}
-::: {.column width="70%"}
+<br>
 
-::: {.body-text .center-text}
+::: {.center-text .teal-text}
 **Nested HTML elements:**
 :::
 
@@ -103,20 +95,17 @@ Remember to close out tags from the inside-out to avoid unexpected renderings.
 knitr::include_graphics("images/nested_html_elements.png")
 ```
 
-:::
-::: {.column width="30%"}
-<br> 
 <br>
 
-::: {.body-text-s}
+::: {.center-text}
 In Markdown syntax, this HTML element would be written as: <br> `# Welcome to your **website customization** workshop`
 :::
 
-:::
-::::
+<br>
 
-::: {.body-text-s .topbr}
-<div class="important-text-bg">*Important:* Take extra care to never skip (or incorrectly type) an end tag! Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.</div>
+::: {.footer}
+[**IMPORTANT: Take extra care to never skip (or incorrectly type) an end tag!** ]{.teal-text}
+Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.
 :::
 
 ---
@@ -127,17 +116,13 @@ In Markdown syntax, this HTML element would be written as: <br> `# Welcome to yo
 
 <hr>
 
-::: {.body-text .topbr}
 [Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`).
-:::
 
-::: {.body-text .topbr}
-<div class="body-text">Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon.</div>
-:::
+<br>
 
-<!-- ::: {.body-text .center-text} -->
-<!-- **The basic anatomy of an HTML attribute:** -->
-<!-- ::: -->
+Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon.
+
+<br>
 
 ```{r}
 #| eval: true 
@@ -149,31 +134,44 @@ knitr::include_graphics("images/html_attribute.png")
 
 ---
 
-##  {#write-html data-menu-title="Write HTML"}
+##  {#write-html1 data-menu-title="Write HTML 1"}
 
 [Let's take a look at some HTML]{.slide-title}
 
 <hr>
 
-::: {.panel-tabset}
+<br>
+<br>
 
-## Write HTML
-
-::: {.body-text-s .center-text}
-*You can use any text editor to write HTML, but the following steps assume you're working in RStudio (you can continue to work on your branch in your website's project directory).*
+::: {.center-text}
+*You can use any text editor to write HTML, but the following steps assume you're working in RStudio. You can continue to work on your branch.*
 :::
 
-[**1.** In the RStudio Terminal, use the `touch` command (alternatively, use **New Blank File** > **Text File** in the Files pane) to create an HTML file (for simplicity, I did this in my project’s root directory), then choose **Open in Editor**.]{.body-text-s}
+<br>
 
-```{bash filename="Command line/RStudio Terminal"}
-#| eval: false
-#| echo: true
-touch practice-html.html
-```
+[**0.**]{.teal-text} I'm going to create a new subdirectory in my repo's root directory called, `DELETE-LATER/`. We'll save the following practice files to this folder, then delete it after (these files are purely for demonstration and aren't needed for your website). To do so, click on the **folder button** in the **Files** pane to add your new subdirectory.
 
-[**2.** Type or copy/paste the following into your `practice-html.html` file:]{.body-text-s}
+<br>
 
-```{html filename="practice-html.html"}
+[**1.**]{.teal-text} Add a new file named `practice-html.html` to your new folder using either the `touch` command or the **Blank File** > **Text File** option.
+
+::: {.footer}
+**Reminder:** You can delete the `DELETE-LATER/` subdirectory after the next few exercises. These files will not be incorporated into our website.
+:::
+
+---
+
+##  {#write-html2 data-menu-title="Write HTML 2"}
+
+[Let's take a look at some HTML]{.slide-title}
+
+<hr>
+
+<br>
+
+[**2.**]{.teal-text} Type or copy / paste the following HTML into your `practice-html.html` file:
+
+```{html filename="~/DELETE-LATER/practice-html.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
@@ -191,11 +189,15 @@ touch practice-html.html
 </html>
 ```
 
-## Render HTML
+---
 
-::: {.body-text .center-text}
-Click **Preview** to render the HTML
-:::
+##  {#render-html data-menu-title="Render HTML"}
+
+[The resulting rendered HTML should look like this]{.slide-title2}
+
+<hr>
+
+[**3.**]{.teal-text} Click the **Preview** button to render your HTML: 
 
 ```{r}
 #| eval: true 
@@ -205,35 +207,27 @@ Click **Preview** to render the HTML
 knitr::include_graphics("images/rendered-practice-html.png")
 ```
 
-:::
-
 ---
 
 ##  {#write-md data-menu-title="Write Markdown"}
 
-[markdown makes it easy to "write" HTML]{.slide-title2}
+[Markdown makes it easy to "write" HTML]{.slide-title}
 
 <hr>
 
-::: {.body-text-s .center-text}
-Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as HTML (we can also write HTML directly in `.qmd` files).
-:::
+<br>
 
-::: {.panel-tabset}
+Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as HTML (we can also write HTML directly in `.qmd` files). Let's practice that together now:
 
-## Write markdown
+<br>
 
-[**1.** Now, use the `touch` command (or **New Blank File** > **Quarto Doc...** in the Files pane) to create a new `.qmd` file.]{.body-text-s}
+[**1.**]{.teal-text} Add a new file named, `practice-markdown.qmd`, inside `DELETE-LATER/` using either the `touch` command or the **Blank File** > **Quarto Doc...** option.
 
-```{bash filename="Command line/RStudio Terminal"}
-#| eval: false
-#| echo: true
-touch practice-markdown.qmd
-```
+<br>
 
-[**2.** Type or copy/paste the following into your `practice-markdown.qmd` file:]{.body-text-s}
+[**2.**]{.teal-text} Type or copy / paste the following into your `practice-markdown.qmd` file:
 
-```{.md filename="practice-markdown.qmd"}
+```{.md filename="~/DELETE-LATER/practice-markdown.qmd"}
 # Here is my level one header
 
 Here is my first paragraph
@@ -243,11 +237,17 @@ Here is my second paragraph, where you can read more about [MEDS](https://ucsb-m
 This is very important text!
 ```
 
-## Render HTML
+---
 
-::: {.body-text-s .center-text}
-Click **Render** to render the markdown as HTML (it will render it as a web page if you're in your website's project directory)
-:::
+##  {#render-md data-menu-title="Render Markdown"}
+
+[The resulting rendered Markdown should look like this]{.slide-title3}
+
+<hr>
+
+<br>
+
+[**3.**]{.teal-text} Click the **Render** button to render the markdown as HTML.
 
 ```{r}
 #| eval: true 
@@ -257,5 +257,7 @@ Click **Render** to render the markdown as HTML (it will render it as a web page
 knitr::include_graphics("images/rendered-practice-markdown.png")
 ```
 
+::: {.center-text}
+***Note:** Because we are in our website repo, the resulting file will be rendered as a web page and styled according to our `styles.scss` stylesheet.*
 :::
 

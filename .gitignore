@@ -40,3 +40,7 @@ vignettes/*.pdf
 
 # videos
 /images/*.mp4
+
+# .DS_Store
+.DS_Store
+**/.DS_Store
