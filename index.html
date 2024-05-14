@@ -1315,7 +1315,7 @@ Next, create a <code>styles.scss</code> file (name it however you want), link to
 <hr>
 <p><br><br><br><br></p>
 <div class="body-text-xl center-text">
-<p>Great question, and hang tight! This requires some CSS, which is the perfect segway into our next section <i class="fa-solid fa-face-smile-wink" title="a smiling winking face" aria-hidden="true"></i></p>
+<p>Great question, and hang tight! This requires some CSS, which is the perfect segue into our next section <i class="fa-solid fa-face-smile-wink" title="a smiling winking face" aria-hidden="true"></i></p>
 </div>
 <!-- --- -->
 <!-- ::: {.body-text .topbr .bottombr} -->
@@ -1334,7 +1334,7 @@ Next, create a <code>styles.scss</code> file (name it however you want), link to
 <!-- ::: {.body-text .topbr .bottombr} -->
 <!-- **** You *must* import a higher font weight (e.g. 800), in addition to your standard "regular" weight, if you wish to **bold** text -- even bolding text using markdown syntax (e.g. `**this text is bold**`) will not work unless a higher font weight style is imported).  -->
 <!-- ::: -->
-</section><section id="refining" class="slide level2" data-menu-title="Time to Refine" data-background="#053660"><h2></h2>
+</section><section id="refining" class="slide level2" data-menu-title="## Refine with CSS ##" data-background="#053660"><h2></h2>
 <div class="vertical-center">
 <center>
 <div class="custom-subtitle2">
@@ -2610,12 +2610,127 @@ Let’s close out this section with just a couple more tips…
 </section><section id="more-fonts" class="slide level2" data-menu-title="More than 1 font family"><h2></h2>
 <p><span class="slide-title">Want to use more than one font family?</span></p>
 <hr>
-<p><span class="body-text-s">Recall that we <strong>(a)</strong> imported two font families from Google Fonts – <a href="https://fonts.google.com/specimen/Nunito?query=nunito">Nunito</a> and <a href="https://fonts.google.com/specimen/Sen?query=sen">Sen</a> (though you can import and use as many as you’d like), and <strong>(b)</strong> set Nunito as our <code>mainfont</code> in <code>_quarto.yml</code> (which applies Nunito as the default font for all text elements). To also apply, Sen, we can <strong>(a)</strong> create a Sass variable for Sen, then <strong>(b)</strong> write a CSS rule(s) to apply Sen to our desired text elements.</span></p>
-
-<img data-src="images/sen-font-family.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="footer">
-<p>Look for the code chunk titled, <strong>Sen: CSS class for a variable style</strong> on the <strong>Embed code</strong> page. We’ll want to grab the value specified after the <strong><code>font-family</code> property</strong> (here, that value is, <code>"Sen", sans-serif;</code>).</p>
+<p><br></p>
+<p><span class="body-text-m">Recall that we:</span></p>
+<p><span class="teal-text"><strong>(a)</strong></span> imported two font families from Google Fonts – <a href="https://fonts.google.com/specimen/Nunito?query=nunito">Nunito</a> and <a href="https://fonts.google.com/specimen/Sen?query=sen">Sen</a> (though you can import and use as many as you’d like), and</p>
+<p><span class="teal-text"><strong>(b)</strong></span> set Nunito as our <code>mainfont</code> in <code>_quarto.yml</code> (which applies Nunito as the default font for all text elements).</p>
+<p><br></p>
+<div class="fragment">
+<p><span class="body-text-m">To also apply Sen, we can:</span></p>
+<p><span class="teal-text"><strong>(a)</strong></span> create a Sass variable for Sen, then</p>
+<p><span class="teal-text"><strong>(b)</strong></span> write a CSS rule(s) to apply Sen to our desired text elements.</p>
 </div>
-</section><section class="slide level2"><p>Modify the size of your logo</p>
+</section><section id="font-family-value" class="slide level2" data-menu-title="font-family value"><h2></h2>
+<p><span class="slide-title2">Google Fonts give provides us with helpful code</span></p>
+<hr>
+<p>Look for the code chunk titled, <strong>Sen: CSS class for a variable style</strong> on the <strong>Embed code</strong> page. We’ll want to grab the value specified after the <strong><code>font-family</code> property</strong> (here, that value is, <code>"Sen", sans-serif;</code>).</p>
+
+<img data-src="images/sen-font-family.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="sen-sass" class="slide level2" data-menu-title="Create Sen Sass / CSS"><h2></h2>
+<p><span class="slide-title2">Create a Sass variable, then craft some CSS</span></p>
+<hr>
+<p><span class="body-text-s">Here, we create a CSS grouping selector, which applies Sen to any HTML header (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>):</span></p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>styles.scss</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="6-7|35-37"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb50-1"><a href="#cb50-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a></span>
+<span id="cb50-3"><a href="#cb50-3"></a><span class="co">// Import fonts</span></span>
+<span id="cb50-4"><a href="#cb50-4"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
+<span id="cb50-5"><a href="#cb50-5"></a></span>
+<span id="cb50-6"><a href="#cb50-6"></a><span class="co">// Fonts</span></span>
+<span id="cb50-7"><a href="#cb50-7"></a><span class="va">$sen</span>: <span class="st">"Sen"</span><span class="op">,</span> <span class="dv">sans-serif</span>;</span>
+<span id="cb50-8"><a href="#cb50-8"></a></span>
+<span id="cb50-9"><a href="#cb50-9"></a><span class="co">// Colors</span></span>
+<span id="cb50-10"><a href="#cb50-10"></a><span class="va">$dark-green</span>: <span class="cn">#858E79</span>;</span>
+<span id="cb50-11"><a href="#cb50-11"></a><span class="va">$light-green</span>: <span class="cn">#D1D9CE</span>;</span>
+<span id="cb50-12"><a href="#cb50-12"></a><span class="va">$cream</span>: <span class="cn">#FDFBF7</span>;</span>
+<span id="cb50-13"><a href="#cb50-13"></a><span class="va">$gray</span>: <span class="cn">#64605f</span>;</span>
+<span id="cb50-14"><a href="#cb50-14"></a><span class="va">$purple</span>: <span class="cn">#9158A2</span>;</span>
+<span id="cb50-15"><a href="#cb50-15"></a><span class="va">$orange</span>: <span class="cn">#ad7237</span>;</span>
+<span id="cb50-16"><a href="#cb50-16"></a></span>
+<span id="cb50-17"><a href="#cb50-17"></a><span class="co">// Base document colors</span></span>
+<span id="cb50-18"><a href="#cb50-18"></a><span class="va">$navbar-bg</span>: <span class="va">$cream</span>; <span class="co">// navbar</span></span>
+<span id="cb50-19"><a href="#cb50-19"></a><span class="va">$navbar-fg</span>: <span class="va">$dark-green</span>; <span class="co">// navbar foreground elements</span></span>
+<span id="cb50-20"><a href="#cb50-20"></a><span class="va">$navbar-hl</span>: <span class="va">$purple</span>; <span class="co">// highlight color when hovering over navbar links</span></span>
+<span id="cb50-21"><a href="#cb50-21"></a><span class="va">$body-bg</span>: <span class="va">$light-green</span>; <span class="co">// page background </span></span>
+<span id="cb50-22"><a href="#cb50-22"></a><span class="va">$body-color</span>: <span class="va">$gray</span>; <span class="co">// page text </span></span>
+<span id="cb50-23"><a href="#cb50-23"></a><span class="va">$footer-bg</span>: <span class="va">$cream</span>; <span class="co">// footer </span></span>
+<span id="cb50-24"><a href="#cb50-24"></a><span class="va">$link-color</span>: <span class="va">$purple</span>; <span class="co">// hyperlinks </span></span>
+<span id="cb50-25"><a href="#cb50-25"></a></span>
+<span id="cb50-26"><a href="#cb50-26"></a><span class="co">// Inline code</span></span>
+<span id="cb50-27"><a href="#cb50-27"></a><span class="va">$code-bg</span>: <span class="va">$cream</span>; <span class="co">// inline code background color</span></span>
+<span id="cb50-28"><a href="#cb50-28"></a><span class="va">$code-color</span>: <span class="va">$purple</span>; <span class="co">// inline code text color</span></span>
+<span id="cb50-29"><a href="#cb50-29"></a></span>
+<span id="cb50-30"><a href="#cb50-30"></a><span class="co">// Code blocks</span></span>
+<span id="cb50-31"><a href="#cb50-31"></a><span class="va">$code-block-bg</span>: <span class="va">$cream</span>; <span class="co">// code block background color </span></span>
+<span id="cb50-32"><a href="#cb50-32"></a></span>
+<span id="cb50-33"><a href="#cb50-33"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb50-34"><a href="#cb50-34"></a></span>
+<span id="cb50-35"><a href="#cb50-35"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3<span class="op">,</span> h4<span class="op">,</span> h5<span class="op">,</span> h6 {</span>
+<span id="cb50-36"><a href="#cb50-36"></a>  <span class="kw">font-family</span>: <span class="va">$sen</span>;</span>
+<span id="cb50-37"><a href="#cb50-37"></a>}</span>
+<span id="cb50-38"><a href="#cb50-38"></a></span>
+<span id="cb50-39"><a href="#cb50-39"></a>h1<span class="op">,</span> h2 {</span>
+<span id="cb50-40"><a href="#cb50-40"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
+<span id="cb50-41"><a href="#cb50-41"></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>;</span>
+<span id="cb50-42"><a href="#cb50-42"></a>}</span>
+<span id="cb50-43"><a href="#cb50-43"></a></span>
+<span id="cb50-44"><a href="#cb50-44"></a><span class="fu">.title</span> {</span>
+<span id="cb50-45"><a href="#cb50-45"></a>  <span class="kw">color</span>: <span class="cn">maroon</span>;</span>
+<span id="cb50-46"><a href="#cb50-46"></a>}</span>
+<span id="cb50-47"><a href="#cb50-47"></a></span>
+<span id="cb50-48"><a href="#cb50-48"></a><span class="fu">.center-text</span> {</span>
+<span id="cb50-49"><a href="#cb50-49"></a>  <span class="kw">text-align</span>: <span class="dv">center</span>;</span>
+<span id="cb50-50"><a href="#cb50-50"></a>}</span>
+<span id="cb50-51"><a href="#cb50-51"></a></span>
+<span id="cb50-52"><a href="#cb50-52"></a><span class="fu">.orange-text</span> {</span>
+<span id="cb50-53"><a href="#cb50-53"></a>  <span class="kw">color</span>: <span class="va">$orange</span>;</span>
+<span id="cb50-54"><a href="#cb50-54"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section><section id="sen-rendered" class="slide level2" data-menu-title="Sen rendered"><h2></h2>
+<p><span class="slide-title2">Sen is now applied to all of our website headers!</span></p>
+<hr>
+
+<img data-src="images/rendered-sen.gif" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="resize-logo" class="slide level2" data-menu-title="Resize logo"><h2></h2>
+<p><span class="slide-title">Final touch: resize our logo</span></p>
+<hr>
+<p><span class="body-text-s">Let’s add a CSS rule to increase the size of our logo. Be sure to add this rule beneath your <code>/*-- scss:rules --*/</code> region decorator, and note that you may need to adjust the <code>max-height</code> value to best suit your own personal logo:</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="false"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.navbar-brand</span> img { </span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-height</span>: <span class="dv">50</span><span class="dt">px</span>;</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="bu">auto</span>;</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+<img data-src="images/large-logo.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="adapt-css" class="slide level2" data-menu-title="Adapting CSS from others"><h2></h2>
+<p><span class="slide-title">How did I figure that CSS rule out??</span></p>
+<hr>
+<p>Great question! I adapted it from someone else’s open source code, which was available on GitHub <i class="fa-solid fa-face-smile-beam" title="a smiling face with happy, squinty eyes" aria-hidden="true"></i> This process often involves some trial and error, but it’s one of the best ways to learn from the many awesome folks who openly share their work.</p>
+<p>More specifically, I stumbled upon <a href="https://robertmitchellv.com/">Robert Mitchell’s personal website</a> (built with Quarto) and noticed that he too had a logo, <em>and</em> that it was perfectly sized to fit the navbar space:</p>
+
+<img data-src="images/mitchell-website.png" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="trial-error" class="slide level2" data-menu-title="Adapting CSS -- trial &amp; error"><h2></h2>
+<p><span class="slide-title2">Figuring things out requires some trial and error</span></p>
+<hr>
+<p>Here’s what that looked like:</p>
+<ol type="1">
+<li><p>I inspected the logo using Google Chrome’s <a href="https://developer.chrome.com/docs/devtools">DevTools</a> (<strong>right click</strong> &gt; <strong>Inspect</strong>).</p></li>
+<li><p>DevTools opened to some HTML which linked to the logo PNG file and had the class <code>navbar-logo</code> (this seemed like a reasonable place to start).</p></li>
+<li><p>I hopped over to Robert’s <a href="https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss"><code>custom.scss</code> file</a> and searched for <code>navbar-logo</code>. This didn’t yield any matches.</p></li>
+<li><p>I returned to the DevTools pane and hovered over the HTML directly above my first attempt (hovering over this new HTML still highlighted the website logo, so I assumed it was targeting the right element). Here, I noticed the class <code>navbar-brand</code>.</p></li>
+<li><p>I jumped back to the <code>custom.scss</code> file – this time, a search for <code>navbar-brand</code> led me to the <a href="https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss#L215-L218">CSS rule</a> used to adjust the size of the logo.</p></li>
+<li><p>(Not shown in gif) Finally, I tried copying this rule over to my own stylesheet to test it out (and hope that it actually works)! I had to tweak the max-height to work for <em>my</em> logo.</p></li>
+</ol>
+<div class="center-text body-text-m teal-text">
+<p>A gif of the process is shown on the next slide.</p>
+</div>
+</section><section class="slide level2">
+<img data-src="images/mitchell-logo.gif" style="width:100.0%" class="r-stretch quarto-figure-center"><p><br></p>
+<div class="center-text">
+<p>This is also the <em>perfect</em> segue into our very last section…</p>
+</div>
 </section><section id="get-inspired" class="slide level2" data-menu-title="Get inspired" data-background="#053660"><h2></h2>
 <div class="page-center">
 <div class="custom-subtitle">
@@ -2623,8 +2738,8 @@ Let’s close out this section with just a couple more tips…
 <path d="M297.2 248.9C311.6 228.3 320 203.2 320 176c0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9c3.7 5.3 8.1 11.3 12.8 17.7l0 0c12.9 17.7 28.3 38.9 39.8 59.8c10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5c-9.9-18-22.2-34.9-34.5-51.8l0 0 0 0c-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176C16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3c-5 7.2-10.2 14.3-15.4 21.4l0 0 0 0c-12.3 16.8-24.6 33.7-34.5 51.8c-5.9 10.8-9.6 22.5-11.8 34.5H226.4c2.6-18.7 7.9-38.6 18.3-57.5c11.5-20.9 26.9-42.1 39.8-59.8l0 0 0 0 0 0c4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80c8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80V416H272v16c0 44.2-35.8 80-80 80z"></path></svg> Get inspired
 </div>
 </div>
-</section><section id="trial-error" class="slide level2" data-menu-title="Styling = lots of trial &amp; error"><h2></h2>
-<p><span class="slide-title3">Styling your website can be challenging</span></p>
+</section><section id="styling-challenges" class="slide level2" data-menu-title="Styling = lots of trial &amp; error"><h2></h2>
+<p><span class="slide-title">Styling your website can be challenging</span></p>
 <hr>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -2647,42 +2762,53 @@ Let’s close out this section with just a couple more tips…
 <div>
 <div class="body-text">
 <ul>
-<li class="fragment">re-rendering often to ensure your Sass/CSS is working as expected</li>
+<li class="fragment">re-rendering often to ensure your Sass / CSS is working as expected</li>
 <li class="fragment">Google! (lots of queries that look like, “CSS underline text”, “CSS rounded corners”, etc.)</li>
 <li class="fragment">
 <a href="https://www.w3schools.com/css/default.asp">W3 Schools</a> – seriously such a valuable resource (especially their interactive tutorials)</li>
-<li class="fragment">drawing inspiration (and borrowing source code) from other webpages</li>
+<li class="fragment">drawing inspiration (and borrowing source code) from other web pages</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-</section><section id="look-at-other-sites" class="slide level2" data-menu-title="Look at other websites"><h2></h2>
-<p><span class="slide-title2">Check out source code (specifically the stylesheets) of other sites</span></p>
+</section><section id="learn-from-others" class="slide level2" data-menu-title="Learn from others"><h2></h2>
+<p><span class="slide-title2">Jump into the source code of a site(s) you really admire</span></p>
 <hr>
-<div class="fragment">
-<div class="body-text topbr bottombr">
-<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> Learn from others! Exploring the source code for other websites, presentations, etc. is, in my opinion, critical for learning this new skill and applying it to your own work.</p>
+<p><br><br></p>
+<div class="center-text body-text-m">
+<p>Exploring the source code for other websites, presentations, etc. is, <em>in my opinion</em>, critical for learning this new skill and applying it to your own work.</p>
 </div>
+<p><br></p>
+<div class="center-text body-text-m">
+<p>You don’t need to limit yourself to <em>just</em> Quarto websites – check out the stylesheets for Quarto docs, presentations (<em>cough cough</em> like <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites">this very presentation</a>), Shiny apps / dashboards, <a href="https://distillery.rbind.io/">Distill sites</a>, and more.</p>
 </div>
-<div class="fragment">
-<div class="body-text topbr bottombr">
-<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> More and more Quarto websites are popping up all the time – Twitter is (or at least was…) a great spot to find folks sharing their sites (I’ll never stop obsessing over <a href="https://maya.rbind.io/">Maya Gans’ Quarto site</a>). You can also explore the source code and stylesheets for Quarto presentations (<em>cough cough,</em> like <a href="https://github.com/UCSB-MEDS/customizing-quarto-websites">this very presentation</a>), books, and more. <strong>My approach for getting started:</strong> Find a page element that you like and look at the HTML. Identify the HTML tag (e.g.&nbsp;<code>&lt;h1&gt;</code>) and if it has any additional selectors (e.g.&nbsp;class or ID selectors). Head over to the stylesheet and search for any relevant selectors to see how they were created.</p>
-</div>
-</div>
-<div class="fragment">
-<div class="body-text topbr bottombr">
-<p><strong><i class="fa-solid fa-angle-right" aria-hidden="true"></i></strong> And don’t limit yourself to Quarto sites! Check out <a href="https://distillery.rbind.io/">The Distillery Showcase</a>, which links to a long list of websites built with R’s <a href="https://github.com/rstudio/distill">distill</a> package (<strong>Note:</strong> the <a href="https://github.com/rstudio/distill">distill</a> framework <em>is</em> a bit different – when exploring <code>.css</code> files, look for CSS selectors beneath the section <code>/*-- Additional custom styles --*/</code>).</p>
-</div>
-</div>
+<!-- ##  {#look-at-other-sites data-menu-title="Look at other websites"} -->
+<!-- [Check out source code (specifically the stylesheets) of other sites]{.slide-title2} -->
+<!-- <hr> -->
+<!-- . . .  -->
+<!-- ::: {.body-text .topbr .bottombr} -->
+<!-- **** Learn from others! Exploring the source code for other websites, presentations, etc. is, in my opinion, critical for learning this new skill and applying it to your own work. -->
+<!-- ::: -->
+<!-- . . .  -->
+<!-- ::: {.body-text .topbr .bottombr} -->
+<!-- **** More and more Quarto websites are popping up all the time -- Twitter is (or at least was...) a great spot to find folks sharing their sites (I'll never stop obsessing over [Maya Gans' Quarto site](https://maya.rbind.io/)). You can also explore the source code and stylesheets for Quarto presentations (*cough cough,* like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), books, and more. **My approach for getting started:** Find a page element that you like and look at the HTML. Identify the HTML tag (e.g. `<h1>`) and if it has any additional selectors (e.g. class or ID selectors). Head over to the stylesheet and search for any relevant selectors to see how they were created. -->
+<!-- ::: -->
+<!-- . . .  -->
+<!-- ::: {.body-text .topbr .bottombr} -->
+<!-- **** And don't limit yourself to Quarto sites! Check out [The Distillery Showcase](https://distillery.rbind.io/), which links to a long list of websites built with R's `{distill}` package (**Note:** the `{distill}` framework *is* a bit different -- when exploring `.css` files, look for CSS selectors beneath the section `/*-- Additional custom styles --*/`). -->
+<!-- ::: -->
 </section><section id="inspect-edit" class="slide level2" data-menu-title="'Edit' while you Inspect"><h2></h2>
-<p><span class="slide-title3">Inspecting web pages allows you to temporarily “edit” CSS</span></p>
+<p><span class="slide-title2">Temporarily “edit” CSS using the DevTools pane</span></p>
 <hr>
-<div class="body-text-s bottombr">
-<p>Play around with selectors and update declaration values (or add/remove declarations) while inspecting your website. This allows you to try out styles before actually hard-coding them, and <em>also</em> helps you identify exactly which elements different selectors are manipulating. It can sometimes take a little digging in the Inspect pane to find what you’re looking for. <strong>Note</strong> that these changes are only <em>temporary</em> – refreshing your web browser will revert your site back to its original state.</p>
+<div class="body-text-s">
+<p>Play around with selectors and update declaration values while inspecting your website. This allows you to try out styles before actually hard-coding them, and <em>also</em> helps you identify exactly which elements different selectors are manipulating. It can sometimes take a little digging in the Inspect pane to find what you’re looking for.</p>
 </div>
 
-<img data-src="images/inspect-edit.gif" style="width:60.0%" class="r-stretch quarto-figure-center"></section><section id="interactive-tutorials" class="slide level2" data-menu-title="Interactive tutorials"><h2></h2>
+<img data-src="images/inspect-edit.gif" style="width:60.0%" class="r-stretch quarto-figure-center"><div class="footer">
+<p><strong>Note</strong> that these changes are only <em>temporary</em> – refreshing your web browser will revert your site back to its original state.</p>
+</div>
+</section><section id="interactive-tutorials" class="slide level2" data-menu-title="Interactive tutorials"><h2></h2>
 <p><span class="slide-title">Take advantage of interactive tutorials</span></p>
 <hr>
 <div class="body-text bottombr">

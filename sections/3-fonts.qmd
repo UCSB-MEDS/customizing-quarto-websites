@@ -259,7 +259,7 @@ All text elements on our website are now Nunito
 <br>
 
 ::: {.body-text-xl .center-text}
-Great question, and hang tight! This requires some CSS, which is the perfect segway into our next section {{< fa face-smile-wink title="a smiling winking face" >}}
+Great question, and hang tight! This requires some CSS, which is the perfect segue into our next section {{< fa face-smile-wink title="a smiling winking face" >}}
 :::
 
 <!-- --- -->

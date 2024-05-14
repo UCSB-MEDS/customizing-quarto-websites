@@ -2,7 +2,7 @@
 format: revealjs
 ---
 
-##  {#refining data-menu-title="Time to Refine" background="#053660"}
+##  {#refining data-menu-title="## Refine with CSS ##" background="#053660"}
 
 <div class="vertical-center">
 <center><div class="custom-subtitle2">Finally, make fine-tuned adjustments by defining CSS rules directly in your `styles.scss` file (you can write CSS in `.scss` files, but not Sass in `.css` files).</div></center>

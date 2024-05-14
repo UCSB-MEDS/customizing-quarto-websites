@@ -727,7 +727,33 @@ Screenshot not included, but feel free to copy this content into your `resources
 
 <hr>
 
-[Recall that we **(a)** imported two font families from Google Fonts -- [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen) (though you can import and use as many as you'd like), and **(b)** set Nunito as our `mainfont` in `_quarto.yml` (which applies Nunito as the default font for all text elements). To also apply, Sen, we can **(a)** create a Sass variable for Sen, then **(b)** write a CSS rule(s) to apply Sen to our desired text elements.]{.body-text-s}
+<br>
+
+[Recall that we:]{.body-text-m} 
+
+[**(a)**]{.teal-text} imported two font families from Google Fonts -- [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen) (though you can import and use as many as you'd like), and
+
+[**(b)**]{.teal-text} set Nunito as our `mainfont` in `_quarto.yml` (which applies Nunito as the default font for all text elements). 
+
+<br>
+
+. . . 
+
+[To also apply Sen, we can:]{.body-text-m} 
+
+[**(a)**]{.teal-text} create a Sass variable for Sen, then 
+
+[**(b)**]{.teal-text} write a CSS rule(s) to apply Sen to our desired text elements.
+
+---
+
+##  {#font-family-value data-menu-title="font-family value"}
+
+[Google Fonts give provides us with helpful code]{.slide-title2}
+
+<hr>
+
+Look for the code chunk titled, **Sen: CSS class for a variable style** on the **Embed code** page. We'll want to grab the value specified after the **`font-family` property** (here, that value is, `"Sen", sans-serif;`). 
 
 ```{r}
 #| eval: true 
@@ -737,11 +763,182 @@ Screenshot not included, but feel free to copy this content into your `resources
 knitr::include_graphics("images/sen-font-family.png")
 ```
 
-::: {.footer}
-Look for the code chunk titled, **Sen: CSS class for a variable style** on the **Embed code** page. We'll want to grab the value specified after the **`font-family` property** (here, that value is, `"Sen", sans-serif;`). 
+---
+
+##  {#sen-sass data-menu-title="Create Sen Sass / CSS"}
+
+[Create a Sass variable, then craft some CSS]{.slide-title2}
+
+<hr>
+
+[Here, we create a CSS grouping selector, which applies Sen to any HTML header (`<h1>` - `<h6>`):]{.body-text-s}
+
+```{sass filename="styles.scss"}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "6-7|35-37"
+
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
+
+// Fonts
+$sen: "Sen", sans-serif;
+
+// Colors
+$dark-green: #858E79;
+$light-green: #D1D9CE;
+$cream: #FDFBF7;
+$gray: #64605f;
+$purple: #9158A2;
+$orange: #ad7237;
+
+// Base document colors
+$navbar-bg: $cream; // navbar
+$navbar-fg: $dark-green; // navbar foreground elements
+$navbar-hl: $purple; // highlight color when hovering over navbar links
+$body-bg: $light-green; // page background 
+$body-color: $gray; // page text 
+$footer-bg: $cream; // footer 
+$link-color: $purple; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+$code-color: $purple; // inline code text color
+
+// Code blocks
+$code-block-bg: $cream; // code block background color 
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $sen;
+}
+
+h1, h2 {
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.title {
+  color: maroon;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.orange-text {
+  color: $orange;
+}
+```
+
+---
+
+##  {#sen-rendered data-menu-title="Sen rendered"}
+
+[Sen is now applied to all of our website headers!]{.slide-title2}
+
+<hr>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/rendered-sen.gif")
+```
+
+---
+
+##  {#resize-logo data-menu-title="Resize logo"}
+
+[Final touch: resize our logo]{.slide-title}
+
+<hr>
+
+[Let's add a CSS rule to increase the size of our logo. Be sure to add this rule beneath your `/*-- scss:rules --*/` region decorator, and note that you may need to adjust the `max-height` value to best suit your own personal logo:]{.body-text-s}
+
+```{sass}
+#| eval: false
+#| echo: true
+#| code-line-numbers: false
+.navbar-brand img { 
+  max-height: 50px;
+  width: auto;
+}
+```
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("images/large-logo.png")
+```
+
+---
+
+##  {#adapt-css data-menu-title="Adapting CSS from others"}
+
+[How did I figure that CSS rule out??]{.slide-title}
+
+<hr>
+
+Great question! I adapted it from someone else's open source code, which was available on GitHub {{< fa face-smile-beam title="a smiling face with happy, squinty eyes" >}} This process often involves some trial and error, but it's one of the best ways to learn from the many awesome folks who openly share their work.
+
+More specifically, I stumbled upon [Robert Mitchell's personal website](https://robertmitchellv.com/) (built with Quarto) and noticed that he too had a logo, *and* that it was perfectly sized to fit the navbar space:
+
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/mitchell-website.png")
+```
+
+---
+
+##  {#trial-error data-menu-title="Adapting CSS -- trial & error"}
+
+[Figuring things out requires some trial and error]{.slide-title2}
+
+<hr>
+
+Here's what that looked like: 
+
+1. I inspected the logo using Google Chrome's [DevTools](https://developer.chrome.com/docs/devtools) (**right click** > **Inspect**).
+
+2. DevTools opened to some HTML which linked to the logo PNG file and had the class `navbar-logo` (this seemed like a reasonable place to start).
+
+3. I hopped over to Robert's [`custom.scss` file](https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss) and searched for `navbar-logo`. This didn't yield any matches.
+
+4. I returned to the DevTools pane and hovered over the HTML directly above my first attempt (hovering over this new HTML still highlighted the website logo, so I assumed it was targeting the right element). Here, I noticed the class `navbar-brand`.
+
+5. I jumped back to the `custom.scss` file -- this time, a search for `navbar-brand` led me to the [CSS rule](https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss#L215-L218) used to adjust the size of the logo.
+
+6. (Not shown in gif) Finally, I tried copying this rule over to my own stylesheet to test it out (and hope that it actually works)! I had to tweak the max-height to work for *my* logo.
+
+::: {.center-text .body-text-m .teal-text}
+A gif of the process is shown on the next slide.
 :::
 
 ---
 
-Modify the size of your logo
+```{r}
+#| eval: true
+#| echo: false
+#| out-width: "100%"
+#| fig-align: "center"
+knitr::include_graphics("images/mitchell-logo.gif")
+```
+
+<br>
+
+::: {.center-text}
+This is also the *perfect* segue into our very last section...
+:::
+
+
 
