@@ -51,6 +51,8 @@ format:
 
 ::: {.title-footer}
 Slides & source code available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}](https://github.com/UCSB-MEDS/customizing-quarto-websites)
+
+*Beginning Fall 2024, these materials will be taught as a part of a [2-unit course](https://bren.ucsb.edu/courses/eds-296-1f) offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/).*
 :::
 
 ---
