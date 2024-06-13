@@ -749,7 +749,7 @@ Screenshot not included, but feel free to copy this content into your `resources
 
 ##  {#font-family-value data-menu-title="font-family value"}
 
-[Google Fonts give provides us with helpful code]{.slide-title2}
+[Google Fonts provides us with helpful code]{.slide-title}
 
 <hr>
 
