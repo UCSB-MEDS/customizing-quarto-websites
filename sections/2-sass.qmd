@@ -5,7 +5,7 @@ format: revealjs
 ##  {#use-sass data-menu-title="## Use Sass ##" background="#053660"}
 
 <div class="vertical-center">
-<center><div class="custom-subtitle2">Next, create a `styles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.</div></center>
+<center><div class="custom-subtitle2">Next, create a `styles.scss` file, link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.</div></center>
 <!-- <center><div class="custom-subtitle2">Use a *Syntactically Awesome Stylesheet* ({{< fa brands sass title="Sass logo" >}}) to define variables and quickly customize your website's appearance</div></center> -->
 </div>
 
@@ -42,7 +42,7 @@ knitr::include_graphics("images/sass.png")
 
 ::: {.body-text}
 - Sass is a **CSS extension** (provides additional features, like variables)
-- Sass is a **CSS preprocesser** (converts Sass code into standard CSS because browsers can’t interpret Sass)
+- Sass is a **CSS preprocesser** (converts Sass code into standard CSS, which is a critical step because browsers can’t interpret Sass but *can* interpret CSS)
 :::
 :::
 
@@ -248,7 +248,7 @@ website:
 
 format:
   html:
-    theme: styles.scss # I've also removed the `css: styles.css` option that was included by default
+    theme: styles.scss # I've also removed the `css: styles.css` option that was included by default, since I'll be writing all my sass and css in this single styles.scss file
     toc: true
     page-layout: full
 ```

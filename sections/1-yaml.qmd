@@ -68,21 +68,18 @@ Use the `about` option to apply a template to your landing page:
 #| code-line-numbers: false
 ---
 title: "Samantha Csik" # if using a built-in template, this title appears under your photo
-image: media/headshot.jpg # great spot for your professional headshot :) 
+image: file/path/to/headshot.jpg # a great spot for your professional headshot :) 
 toc: false # disable table of contents for this page
 about: 
-  template: trestles # see other templates at https://quarto.org/docs/websites/website-about.html#templates
+  template: trestles 
   image-shape: round
   image-width: 20em
-  links: # create buttons; need to supply a `text` and/or `icon`, as well as `href` (the URL or file path that your button redirects to)
-    - icon: linkedin # optionally include a FontAwesome icon
-      text: LinkedIn
+  links: # create buttons
+    - text: LinkedIn
       href: https://www.linkedin.com/in/samanthacsik/
-    - icon: github
-      text: GitHub
+    - text: GitHub
       href: https://github.com/samanthacsik
-    - icon: envelope
-      text: Email
+    - text: Email
       href: mailto:scsik@ucsb.edu
 ---
         

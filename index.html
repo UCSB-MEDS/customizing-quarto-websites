@@ -402,7 +402,7 @@
 <div class="column" style="width:50%;">
 <p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Jun 12, 2024</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Jun 19, 2024</span></p>
 </div>
 </div>
 <hr class="hr-teal">
@@ -473,7 +473,7 @@
 <div>
 <ul>
 <li class="fragment"><p><span class="teal-text"><strong>First</strong></span>, add a <a href="https://quarto.org/docs/websites/website-about.html#templates">pre-built template</a> to <code>index.qmd</code> and adjust website configurations by editing <code>_quarto.yml</code> – this is the easiest way to add some really cool features with minimal effort.</p></li>
-<li class="fragment"><p><span class="teal-text"><strong>Next</strong></span>, create a <code>styles.scss</code> file (name it however you want), link to it in <code>_quarto.yml</code> (this applies your styles to your Quarto site), and define your Sass variables.</p></li>
+<li class="fragment"><p><span class="teal-text"><strong>Next</strong></span>, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</code> (this applies your styles to your Quarto site), and define your Sass variables.</p></li>
 <li class="fragment"><p><span class="teal-text"><strong>Finally</strong></span>, make fine-tuned adjustments by defining CSS rules directly in your <code>styles.scss</code> file (you can write CSS in <code>.scss</code> files, but not Sass in <code>.css</code> files).</p></li>
 </ul>
 </div>
@@ -515,7 +515,7 @@
 </section><section id="quarto-preview" class="slide level2" data-menu-title="quarto preview"><h2></h2>
 <p><span class="slide-title">Preview your site for fast iteration</span></p>
 <hr>
-<p>Run <code>quarto preview</code> in the RStudio Terminal to view changes in near real time – each time edit and save your work, the preview will update in your browser.</p>
+<p>Run <code>quarto preview</code> in the RStudio Terminal to view changes in near real time – each time you edit and save your work, the preview will update in your browser.</p>
 <p><br></p>
 
 <img data-src="images/quarto-preview.gif" style="width:100.0%" class="r-stretch quarto-figure-center"></section><section id="lets-start-styling" class="slide level2" data-menu-title="Let's start styling" data-background="#053660"><h2></h2>
@@ -545,7 +545,7 @@
 </div>
 </div>
 <div class="center-text">
-<p><span class="teal-text"><strong>Please note:</strong> these materials assume you’ve already worked through <a href="https://ucsb-meds.github.io/creating-quarto-websites/">Creating your personal website with Quarto</a> and picks up where those instructions left off.</span></p>
+<p><span class="teal-text"><strong>Please note:</strong> these materials assume you’ve already worked through <a href="https://ucsb-meds.github.io/creating-quarto-websites/">Creating your personal website with Quarto</a> and pick up where those instructions left off.</span></p>
 </div>
 </section><section id="modify-to-stand-out" class="slide level2" data-menu-title="Make your website stand stand out"><h2></h2>
 <p><span class="slide-title3">But some additional modifications can make <em>your</em> website stand out from the rest</span></p>
@@ -605,25 +605,22 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 </div>
 <div class="sourceCode cell-code" id="cb3" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Samantha Csik"</span> <span class="co"># if using a built-in template, this title appears under your photo</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> media<span class="sc">/</span>headshot.jpg <span class="co"># great spot for your professional headshot :) </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> file<span class="sc">/</span>path<span class="sc">/</span>to<span class="sc">/</span>headshot.jpg <span class="co"># a great spot for your professional headshot :) </span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> false <span class="co"># disable table of contents for this page</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>about<span class="sc">:</span> </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  template<span class="sc">:</span> trestles <span class="co"># see other templates at https://quarto.org/docs/websites/website-about.html#templates</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  template<span class="sc">:</span> trestles </span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>shape<span class="sc">:</span> round</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>width<span class="sc">:</span> 20em</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  links<span class="sc">:</span> <span class="co"># create buttons; need to supply a `text` and/or `icon`, as well as `href` (the URL or file path that your button redirects to)</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> icon<span class="sc">:</span> linkedin <span class="co"># optionally include a FontAwesome icon</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      text<span class="sc">:</span> LinkedIn</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>samanthacsik<span class="sc">/</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> icon<span class="sc">:</span> github</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      text<span class="sc">:</span> GitHub</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> icon<span class="sc">:</span> envelope</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      text<span class="sc">:</span> Email</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> mailto<span class="sc">:</span>scsik<span class="sc">@</span>ucsb.edu</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ landing page content / text omitted for brevity ~        </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  links<span class="sc">:</span> <span class="co"># create buttons</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> LinkedIn</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>samanthacsik<span class="sc">/</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> GitHub</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> Email</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> mailto<span class="sc">:</span>scsik<span class="sc">@</span>ucsb.edu</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ landing page content / text omitted for brevity ~        </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section><section id="fa-icons" class="slide level2" data-menu-title="fontawesome icons"><h2></h2>
@@ -858,7 +855,7 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <div class="vertical-center">
 <center>
 <div class="custom-subtitle2">
-Next, create a <code>styles.scss</code> file (name it however you want), link to it in <code>_quarto.yml</code> (this applies your styles to your Quarto site), and define your Sass variables.
+Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</code> (this applies your styles to your Quarto site), and define your Sass variables.
 </div>
 </center>
 <!-- <center><div class="custom-subtitle2">Use a *Syntactically Awesome Stylesheet* () to define variables and quickly customize your website's appearance</div></center> -->
@@ -885,7 +882,7 @@ Next, create a <code>styles.scss</code> file (name it however you want), link to
 <div class="body-text">
 <ul>
 <li>Sass is a <strong>CSS extension</strong> (provides additional features, like variables)</li>
-<li>Sass is a <strong>CSS preprocesser</strong> (converts Sass code into standard CSS because browsers can’t interpret Sass)</li>
+<li>Sass is a <strong>CSS preprocesser</strong> (converts Sass code into standard CSS, which is a critical step because browsers can’t interpret Sass but <em>can</em> interpret CSS)</li>
 </ul>
 </div>
 </div>
@@ -1034,7 +1031,7 @@ Next, create a <code>styles.scss</code> file (name it however you want), link to
 <span id="cb15-28"><a href="#cb15-28"></a></span>
 <span id="cb15-29"><a href="#cb15-29"></a>format<span class="sc">:</span></span>
 <span id="cb15-30"><a href="#cb15-30"></a>  html<span class="sc">:</span></span>
-<span id="cb15-31"><a href="#cb15-31"></a>    theme<span class="sc">:</span> styles.scss <span class="co"># I've also removed the `css: styles.css` option that was included by default</span></span>
+<span id="cb15-31"><a href="#cb15-31"></a>    theme<span class="sc">:</span> styles.scss <span class="co"># I've also removed the `css: styles.css` option that was included by default, since I'll be writing all my sass and css in this single styles.scss file</span></span>
 <span id="cb15-32"><a href="#cb15-32"></a>    toc<span class="sc">:</span> true</span>
 <span id="cb15-33"><a href="#cb15-33"></a>    page<span class="sc">-</span>layout<span class="sc">:</span> full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1158,12 +1155,13 @@ Next, create a <code>styles.scss</code> file (name it however you want), link to
 <p><span class="slide-title2">We can also import Google fonts in <code>styles.scss</code></span></p>
 <hr>
 <p><br></p>
-<p>Fonts are just as important as color in expressing yourself and your brand – you should <em>absolutely</em> be importing and using a different (more exciting) font family(ies) than the default.</p>
+<p><span class="body-text-m">Fonts are just as important as color in expressing yourself and your brand – you should <em>absolutely</em> be importing and using a different (more exciting) font family(ies) than the default.</span></p>
 <p><br></p>
 <p><span class="teal-text"><strong>6a.</strong></span> Browse the <em>many</em> available Google fonts at <a href="https://fonts.google.com/" class="uri">https://fonts.google.com/</a> and choose 1-3 fonts (two is, in my option, the sweet spot). Click on the <strong>Filters</strong> button in the top left corner of the page to help narrow your choices.</p>
 <p><br></p>
 
-<img data-src="images/google-fonts.png" style="width:70.0%" class="r-stretch quarto-figure-center"></section><section id="select-fonts1" class="slide level2" data-menu-title="Select Fonts 1"><h2></h2>
+<img data-src="images/google-fonts.png" style="width:70.0%" class="r-stretch quarto-figure-center"><p><br></p>
+</section><section id="select-fonts1" class="slide level2" data-menu-title="Select Fonts 1"><h2></h2>
 <p><span class="slide-title">Selecting a Google font(s)</span></p>
 <hr>
 <p><span class="teal-text"><strong>6b.</strong></span> Select a Google font family by clicking the blue <strong>Get Font</strong> button in the top right corner of the page, which adds your font family to your “bag.” You can add as many font families to your bag as you’d like to import – here, we select both <a href="https://fonts.google.com/specimen/Nunito?query=nunito">Nunito</a> and <a href="https://fonts.google.com/specimen/Sen?query=sen">Sen</a>.</p>
@@ -1916,9 +1914,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </section><section id="conflicting-css" class="slide level2" data-menu-title="Conflicting CSS rules"><h2></h2>
 <p><span class="slide-title">Conflicting CSS rules?</span></p>
 <hr>
-<div class="body-text-s topbr">
 <p>It is often the case that more than one CSS rule will point to the same element. For example, say you have a style sheet and HTML that look like the following:</p>
-</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="body-text topbr"><strong>CSS</strong></span></p>
@@ -1955,19 +1951,19 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br></p>
-<div class="body-text center-text topbr bottombr">
+<div class="center-text topbr bottombr">
 <p><strong>Inline Styles</strong></p>
 </div>
-<div class="body-text center-text topbr bottombr">
+<div class="center-text topbr bottombr">
 <p><strong>IDs</strong></p>
 </div>
-<div class="body-text center-text topbr bottombr">
+<div class="center-text topbr bottombr">
 <p><strong>Class Selectors</strong></p>
 </div>
-<div class="body-text center-text topbr bottombr">
+<div class="center-text topbr bottombr">
 <p><strong>Element Selectors</strong></p>
 </div>
-<div class="body-text center-text topbr bottombr">
+<div class="center-text topbr bottombr">
 <p><strong>Universal Selectors</strong></p>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1995,7 +1991,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
       }</style></aside><!-- --- --><!-- ##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"} --><!-- <div class = "vertical-center"> --><!-- <center><div class="custom-subtitle2">`<svg aria-label="Laptop Code" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Laptop Code</title><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>`{=html} Practice writing and applying some CSS rules</div></center> --><!-- </div> --></section><section id="css-practice1" class="slide level2" data-menu-title="Practice CSS (1/3)"><h2></h2>
 <p><span class="slide-title">Practice writing CSS (1/3)</span></p>
 <hr>
-<p><span class="teal-text"><strong>1.</strong></span> Create a new CSS file inside <code>DELETE-LATER/</code> named <code>practcies-styles.css</code> using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Text File</strong> option.</p>
+<p><span class="teal-text"><strong>1.</strong></span> Create a new CSS file inside <code>DELETE-LATER/</code> named <code>practice-styles.css</code> using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Text File</strong> option.</p>
 <p><br></p>
 <div class="fragment">
 <p><span class="teal-text"><strong>2.</strong></span> Link your CSS file inside the <code>&lt;head&gt;</code> of your HTML file (you can <a href="https://www.w3schools.com/css/css_howto.asp">read more</a> about inserting style sheets).</p>
@@ -2147,7 +2143,7 @@ Okay, that’s cool…but what about Quarto?
 </section><section id="scss-div" class="slide level2" data-menu-title="SCSS rules divider"><h2></h2>
 <p><span class="slide-title">Create a section for defining CSS rules in <code>styles.scss</code></span></p>
 <hr>
-<p>To start defining CSS rules in <code>styles.scss</code> you first need to add the <code>/*-- scss:rules --*/</code> region decorator beneath your Sass variables section (this is important! your CSS won’t be recognized without this region decorator in place):</p>
+<p>To start defining CSS rules in <code>styles.scss</code> you first need to add the <code>/*-- scss:rules --*/</code> region decorator beneath your Sass variables section (<strong>this is important! your CSS won’t be recognized without this region decorator in place</strong>):</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">

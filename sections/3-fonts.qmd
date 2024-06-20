@@ -10,7 +10,7 @@ format: revealjs
 
 <br>
 
-Fonts are just as important as color in expressing yourself and your brand -- you should *absolutely* be importing and using a different (more exciting) font family(ies) than the default.
+[Fonts are just as important as color in expressing yourself and your brand -- you should *absolutely* be importing and using a different (more exciting) font family(ies) than the default.]{.body-text-m}
 
 <br>
 
@@ -25,6 +25,8 @@ Fonts are just as important as color in expressing yourself and your brand -- yo
 #| out-width: "70%" 
 knitr::include_graphics("images/google-fonts.png")
 ```
+
+<br>
 
 ---
 

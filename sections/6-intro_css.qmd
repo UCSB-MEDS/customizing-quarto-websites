@@ -409,9 +409,7 @@ knitr::include_graphics("images/inline_styling.png")
 
 <hr>
 
-::: {.body-text-s .topbr}
 It is often the case that more than one CSS rule will point to the same element. For example, say you have a style sheet and HTML that look like the following:
-:::
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -467,23 +465,23 @@ In this case, we have a universal selector that styles all of our text orange, b
 ::: {.column width="50%"}
 <br>
 
-::: {.body-text .center-text .topbr .bottombr}
+::: {.center-text .topbr .bottombr}
 **Inline Styles**
 :::
 
-::: {.body-text .center-text .topbr .bottombr}
+::: {.center-text .topbr .bottombr}
 **IDs**
 :::
 
-::: {.body-text .center-text .topbr .bottombr}
+::: {.center-text .topbr .bottombr}
 **Class Selectors**
 :::
 
-::: {.body-text .center-text .topbr .bottombr}
+::: {.center-text .topbr .bottombr}
 **Element Selectors**
 :::
 
-::: {.body-text .center-text .topbr .bottombr}
+::: {.center-text .topbr .bottombr}
 **Universal Selectors**
 :::
 
@@ -521,7 +519,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 <hr>
 
-[**1.**]{.teal-text} Create a new CSS file inside `DELETE-LATER/` named `practcies-styles.css` using either the `touch` command or the **Blank File** > **Text File** option.
+[**1.**]{.teal-text} Create a new CSS file inside `DELETE-LATER/` named `practice-styles.css` using either the `touch` command or the **Blank File** > **Text File** option.
 
 <br>
 

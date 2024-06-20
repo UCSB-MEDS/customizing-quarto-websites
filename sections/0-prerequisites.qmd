@@ -93,7 +93,7 @@ Approaching this in the following order worked best for me:
 ::: incremental
 - [**First**]{.teal-text}, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.
 
-- [**Next**]{.teal-text}, create a `styles.scss` file (name it however you want), link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
+- [**Next**]{.teal-text}, create a `styles.scss` file, link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
 
 - [**Finally**]{.teal-text}, make fine-tuned adjustments by defining CSS rules directly in your `styles.scss` file (you can write CSS in `.scss` files, but not Sass in `.css` files).
 :::
@@ -148,7 +148,7 @@ You're now ready to work as normal! Once satisfied with your changes, you can `g
 
 <hr>
 
-Run `quarto preview` in the RStudio Terminal to view changes in near real time – each time edit and save your work, the preview will update in your browser.
+Run `quarto preview` in the RStudio Terminal to view changes in near real time – each time you edit and save your work, the preview will update in your browser.
 
 <br>
 
@@ -202,7 +202,7 @@ An example Quarto website styled using the built-in [Bootswatch](https://bootswa
 :::
 
 ::: {.center-text}
-[**Please note:** these materials assume you've already worked through [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and picks up where those instructions left off.]{.teal-text}
+[**Please note:** these materials assume you've already worked through [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and pick up where those instructions left off.]{.teal-text}
 :::
 
 ---

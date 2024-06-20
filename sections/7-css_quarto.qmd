@@ -40,7 +40,7 @@ You can delete `styles.css` if you don't plan to use it, or leave it be (it won'
 
 <hr>
 
-To start defining CSS rules in `styles.scss` you first need to add the `/*-- scss:rules --*/` region decorator beneath your Sass variables section (this is important! your CSS won't be recognized without this region decorator in place):
+To start defining CSS rules in `styles.scss` you first need to add the `/*-- scss:rules --*/` region decorator beneath your Sass variables section (**this is important! your CSS won't be recognized without this region decorator in place**):
 
 ```{sass filename="styles.scss"}
 #| eval: false
