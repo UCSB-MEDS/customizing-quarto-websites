@@ -77,13 +77,13 @@ Use the `about` option to apply a template to your landing page:
 #| echo: true
 #| code-line-numbers: false
 ---
-title: "Samantha Csik" # if using a built-in template, this title appears under your photo; you may also remove this if you don't want that title text to appear
-image: file/path/to/headshot.jpg # a great spot for your professional headshot :) 
-toc: false # disable table of contents for this page
+# title: "Samantha Csik" # optional (omitted in example screenshots); this title appears under your photo
+image: file/path/to/headshot.jpeg # a great spot for your professional headshot :) 
+toc: false # disable table of contents for this page (if applicable)
 about: 
-  template: trestles 
+  template: jolla 
   image-shape: round
-  image-width: 20em
+  image-width: 17em
   links: # create buttons
     - text: LinkedIn
       href: https://www.linkedin.com/in/samanthacsik/
@@ -190,9 +190,9 @@ website:
         text: Resources
       - href: file/path/to/myCV.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: CV
-        target: _blank # opens link (or page) in a new tab
+        target: _blank # opens link (or page) in a new browser tab
       - icon: github # add icons as navbar buttons
-        href: https://github.com/yourUserName
+        href: https://github.com/samanthacsik
         target: _blank
 
 format:
@@ -220,6 +220,10 @@ Footers appear on each page (you may have to scroll to the bottom to see it appe
 #| out-width: "65%" 
 knitr::include_graphics("images/page-footer.png")
 ```
+
+::: {.footer}
+**Note:** If you plan to use FontAwesome icons *outside* of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html) (more info on the next few slides).
+:::
 
 ---
 
@@ -267,10 +271,6 @@ format:
     toc: true
     page-layout: full
 ```
-
-::: {.footer}
-**Note:** If you plan to use FontAwesome icons outside of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html) (more info on the next slide).
-:::
 
 ---
 
@@ -413,7 +413,7 @@ website:
   title: "Sam Csik"
   favicon: file/path/to/image.png # NOTE: that the `favicon` is a `website` level option (not under `navbar`)
   navbar:
-    title: false # override printing your website `title` here
+    title: false # override printing your website `title` (e.g. "Sam Csik" on line 6) in the top left corner of your navbar
     logo: file/path/to/logo.png
     logo-alt: "Alt text for logo"
     right:

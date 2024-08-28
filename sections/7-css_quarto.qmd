@@ -82,31 +82,29 @@ Next, we'll walk through some examples of how to modify your site with your own 
 
 <hr>
 
-<br>
+***Note:** I've added a bit more text to my page titled, "About," for demonstration purposes.*
 
 Let's say I want to similarly style (add a bit of spacing between each letter, increase font weight) the following text on my website:
 
-<br>
-
 :::: {.columns}
 
-::: {.column width="33%"}
+<!-- ::: {.column width="33%"} -->
 
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "100%" 
-knitr::include_graphics("images/index-font.png")
-```
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "100%"  -->
+<!-- knitr::include_graphics("images/index-font.png") -->
+<!-- ``` -->
 
-::: {.body-text-s .center-text .gray-text}
-On my landing page, I want to style my name, "Samantha Csik", and the three section headers, "Hi there!", "Education", and "Experience"
-:::
+<!-- ::: {.body-text-s .center-text .gray-text} -->
+<!-- On my landing page, I want to style my name, "Samantha Csik", and the three section headers, "Hi there!", "Education", and "Experience" -->
+<!-- ::: -->
 
-:::
+<!-- ::: -->
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 
 ```{r}
 #| eval: true 
@@ -117,12 +115,12 @@ knitr::include_graphics("images/about-font.png")
 ```
 
 ::: {.body-text-s .center-text .gray-text}
-On my About page, I want to style the page title, "About"
+On my About page, I want to style the page title, "About",  and each of the section headers
 :::
 
 :::
 
-::: {.column width="33%"}
+::: {.column width="50%"}
 
 ```{r}
 #| eval: true 
@@ -166,10 +164,9 @@ knitr::include_graphics("images/inspect.gif")
 ::: {.column width="50%"}
 <br>
 <br>
-<br>
 
 ::: {.body-text-s}
-In your website preview, **right click on an element of interest** (in this case, let's start with my name, "Samantha Csik") and **choose Inspect** to pull up the underlying HTML & CSS files.
+In your website preview, **right click on an element of interest** (in this case, let's start with the page title, "About") and **choose Inspect** to pull up the underlying HTML & CSS files. You can continue to right click / inspect additional elements (e.g. the section header, "What I do for work").
 :::
 
 ::: {.body-text-s}
@@ -180,10 +177,14 @@ Hovering your mouse over different lines of HTML highlights the corresponding el
 
 ---
 
-##  {#inspect-name data-menu-title="Inspect landing page name"}
+##  {#inspect-about-title data-menu-title="Inspect About & Resources page titles"}
 
 ::: {.body-text-xl .teal-text .center-text}
-My name is an `<h1>` element
+The words "About" and "All my favorite resources!" are `<h1>` elements
+:::
+
+::: {.center-text}
+*Only the screenshot for the "About" page shown here*
 :::
 
 ```{r}
@@ -191,19 +192,43 @@ My name is an `<h1>` element
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%" 
-knitr::include_graphics("images/inspect-name.png")
+knitr::include_graphics("images/inspect-about-resources.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-**Note:** This `<h1>` element also has a class `title` -- more on that in a minute.
+**Note:** These `<h1>` elements also have a class `title` -- more on that in a minute.
 :::
+
+<!-- --- -->
+
+<!-- ##  {#inspect-name data-menu-title="Inspect landing page name"} -->
+
+<!-- ::: {.body-text-xl .teal-text .center-text} -->
+<!-- My name is an `<h1>` element -->
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "100%"  -->
+<!-- knitr::include_graphics("images/inspect-name.png") -->
+<!-- ``` -->
+
+<!-- ::: {.body-text-s .gray-text .center-text} -->
+<!-- **Note:** This `<h1>` element also has a class `title` -- more on that in a minute. -->
+<!-- ::: -->
 
 ---
 
-##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"}
+##  {#inspect-about-sections data-menu-title="Inspect About page sections"}
 
 ::: {.body-text-xl .teal-text .center-text}
-My landing page sections, "Hi there!", "Education" and "Experience", are `<h2>` elements
+Both section headers on the page titled, "About," are `<h2>` elements
+:::
+
+::: {.center-text}
+*Only the screenshot for the section header that reads, "What I do for work," shown here*
 :::
 
 ```{r}
@@ -211,28 +236,48 @@ My landing page sections, "Hi there!", "Education" and "Experience", are `<h2>` 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%" 
-knitr::include_graphics("images/inspect-education.png")
-```
-
----
-
-##  {#inspect-about data-menu-title="Inspect about page"}
-
-::: {.body-text-xl .teal-text .center-text}
-My About page and Resource page titles are `<h1>` elements
-:::
-
-```{r}
-#| eval: true 
-#| echo: false
-#| fig-align: "center"
-#| out-width: "90%" 
-knitr::include_graphics("images/inspect-about.png")
+knitr::include_graphics("images/inspect-about-section-headers.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-**Note:** These `<h1>` elements also have a class, `title`-- we'll come back to that shortly.
+**Note:** These `<h2>` elements also have a class `anchored` -- more on that in a minute.
 :::
+
+<!-- --- -->
+
+<!-- ##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"} -->
+
+<!-- ::: {.body-text-xl .teal-text .center-text} -->
+<!-- My landing page sections, "Hi there!", "Education" and "Experience", are `<h2>` elements -->
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "100%"  -->
+<!-- knitr::include_graphics("images/inspect-education.png") -->
+<!-- ``` -->
+
+<!-- --- -->
+
+<!-- ##  {#inspect-about data-menu-title="Inspect about page"} -->
+
+<!-- ::: {.body-text-xl .teal-text .center-text} -->
+<!-- My About page and Resource page titles are `<h1>` elements -->
+<!-- ::: -->
+
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "90%"  -->
+<!-- knitr::include_graphics("images/inspect-about.png") -->
+<!-- ``` -->
+
+<!-- ::: {.body-text-s .gray-text .center-text} -->
+<!-- **Note:** These `<h1>` elements also have a class, `title`-- we'll come back to that shortly. -->
+<!-- ::: -->
 
 ---
 
@@ -245,8 +290,11 @@ knitr::include_graphics("images/inspect-about.png")
 ```{sass filename="styles.scss"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "29-32"
+#| code-line-numbers: "32-35"
 /*-- scss:defaults --*/
+
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
 
 // Colors
 $dark-green: #858E79;
@@ -276,12 +324,12 @@ $code-block-bg: $cream; // code block background color
 
 h1, h2 {
   letter-spacing: 5px;
-  font-weight: 800; # Google fonts tells you which weights your chosen font family allows for!
+  font-weight: 800; // Google fonts tells you which weights your chosen font family allows for!
 }
 ```
 
 ::: {.footer}
-**Note:** We don't need to make any changes to the HTML (in `index.qmd`, `about.qmd`, and `resources.qmd`) since this grouping selector targets *all* `<h1>` and `<h2>` elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.
+**Note:** We don't need to make any changes to the HTML (in `about.qmd` and `resources.qmd`) since this grouping selector targets *all* `<h1>` and `<h2>` elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.
 :::
 
 ---
@@ -292,9 +340,7 @@ h1, h2 {
 
 <hr>
 
-<br>
-
-Our updated `<h1>` and `<h2>` elements should now look like this:
+Our updated `<h1>` and `<h2>` elements should now look something like this:
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -327,6 +373,10 @@ With CSS styling on `h1` and `h2` headers
 :::
 ::::
 
+::: {.center-text}
+Check to see that our styles were also applied to our "Resources" page title.
+:::
+
 ---
 
 ##  {#predefined-title-class data-menu-title="Predefined 'title' class"}
@@ -335,7 +385,9 @@ With CSS styling on `h1` and `h2` headers
 
 <hr>
 
-[We noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* are also given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`). This means that the Quarto framework has already defined a class selector called `.title` and applied that class to the above elements.]{.body-text-s}
+<!-- [We noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* are also given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`). This means that the Quarto framework has already defined a class selector called `.title` and applied that class to the above elements.]{.body-text-s} -->
+
+[We noted that the page titles ("About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* are also given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`). This means that the Quarto framework has already defined a class selector called `.title` and applied that class to the above elements.]{.body-text-s}
 
 ```{r}
 #| eval: true
@@ -405,7 +457,7 @@ h1, h2 {
 
 <hr>
 
-[**It's important to note that we didn't need to make any changes to the HTML** (in `index.qmd`, `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`. Updates are automatically applied to any elements that the Quarto framework has already assigned as that class.]{.body-text-s}
+[**It's important to note that we didn't need to make any changes to the HTML** (in `about.qmd`, and `resources.qmd`) since those `<h1>` elements are *already* assigned the class, `title`. Updates are automatically applied to any elements that the Quarto framework has already assigned as that class.]{.body-text-s}
 
 <br>
 
@@ -425,16 +477,16 @@ knitr::include_graphics("images/maroon-text.gif")
 
 <hr>
 
-Yes! To demonstrate, let's write a couple of HTML elements that *are not by default* assigned the `title` class to see what happens -- in other words, let's apply the `title` class to some elements beyond just our website's landing page name and page titles. I'll do this on my **About** page (`about.qmd`):
+Yes! To demonstrate, let's write a couple of HTML elements that *are not by default* assigned the `title` class to see what happens -- in other words, let's apply the `title` class to some elements beyond just our website's landing page name and page titles. I'll do this on my **Resources** page (`resources.qmd`):
 
 <br>
 
-```{r filename="about.qmd"}
+```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5-11"
 ---
-title: "About"
+title: "Resources"
 ---
 
 <h1>this is an `<h1>` element</h1> # alternatively, you can write <h1> elements using markdown (`# this is an `<h1>` element`)
@@ -460,8 +512,6 @@ title: "About"
 
 [Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only `<h1>` elements that are assigned the class, `title`, are colored maroon. Any `<h1>` elements that are not assigned the class, `title`, are styled according to our `h1, h2 {}` element selector.]{.body-text-s}
 
-[Note that we can also apply the `title` class to *any* text element (not *just* `<h1>` elements). In this example, we apply it both to an `<h1>` element and a `<p>` element.]{.body-text-s}
-
 ```{r}
 #| eval: true 
 #| echo: false
@@ -469,6 +519,8 @@ title: "About"
 #| out-width: "100%" 
 knitr::include_graphics("images/h1-title.png")
 ```
+
+[**Note** that we can also apply the `title` class to *any* text element (not *just* `<h1>` elements). In this example, we apply it both to an `<h1>` element and a `<p>` element.]{.body-text-s}
 
 ---
 
@@ -542,20 +594,26 @@ h1, h2 {
 
 <hr>
 
-<br>
-
-Next, let's write a few different elements in `resources.qmd` and apply our custom class selectors: 
-
-<br>
+[Add a few more elements in `resources.qmd` and apply our custom class selectors. **Remember,** unlike element selectors, **class selectors must be applied to the elements that we want to style** (i.e. we need to update our HTML!):]{.body-text-s}
 
 ```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "5-13"
+#| code-line-numbers: "13-22"
 
 ---
 title: "All my favorite resources!"
 ---
+  
+<h1>this is an `<h1>` element</h1> 
+
+<h1 class="title">this is an `<h1>` element of class `title`</h1>
+
+<p>this is a `<p>` element</p>
+
+<p class="title">this is a `<p>` element of class `title`</p>
+  
+--- # three dashes is markdown syntax for creating a horizontal line across your page
 
 <p class="orange-text">This paragraph is orange.</p>
   
@@ -565,10 +623,6 @@ title: "All my favorite resources!"
 
 <h2 class="center-text">This level-2 header is centered</h2>
 ```
-
-::: {.footer}
-**Don't forget:** Unlike element selectors, **class selectors must be applied to the elements that we want to style** (meaning, we need to update our HTML!).
-:::
 
 ---
 
@@ -598,26 +652,36 @@ knitr::include_graphics("images/orange-center.png")
 
 Simply list the names of the class selectors one after the next inside `""` -- for example, `<tag class="class1 class2">Content</tag>`.
 
-<br>
-
 ```{r filename="resources.qmd"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "13-15"
+#| code-line-numbers: "23-27"
 
 ---
 title: "All my favorite resources!"
 ---
   
+<h1>this is an `<h1>` element</h1> 
+
+<h1 class="title">this is an `<h1>` element of class `title`</h1>
+
+<p>this is a `<p>` element</p>
+
+<p class="title">this is a `<p>` element of class `title`</p>
+  
+--- # three dashes is markdown syntax for creating a horizontal line across your page
+
 <p class="orange-text">This paragraph is orange.</p>
   
 <p class="center-text">This paragraph is centered.</p>
   
 <p>This paragraph has no styling.</p>
 
-<h2 class="center-text">This level-2 header is centered</h2>
+<h2 class="center-text">This level-2 header is centered</h3>
   
-<h2 class="center-text orange-text">This level-2 header is both centered and orange</h2>
+---
+  
+<h3 class="center-text orange-text">This level-3 header is both centered and orange</h2>
   
 <p class="orange-text">**This paragraph is orange and bolded using markdown syntax (yes, you can combine markdown and html!).**</p>
 ```
@@ -630,7 +694,9 @@ title: "All my favorite resources!"
 
 <hr>
 
-<br>
+::: {.center-text}
+(Yeah, okay this doesn't look that great, but I hope you can at least admire your use of CSS to style different HTML elements!)
+:::
 
 ```{r}
 #| eval: true 
@@ -640,6 +706,10 @@ title: "All my favorite resources!"
 knitr::include_graphics("images/two-classes.png")
 ```
 
+::: {.footer}
+It's important to note that Quarto (currently) does not create a table of contents (TOC) on a page where header text is specified using HTML syntax (e.g. `<h1>`, `<h2>`, etc.). It *does* add a TOC when header text is specified using markdown syntax (e.g. `#`, `##`, etc.) so long as you have `toc: true`.
+:::
+
 ---
 
 ##  {#quarto-syntax data-menu-title="Quarto Syntax"}
@@ -647,8 +717,6 @@ knitr::include_graphics("images/two-classes.png")
 [Quarto also provides its [own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) for applying classes to elements]{.slide-title3}
 
 <hr>
-
-<br>
 
 You can create both **divs (block-level regions of content)** and **spans (inline content)** using Quarto's syntax. For example:
 
@@ -875,7 +943,7 @@ knitr::include_graphics("images/rendered-sen.gif")
 #| echo: true
 #| code-line-numbers: false
 .navbar-brand img { 
-  max-height: 50px;
+  max-height: 40px;
   width: auto;
 }
 ```
@@ -896,7 +964,7 @@ knitr::include_graphics("images/large-logo.png")
 
 <hr>
 
-Great question! I adapted it from someone else's open source code, which was available on GitHub {{< fa face-smile-beam title="a smiling face with happy, squinty eyes" >}} This process often involves some trial and error, but it's one of the best ways to learn from the many awesome folks who openly share their work.
+Great question! **I adapted it from someone else's open source code**, which was available on GitHub {{< fa face-smile-beam title="a smiling face with happy, squinty eyes" >}} This process often involves some trial and error, but it's one of the best ways to learn from the many awesome folks who openly share their work.
 
 More specifically, I stumbled upon [Robert Mitchell's personal website](https://robertmitchellv.com/) (built with Quarto) and noticed that he too had a logo, *and* that it was perfectly sized to fit the navbar space:
 

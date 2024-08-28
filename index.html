@@ -403,7 +403,7 @@
 <div class="column" style="width:50%;">
 <p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Aug 27, 2024</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Aug 28, 2024</span></p>
 </div></div>
 <hr class="hr-teal">
 <div class="columns">
@@ -601,13 +601,13 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <pre><strong>index.qmd</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Samantha Csik"</span> <span class="co"># if using a built-in template, this title appears under your photo; you may also remove this if you don't want that title text to appear</span></span>
-<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> file<span class="sc">/</span>path<span class="sc">/</span>to<span class="sc">/</span>headshot.jpg <span class="co"># a great spot for your professional headshot :) </span></span>
-<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> false <span class="co"># disable table of contents for this page</span></span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># title: "Samantha Csik" # optional (omitted in example screenshots); this title appears under your photo</span></span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>image<span class="sc">:</span> file<span class="sc">/</span>path<span class="sc">/</span>to<span class="sc">/</span>headshot.jpeg <span class="co"># a great spot for your professional headshot :) </span></span>
+<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>toc<span class="sc">:</span> false <span class="co"># disable table of contents for this page (if applicable)</span></span>
 <span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a>about<span class="sc">:</span> </span>
-<span id="cb3-6"><a href="" aria-hidden="true" tabindex="-1"></a>  template<span class="sc">:</span> trestles </span>
+<span id="cb3-6"><a href="" aria-hidden="true" tabindex="-1"></a>  template<span class="sc">:</span> jolla </span>
 <span id="cb3-7"><a href="" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>shape<span class="sc">:</span> round</span>
-<span id="cb3-8"><a href="" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">20</span>em</span>
+<span id="cb3-8"><a href="" aria-hidden="true" tabindex="-1"></a>  image<span class="sc">-</span>width<span class="sc">:</span> <span class="dv">17</span>em</span>
 <span id="cb3-9"><a href="" aria-hidden="true" tabindex="-1"></a>  links<span class="sc">:</span> <span class="co"># create buttons</span></span>
 <span id="cb3-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> LinkedIn</span>
 <span id="cb3-11"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>samanthacsik<span class="sc">/</span></span>
@@ -683,9 +683,9 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <span id="cb5-13"><a href=""></a>        text<span class="sc">:</span> Resources</span>
 <span id="cb5-14"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> file<span class="sc">/</span>path<span class="sc">/</span>to<span class="sc">/</span>myCV.pdf <span class="co"># providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked</span></span>
 <span id="cb5-15"><a href=""></a>        text<span class="sc">:</span> CV</span>
-<span id="cb5-16"><a href=""></a>        target<span class="sc">:</span> _blank <span class="co"># opens link (or page) in a new tab</span></span>
+<span id="cb5-16"><a href=""></a>        target<span class="sc">:</span> _blank <span class="co"># opens link (or page) in a new browser tab</span></span>
 <span id="cb5-17"><a href=""></a>      <span class="sc">-</span> icon<span class="sc">:</span> github <span class="co"># add icons as navbar buttons</span></span>
-<span id="cb5-18"><a href=""></a>        href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>yourUserName</span>
+<span id="cb5-18"><a href=""></a>        href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
 <span id="cb5-19"><a href=""></a>        target<span class="sc">:</span> _blank</span>
 <span id="cb5-20"><a href=""></a></span>
 <span id="cb5-21"><a href=""></a>format<span class="sc">:</span></span>
@@ -701,7 +701,10 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <hr>
 <p>Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.</p>
 
-<img data-src="images/page-footer.png" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%"></section><section id="add-footer2" class="slide level2" data-menu-title="Add page footer (code)"><h2></h2>
+<img data-src="images/page-footer.png" class="quarto-figure quarto-figure-center r-stretch" style="width:65.0%"><div class="footer">
+<p><strong>Note:</strong> If you plan to use FontAwesome icons <em>outside</em> of the <code>icon</code> YAML option, you’ll need to first install the Quarto <a href="https://quarto.org/docs/websites/website-about.html">fontawesome extension</a> (more info on the next few slides).</p>
+</div>
+</section><section id="add-footer2" class="slide level2" data-menu-title="Add page footer (code)"><h2></h2>
 <p><span class="slide-title">Add a page footer</span> <!-- [Configure your page footer in `_quarto.yml`]{.slide-title2} --></p>
 <hr>
 <p>Make edits to a website’s footer under the <code>website</code> &gt; <code>page-footer</code> option:</p>
@@ -736,9 +739,6 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <span id="cb6-28"><a href=""></a>    css<span class="sc">:</span> styles.css</span>
 <span id="cb6-29"><a href=""></a>    toc<span class="sc">:</span> true</span>
 <span id="cb6-30"><a href=""></a>    page<span class="sc">-</span>layout<span class="sc">:</span> full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="footer">
-<p><strong>Note:</strong> If you plan to use FontAwesome icons outside of the <code>icon</code> YAML option, you’ll need to first install the Quarto <a href="https://quarto.org/docs/websites/website-about.html">fontawesome extension</a> (more info on the next slide).</p>
 </div>
 </section><section id="fa-extension" class="slide level2" data-menu-title="fontawesome extension"><h2></h2>
 <p><span class="slide-title">Install the Quarto <a href="https://quarto.org/docs/websites/website-about.html">fontawesome extension</a></span></p>
@@ -811,7 +811,7 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <span id="cb11-6"><a href=""></a>  title<span class="sc">:</span> <span class="st">"Sam Csik"</span></span>
 <span id="cb11-7"><a href=""></a>  favicon<span class="sc">:</span> file<span class="sc">/</span>path<span class="sc">/</span>to<span class="sc">/</span>image.png <span class="co"># </span><span class="al">NOTE</span><span class="co">: that the `favicon` is a `website` level option (not under `navbar`)</span></span>
 <span id="cb11-8"><a href=""></a>  navbar<span class="sc">:</span></span>
-<span id="cb11-9"><a href=""></a>    title<span class="sc">:</span> false <span class="co"># override printing your website `title` here</span></span>
+<span id="cb11-9"><a href=""></a>    title<span class="sc">:</span> false <span class="co"># override printing your website `title` (e.g. "Sam Csik" on line 6) in the top left corner of your navbar</span></span>
 <span id="cb11-10"><a href=""></a>    logo<span class="sc">:</span> file<span class="sc">/</span>path<span class="sc">/</span>to<span class="sc">/</span>logo.png</span>
 <span id="cb11-11"><a href=""></a>    logo<span class="sc">-</span>alt<span class="sc">:</span> <span class="st">"Alt text for logo"</span></span>
 <span id="cb11-12"><a href=""></a>    right<span class="sc">:</span></span>
@@ -997,7 +997,7 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>project<span class="sc">:</span></span>
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a>project<span class="sc">:</span></span>
 <span id="cb15-2"><a href=""></a>  type<span class="sc">:</span> website</span>
 <span id="cb15-3"><a href=""></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
 <span id="cb15-4"><a href=""></a></span>
@@ -1219,7 +1219,7 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 </div>
 <div class="sourceCode cell-code" id="cb20" data-code-line-numbers="3-4"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb20-1"><a href=""></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb20-2"><a href=""></a></span>
-<span id="cb20-3"><a href=""></a><span class="co">// Import fonts</span></span>
+<span id="cb20-3"><a href=""></a><span class="co">// Import Google fonts</span></span>
 <span id="cb20-4"><a href=""></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
 <span id="cb20-5"><a href=""></a></span>
 <span id="cb20-6"><a href=""></a><span class="co">// Colors</span></span>
@@ -1263,34 +1263,35 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 <span id="cb21-3"><a href=""></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
 <span id="cb21-4"><a href=""></a></span>
 <span id="cb21-5"><a href=""></a>website<span class="sc">:</span></span>
-<span id="cb21-6"><a href=""></a>  favicon<span class="sc">:</span> media<span class="sc">/</span>myFavicon.png</span>
-<span id="cb21-7"><a href=""></a>  navbar<span class="sc">:</span></span>
-<span id="cb21-8"><a href=""></a>    title<span class="sc">:</span> false</span>
-<span id="cb21-9"><a href=""></a>    logo<span class="sc">:</span> media<span class="sc">/</span>myLogo.png</span>
-<span id="cb21-10"><a href=""></a>    logo<span class="sc">-</span>alt<span class="sc">:</span> <span class="st">"The name 'sam csik' written in green text. Above 'csik' is a dark green horizontal line, above which sits a green chick."</span></span>
-<span id="cb21-11"><a href=""></a>    right<span class="sc">:</span></span>
-<span id="cb21-12"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
-<span id="cb21-13"><a href=""></a>        text<span class="sc">:</span> Home</span>
-<span id="cb21-14"><a href=""></a>      <span class="sc">-</span> about.qmd</span>
-<span id="cb21-15"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> resources.qmd</span>
-<span id="cb21-16"><a href=""></a>        text<span class="sc">:</span> Resources</span>
-<span id="cb21-17"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> cv<span class="sc">/</span>myCV.pdf</span>
-<span id="cb21-18"><a href=""></a>        text<span class="sc">:</span> CV</span>
-<span id="cb21-19"><a href=""></a>        target<span class="sc">:</span> _blank</span>
-<span id="cb21-20"><a href=""></a>      <span class="sc">-</span> icon<span class="sc">:</span> github</span>
-<span id="cb21-21"><a href=""></a>        href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
-<span id="cb21-22"><a href=""></a>        target<span class="sc">:</span> _blank</span>
-<span id="cb21-23"><a href=""></a>  page<span class="sc">-</span>footer<span class="sc">:</span></span>
-<span id="cb21-24"><a href=""></a>    background<span class="sc">:</span> light</span>
-<span id="cb21-25"><a href=""></a>    left<span class="sc">:</span> Copyright <span class="dv">2021</span>, Samantha Csik</span>
-<span id="cb21-26"><a href=""></a>    right<span class="sc">:</span> This website is built with {{<span class="sc">&lt;</span> fa heart title<span class="ot">=</span><span class="st">"a heart"</span> <span class="sc">&gt;</span>}}, [{{<span class="sc">&lt;</span> fa brands github title<span class="ot">=</span><span class="st">"GitHub octocat logo"</span> <span class="sc">&gt;</span>}}](https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik<span class="sc">/</span>samanthacsik.github.io){target<span class="ot">=</span>_blank}, [{{<span class="sc">&lt;</span> fa brands r<span class="sc">-</span>project title<span class="ot">=</span><span class="st">"R Project"</span> <span class="sc">&gt;</span>}}](https<span class="sc">:</span><span class="er">//</span>www.r<span class="sc">-</span>project.org<span class="sc">/</span>about.html){target<span class="ot">=</span>_blank} and [Quarto](https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>){target<span class="ot">=</span>_blank}</span>
-<span id="cb21-27"><a href=""></a></span>
-<span id="cb21-28"><a href=""></a>format<span class="sc">:</span></span>
-<span id="cb21-29"><a href=""></a>  html<span class="sc">:</span></span>
-<span id="cb21-30"><a href=""></a>    theme<span class="sc">:</span> styles.scss</span>
-<span id="cb21-31"><a href=""></a>    mainfont<span class="sc">:</span> Nunito</span>
-<span id="cb21-32"><a href=""></a>    toc<span class="sc">:</span> true</span>
-<span id="cb21-33"><a href=""></a>    page<span class="sc">-</span>layout<span class="sc">:</span> full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-6"><a href=""></a>  title<span class="sc">:</span> <span class="st">"Sam Csik"</span></span>
+<span id="cb21-7"><a href=""></a>  favicon<span class="sc">:</span> media<span class="sc">/</span>myFavicon.png</span>
+<span id="cb21-8"><a href=""></a>  navbar<span class="sc">:</span></span>
+<span id="cb21-9"><a href=""></a>    title<span class="sc">:</span> false</span>
+<span id="cb21-10"><a href=""></a>    logo<span class="sc">:</span> media<span class="sc">/</span>myLogo.png</span>
+<span id="cb21-11"><a href=""></a>    logo<span class="sc">-</span>alt<span class="sc">:</span> <span class="st">"The name 'sam csik' written in green text. Above 'csik' is a dark green horizontal line, above which sits a green chick."</span></span>
+<span id="cb21-12"><a href=""></a>    right<span class="sc">:</span></span>
+<span id="cb21-13"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> index.qmd</span>
+<span id="cb21-14"><a href=""></a>        text<span class="sc">:</span> Home</span>
+<span id="cb21-15"><a href=""></a>      <span class="sc">-</span> about.qmd</span>
+<span id="cb21-16"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> resources.qmd</span>
+<span id="cb21-17"><a href=""></a>        text<span class="sc">:</span> Resources</span>
+<span id="cb21-18"><a href=""></a>      <span class="sc">-</span> href<span class="sc">:</span> cv<span class="sc">/</span>myCV.pdf</span>
+<span id="cb21-19"><a href=""></a>        text<span class="sc">:</span> CV</span>
+<span id="cb21-20"><a href=""></a>        target<span class="sc">:</span> _blank</span>
+<span id="cb21-21"><a href=""></a>      <span class="sc">-</span> icon<span class="sc">:</span> github</span>
+<span id="cb21-22"><a href=""></a>        href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
+<span id="cb21-23"><a href=""></a>        target<span class="sc">:</span> _blank</span>
+<span id="cb21-24"><a href=""></a>  page<span class="sc">-</span>footer<span class="sc">:</span></span>
+<span id="cb21-25"><a href=""></a>    background<span class="sc">:</span> light</span>
+<span id="cb21-26"><a href=""></a>    left<span class="sc">:</span> Copyright <span class="dv">2021</span>, Samantha Csik</span>
+<span id="cb21-27"><a href=""></a>    right<span class="sc">:</span> This website is built with {{<span class="sc">&lt;</span> fa heart title<span class="ot">=</span><span class="st">"a heart"</span> <span class="sc">&gt;</span>}}, [{{<span class="sc">&lt;</span> fa brands github title<span class="ot">=</span><span class="st">"GitHub octocat logo"</span> <span class="sc">&gt;</span>}}](https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik<span class="sc">/</span>samanthacsik.github.io){target<span class="ot">=</span>_blank}, [{{<span class="sc">&lt;</span> fa brands r<span class="sc">-</span>project title<span class="ot">=</span><span class="st">"R Project"</span> <span class="sc">&gt;</span>}}](https<span class="sc">:</span><span class="er">//</span>www.r<span class="sc">-</span>project.org<span class="sc">/</span>about.html){target<span class="ot">=</span>_blank} and [Quarto](https<span class="sc">:</span><span class="er">//</span>quarto.org<span class="sc">/</span>){target<span class="ot">=</span>_blank}</span>
+<span id="cb21-28"><a href=""></a></span>
+<span id="cb21-29"><a href=""></a>format<span class="sc">:</span></span>
+<span id="cb21-30"><a href=""></a>  html<span class="sc">:</span></span>
+<span id="cb21-31"><a href=""></a>    theme<span class="sc">:</span> styles.scss</span>
+<span id="cb21-32"><a href=""></a>    mainfont<span class="sc">:</span> Nunito</span>
+<span id="cb21-33"><a href=""></a>    toc<span class="sc">:</span> true</span>
+<span id="cb21-34"><a href=""></a>    page<span class="sc">-</span>layout<span class="sc">:</span> full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -2150,23 +2151,10 @@ Okay, that’s cool…but what about Quarto?
 </section><section id="determine-element-to-style" class="slide level2" data-menu-title="Determine element(s) to style"><h2></h2>
 <p><span class="slide-title2">Determine which element(s) you want to style</span></p>
 <hr>
-<p><br></p>
+<p><em><strong>Note:</strong> I’ve added a bit more text to my page titled, “About,” for demonstration purposes.</em></p>
 <p>Let’s say I want to similarly style (add a bit of spacing between each letter, increase font weight) the following text on my website:</p>
-<p><br></p>
 <div class="columns">
-<div class="column" style="width:33%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/index-font.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="body-text-s center-text gray-text">
-<p>On my landing page, I want to style my name, “Samantha Csik”, and the three section headers, “Hi there!”, “Education”, and “Experience”</p>
-</div>
-</div><div class="column" style="width:33%;">
+<!-- ::: {.column width="33%"} --><!-- ```{r} --><!-- #| eval: true  --><!-- #| echo: false --><!-- #| fig-align: "center" --><!-- #| out-width: "100%"  --><!-- knitr::include_graphics("images/index-font.png") --><!-- ``` --><!-- ::: {.body-text-s .center-text .gray-text} --><!-- On my landing page, I want to style my name, "Samantha Csik", and the three section headers, "Hi there!", "Education", and "Experience" --><!-- ::: --><!-- ::: --><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2176,9 +2164,9 @@ Okay, that’s cool…but what about Quarto?
 </div>
 </div>
 <div class="body-text-s center-text gray-text">
-<p>On my About page, I want to style the page title, “About”</p>
+<p>On my About page, I want to style the page title, “About”, and each of the section headers</p>
 </div>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -2207,35 +2195,78 @@ Okay, that’s cool…but what about Quarto?
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<p><br><br><br></p>
+<p><br><br></p>
 <div class="body-text-s">
-<p>In your website preview, <strong>right click on an element of interest</strong> (in this case, let’s start with my name, “Samantha Csik”) and <strong>choose Inspect</strong> to pull up the underlying HTML &amp; CSS files.</p>
+<p>In your website preview, <strong>right click on an element of interest</strong> (in this case, let’s start with the page title, “About”) and <strong>choose Inspect</strong> to pull up the underlying HTML &amp; CSS files. You can continue to right click / inspect additional elements (e.g.&nbsp;the section header, “What I do for work”).</p>
 </div>
 <div class="body-text-s">
 <p>Hovering your mouse over different lines of HTML highlights the corresponding element on your webpage.</p>
 </div>
 </div></div>
-</section><section id="inspect-name" class="slide level2" data-menu-title="Inspect landing page name"><h2></h2>
+</section><section id="inspect-about-title" class="slide level2" data-menu-title="Inspect About &amp; Resources page titles"><h2></h2>
 <div class="body-text-xl teal-text center-text">
-<p>My name is an <code>&lt;h1&gt;</code> element</p>
+<p>The words “About” and “All my favorite resources!” are <code>&lt;h1&gt;</code> elements</p>
+</div>
+<div class="center-text">
+<p><em>Only the screenshot for the “About” page shown here</em></p>
 </div>
 
-<img data-src="images/inspect-name.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="body-text-s gray-text center-text">
-<p><strong>Note:</strong> This <code>&lt;h1&gt;</code> element also has a class <code>title</code> – more on that in a minute.</p>
+<img data-src="images/inspect-about-resources.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="body-text-s gray-text center-text">
+<p><strong>Note:</strong> These <code>&lt;h1&gt;</code> elements also have a class <code>title</code> – more on that in a minute.</p>
 </div>
-</section><section id="inspect-landing-page-sections" class="slide level2" data-menu-title="Inspect landing page sections"><h2></h2>
+<!-- --- -->
+<!-- ##  {#inspect-name data-menu-title="Inspect landing page name"} -->
+<!-- ::: {.body-text-xl .teal-text .center-text} -->
+<!-- My name is an `<h1>` element -->
+<!-- ::: -->
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "100%"  -->
+<!-- knitr::include_graphics("images/inspect-name.png") -->
+<!-- ``` -->
+<!-- ::: {.body-text-s .gray-text .center-text} -->
+<!-- **Note:** This `<h1>` element also has a class `title` -- more on that in a minute. -->
+<!-- ::: -->
+</section><section id="inspect-about-sections" class="slide level2" data-menu-title="Inspect About page sections"><h2></h2>
 <div class="body-text-xl teal-text center-text">
-<p>My landing page sections, “Hi there!”, “Education” and “Experience”, are <code>&lt;h2&gt;</code> elements</p>
+<p>Both section headers on the page titled, “About,” are <code>&lt;h2&gt;</code> elements</p>
+</div>
+<div class="center-text">
+<p><em>Only the screenshot for the section header that reads, “What I do for work,” shown here</em></p>
 </div>
 
-<img data-src="images/inspect-education.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="inspect-about" class="slide level2" data-menu-title="Inspect about page"><h2></h2>
-<div class="body-text-xl teal-text center-text">
-<p>My About page and Resource page titles are <code>&lt;h1&gt;</code> elements</p>
+<img data-src="images/inspect-about-section-headers.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="body-text-s gray-text center-text">
+<p><strong>Note:</strong> These <code>&lt;h2&gt;</code> elements also have a class <code>anchored</code> – more on that in a minute.</p>
 </div>
-
-<img data-src="images/inspect-about.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><div class="body-text-s gray-text center-text">
-<p><strong>Note:</strong> These <code>&lt;h1&gt;</code> elements also have a class, <code>title</code>– we’ll come back to that shortly.</p>
-</div>
+<!-- --- -->
+<!-- ##  {#inspect-landing-page-sections data-menu-title="Inspect landing page sections"} -->
+<!-- ::: {.body-text-xl .teal-text .center-text} -->
+<!-- My landing page sections, "Hi there!", "Education" and "Experience", are `<h2>` elements -->
+<!-- ::: -->
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "100%"  -->
+<!-- knitr::include_graphics("images/inspect-education.png") -->
+<!-- ``` -->
+<!-- --- -->
+<!-- ##  {#inspect-about data-menu-title="Inspect about page"} -->
+<!-- ::: {.body-text-xl .teal-text .center-text} -->
+<!-- My About page and Resource page titles are `<h1>` elements -->
+<!-- ::: -->
+<!-- ```{r} -->
+<!-- #| eval: true  -->
+<!-- #| echo: false -->
+<!-- #| fig-align: "center" -->
+<!-- #| out-width: "90%"  -->
+<!-- knitr::include_graphics("images/inspect-about.png") -->
+<!-- ``` -->
+<!-- ::: {.body-text-s .gray-text .center-text} -->
+<!-- **Note:** These `<h1>` elements also have a class, `title`-- we'll come back to that shortly. -->
+<!-- ::: -->
 </section><section id="write-grouping-selector" class="slide level2" data-menu-title="Write grouping selector"><h2></h2>
 <span class="slide-title">Write a <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> grouping selector</span> <!-- We can use a grouping selector! -->
 <hr>
@@ -2244,48 +2275,50 @@ Okay, that’s cool…but what about Quarto?
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="29-32"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb41-1"><a href=""></a><span class="co">/*-- scss:defaults --*/</span></span>
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="32-35"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb41-1"><a href=""></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb41-2"><a href=""></a></span>
-<span id="cb41-3"><a href=""></a><span class="co">// Colors</span></span>
-<span id="cb41-4"><a href=""></a><span class="va">$dark-green</span>: <span class="cn">#858E79</span>;</span>
-<span id="cb41-5"><a href=""></a><span class="va">$light-green</span>: <span class="cn">#D1D9CE</span>;</span>
-<span id="cb41-6"><a href=""></a><span class="va">$cream</span>: <span class="cn">#FDFBF7</span>;</span>
-<span id="cb41-7"><a href=""></a><span class="va">$gray</span>: <span class="cn">#64605f</span>;</span>
-<span id="cb41-8"><a href=""></a><span class="va">$purple</span>: <span class="cn">#9158A2</span>;</span>
-<span id="cb41-9"><a href=""></a><span class="va">$orange</span>: <span class="cn">#ad7237</span>;</span>
-<span id="cb41-10"><a href=""></a></span>
-<span id="cb41-11"><a href=""></a><span class="co">// Base document colors</span></span>
-<span id="cb41-12"><a href=""></a><span class="va">$navbar-bg</span>: <span class="va">$cream</span>; <span class="co">// navbar</span></span>
-<span id="cb41-13"><a href=""></a><span class="va">$navbar-fg</span>: <span class="va">$dark-green</span>; <span class="co">// navbar foreground elements</span></span>
-<span id="cb41-14"><a href=""></a><span class="va">$navbar-hl</span>: <span class="va">$purple</span>; <span class="co">// highlight color when hovering over navbar links</span></span>
-<span id="cb41-15"><a href=""></a><span class="va">$body-bg</span>: <span class="va">$light-green</span>; <span class="co">// page background </span></span>
-<span id="cb41-16"><a href=""></a><span class="va">$body-color</span>: <span class="va">$gray</span>; <span class="co">// page text </span></span>
-<span id="cb41-17"><a href=""></a><span class="va">$footer-bg</span>: <span class="va">$cream</span>; <span class="co">// footer </span></span>
-<span id="cb41-18"><a href=""></a><span class="va">$link-color</span>: <span class="va">$purple</span>; <span class="co">// hyperlinks </span></span>
-<span id="cb41-19"><a href=""></a></span>
-<span id="cb41-20"><a href=""></a><span class="co">// Inline code</span></span>
-<span id="cb41-21"><a href=""></a><span class="va">$code-bg</span>: <span class="va">$cream</span>; <span class="co">// inline code background color</span></span>
-<span id="cb41-22"><a href=""></a><span class="va">$code-color</span>: <span class="va">$purple</span>; <span class="co">// inline code text color</span></span>
-<span id="cb41-23"><a href=""></a></span>
-<span id="cb41-24"><a href=""></a><span class="co">// Code blocks</span></span>
-<span id="cb41-25"><a href=""></a><span class="va">$code-block-bg</span>: <span class="va">$cream</span>; <span class="co">// code block background color </span></span>
+<span id="cb41-3"><a href=""></a><span class="co">// Import Google fonts</span></span>
+<span id="cb41-4"><a href=""></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
+<span id="cb41-5"><a href=""></a></span>
+<span id="cb41-6"><a href=""></a><span class="co">// Colors</span></span>
+<span id="cb41-7"><a href=""></a><span class="va">$dark-green</span>: <span class="cn">#858E79</span>;</span>
+<span id="cb41-8"><a href=""></a><span class="va">$light-green</span>: <span class="cn">#D1D9CE</span>;</span>
+<span id="cb41-9"><a href=""></a><span class="va">$cream</span>: <span class="cn">#FDFBF7</span>;</span>
+<span id="cb41-10"><a href=""></a><span class="va">$gray</span>: <span class="cn">#64605f</span>;</span>
+<span id="cb41-11"><a href=""></a><span class="va">$purple</span>: <span class="cn">#9158A2</span>;</span>
+<span id="cb41-12"><a href=""></a><span class="va">$orange</span>: <span class="cn">#ad7237</span>;</span>
+<span id="cb41-13"><a href=""></a></span>
+<span id="cb41-14"><a href=""></a><span class="co">// Base document colors</span></span>
+<span id="cb41-15"><a href=""></a><span class="va">$navbar-bg</span>: <span class="va">$cream</span>; <span class="co">// navbar</span></span>
+<span id="cb41-16"><a href=""></a><span class="va">$navbar-fg</span>: <span class="va">$dark-green</span>; <span class="co">// navbar foreground elements</span></span>
+<span id="cb41-17"><a href=""></a><span class="va">$navbar-hl</span>: <span class="va">$purple</span>; <span class="co">// highlight color when hovering over navbar links</span></span>
+<span id="cb41-18"><a href=""></a><span class="va">$body-bg</span>: <span class="va">$light-green</span>; <span class="co">// page background </span></span>
+<span id="cb41-19"><a href=""></a><span class="va">$body-color</span>: <span class="va">$gray</span>; <span class="co">// page text </span></span>
+<span id="cb41-20"><a href=""></a><span class="va">$footer-bg</span>: <span class="va">$cream</span>; <span class="co">// footer </span></span>
+<span id="cb41-21"><a href=""></a><span class="va">$link-color</span>: <span class="va">$purple</span>; <span class="co">// hyperlinks </span></span>
+<span id="cb41-22"><a href=""></a></span>
+<span id="cb41-23"><a href=""></a><span class="co">// Inline code</span></span>
+<span id="cb41-24"><a href=""></a><span class="va">$code-bg</span>: <span class="va">$cream</span>; <span class="co">// inline code background color</span></span>
+<span id="cb41-25"><a href=""></a><span class="va">$code-color</span>: <span class="va">$purple</span>; <span class="co">// inline code text color</span></span>
 <span id="cb41-26"><a href=""></a></span>
-<span id="cb41-27"><a href=""></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb41-28"><a href=""></a></span>
-<span id="cb41-29"><a href=""></a>h1<span class="op">,</span> h2 {</span>
-<span id="cb41-30"><a href=""></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
-<span id="cb41-31"><a href=""></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>; # Google fonts tells you which weights your chosen font family allows for<span class="at">!</span></span>
-<span id="cb41-32"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb41-27"><a href=""></a><span class="co">// Code blocks</span></span>
+<span id="cb41-28"><a href=""></a><span class="va">$code-block-bg</span>: <span class="va">$cream</span>; <span class="co">// code block background color </span></span>
+<span id="cb41-29"><a href=""></a></span>
+<span id="cb41-30"><a href=""></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb41-31"><a href=""></a></span>
+<span id="cb41-32"><a href=""></a>h1<span class="op">,</span> h2 {</span>
+<span id="cb41-33"><a href=""></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
+<span id="cb41-34"><a href=""></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>; <span class="co">// Google fonts tells you which weights your chosen font family allows for!</span></span>
+<span id="cb41-35"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="footer">
-<p><strong>Note:</strong> We don’t need to make any changes to the HTML (in <code>index.qmd</code>, <code>about.qmd</code>, and <code>resources.qmd</code>) since this grouping selector targets <em>all</em> <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.</p>
+<p><strong>Note:</strong> We don’t need to make any changes to the HTML (in <code>about.qmd</code> and <code>resources.qmd</code>) since this grouping selector targets <em>all</em> <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements across the site. If an element on any of the pages has either of those tags, it will get styled according to the declaration(s) included in our CSS rule.</p>
 </div>
 </section><section id="preview-grouping-selector" class="slide level2" data-menu-title="Preview grouping selector"><h2></h2>
 <p><span class="slide-title">Preview your updated styling</span></p>
 <hr>
-<p><br></p>
-<p>Our updated <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements should now look like this:</p>
+<p>Our updated <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> elements should now look something like this:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
@@ -2312,10 +2345,13 @@ Okay, that’s cool…but what about Quarto?
 <p>With CSS styling on <code>h1</code> and <code>h2</code> headers</p>
 </div>
 </div></div>
+<div class="center-text">
+<p>Check to see that our styles were also applied to our “Resources” page title.</p>
+</div>
 </section><section id="predefined-title-class" class="slide level2" data-menu-title="Predefined 'title' class"><h2></h2>
 <p><span class="slide-title3">Recall those <code>.title</code> class selectors we noted earlier?</span></p>
 <hr>
-<p><span class="body-text-s">We noted that the page titles (“Samantha Csik” on the landing page, “About” on the About page and “All my favorite resources!” on the Resources page), are all <code>&lt;h1&gt;</code> elements <em>and</em> are also given the class, <code>title</code> (e.g.&nbsp;<code>&lt;h1&gt; class="title"&gt;All of my favorite resources!&lt;/h1&gt;</code>). This means that the Quarto framework has already defined a class selector called <code>.title</code> and applied that class to the above elements.</span></p>
+<!-- [We noted that the page titles ("Samantha Csik" on the landing page, "About" on the About page and "All my favorite resources!" on the Resources page), are all `<h1>` elements *and* are also given the class, `title` (e.g. `<h1> class="title">All of my favorite resources!</h1>`). This means that the Quarto framework has already defined a class selector called `.title` and applied that class to the above elements.]{.body-text-s} --><p><span class="body-text-s">We noted that the page titles (“About” on the About page and “All my favorite resources!” on the Resources page), are all <code>&lt;h1&gt;</code> elements <em>and</em> are also given the class, <code>title</code> (e.g.&nbsp;<code>&lt;h1&gt; class="title"&gt;All of my favorite resources!&lt;/h1&gt;</code>). This means that the Quarto framework has already defined a class selector called <code>.title</code> and applied that class to the above elements.</span></p>
 
 <img data-src="images/title-class.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="modify-title-class" class="slide level2" data-menu-title="Modify 'title' class"><h2></h2>
 <p><span class="slide-title2">We can modify existing class (or ID) selectors</span></p>
@@ -2367,21 +2403,21 @@ Okay, that’s cool…but what about Quarto?
 </section><section id="maroon-titles" class="slide level2" data-menu-title="Maroon titles"><h2></h2>
 <p><span class="slide-title">Check out your new maroon <code>title</code>s</span></p>
 <hr>
-<p><span class="body-text-s"><strong>It’s important to note that we didn’t need to make any changes to the HTML</strong> (in <code>index.qmd</code>, <code>about.qmd</code>, and <code>resources.qmd</code>) since those <code>&lt;h1&gt;</code> elements are <em>already</em> assigned the class, <code>title</code>. Updates are automatically applied to any elements that the Quarto framework has already assigned as that class.</span></p>
+<p><span class="body-text-s"><strong>It’s important to note that we didn’t need to make any changes to the HTML</strong> (in <code>about.qmd</code>, and <code>resources.qmd</code>) since those <code>&lt;h1&gt;</code> elements are <em>already</em> assigned the class, <code>title</code>. Updates are automatically applied to any elements that the Quarto framework has already assigned as that class.</span></p>
 <p><br></p>
 
 <img data-src="images/maroon-text.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="non-titles" class="slide level2" data-menu-title="Elements w/o title class"><h2></h2>
 <p><span class="slide-title2">Can we apply the <code>title</code> class to other elements?</span></p>
 <hr>
-<p>Yes! To demonstrate, let’s write a couple of HTML elements that <em>are not by default</em> assigned the <code>title</code> class to see what happens – in other words, let’s apply the <code>title</code> class to some elements beyond just our website’s landing page name and page titles. I’ll do this on my <strong>About</strong> page (<code>about.qmd</code>):</p>
+<p>Yes! To demonstrate, let’s write a couple of HTML elements that <em>are not by default</em> assigned the <code>title</code> class to see what happens – in other words, let’s apply the <code>title</code> class to some elements beyond just our website’s landing page name and page titles. I’ll do this on my <strong>Resources</strong> page (<code>resources.qmd</code>):</p>
 <p><br></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>about.qmd</strong></pre>
+<pre><strong>resources.qmd</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb43" data-code-line-numbers="5-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="sc">---</span></span>
-<span id="cb43-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"About"</span></span>
+<span id="cb43-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"Resources"</span></span>
 <span id="cb43-3"><a href=""></a><span class="sc">---</span></span>
 <span id="cb43-4"><a href=""></a></span>
 <span id="cb43-5"><a href=""></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> <span class="co"># alternatively, you can write &lt;h1&gt; elements using markdown (`# this is an `&lt;h1&gt;` element`)</span></span>
@@ -2400,9 +2436,9 @@ Okay, that’s cool…but what about Quarto?
 <p><span class="slide-title3">Class selectors allow us fine-tuned control over styling</span></p>
 <hr>
 <p><span class="body-text-s">Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only <code>&lt;h1&gt;</code> elements that are assigned the class, <code>title</code>, are colored maroon. Any <code>&lt;h1&gt;</code> elements that are not assigned the class, <code>title</code>, are styled according to our <code>h1, h2 {}</code> element selector.</span></p>
-<p><span class="body-text-s">Note that we can also apply the <code>title</code> class to <em>any</em> text element (not <em>just</em> <code>&lt;h1&gt;</code> elements). In this example, we apply it both to an <code>&lt;h1&gt;</code> element and a <code>&lt;p&gt;</code> element.</span></p>
 
-<img data-src="images/h1-title.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="write-own-class-selector" class="slide level2" data-menu-title="Write your own class selectors"><h2></h2>
+<img data-src="images/h1-title.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><span class="body-text-s"><strong>Note</strong> that we can also apply the <code>title</code> class to <em>any</em> text element (not <em>just</em> <code>&lt;h1&gt;</code> elements). In this example, we apply it both to an <code>&lt;h1&gt;</code> element and a <code>&lt;p&gt;</code> element.</span></p>
+</section><section id="write-own-class-selector" class="slide level2" data-menu-title="Write your own class selectors"><h2></h2>
 <p><span class="slide-title">We can also write our own class selectors</span></p>
 <hr>
 <p>Let’s first create two different classes: one to center text on the page, and another to color text orange: <!-- Then, we'll add elements to our **Resources** page (`resources.qmd`) to test out our new class selectors: --></p>
@@ -2463,29 +2499,34 @@ Okay, that’s cool…but what about Quarto?
 </section><section id="write-resources-html" class="slide level2" data-menu-title="Write HTML for Resources page"><h2></h2>
 <p><span class="slide-title3">Write some HTML elements and apply class selectors</span></p>
 <hr>
-<p><br></p>
-<p>Next, let’s write a few different elements in <code>resources.qmd</code> and apply our custom class selectors:</p>
-<p><br></p>
+<p><span class="body-text-s">Add a few more elements in <code>resources.qmd</code> and apply our custom class selectors. <strong>Remember,</strong> unlike element selectors, <strong>class selectors must be applied to the elements that we want to style</strong> (i.e.&nbsp;we need to update our HTML!):</span></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>resources.qmd</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="5-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="sc">---</span></span>
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="13-22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="sc">---</span></span>
 <span id="cb45-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"All my favorite resources!"</span></span>
 <span id="cb45-3"><a href=""></a><span class="sc">---</span></span>
-<span id="cb45-4"><a href=""></a></span>
-<span id="cb45-5"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"orange-text"</span><span class="sc">&gt;</span>This paragraph is orange.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb45-6"><a href=""></a>  </span>
-<span id="cb45-7"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This paragraph is centered.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb45-8"><a href=""></a>  </span>
-<span id="cb45-9"><a href=""></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>This paragraph has no styling.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-4"><a href=""></a>  </span>
+<span id="cb45-5"><a href=""></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> </span>
+<span id="cb45-6"><a href=""></a></span>
+<span id="cb45-7"><a href=""></a><span class="er">&lt;</span>h1 class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
+<span id="cb45-8"><a href=""></a></span>
+<span id="cb45-9"><a href=""></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
 <span id="cb45-10"><a href=""></a></span>
-<span id="cb45-11"><a href=""></a><span class="er">&lt;</span>h2 class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This level<span class="dv">-2</span> header is centered<span class="sc">&lt;</span><span class="er">/</span>h2<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-11"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-12"><a href=""></a>  </span>
+<span id="cb45-13"><a href=""></a><span class="sc">---</span> <span class="co"># three dashes is markdown syntax for creating a horizontal line across your page</span></span>
+<span id="cb45-14"><a href=""></a></span>
+<span id="cb45-15"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"orange-text"</span><span class="sc">&gt;</span>This paragraph is orange.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-16"><a href=""></a>  </span>
+<span id="cb45-17"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This paragraph is centered.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-18"><a href=""></a>  </span>
+<span id="cb45-19"><a href=""></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>This paragraph has no styling.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb45-20"><a href=""></a></span>
+<span id="cb45-21"><a href=""></a><span class="er">&lt;</span>h2 class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This level<span class="dv">-2</span> header is centered<span class="sc">&lt;</span><span class="er">/</span>h2<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="footer">
-<p><strong>Don’t forget:</strong> Unlike element selectors, <strong>class selectors must be applied to the elements that we want to style</strong> (meaning, we need to update our HTML!).</p>
 </div>
 </section><section id="orange-center-text" class="slide level2" data-menu-title="Oranged / centered text"><h2></h2>
 <p><span class="slide-title">Check out your new orange / centered text</span></p>
@@ -2496,38 +2537,53 @@ Okay, that’s cool…but what about Quarto?
 <p><span class="slide-title2">Elements can have more than one class selector</span></p>
 <hr>
 <p>Simply list the names of the class selectors one after the next inside <code>""</code> – for example, <code>&lt;tag class="class1 class2"&gt;Content&lt;/tag&gt;</code>.</p>
-<p><br></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>resources.qmd</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="13-15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="sc">---</span></span>
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="23-27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="sc">---</span></span>
 <span id="cb46-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"All my favorite resources!"</span></span>
 <span id="cb46-3"><a href=""></a><span class="sc">---</span></span>
 <span id="cb46-4"><a href=""></a>  </span>
-<span id="cb46-5"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"orange-text"</span><span class="sc">&gt;</span>This paragraph is orange.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb46-6"><a href=""></a>  </span>
-<span id="cb46-7"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This paragraph is centered.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
-<span id="cb46-8"><a href=""></a>  </span>
-<span id="cb46-9"><a href=""></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>This paragraph has no styling.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb46-5"><a href=""></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> </span>
+<span id="cb46-6"><a href=""></a></span>
+<span id="cb46-7"><a href=""></a><span class="er">&lt;</span>h1 class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span></span>
+<span id="cb46-8"><a href=""></a></span>
+<span id="cb46-9"><a href=""></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
 <span id="cb46-10"><a href=""></a></span>
-<span id="cb46-11"><a href=""></a><span class="er">&lt;</span>h2 class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This level<span class="dv">-2</span> header is centered<span class="sc">&lt;</span><span class="er">/</span>h2<span class="sc">&gt;</span></span>
+<span id="cb46-11"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"title"</span><span class="sc">&gt;</span>this is a <span class="st">`</span><span class="at">&lt;p&gt;</span><span class="st">`</span> element of class <span class="st">`</span><span class="at">title</span><span class="st">`</span><span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
 <span id="cb46-12"><a href=""></a>  </span>
-<span id="cb46-13"><a href=""></a><span class="er">&lt;</span>h2 class<span class="ot">=</span><span class="st">"center-text orange-text"</span><span class="sc">&gt;</span>This level<span class="dv">-2</span> header is both centered and orange<span class="sc">&lt;</span><span class="er">/</span>h2<span class="sc">&gt;</span></span>
-<span id="cb46-14"><a href=""></a>  </span>
-<span id="cb46-15"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"orange-text"</span><span class="sc">&gt;</span><span class="er">**</span>This paragraph is orange and bolded using markdown <span class="fu">syntax</span> (yes, you can combine markdown and html<span class="sc">!</span>).<span class="sc">**</span><span class="er">&lt;/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb46-13"><a href=""></a><span class="sc">---</span> <span class="co"># three dashes is markdown syntax for creating a horizontal line across your page</span></span>
+<span id="cb46-14"><a href=""></a></span>
+<span id="cb46-15"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"orange-text"</span><span class="sc">&gt;</span>This paragraph is orange.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb46-16"><a href=""></a>  </span>
+<span id="cb46-17"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This paragraph is centered.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb46-18"><a href=""></a>  </span>
+<span id="cb46-19"><a href=""></a><span class="er">&lt;</span>p<span class="sc">&gt;</span>This paragraph has no styling.<span class="sc">&lt;</span><span class="er">/</span>p<span class="sc">&gt;</span></span>
+<span id="cb46-20"><a href=""></a></span>
+<span id="cb46-21"><a href=""></a><span class="er">&lt;</span>h2 class<span class="ot">=</span><span class="st">"center-text"</span><span class="sc">&gt;</span>This level<span class="dv">-2</span> header is centered<span class="sc">&lt;</span><span class="er">/</span>h3<span class="sc">&gt;</span></span>
+<span id="cb46-22"><a href=""></a>  </span>
+<span id="cb46-23"><a href=""></a><span class="sc">---</span></span>
+<span id="cb46-24"><a href=""></a>  </span>
+<span id="cb46-25"><a href=""></a><span class="er">&lt;</span>h3 class<span class="ot">=</span><span class="st">"center-text orange-text"</span><span class="sc">&gt;</span>This level<span class="dv">-3</span> header is both centered and orange<span class="sc">&lt;</span><span class="er">/</span>h2<span class="sc">&gt;</span></span>
+<span id="cb46-26"><a href=""></a>  </span>
+<span id="cb46-27"><a href=""></a><span class="er">&lt;</span>p class<span class="ot">=</span><span class="st">"orange-text"</span><span class="sc">&gt;</span><span class="er">**</span>This paragraph is orange and bolded using markdown <span class="fu">syntax</span> (yes, you can combine markdown and html<span class="sc">!</span>).<span class="sc">**</span><span class="er">&lt;/</span>p<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section><section id="two-classes" class="slide level2" data-menu-title="2+ classes"><h2></h2>
 <p><span class="slide-title">Admire your updated page!</span></p>
 <hr>
-<p><br></p>
+<div class="center-text">
+<p>(Yeah, okay this doesn’t look that great, but I hope you can at least admire your use of CSS to style different HTML elements!)</p>
+</div>
 
-<img data-src="images/two-classes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section><section id="quarto-syntax" class="slide level2" data-menu-title="Quarto Syntax"><h2></h2>
+<img data-src="images/two-classes.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"><div class="footer">
+<p>It’s important to note that Quarto (currently) does not create a table of contents (TOC) on a page where header text is specified using HTML syntax (e.g.&nbsp;<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.). It <em>does</em> add a TOC when header text is specified using markdown syntax (e.g.&nbsp;<code>#</code>, <code>##</code>, etc.) so long as you have <code>toc: true</code>.</p>
+</div>
+</section><section id="quarto-syntax" class="slide level2" data-menu-title="Quarto Syntax"><h2></h2>
 <p><span class="slide-title3">Quarto also provides its <a href="https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans">own syntax</a> for applying classes to elements</span></p>
 <hr>
-<p><br></p>
 <p>You can create both <strong>divs (block-level regions of content)</strong> and <strong>spans (inline content)</strong> using Quarto’s syntax. For example:</p>
 <p><br></p>
 <div class="columns">
@@ -2680,7 +2736,7 @@ Let’s close out this section with just a couple more tips…
 <p><span class="body-text-s">Let’s add a CSS rule to increase the size of our logo. Be sure to add this rule beneath your <code>/*-- scss:rules --*/</code> region decorator, and note that you may need to adjust the <code>max-height</code> value to best suit your own personal logo:</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb51-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">.navbar-brand</span> img { </span>
-<span id="cb51-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-height</span>: <span class="dv">50</span><span class="dt">px</span>;</span>
+<span id="cb51-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-height</span>: <span class="dv">40</span><span class="dt">px</span>;</span>
 <span id="cb51-3"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="bu">auto</span>;</span>
 <span id="cb51-4"><a href="" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2688,7 +2744,7 @@ Let’s close out this section with just a couple more tips…
 <img data-src="images/large-logo.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="adapt-css" class="slide level2" data-menu-title="Adapting CSS from others"><h2></h2>
 <p><span class="slide-title">How did I figure that CSS rule out??</span></p>
 <hr>
-<p>Great question! I adapted it from someone else’s open source code, which was available on GitHub <i class="fa-solid fa-face-smile-beam" title="a smiling face with happy, squinty eyes" aria-hidden="true"></i> This process often involves some trial and error, but it’s one of the best ways to learn from the many awesome folks who openly share their work.</p>
+<p>Great question! <strong>I adapted it from someone else’s open source code</strong>, which was available on GitHub <i class="fa-solid fa-face-smile-beam" title="a smiling face with happy, squinty eyes" aria-hidden="true"></i> This process often involves some trial and error, but it’s one of the best ways to learn from the many awesome folks who openly share their work.</p>
 <p>More specifically, I stumbled upon <a href="https://robertmitchellv.com/">Robert Mitchell’s personal website</a> (built with Quarto) and noticed that he too had a logo, <em>and</em> that it was perfectly sized to fit the navbar space:</p>
 
 <img data-src="images/mitchell-website.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="trial-error" class="slide level2" data-menu-title="Adapting CSS -- trial &amp; error"><h2></h2>
