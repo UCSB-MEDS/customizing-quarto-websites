@@ -217,12 +217,13 @@ Adding the region decorator as written above is *critical!* Quarto won't recogni
 ```{r filename="styles.scss"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "31"
+#| code-line-numbers: "32"
 project:
   type: website
   output-dir: docs
 
 website:
+  title: "Sam Csik"
   favicon: file/path/to/image.png 
   navbar:
     title: false 

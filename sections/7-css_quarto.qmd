@@ -1,5 +1,15 @@
 ---
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    # preview-links: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: 
+      - meds-slides-styles.scss
 ---
 
 ##  {#css-quarto data-menu-title="CSS + Quarto" background="#047C90"}
