@@ -170,7 +170,6 @@ Run `quarto preview` in the RStudio Terminal to view changes in near real time â
 knitr::include_graphics("images/quarto-preview.gif")
 ```
 
-
 ---
 
 ##  {#lets-start-styling data-menu-title="Let's start styling" background="#053660"}
