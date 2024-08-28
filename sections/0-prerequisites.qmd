@@ -1,5 +1,15 @@
 ---
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    # preview-links: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: 
+      - meds-slides-styles.scss
 ---
 
 ## {#prerequisites data-menu-title="Prerequisites"}
@@ -192,11 +202,11 @@ knitr::include_graphics("images/quarto-preview.gif")
 #| echo: false
 #| fig-align: "center"
 #| out-width: "85%" 
-knitr::include_graphics("images/trestles-template.png")
+knitr::include_graphics("images/jolla-template.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/), *and* the `trestles` [layout template](https://quarto.org/docs/websites/website-about.html) applied
+An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/), *and* the `jolla` [layout template](https://quarto.org/docs/websites/website-about.html) applied
 :::
 
 :::

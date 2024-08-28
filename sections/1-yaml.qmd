@@ -1,5 +1,15 @@
 ---
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    # preview-links: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: 
+      - meds-slides-styles.scss
 ---
 
 ##  {#edit-quarto-yml data-menu-title="## Edit YAML ##" background="#053660"}
@@ -39,10 +49,10 @@ Without an About Page template
 #| echo: false
 #| fig-align: "center"
 #| out-width: "92%" 
-knitr::include_graphics("images/trestles-template.png")
+knitr::include_graphics("images/jolla-template-title.png")
 ```
 ::: {.body-text-s .gray-text .center-text}
-With the `trestles` About Page template
+With the `jolla` About Page template
 :::
 :::
 ::::
@@ -67,13 +77,13 @@ Use the `about` option to apply a template to your landing page:
 #| echo: true
 #| code-line-numbers: false
 ---
-title: "Samantha Csik" # if using a built-in template, this title appears under your photo
-image: file/path/to/headshot.jpg # a great spot for your professional headshot :) 
-toc: false # disable table of contents for this page
+# title: "Samantha Csik" # optional (omitted in example screenshots); this title appears under your photo
+image: file/path/to/headshot.jpeg # a great spot for your professional headshot :) 
+toc: false # disable table of contents for this page (if applicable)
 about: 
-  template: trestles 
+  template: jolla 
   image-shape: round
-  image-width: 20em
+  image-width: 17em
   links: # create buttons
     - text: LinkedIn
       href: https://www.linkedin.com/in/samanthacsik/
@@ -170,8 +180,8 @@ project:
   output-dir: docs
 
 website:
+  title: "Sam Csik"
   navbar:
-    title: "Samantha Csik"
     right: # accepts right/left/center; you can also place items individually on the left, right, and center
       - href: index.qmd
         text: Home
@@ -180,7 +190,7 @@ website:
         text: Resources
       - href: file/path/to/myCV.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: CV
-        target: _blank # opens link (or page) in a new tab
+        target: _blank # opens link (or page) in a new browser tab
       - icon: github # add icons as navbar buttons
         href: https://github.com/samanthacsik
         target: _blank
@@ -211,6 +221,10 @@ Footers appear on each page (you may have to scroll to the bottom to see it appe
 knitr::include_graphics("images/page-footer.png")
 ```
 
+::: {.footer}
+**Note:** If you plan to use FontAwesome icons *outside* of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html) (more info on the next few slides).
+:::
+
 ---
 
 ## {#add-footer2 data-menu-title="Add page footer (code)"}
@@ -231,8 +245,8 @@ project:
   output-dir: docs
 
 website:
+  title: "Sam Csik"
   navbar:
-    title: "Samantha Csik"
     right:
       - href: index.qmd
         text: Home
@@ -243,7 +257,7 @@ website:
         text: CV
         target: _blank 
       - icon: github 
-        href: https://github.com/samanthacsik
+        href: https://github.com/yourUserName
         target: _blank
   page-footer:
     background: light # or `dark`
@@ -257,10 +271,6 @@ format:
     toc: true
     page-layout: full
 ```
-
-::: {.footer}
-**Note:** If you plan to use FontAwesome icons outside of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html) (more info on the next slide).
-:::
 
 ---
 
@@ -394,15 +404,16 @@ knitr::include_graphics("images/logo-favicon.png")
 ```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "6,8-10"
+#| code-line-numbers: "7,9-11"
 project:
   type: website
   output-dir: docs
 
 website:
+  title: "Sam Csik"
   favicon: file/path/to/image.png # NOTE: that the `favicon` is a `website` level option (not under `navbar`)
   navbar:
-    title: false # change this to false!
+    title: false # override printing your website `title` (e.g. "Sam Csik" on line 6) in the top left corner of your navbar
     logo: file/path/to/logo.png
     logo-alt: "Alt text for logo"
     right:

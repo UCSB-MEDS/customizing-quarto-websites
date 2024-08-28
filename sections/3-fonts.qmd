@@ -1,5 +1,15 @@
 ---
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    # preview-links: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: 
+      - meds-slides-styles.scss
 ---
 
 ## {#explore-fonts data-menu-title="Explore Google fonts"}
@@ -148,7 +158,7 @@ Your `styles.scss` should now similar to this:
 #| code-line-numbers: "3-4"
 /*-- scss:defaults --*/
 
-// Import fonts
+// Import Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sen:wght@400..800&display=swap');
 
 // Colors
@@ -198,6 +208,7 @@ project:
   output-dir: docs
 
 website:
+  title: "Sam Csik"
   favicon: media/myFavicon.png
   navbar:
     title: false

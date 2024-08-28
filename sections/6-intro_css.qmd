@@ -1,5 +1,15 @@
 ---
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    # preview-links: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: 
+      - meds-slides-styles.scss
 ---
 
 ##  {#light-intro-css data-menu-title="Light intro to CSS" background="#047C90"}
