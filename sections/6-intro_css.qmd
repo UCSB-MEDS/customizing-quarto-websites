@@ -60,13 +60,16 @@ knitr::include_graphics("images/CSS_syntax.png")
 
 ---
 
-##  {#selector-types data-menu-title="Types of Selectors"}
+##  {#selector-types1 data-menu-title="Types of Selectors 1"}
 
 [There are a number of different CSS selector types]{.slide-title2}
 
 <hr>
 
-The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but check out you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)):
+<br>
+
+[There are many different CSS selector types, but the following will get you pretty far (though you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)).]{.body-text-m}
+<!-- The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but check out you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)): -->
 
 <br>
 
@@ -84,24 +87,44 @@ The next few slides review just a few basic CSS selector types for styling HTML 
 
 ---
 
-##  {#select-tags data-menu-title="Element & Grouping Selectors"}
+##  {#selector-types2 data-menu-title="Types of Selectors 2"}
 
-[Select an element(s) based on its tag]{.slide-title}
+[There are a number of different CSS selector types]{.slide-title2}
 
 <hr>
 
-::: {.panel-tabset}
+<br>
 
-## Element Selectors
+[If you're just getting started on styling your Quarto website, you'll probably use **element**, **grouping**, and **class selectors** most often. We'll focus on those today.]{.body-text-m}
 
-::: {.body-text}
-Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.
-:::
+<br>
+
+- [**Element selectors:**]{.teal-text} **selects all HTML elements with the specified element name**
+
+- [**Grouping selectors:**]{.teal-text} **selects all HTML elements with the same style definitions**
+
+- [**ID selectors:**]{.teal-text} uses the id attribute of an HTML element to select a specific element; id of an element is unique within a page, so the id selector is used to select one unique element
+
+- [**Class selectors:**]{.teal-text} **selects HTML elements with a specific class attribute**
+
+- [**Universal selector:**]{.teal-text} selects all HTML elements on the page
+
+- [**Inline styling:**]{.teal-text} (not a selector type, but an alternative way to apply CSS styling)
+
+---
+
+##  {#element-selectors data-menu-title="Element selectors"}
+
+[Use *element selectors* for styling an element based on its tag]{.slide-title2}
+
+<hr>
+
+[Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.]{.body-text-m}
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="50%"}
 
-[**CSS**]{.body-text}
+**CSS**
 
 ```{css}
 #| eval: false
@@ -112,7 +135,10 @@ h1 {
 }
 ```
 
-[**HTML**]{.body-text .topbr}
+:::
+::: {.column width="50%"}
+
+**HTML**
 
 ```{html}
 #| eval: false
@@ -122,15 +148,11 @@ h1 {
 <p>Neither will this paragaph</p>
 <h1>But this second level one header will be</h1>
 ```
+
 :::
-::: {.column width="40%"}
+::::
 
 <br>
-<br>
-
-::: {.body-text .center-text .topbr}
-**Output**
-:::
 
 ```{r}
 #| eval: true 
@@ -140,19 +162,20 @@ h1 {
 knitr::include_graphics("images/element_selector.png")
 ```
 
-:::
-::::
+---
 
-## Grouping Selectors
+##  {#grouping-selectors data-menu-title="Grouping selectors"}
 
-::: {.body-text}
-Group multiple element selectors together (separated by commas) if you want them all styled the same way.
-:::
+[Use *grouping selectors* for styling multiple elements the same way]{.slide-title2}
+
+<hr>
+
+[Group multiple element selectors together (separated by commas) if you want them all styled the same way.]{.body-text-m}
 
 :::: {.columns}
-::: {.column width="60%"}
+::: {.column width="50%"}
 
-[**CSS**]{.body-text}
+**CSS**
 
 ```{css}
 #| eval: false
@@ -163,7 +186,10 @@ h1, h2, p {
 }
 ```
 
-[**HTML**]{.body-text .topbr}
+:::
+::: {.column width="50%"}
+
+**HTML**
 
 ```{html}
 #| eval: false
@@ -175,13 +201,9 @@ h1, h2, p {
 ```
 
 :::
-::: {.column width="40%"}
-<br>
-<br>
+::::
 
-::: {.body-text .center-text .topbr}
-**Output**
-:::
+<br>
 
 ```{r}
 #| eval: true 
@@ -191,81 +213,40 @@ h1, h2, p {
 knitr::include_graphics("images/grouping_selector.png")
 ```
 
-:::
-::::
-
-:::
-
 ---
 
-##  {#select-attributes data-menu-title="ID & Class Selectors"}
+##  {#class-selectors1 data-menu-title="Class selectors 1"}
 
-[Target element(s) using HTML attributes]{.slide-title2}
-
-<!-- Select an element(s) using attributes -->
+[Use *class selectors* and HTML attributes to target particular elements]{.slide-title2}
 
 <hr>
 
-::: {.panel-tabset}
+[Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`). We can use attributes (e.g. the **`class`** attribute) to apply **targeted styling** using class selectors.
 
-## ID Selectors
-
-::: {.body-text}
-An ID selector uses the *`id` attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a `#` followed by the selector name, e.g. `#selector`.
-:::
-
-:::: {.columns}
-::: {.column width="60%"}
-
-[**CSS**]{.body-text}
-
-```{css}
-#| eval: false
-#| echo: true
-#para1 {
-  color: red;
-  text-align: center;
-}
-```
-
-[**HTML**]{.body-text .topbr}
-
-```{html}
-#| eval: false
-#| echo: true
-<p id="para1">My first paragraph is styled</p>
-<p>But my second paragraph is not</p>
-```
-:::
-::: {.column width="40%"}
 <br>
-<br>
-
-::: {.body-text .center-text .topbr}
-**Output**
-:::
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "90%" 
-knitr::include_graphics("images/id_selector.png")
+knitr::include_graphics("images/html_attribute.png")
 ```
 
-:::
-::::
+---
 
-## Class Selectors
+##  {#class-selectors2 data-menu-title="Class selectors 2"}
 
-::: {.body-text-s}
+[Use *class selectors* and HTML attributes to target particular elements]{.slide-title2}
+
+<hr>
+
 A class selector uses the *`class` attribute* of an HTML element to style that specific element. Class selectors are written using a `.` followed by the selector name, e.g. `.selector`. HTML elements can have more than one class, e.g. `<p class="class1 class2">`
-:::
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-[**CSS**]{.body-text .topbr}
+[**CSS**]{.body-text}
 
 ```{css}
 #| eval: false
@@ -276,21 +257,22 @@ A class selector uses the *`class` attribute* of an HTML element to style that s
 }
 ```
 
-[**HTML**]{.body-text .topbr}
+:::
+::: {.column width="50%"}
+[**HTML**]{.body-text}
 
 ```{html}
 #| eval: false
 #| echo: true
 <p class="blue-italicized">My first paragraph is styled</p>
 <p>But my second paragraph is not</p>
+<p>We can use span tags to target <span class="blue-italicized">parts of an element</span> as well</p>
 ```
-:::
-::: {.column width="50%"}
-<br>
 
-::: {.body-text .center-text .topbr}
-**Output**
 :::
+::::
+
+<br>
 
 ```{r}
 #| eval: true 
@@ -300,36 +282,67 @@ A class selector uses the *`class` attribute* of an HTML element to style that s
 knitr::include_graphics("images/class_selector.png")
 ```
 
+---
+
+##  {#other-selector-types data-menu-title="Other selector types"}
+
+[Examples of other selector types]{.slide-title}
+
+<hr>
+
+::: {.panel-tabset}
+
+## ID Selectors
+
+An ID selector uses the *`id` attribute* of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style *one* unique element. ID selectors are written using a `#` followed by the selector name, e.g. `#selector`.
+
+:::: {.columns}
+::: {.column width="50%"}
+
+**CSS**
+
+```{css}
+#| eval: false
+#| echo: true
+#para1 {
+  color: red;
+  text-align: center;
+}
+```
+
+:::
+::: {.column width="50%"}
+
+**HTML**
+
+```{html}
+#| eval: false
+#| echo: true
+<p id="para1">My first paragraph is styled</p>
+<p>But my second paragraph is not</p>
+```
+
 :::
 ::::
 
 <br>
 
-::: {.center-text}
-*If you're like me, you'll probably find yourself using **class selectors** most often!*
-:::
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "90%" 
+knitr::include_graphics("images/id_selector.png")
+```
 
-:::
-
----
-
-##  {#universal-inline data-menu-title="Universal & Inline Selectors"}
-
-[Select all elements or style inline]{.slide-title}
-
-<hr>
-
-::: {.panel-tabset}
 ## Universal Selector
 
-::: {.body-text}
 The universal selector selects *all* HTML elements on the page. It is written using only an asterisk, `*`.
-:::
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-[**CSS**]{.body-text .topbr}
+**CSS**
 
 ```{css}
 #| eval: false
@@ -340,7 +353,10 @@ The universal selector selects *all* HTML elements on the page. It is written us
 }
 ```
 
-[**HTML**]{.body-text .topbr}
+:::
+::: {.column width="50%"}
+
+**HTML**
 
 ```{html}
 #| eval: false
@@ -349,14 +365,11 @@ The universal selector selects *all* HTML elements on the page. It is written us
 <h2>This level two header will be styled</h2>
 <p>This paragaph will also be styled</p>
 ```
-:::
-::: {.column width="50%"}
-<br>
-<br>
 
-::: {.body-text .center-text .topbr}
-**Output**
 :::
+::::
+
+<br>
 
 ```{r}
 #| eval: true 
@@ -366,19 +379,11 @@ The universal selector selects *all* HTML elements on the page. It is written us
 knitr::include_graphics("images/universal_selector.png")
 ```
 
-:::
-::::
-
 ## Inline styling
 
-::: {.body-text-s}
-The *`style` attribute* may be used inline to apply unique styles to a single element. It's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.
-:::
+You may define styles directly inline using the *`style` attribute*. However, it's best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.
 
-:::: {.columns}
-
-::: {.column width="50%"}
-[**HTML with inline styling**]{.body-text .topbr}
+**HTML with inline styling**
 
 ```{html}
 #| eval: false
@@ -388,11 +393,6 @@ The *`style` attribute* may be used inline to apply unique styles to a single el
 <p>Here, only the word <span style="color: red; font-style: italic;">paragraph</span> is styled</p>
 ```
 
-:::
-
-::: {.column width="50%"}
-[**Output**]{.body-text .topbr}
-
 ```{r}
 #| eval: true 
 #| echo: false
@@ -401,13 +401,9 @@ The *`style` attribute* may be used inline to apply unique styles to a single el
 knitr::include_graphics("images/inline_styling.png")
 ```
 
-:::
-
-::::
-
-::: {.body-text-s}
-**Note:** You can also use the `<span>` tag to apply class or ID selectors to *part* of an element (e.g. let's say I have a class selector, `.blue-text{color: blue;}`. I can target parts of HTML elements using this selector in conjunction with the `<span>` tag: `<p>In this sentence, only the word <span class="blue-text">blue</span> is styled.</p>`)
-:::
+<!-- ::: {.body-text-s} -->
+<!-- **Note:** You can also use the `<span>` tag to apply class or ID selectors to *part* of an element (e.g. let's say I have a class selector, `.blue-text{color: blue;}`. I can target parts of HTML elements using this selector in conjunction with the `<span>` tag: `<p>In this sentence, only the word <span class="blue-text">blue</span> is styled.</p>`) -->
+<!-- ::: -->
 
 :::
 
@@ -456,7 +452,7 @@ h1 {
 ::::
 
 ::: {.body-text-s .topbr}
-In this case, we have a universal selector that styles all of our text orange, but we also have an element selector that colors our `<h1>` elements blue and a class selector that is applied inline to color a subset of text green. How do you know which style will be declared and applied to each of our HTML elements?
+In this case, we have a universal selector that styles all of our text orange, but we also have an element selector that colors our `<h1>` elements blue and a class selector that is applied inline to color a subset of text green. *How do you know which style will be declared and applied to each of our HTML elements?*
 :::
 
 ---

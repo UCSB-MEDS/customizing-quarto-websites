@@ -202,7 +202,7 @@ $code-block-bg: $cream; // code block background color
 ```{r filename="_quarto.yml"}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "31"
+#| code-line-numbers: "32"
 project:
   type: website
   output-dir: docs

@@ -403,7 +403,7 @@
 <div class="column" style="width:50%;">
 <p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Aug 28, 2024</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 06, 2024</span></p>
 </div></div>
 <hr class="hr-teal">
 <div class="columns">
@@ -440,8 +440,9 @@
 </section><section id="tldr1" class="slide level2" data-menu-title="TL;DR"><h2></h2>
 <p><span class="slide-title">TL;DR</span></p>
 <hr>
-<p>When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch <a href="https://bootswatch.com/cosmo/">Cosmo theme</a>). We can modify the appearance of our website in a number of ways. We’ll learn a bit about the following:</p>
+<p>When we <strong>render</strong> a new Quarto site, it <strong>converts</strong> all of our <strong>markdown into HTML</strong> and <strong>applies a pre-built CSS stylesheet</strong> (the Bootswatch <a href="https://bootswatch.com/cosmo/">Cosmo theme</a>).</p>
 <p><br></p>
+<p><span class="body-text-m teal-text">We can modify the appearance of our website in a number of ways:</span></p>
 <div>
 <div class="body-text-s">
 <ul>
@@ -498,7 +499,7 @@
 </div>
 </div>
 <div class="body-text-s">
-<p>Push your new local branch to GitHub by running the following in your terminal:</p>
+<p>Push your new local branch to GitHub by running the following in your Terminal:</p>
 </div>
 <div class="cell">
 <div class="code-with-filename">
@@ -559,9 +560,9 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 </center>
 </div>
 </section><section id="add-template1" class="slide level2" data-menu-title="Add a landing page template (rendered)"><h2></h2>
-<p><span class="slide-title3">Arrange your landing page content using a pre-built template</span></p>
+<p><span class="slide-title3">Arrange landing page content using a pre-built template</span></p>
 <hr>
-<p>Quarto has 5 pre-built template “<a href="https://quarto.org/docs/websites/website-about.html">about pages</a>”, which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example:</p>
+<p>Quarto has <a href="https://quarto.org/docs/websites/website-about.html">5 pre-built template “about pages”</a>, which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell" data-layout-align="center">
@@ -592,7 +593,7 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <p><strong>Note:</strong> You can apply a template to <em>any</em> of your website’s pages, though they are particularly awesome for creating a clean, professional-looking landing page.</p>
 </div>
 </section><section id="add-template2" class="slide level2" data-menu-title="Add a landing page template (code)"><h2></h2>
-<p><span class="slide-title3">Arrange your landing page content using a pre-built template</span> <!-- [Apply a template in index.qmd’s YAML]{.slide-title} --></p>
+<p><span class="slide-title3">Arrange landing page content using a pre-built template</span> <!-- [Apply a template in index.qmd’s YAML]{.slide-title} --></p>
 <hr>
 <p>Use the <code>about</code> option to apply a template to your landing page:</p>
 <div class="cell">
@@ -611,17 +612,19 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <span id="cb3-9"><a href="" aria-hidden="true" tabindex="-1"></a>  links<span class="sc">:</span> <span class="co"># create buttons</span></span>
 <span id="cb3-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> LinkedIn</span>
 <span id="cb3-11"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>samanthacsik<span class="sc">/</span></span>
-<span id="cb3-12"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> GitHub</span>
-<span id="cb3-13"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
-<span id="cb3-14"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> Email</span>
-<span id="cb3-15"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> mailto<span class="sc">:</span>scsik<span class="sc">@</span>ucsb.edu</span>
-<span id="cb3-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
-<span id="cb3-17"><a href="" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-18"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ landing page content / text omitted for brevity ~        </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-12"><a href="" aria-hidden="true" tabindex="-1"></a>      target<span class="sc">:</span> _blank <span class="co"># opens link in a new browser tab</span></span>
+<span id="cb3-13"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> GitHub</span>
+<span id="cb3-14"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>samanthacsik</span>
+<span id="cb3-15"><a href="" aria-hidden="true" tabindex="-1"></a>      target<span class="sc">:</span> _blank </span>
+<span id="cb3-16"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> text<span class="sc">:</span> Email</span>
+<span id="cb3-17"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> mailto<span class="sc">:</span>scsik<span class="sc">@</span>ucsb.edu</span>
+<span id="cb3-18"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb3-19"><a href="" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-20"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co"># ~ landing page content / text omitted for brevity ~        </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section><section id="fa-icons" class="slide level2" data-menu-title="fontawesome icons"><h2></h2>
-<p><span class="slide-title3">Optionally add FontAwesome icons to your buttons</span></p>
+<p><span class="slide-title3">Optionally, add FontAwesome icons to your buttons</span></p>
 <hr>
 <p>Add any <a href="https://fontawesome.com/search?o=r&amp;m=free"><strong>free</strong> FontAwesome icons</a> to your buttons using the <code>icon</code> option. For example:</p>
 <p><br></p>
@@ -636,7 +639,7 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<p><br><br></p>
+<p><br></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -646,7 +649,8 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a>links<span class="sc">:</span> </span>
 <span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="sc">-</span> icon<span class="sc">:</span> linkedin </span>
 <span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a>      text<span class="sc">:</span> LinkedIn</span>
-<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>yourlinkedinname<span class="sc">/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a>      href<span class="sc">:</span> https<span class="sc">:</span><span class="er">//</span>www.linkedin.com<span class="sc">/</span><span class="cf">in</span><span class="sc">/</span>yourlinkedinname<span class="sc">/</span></span>
+<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a>      target<span class="sc">:</span> _blank</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div></div>
@@ -746,7 +750,7 @@ First, add a <a href="https://quarto.org/docs/websites/website-about.html#templa
 <p><br></p>
 <p>If you want to use FontAwesome icons anywhere else on your website (i.e.&nbsp;outside of the <code>icon</code> YAML option), you’ll need to first install the Quarto <a href="https://quarto.org/docs/websites/website-about.html">fontawesome extension</a>.</p>
 <p><br></p>
-<p>Running the following in your RStudio Terminal will download and save the extension to a folder named <code>_extensions</code> in your repo’s root directory. Be sure to push this new folder (and its contents) to GitHub:</p>
+<p>Running the following in your RStudio Terminal will download and save the extension to a folder named <code>_extensions</code> in your repo’s root directory (alternatively, you may do so from any command line interface, but make sure you’re in your project’s root directory). Be sure to push this new folder (and its contents) to GitHub:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -947,20 +951,26 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 <div class="center-text">
 <p>Web browsers can interpret CSS (<span class="teal-text"><i class="fa-solid fa-check" aria-hidden="true"></i></span> <code>.css</code>) but <em>not</em> Sass (<span class="teal-text"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span> <code>.scss</code> or <code>.sass</code>).</p>
 </div>
+<div class="fragment">
 <p><br></p>
 <div class="center-text">
 <p>Typically, you’d need to <strong>compile (i.e.&nbsp;convert) Sass to CSS</strong>, then link the resulting <code>.css</code> file in your HTML.</p>
 </div>
+</div>
+<div class="fragment">
 <p><br></p>
 <div class="center-text">
 <p>Lucky for us, <strong>Quarto compiles the contents of a <code>.scss</code> file into CSS without any extra steps</strong> – all we need to do is link to a <code>.scss</code> file directly in our website’s <code>_quarto.yml</code>.</p>
 </div>
+</div>
+<div class="fragment">
 <p><br></p>
 <div class="body-text-xl teal-text center-text">
 <p>Let’s create our website’s <code>.scss</code> stylesheet.</p>
 </div>
 <div class="center-text teal-text">
 <p>(The following slides break this down into ~7 steps)</p>
+</div>
 </div>
 </section><section id="create-scss" class="slide level2" data-menu-title="Create .scss file"><h2></h2>
 <p><span class="slide-title">Create a <code>.scss</code> file for your website</span></p>
@@ -985,8 +995,9 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:defaults --*/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="footer">
-<p>Adding the region decorator as written above is <em>critical!</em> Quarto won’t recognize your <code>.scss</code> file without it.</p>
+<p><br></p>
+<div class="center-text body-text-m">
+<p>Adding the region decorator as written above is <strong><em>critical!</em></strong> Quarto won’t recognize your <code>.scss</code> file without it.</p>
 </div>
 </section><section id="link-scss" class="slide level2" data-menu-title="Link .scss in _quarto.yml"><h2></h2>
 <p><span class="slide-title">Link to your <code>.scss</code> file in <code>_quarto.yml</code></span></p>
@@ -1258,7 +1269,7 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 <div class="code-with-filename-file">
 <pre><strong>_quarto.yml</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>project<span class="sc">:</span></span>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a>project<span class="sc">:</span></span>
 <span id="cb21-2"><a href=""></a>  type<span class="sc">:</span> website</span>
 <span id="cb21-3"><a href=""></a>  output<span class="sc">-</span>dir<span class="sc">:</span> docs</span>
 <span id="cb21-4"><a href=""></a></span>
@@ -1458,14 +1469,9 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <div class="center-text">
 <p>In Markdown syntax, this HTML element would be written as, <code># Welcome to your website customization workshop</code></p>
 </div>
-<p><br></p>
-<div class="footer">
-<p><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.</p>
-</div>
 </section><section id="html-elements2" class="slide level2" data-menu-title="Commonly used HTML tags"><h2></h2>
 <p><span class="slide-title">Commonly used HTML tags</span></p>
 <hr>
-<p><br></p>
 <div class="center-text body-text-m">
 <p>Browse a complete <a href="https://www.w3schools.com/tags/default.asp">list of HTML tags</a>.</p>
 </div>
@@ -1521,7 +1527,11 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <td>an inline container used to markup part of a text or document</td>
 </tr>
 </tbody>
-</table></section><section id="nested-html-elements" class="slide level2" data-menu-title="Nested HTML elements"><h2></h2>
+</table>
+<div class="footer">
+<p><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.</p>
+</div>
+</section><section id="nested-html-elements" class="slide level2" data-menu-title="Nested HTML elements"><h2></h2>
 <p><span class="slide-title">HTML elements can be <em>nested</em></span></p>
 <hr>
 <p>Remember to close out tags from the inside-out to avoid unexpected renderings.</p>
@@ -1539,15 +1549,15 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <p><span class="teal-text"><strong>IMPORTANT: Take extra care to never skip (or incorrectly type) an end tag!</strong></span> Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors <svg aria-label="Face Grin Beam Sweat" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#222222;overflow:visible;position:relative;"><title>Face Grin Beam Sweat</title>
 <path d="M476.8 126.3C497.1 120.8 512 102.7 512 81c0-20-28.6-60.4-41.6-77.7c-3.2-4.4-9.6-4.4-12.8 0c-9.5 12.6-27.1 37.2-36 57.5c-.3 .7-.6 1.4-.9 2.1C417.8 69.7 416 76 416 81c0 26 21.5 47 48 47c4.4 0 8.7-.6 12.8-1.7zM395.4 41.2C355.3 15.2 307.4 0 256 0C114.6 0 0 114.6 0 256S114.6 512 256 512s256-114.6 256-256c0-35.8-7.3-69.9-20.6-100.8c-8.6 3.1-17.8 4.8-27.4 4.8c-8.9 0-17.6-1.5-25.7-4.2C454.7 185.5 464 219.7 464 256c0 114.9-93.1 208-208 208S48 370.9 48 256S141.1 48 256 48c48.7 0 93.4 16.7 128.9 44.7c-.6-3.8-.9-7.7-.9-11.7c0-11.4 3.8-22.4 7.1-30.5c1.3-3.1 2.7-6.2 4.3-9.3zM375 336.5c10.4-16.1-6.8-32.5-25.5-28.1c-28.9 6.8-60.5 10.5-93.6 10.5s-64.7-3.7-93.6-10.5c-18.7-4.4-35.9 12-25.5 28.1c24.6 38.1 68.7 63.5 119.1 63.5s94.5-25.4 119.1-63.5zM217.6 228.8l0 0 0 0 0 0c2.1 2.8 5.7 3.9 8.9 2.8s5.5-4.1 5.5-7.6c0-17.9-6.7-35.6-16.6-48.8c-9.8-13-23.9-23.2-39.4-23.2s-29.6 10.2-39.4 23.2C126.7 188.4 120 206.1 120 224c0 3.4 2.2 6.5 5.5 7.6s6.9 0 8.9-2.8l0 0 0 0 0 0 .2-.2c.2-.2 .4-.5 .7-.9c.6-.8 1.6-2 2.8-3.4c2.5-2.8 6-6.6 10.2-10.3c8.8-7.8 18.8-14 27.7-14s18.9 6.2 27.7 14c4.2 3.7 7.7 7.5 10.2 10.3c1.2 1.4 2.2 2.6 2.8 3.4c.3 .4 .6 .7 .7 .9l.2 .2 0 0zm160 0l0 0 0 0c2.1 2.8 5.7 3.9 8.9 2.8s5.5-4.1 5.5-7.6c0-17.9-6.7-35.6-16.6-48.8c-9.8-13-23.9-23.2-39.4-23.2s-29.6 10.2-39.4 23.2C286.7 188.4 280 206.1 280 224c0 3.4 2.2 6.5 5.5 7.6s6.9 0 8.9-2.8l0 0 0 0 0 0 .2-.2c.2-.2 .4-.5 .7-.9c.6-.8 1.6-2 2.8-3.4c2.5-2.8 6-6.6 10.2-10.3c8.8-7.8 18.8-14 27.7-14s18.9 6.2 27.7 14c4.2 3.7 7.7 7.5 10.2 10.3c1.2 1.4 2.2 2.6 2.8 3.4c.3 .4 .6 .7 .7 .9l.2 .2 0 0 0 0z"></path></svg>.</p>
 </div>
-</section><section id="html-attributes" class="slide level2" data-menu-title="HTML attributes"><h2></h2>
-<p><span class="slide-title3">HTML attributes can be used for targeted styling</span></p>
-<hr>
-<p><a href="https://www.w3schools.com/html/html_attributes.asp">Attributes</a> provide extra information about elements. They are always <strong>specified in the start tag</strong> and usually come in <strong>value/name pairs</strong> (e.g.&nbsp;<code>attributeName="attributeValue"</code>).</p>
-<p><br></p>
-<p>Attributes can be used for <strong>targeted styling with CSS</strong> (e.g.&nbsp;<strong><code>class</code></strong> or <strong><code>id</code></strong> attributes) – more on this soon.</p>
-<p><br></p>
-
-<img data-src="images/html_attribute.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="write-html1" class="slide level2" data-menu-title="Write HTML 1"><h2></h2>
+<!-- --- -->
+<!-- ##  {#html-attributes data-menu-title="HTML attributes"} -->
+<!-- [HTML attributes can be used for targeted styling]{.slide-title3} -->
+<!-- <hr> -->
+<!-- [Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`). -->
+<!-- <br> -->
+<!-- Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon. -->
+<!-- <br> -->
+</section><section id="write-html1" class="slide level2" data-menu-title="Write HTML 1"><h2></h2>
 <p><span class="slide-title">Let’s take a look at some HTML</span></p>
 <hr>
 <p><br><br></p>
@@ -1650,10 +1660,11 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <li><p><span class="body-text-s">A property and its corresponding value are separated by a colon, <code>:</code>. Declarations end with a semicolon, <code>;</code></span></p></li>
 </ul>
 </div></div>
-</section><section id="selector-types" class="slide level2" data-menu-title="Types of Selectors"><h2></h2>
+</section><section id="selector-types1" class="slide level2" data-menu-title="Types of Selectors 1"><h2></h2>
 <p><span class="slide-title2">There are a number of different CSS selector types</span></p>
 <hr>
-<p>The next few slides review just a few basic CSS selector types for styling HTML elements – these will get you far in your website customization journey (but check out you can learn more about all the <a href="https://www.w3schools.com/css/css_selectors.asp">different categories of CSS selectors here</a>):</p>
+<p><br></p>
+<p><span class="body-text-m">There are many different CSS selector types, but the following will get you pretty far (though you can learn more about all the <a href="https://www.w3schools.com/css/css_selectors.asp">different categories of CSS selectors here</a>).</span> <!-- The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but check out you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)): --></p>
 <p><br></p>
 <ul>
 <li><p><span class="teal-text"><strong>Element selectors:</strong></span> selects all HTML elements with the specified element name</p></li>
@@ -1662,120 +1673,125 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <li><p><span class="teal-text"><strong>Class selectors:</strong></span> selects HTML elements with a specific class attribute</p></li>
 <li><p><span class="teal-text"><strong>Universal selector:</strong></span> selects all HTML elements on the page</p></li>
 <li><p><span class="teal-text"><strong>Inline styling:</strong></span> (not a selector type, but an alternative way to apply CSS styling)</p></li>
-</ul></section><section id="select-tags" class="slide level2" data-menu-title="Element &amp; Grouping Selectors"><h2></h2>
-<p><span class="slide-title">Select an element(s) based on its tag</span></p>
+</ul></section><section id="selector-types2" class="slide level2" data-menu-title="Types of Selectors 2"><h2></h2>
+<p><span class="slide-title2">There are a number of different CSS selector types</span></p>
 <hr>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">Element Selectors</a></li>
-<li><a href="#tabset-1-2">Grouping Selectors</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="body-text">
-<p>Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</p>
-</div>
+<p><br></p>
+<p><span class="body-text-m">If you’re just getting started on styling your Quarto website, you’ll probably use <strong>element</strong>, <strong>grouping</strong>, and <strong>class selectors</strong> most often. We’ll focus on those today.</span></p>
+<p><br></p>
+<ul>
+<li><p><span class="teal-text"><strong>Element selectors:</strong></span> <strong>selects all HTML elements with the specified element name</strong></p></li>
+<li><p><span class="teal-text"><strong>Grouping selectors:</strong></span> <strong>selects all HTML elements with the same style definitions</strong></p></li>
+<li><p><span class="teal-text"><strong>ID selectors:</strong></span> uses the id attribute of an HTML element to select a specific element; id of an element is unique within a page, so the id selector is used to select one unique element</p></li>
+<li><p><span class="teal-text"><strong>Class selectors:</strong></span> <strong>selects HTML elements with a specific class attribute</strong></p></li>
+<li><p><span class="teal-text"><strong>Universal selector:</strong></span> selects all HTML elements on the page</p></li>
+<li><p><span class="teal-text"><strong>Inline styling:</strong></span> (not a selector type, but an alternative way to apply CSS styling)</p></li>
+</ul></section><section id="element-selectors" class="slide level2" data-menu-title="Element selectors"><h2></h2>
+<p><span class="slide-title2">Use <em>element selectors</em> for styling an element based on its tag</span></p>
+<hr>
+<p><span class="body-text-m">Any HTML element can be used as a selector. The declarations specified apply to all HTML elements of that type.</span></p>
 <div class="columns">
-<div class="column" style="width:60%;">
-<p><span class="body-text"><strong>CSS</strong></span></p>
+<div class="column" style="width:50%;">
+<p><strong>CSS</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb24-1"><a href=""></a>h1 {</span>
 <span id="cb24-2"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span></span>
 <span id="cb24-3"><a href=""></a>  <span class="kw">letter-spacing</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
 <span id="cb24-4"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><span class="body-text topbr"><strong>HTML</strong></span></p>
+</div><div class="column" style="width:50%;">
+<p><strong>HTML</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb25-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>My level one header will be styled<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
 <span id="cb25-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>This level two header will not be styled<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
 <span id="cb25-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Neither will this paragaph<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb25-4"><a href=""></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>But this second level one header will be<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div><div class="column" style="width:40%;">
-<p><br><br></p>
-<div class="body-text center-text topbr">
-<p><strong>Output</strong></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/element_selector.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
-</figure>
-</div>
-</div>
-</div>
 </div></div>
-</div>
-<div id="tabset-1-2">
-<div class="body-text">
-<p>Group multiple element selectors together (separated by commas) if you want them all styled the same way.</p>
-</div>
+<p><br></p>
+
+<img data-src="images/element_selector.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="grouping-selectors" class="slide level2" data-menu-title="Grouping selectors"><h2></h2>
+<p><span class="slide-title2">Use <em>grouping selectors</em> for styling multiple elements the same way</span></p>
+<hr>
+<p><span class="body-text-m">Group multiple element selectors together (separated by commas) if you want them all styled the same way.</span></p>
 <div class="columns">
-<div class="column" style="width:60%;">
-<p><span class="body-text"><strong>CSS</strong></span></p>
+<div class="column" style="width:50%;">
+<p><strong>CSS</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb26-1"><a href=""></a>h1<span class="op">,</span> h2<span class="op">,</span> p {</span>
 <span id="cb26-2"><a href=""></a>  <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
 <span id="cb26-3"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">purple</span><span class="op">;</span></span>
 <span id="cb26-4"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><span class="body-text topbr"><strong>HTML</strong></span></p>
+</div><div class="column" style="width:50%;">
+<p><strong>HTML</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb27-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>My level one header will be styled<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
 <span id="cb27-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>This level two header will be styled<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
 <span id="cb27-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">h3</span><span class="dt">&gt;</span>This level three header will not be styled<span class="dt">&lt;/</span><span class="kw">h3</span><span class="dt">&gt;</span></span>
 <span id="cb27-4"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This paragraph will be styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div><div class="column" style="width:40%;">
-<p><br><br></p>
-<div class="body-text center-text topbr">
-<p><strong>Output</strong></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/grouping_selector.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
-</figure>
-</div>
-</div>
-</div>
 </div></div>
-</div>
-</div>
-</div>
-</section><section id="select-attributes" class="slide level2" data-menu-title="ID &amp; Class Selectors"><h2></h2>
-<p><span class="slide-title2">Target element(s) using HTML attributes</span></p>
-<!-- Select an element(s) using attributes -->
+<p><br></p>
+
+<img data-src="images/grouping_selector.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="class-selectors1" class="slide level2" data-menu-title="Class selectors 1"><h2></h2>
+<p><span class="slide-title2">Use <em>class selectors</em> and HTML attributes to target particular elements</span></p>
 <hr>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">ID Selectors</a></li>
-<li><a href="#tabset-2-2">Class Selectors</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<div class="body-text">
-<p>An ID selector uses the <em><code>id</code> attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a <code>#</code> followed by the selector name, e.g.&nbsp;<code>#selector</code>.</p>
-</div>
+<p><a href="https://www.w3schools.com/html/html_attributes.asp">Attributes</a> provide extra information about elements. They are always <strong>specified in the start tag</strong> and usually come in <strong>value/name pairs</strong> (e.g.&nbsp;<code>attributeName="attributeValue"</code>). We can use attributes (e.g.&nbsp;the <strong><code>class</code></strong> attribute) to apply <strong>targeted styling</strong> using class selectors.</p>
+<p><br></p>
+
+<img data-src="images/html_attribute.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"></section><section id="class-selectors2" class="slide level2" data-menu-title="Class selectors 2"><h2></h2>
+<p><span class="slide-title2">Use <em>class selectors</em> and HTML attributes to target particular elements</span></p>
+<hr>
+<p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:50%;">
 <p><span class="body-text"><strong>CSS</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb28-1"><a href=""></a><span class="pp">#para1</span> {</span>
-<span id="cb28-2"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
-<span id="cb28-3"><a href=""></a>  <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb28-1"><a href=""></a><span class="fu">.blue-italicized</span> {</span>
+<span id="cb28-2"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">blue</span><span class="op">;</span></span>
+<span id="cb28-3"><a href=""></a>  <span class="kw">font-style</span><span class="ch">:</span> <span class="dv">italic</span><span class="op">;</span></span>
 <span id="cb28-4"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><span class="body-text topbr"><strong>HTML</strong></span></p>
+</div><div class="column" style="width:50%;">
+<p><span class="body-text"><strong>HTML</strong></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb29-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"para1"</span><span class="dt">&gt;</span>My first paragraph is styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb29-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>But my second paragraph is not<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb29-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"blue-italicized"</span><span class="dt">&gt;</span>My first paragraph is styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb29-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>But my second paragraph is not<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb29-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>We can use span tags to target <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"blue-italicized"</span><span class="dt">&gt;</span>parts of an element<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> as well<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div><div class="column" style="width:40%;">
-<p><br><br></p>
-<div class="body-text center-text topbr">
-<p><strong>Output</strong></p>
+</div></div>
+<p><br></p>
+
+<img data-src="images/class_selector.png" class="quarto-figure quarto-figure-center r-stretch" style="width:60.0%"></section><section id="other-selector-types" class="slide level2" data-menu-title="Other selector types"><h2></h2>
+<p><span class="slide-title">Examples of other selector types</span></p>
+<hr>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-1-1">ID Selectors</a></li>
+<li><a href="#tabset-1-2">Universal Selector</a></li>
+<li><a href="#tabset-1-3">Inline styling</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>An ID selector uses the <em><code>id</code> attribute</em> of an HTML element to style that specific element. IDs must be unique within a page and therefore can only be used to select and style <em>one</em> unique element. ID selectors are written using a <code>#</code> followed by the selector name, e.g.&nbsp;<code>#selector</code>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>CSS</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb30-1"><a href=""></a><span class="pp">#para1</span> {</span>
+<span id="cb30-2"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb30-3"><a href=""></a>  <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb30-4"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div><div class="column" style="width:50%;">
+<p><strong>HTML</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb31-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> id</span><span class="op">=</span><span class="st">"para1"</span><span class="dt">&gt;</span>My first paragraph is styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb31-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>But my second paragraph is not<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p><br></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1784,80 +1800,27 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </div>
 </div>
 </div>
-</div></div>
 </div>
-<div id="tabset-2-2">
-<div class="body-text-s">
-<p>A class selector uses the <em><code>class</code> attribute</em> of an HTML element to style that specific element. Class selectors are written using a <code>.</code> followed by the selector name, e.g.&nbsp;<code>.selector</code>. HTML elements can have more than one class, e.g.&nbsp;<code>&lt;p class="class1 class2"&gt;</code></p>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="body-text topbr"><strong>CSS</strong></span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb30-1"><a href=""></a><span class="fu">.blue-italicized</span> {</span>
-<span id="cb30-2"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">blue</span><span class="op">;</span></span>
-<span id="cb30-3"><a href=""></a>  <span class="kw">font-style</span><span class="ch">:</span> <span class="dv">italic</span><span class="op">;</span></span>
-<span id="cb30-4"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><span class="body-text topbr"><strong>HTML</strong></span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb31-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"blue-italicized"</span><span class="dt">&gt;</span>My first paragraph is styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb31-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>But my second paragraph is not<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div><div class="column" style="width:50%;">
-<p><br></p>
-<div class="body-text center-text topbr">
-<p><strong>Output</strong></p>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/class_selector.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<p><br></p>
-<div class="center-text">
-<p><em>If you’re like me, you’ll probably find yourself using <strong>class selectors</strong> most often!</em></p>
-</div>
-</div>
-</div>
-</div>
-</section><section id="universal-inline" class="slide level2" data-menu-title="Universal &amp; Inline Selectors"><h2></h2>
-<p><span class="slide-title">Select all elements or style inline</span></p>
-<hr>
-<div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">Universal Selector</a></li>
-<li><a href="#tabset-3-2">Inline styling</a></li>
-</ul>
-<div class="tab-content">
-<div id="tabset-3-1">
-<div class="body-text">
+<div id="tabset-1-2">
 <p>The universal selector selects <em>all</em> HTML elements on the page. It is written using only an asterisk, <code>*</code>.</p>
-</div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span class="body-text topbr"><strong>CSS</strong></span></p>
+<p><strong>CSS</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb32-1"><a href=""></a><span class="op">*</span> {</span>
 <span id="cb32-2"><a href=""></a>  <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
 <span id="cb32-3"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">orange</span><span class="op">;</span></span>
 <span id="cb32-4"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><span class="body-text topbr"><strong>HTML</strong></span></p>
+</div><div class="column" style="width:50%;">
+<p><strong>HTML</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb33-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>My level one header will be styled<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
 <span id="cb33-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">h2</span><span class="dt">&gt;</span>This level two header will be styled<span class="dt">&lt;/</span><span class="kw">h2</span><span class="dt">&gt;</span></span>
 <span id="cb33-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This paragaph will also be styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div><div class="column" style="width:50%;">
-<p><br><br></p>
-<div class="body-text center-text topbr">
-<p><strong>Output</strong></p>
-</div>
+</div></div>
+<p><br></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1866,22 +1829,15 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </div>
 </div>
 </div>
-</div></div>
 </div>
-<div id="tabset-3-2">
-<div class="body-text-s">
-<p>The <em><code>style</code> attribute</em> may be used inline to apply unique styles to a single element. It’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</p>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><span class="body-text topbr"><strong>HTML with inline styling</strong></span></p>
+<div id="tabset-1-3">
+<p>You may define styles directly inline using the <em><code>style</code> attribute</em>. However, it’s best practice to use these sparingly as it mixes content (HTML) with presentation (CSS) and cannot be reused with other elements like defined CSS rules can.</p>
+<p><strong>HTML with inline styling</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb34-1"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is a normal paragraph<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb34-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red; font-style: italic;"</span><span class="dt">&gt;</span>This paragraph has inline styling<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb34-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here, only the word <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> style</span><span class="op">=</span><span class="st">"color: red; font-style: italic;"</span><span class="dt">&gt;</span>paragraph<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> is styled<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div><div class="column" style="width:50%;">
-<p><span class="body-text topbr"><strong>Output</strong></span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1890,10 +1846,9 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </div>
 </div>
 </div>
-</div></div>
-<div class="body-text-s">
-<p><strong>Note:</strong> You can also use the <code>&lt;span&gt;</code> tag to apply class or ID selectors to <em>part</em> of an element (e.g.&nbsp;let’s say I have a class selector, <code>.blue-text{color: blue;}</code>. I can target parts of HTML elements using this selector in conjunction with the <code>&lt;span&gt;</code> tag: <code>&lt;p&gt;In this sentence, only the word &lt;span class="blue-text"&gt;blue&lt;/span&gt; is styled.&lt;/p&gt;</code>)</p>
-</div>
+<!-- ::: {.body-text-s} -->
+<!-- **Note:** You can also use the `<span>` tag to apply class or ID selectors to *part* of an element (e.g. let's say I have a class selector, `.blue-text{color: blue;}`. I can target parts of HTML elements using this selector in conjunction with the `<span>` tag: `<p>In this sentence, only the word <span class="blue-text">blue</span> is styled.</p>`) -->
+<!-- ::: -->
 </div>
 </div>
 </div>
@@ -2032,13 +1987,13 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <p><span class="slide-title">Practice writing CSS (3/3)</span></p>
 <hr>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">CSS</a></li>
-<li><a href="#tabset-4-2">HTML</a></li>
-<li><a href="#tabset-4-3">Rendered HTML</a></li>
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">CSS</a></li>
+<li><a href="#tabset-2-2">HTML</a></li>
+<li><a href="#tabset-2-3">Rendered HTML</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-4-1">
+<div id="tabset-2-1">
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -2075,7 +2030,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </div>
 </div>
 </div>
-<div id="tabset-4-2">
+<div id="tabset-2-2">
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -2098,7 +2053,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </div>
 </div>
 </div>
-<div id="tabset-4-3">
+<div id="tabset-2-3">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">

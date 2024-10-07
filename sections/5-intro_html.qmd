@@ -46,12 +46,6 @@ knitr::include_graphics("images/html_element.png")
 In Markdown syntax, this HTML element would be written as, `# Welcome to your website customization workshop`
 :::
 
-<br>
-
-::: {.footer}
-**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.
-:::
-
 ---
 
 ##  {#html-elements2 data-menu-title="Commonly used HTML tags"}
@@ -60,7 +54,6 @@ In Markdown syntax, this HTML element would be written as, `# Welcome to your we
 
 <hr>
 
-<br>
 
 ::: {.center-text .body-text-m}
 Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp).
@@ -80,6 +73,10 @@ Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp
 | `<a></a>`           | define a hyperlink                                           |
 | `<br>`              | add a line break (empty element)                             |
 | `<span></span>`     | an inline container used to markup part of a text or document|
+
+::: {.footer}
+**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.
+:::
 
 ---
 
@@ -118,28 +115,28 @@ In Markdown syntax, this HTML element would be written as: <br> `# Welcome to yo
 Some elements will still display correctly if you forget an end tag, but you cannot rely on this. Forgotten end tags will cause you headaches as you try troubleshoot unexpected results and errors `r fontawesome::fa("grin-beam-sweat", fill = "#222222", a11y = "sem")`.
 :::
 
----
+<!-- --- -->
 
-##  {#html-attributes data-menu-title="HTML attributes"}
+<!-- ##  {#html-attributes data-menu-title="HTML attributes"} -->
 
-[HTML attributes can be used for targeted styling]{.slide-title3}
+<!-- [HTML attributes can be used for targeted styling]{.slide-title3} -->
 
-<hr>
+<!-- <hr> -->
 
-[Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`).
+<!-- [Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`). -->
 
-<br>
+<!-- <br> -->
 
-Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon.
+<!-- Attributes can be used for **targeted styling with CSS** (e.g. **`class`** or **`id`** attributes) -- more on this soon. -->
 
-<br>
+<!-- <br> -->
 
 ```{r}
 #| eval: true 
 #| echo: false
 #| fig-align: "center"
 #| out-width: "90%" 
-knitr::include_graphics("images/html_attribute.png")
+# knitr::include_graphics("images/html_attribute.png")
 ```
 
 ---

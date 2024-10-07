@@ -33,10 +33,13 @@ $presentation-font-size-root: 25px;
 
 /*-- scss:rules --*/
 
+body {
+  line-height: 2em;
+}
+
 // bold styling
 strong, b {
   font-weight: 900;
-  //color: $teal;
 }
 
 // table header font size

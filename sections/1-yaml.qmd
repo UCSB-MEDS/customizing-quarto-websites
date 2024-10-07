@@ -23,11 +23,11 @@ format:
 
 ## {#add-template1 data-menu-title="Add a landing page template (rendered)"}
 
-[Arrange your landing page content using a pre-built template]{.slide-title3}
+[Arrange landing page content using a pre-built template]{.slide-title3}
 
 <hr>
 
-Quarto has 5 pre-built template "[about pages](https://quarto.org/docs/websites/website-about.html)", which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example: 
+Quarto has [5 pre-built template "about pages"](https://quarto.org/docs/websites/website-about.html), which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example: 
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -65,7 +65,7 @@ With the `jolla` About Page template
 
 ## {#add-template2 data-menu-title="Add a landing page template (code)"}
 
-[Arrange your landing page content using a pre-built template]{.slide-title3}
+[Arrange landing page content using a pre-built template]{.slide-title3}
 <!-- [Apply a template in index.qmd’s YAML]{.slide-title} -->
 
 <hr>
@@ -87,8 +87,10 @@ about:
   links: # create buttons
     - text: LinkedIn
       href: https://www.linkedin.com/in/samanthacsik/
+      target: _blank # opens link in a new browser tab
     - text: GitHub
       href: https://github.com/samanthacsik
+      target: _blank 
     - text: Email
       href: mailto:scsik@ucsb.edu
 ---
@@ -100,7 +102,7 @@ about:
 
 ## {#fa-icons data-menu-title="fontawesome icons"}
 
-[Optionally add FontAwesome icons to your buttons]{.slide-title3}
+[Optionally, add FontAwesome icons to your buttons]{.slide-title3}
 
 <hr>
 
@@ -121,7 +123,6 @@ knitr::include_graphics("images/button-icons.png")
 
 ::: {.column width="50%"}
 <br>
-<br>
 
 ```{r filename="_quarto.yml"}
 #| eval: false
@@ -132,6 +133,7 @@ links:
     - icon: linkedin 
       text: LinkedIn
       href: https://www.linkedin.com/in/yourlinkedinname/
+      target: _blank
 ```
 :::
 ::::
@@ -286,7 +288,7 @@ If you want to use FontAwesome icons anywhere else on your website (i.e. outside
 
 <br>
 
-Running the following in your RStudio Terminal will download and save the extension to a folder named `_extensions` in your repo's root directory. Be sure to push this new folder (and its contents) to GitHub:
+Running the following in your RStudio Terminal will download and save the extension to a folder named `_extensions` in your repo's root directory (alternatively, you may do so from any command line interface, but make sure you're in your project's root directory). Be sure to push this new folder (and its contents) to GitHub:
 
 ```{bash filename="RStudio Terminal"}
 #| eval: false

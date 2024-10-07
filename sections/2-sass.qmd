@@ -148,17 +148,23 @@ h1 {
 Web browsers can interpret CSS ([{{< fa check >}}]{.teal-text} `.css`) but *not* Sass ([{{< fa xmark >}}]{.teal-text} `.scss` or `.sass`). 
 :::
 
+. . . 
+
 <br>
 
 ::: {.center-text}
 Typically, you’d need to **compile (i.e. convert) Sass to CSS**, then link the resulting `.css` file in your HTML.
 :::
 
+. . . 
+
 <br>
 
 ::: {.center-text}
 Lucky for us, **Quarto compiles the contents of a `.scss` file into CSS without any extra steps** -- all we need to do is link to a `.scss` file directly in our website's `_quarto.yml`. 
 :::
+
+. . . 
 
 <br>
 
@@ -200,8 +206,10 @@ touch styles.scss # name it whatever you want
 /*-- scss:defaults --*/
 ```
 
-::: {.footer}
-Adding the region decorator as written above is *critical!* Quarto won't recognize your `.scss` file without it.
+<br>
+
+::: {.center-text .body-text-m}
+Adding the region decorator as written above is ***critical!*** Quarto won't recognize your `.scss` file without it.
 :::
 
 ---

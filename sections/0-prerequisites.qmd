@@ -55,9 +55,11 @@ Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 
 <hr>
 
-When we render a new Quarto site, it converts all of our markdown into HTML and applies a pre-built CSS stylesheet (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). We can modify the appearance of our website in a number of ways. We'll learn a bit about the following:
+When we **render** a new Quarto site, it **converts** all of our **markdown into HTML** and **applies a pre-built CSS stylesheet** (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). 
 
 <br>
+
+[We can modify the appearance of our website in a number of ways:]{.body-text-m .teal-text}
 
 ::: {.incremental}
 ::: {.body-text-s}
@@ -136,7 +138,7 @@ git checkout -b my-new-branch
 ```
 
 ::: {.body-text-s}
-Push your new local branch to GitHub by running the following in your terminal:
+Push your new local branch to GitHub by running the following in your Terminal:
 :::
 
 ```{bash filename="Command line / RStudio Terminal"}
