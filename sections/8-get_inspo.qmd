@@ -144,7 +144,7 @@ knitr::include_graphics("images/inspect-edit.gif")
 <hr>
 
 ::: {.body-text .bottombr}
-[W3Schools](https://www.w3schools.com/css/default.asp) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!
+[W3Schools](https://www.w3schools.com/css/default.asp) (or alternatively, [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS), by Mozilla) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!
 :::
 
 <br>

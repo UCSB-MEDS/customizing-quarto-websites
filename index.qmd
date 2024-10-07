@@ -36,8 +36,9 @@ format:
 
 ::: {.column width="50%"}
 [Sam Csik |]{.custom-subtitle2}<br>
-[Data Training Coordinator]{.custom-subtitle2}<br>
-[*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3}
+[Lecturer & Data Training Coordinator]{.custom-subtitle2}<br>
+[*Bren & NCEAS*]{.custom-subtitle3}
+<!-- [*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3} -->
 :::
 
 ::: {.column width="50%"}
