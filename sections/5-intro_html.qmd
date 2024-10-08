@@ -160,7 +160,7 @@ Some elements will still display correctly if you forget an end tag, but you can
 
 <br>
 
-[**1.**]{.teal-text} Add a new file named `practice-html.html` to your new folder using either the `touch` command or the **Blank File** > **Text File** option.
+[**1.**]{.teal-text} Add a new file named `practice.html` to your new folder using either the `touch` command or the **Blank File** > **Text File** option.
 
 ::: {.footer}
 **Reminder:** You can delete the `DELETE-LATER/` subdirectory after the next few exercises. These files will not be incorporated into our website.
@@ -176,9 +176,9 @@ Some elements will still display correctly if you forget an end tag, but you can
 
 <br>
 
-[**2.**]{.teal-text} Type or copy / paste the following HTML into your `practice-html.html` file:
+[**2.**]{.teal-text} Type or copy / paste the following HTML into your `practice.html` file:
 
-```{html filename="~/DELETE-LATER/practice-html.html"}
+```{html filename="~/DELETE-LATER/practice.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
@@ -190,7 +190,7 @@ Some elements will still display correctly if you forget an end tag, but you can
   <!-- Write all the contents of the HTML doc here -->
   <h1>Here is my level one header</h1>
   <p>Here is my first paragraph</p>
-  <p>Here is my second paragraph, where you can read more about <a href="https://ucsb-meds.github.io/">MEDS</a>.</p>
+  <p>Here is my second paragraph, where you can read more about <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science">MEDS</a>.</p>
   <p>This is very important text!</p>
 </body>
 </html>
@@ -228,18 +228,18 @@ Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as
 
 <br>
 
-[**1.**]{.teal-text} Add a new file named, `practice-markdown.qmd`, inside `DELETE-LATER/` using either the `touch` command or the **Blank File** > **Quarto Doc...** option.
+[**1.**]{.teal-text} Add a new file named, `practice.qmd`, inside `DELETE-LATER/` using either the `touch` command or the **Blank File** > **Quarto Doc...** option.
 
 <br>
 
-[**2.**]{.teal-text} Type or copy / paste the following into your `practice-markdown.qmd` file:
+[**2.**]{.teal-text} Type or copy / paste the following into your `practice.qmd` file:
 
-```{.md filename="~/DELETE-LATER/practice-markdown.qmd"}
+```{.md filename="~/DELETE-LATER/practice.qmd"}
 # Here is my level one header
 
 Here is my first paragraph
 
-Here is my second paragraph, where you can read more about [MEDS](https://ucsb-meds.github.io/).
+Here is my second paragraph, where you can read more about [MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science).
 
 This is very important text!
 ```

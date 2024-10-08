@@ -50,7 +50,7 @@ knitr::include_graphics("images/CSS_syntax.png")
 
 - [[**Selectors**]{.teal-text} select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*]{.body-text-s}
 
-- [[**Declarations**]{.teal-text} sit inside curly brackets, `{}`, and are made up of **property** and **value** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*]{.body-text-s}
+- [[**Declarations**]{.teal-text} sit inside curly brackets, `{}`, and are made up of **[property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)** and **[value](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units)** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*]{.body-text-s}
 
 - [A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`]{.body-text-s}
 
@@ -525,7 +525,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 <hr>
 
-[**1.**]{.teal-text} Create a new CSS file inside `DELETE-LATER/` named `practice-styles.css` using either the `touch` command or the **Blank File** > **Text File** option.
+[**1.**]{.teal-text} Create a new CSS file inside `DELETE-LATER/` named `practice.css` using either the `touch` command or the **Blank File** > **Text File** option.
 
 <br>
 
@@ -533,7 +533,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 [**2.**]{.teal-text} Link your CSS file inside the `<head>` of your HTML file (you can [read more](https://www.w3schools.com/css/css_howto.asp) about inserting style sheets).
 
-```{html filename="~/DELETE-LATER/practice-html.html"} 
+```{html filename="~/DELETE-LATER/practice.html"} 
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
@@ -541,13 +541,13 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>
  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
- <link rel="stylesheet" href="practice-styles.css"> 
+ <link rel="stylesheet" href="practice.css"> 
 </head>
 <body> 
   <!-- Write all the contents of the HTML doc here -->
   <h1>Here is my level one header</h1>
   <p>Here is my first paragraph</p>
-  <p>Here is my second paragraph, where you can read more about <a href="https://ucsb-meds.github.io/">MEDS</a>.</p>
+  <p>Here is my second paragraph, where you can read more about <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science">MEDS</a>.</p>
   <p>This is very important text!</p>
 </body>
 </html>
@@ -561,7 +561,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 <hr>
 
-[**3.**]{.teal-text} Write some CSS selectors in your `practice-styles.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
+[**3.**]{.teal-text} Write some CSS selectors in your `practice.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice.html` to see the updates. Some suggestions:
 
 ::: {.body-text-s .topbr}
 [**(a)**]{.teal-text} create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/) allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
@@ -606,7 +606,7 @@ It'll be especially helpful to explore this list of available [CSS properties](h
 ::: {.panel-tabset}
 
 ## CSS
-```{css filename="~/DELETE-LATER/practice-styles.css"}
+```{css filename="~/DELETE-LATER/practice.css"}
 #| eval: false
 #| echo: true
 /* ------- element selectors ------- */
@@ -640,20 +640,20 @@ a {
 ```
 
 ## HTML 
-```{html filename="~/DELETE-LATER/practice-html.html"}
+```{html filename="~/DELETE-LATER/practice.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
 <html> <!-- This tag represents the root of the HTML doc -->
 <head>
  <!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) -->
- <link rel="stylesheet" href="practice-styles.css">
+ <link rel="stylesheet" href="practice.css">
 </head>
 <body> 
   <!-- Write all the contents of the HTML doc here -->
   <h1>Here is my level one header</h1>
   <p class="blue-text">Here is my first paragraph</p>
-  <p>Here is my second paragraph, where you can read more about <a href="https://ucsb-meds.github.io/">MEDS</a>.</p>
+  <p>Here is my second paragraph, where you can read more about <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science">MEDS</a>.</p>
   <p class="important-text">This is <span class="blue-text">very</span> important text!</p>
 </body>
 </html>

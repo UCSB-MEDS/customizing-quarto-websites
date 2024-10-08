@@ -403,7 +403,7 @@
 <div class="column" style="width:50%;">
 <p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 07, 2024</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 08, 2024</span></p>
 </div></div>
 <hr class="hr-teal">
 <div class="columns">
@@ -1567,7 +1567,7 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <p><br></p>
 <p><span class="teal-text"><strong>0.</strong></span> I’m going to create a new subdirectory in my repo’s root directory called, <code>DELETE-LATER/</code>. We’ll save the following practice files to this folder, then delete it after (these files are purely for demonstration and aren’t needed for your website). To do so, click on the <strong>folder button</strong> in the <strong>Files</strong> pane to add your new subdirectory.</p>
 <p><br></p>
-<p><span class="teal-text"><strong>1.</strong></span> Add a new file named <code>practice-html.html</code> to your new folder using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Text File</strong> option.</p>
+<p><span class="teal-text"><strong>1.</strong></span> Add a new file named <code>practice.html</code> to your new folder using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Text File</strong> option.</p>
 <div class="footer">
 <p><strong>Reminder:</strong> You can delete the <code>DELETE-LATER/</code> subdirectory after the next few exercises. These files will not be incorporated into our website.</p>
 </div>
@@ -1575,11 +1575,11 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <p><span class="slide-title">Let’s take a look at some HTML</span></p>
 <hr>
 <p><br></p>
-<p><span class="teal-text"><strong>2.</strong></span> Type or copy / paste the following HTML into your <code>practice-html.html</code> file:</p>
+<p><span class="teal-text"><strong>2.</strong></span> Type or copy / paste the following HTML into your <code>practice.html</code> file:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>~/DELETE-LATER/practice-html.html</strong></pre>
+<pre><strong>~/DELETE-LATER/practice.html</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb22-1"><a href=""></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb22-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
@@ -1590,7 +1590,7 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <span id="cb22-7"><a href=""></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
 <span id="cb22-8"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Here is my level one header<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
 <span id="cb22-9"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my first paragraph<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb22-10"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my second paragraph, where you can read more about <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://ucsb-meds.github.io/"</span><span class="dt">&gt;</span>MEDS<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb22-10"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my second paragraph, where you can read more about <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://bren.ucsb.edu/masters-programs/master-environmental-data-science"</span><span class="dt">&gt;</span>MEDS<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb22-11"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is very important text!<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb22-12"><a href=""></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb22-13"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1607,18 +1607,18 @@ A <em>light</em> introduction to HTML <svg aria-label="HTML 5 Logo" role="img" v
 <p><br></p>
 <p>Quarto (<code>.qmd</code>) files allow us to write markdown, then <em>Render</em> that markdown as HTML (we can also write HTML directly in <code>.qmd</code> files). Let’s practice that together now:</p>
 <p><br></p>
-<p><span class="teal-text"><strong>1.</strong></span> Add a new file named, <code>practice-markdown.qmd</code>, inside <code>DELETE-LATER/</code> using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Quarto Doc…</strong> option.</p>
+<p><span class="teal-text"><strong>1.</strong></span> Add a new file named, <code>practice.qmd</code>, inside <code>DELETE-LATER/</code> using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Quarto Doc…</strong> option.</p>
 <p><br></p>
-<p><span class="teal-text"><strong>2.</strong></span> Type or copy / paste the following into your <code>practice-markdown.qmd</code> file:</p>
+<p><span class="teal-text"><strong>2.</strong></span> Type or copy / paste the following into your <code>practice.qmd</code> file:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>~/DELETE-LATER/practice-markdown.qmd</strong></pre>
+<pre><strong>~/DELETE-LATER/practice.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb23" data-filename="~/DELETE-LATER/practice-markdown.qmd"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href=""></a><span class="fu"># Here is my level one header</span></span>
+<div class="sourceCode" id="cb23" data-filename="~/DELETE-LATER/practice.qmd"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href=""></a><span class="fu"># Here is my level one header</span></span>
 <span id="cb23-2"><a href=""></a></span>
 <span id="cb23-3"><a href=""></a>Here is my first paragraph</span>
 <span id="cb23-4"><a href=""></a></span>
-<span id="cb23-5"><a href=""></a>Here is my second paragraph, where you can read more about <span class="co">[</span><span class="ot">MEDS</span><span class="co">](https://ucsb-meds.github.io/)</span>.</span>
+<span id="cb23-5"><a href=""></a>Here is my second paragraph, where you can read more about <span class="co">[</span><span class="ot">MEDS</span><span class="co">](https://bren.ucsb.edu/masters-programs/master-environmental-data-science)</span>.</span>
 <span id="cb23-6"><a href=""></a></span>
 <span id="cb23-7"><a href=""></a>This is very important text!</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1656,7 +1656,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </div><div class="column" style="width:50%;">
 <ul>
 <li><p><span class="body-text-s"><span class="teal-text"><strong>Selectors</strong></span> select the HTML element(s) you want to style <em>(e.g.&nbsp;level one headings, <code>&lt;h1&gt;</code>)</em></span></p></li>
-<li><p><span class="body-text-s"><span class="teal-text"><strong>Declarations</strong></span> sit inside curly brackets, <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, and are made up of <strong>property</strong> and <strong>value</strong> pairs. Each pair specifies the property of the HTML element(s) you’re selecting <em>(e.g.&nbsp;the color property of the element <code>&lt;h1&gt;</code>)</em>, and a value you’d like to assign to that property <em>(e.g.&nbsp;green)</em></span></p></li>
+<li><p><span class="body-text-s"><span class="teal-text"><strong>Declarations</strong></span> sit inside curly brackets, <code><a href="https://rdrr.io/r/base/Paren.html">{}</a></code>, and are made up of <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">property</a></strong> and <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units">value</a></strong> pairs. Each pair specifies the property of the HTML element(s) you’re selecting <em>(e.g.&nbsp;the color property of the element <code>&lt;h1&gt;</code>)</em>, and a value you’d like to assign to that property <em>(e.g.&nbsp;green)</em></span></p></li>
 <li><p><span class="body-text-s">A property and its corresponding value are separated by a colon, <code>:</code>. Declarations end with a semicolon, <code>;</code></span></p></li>
 </ul>
 </div></div>
@@ -1930,26 +1930,26 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
       }</style></aside><!-- --- --><!-- ##  {#css-practice0 data-menu-title="Practice CSS (0/3)" background="#053660"} --><!-- <div class = "vertical-center"> --><!-- <center><div class="custom-subtitle2">`<svg aria-label="Laptop Code" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#d2e3f3;overflow:visible;position:relative;"><title>Laptop Code</title><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></svg>`{=html} Practice writing and applying some CSS rules</div></center> --><!-- </div> --></section><section id="css-practice1" class="slide level2" data-menu-title="Practice CSS (1/3)"><h2></h2>
 <p><span class="slide-title">Practice writing CSS (1/3)</span></p>
 <hr>
-<p><span class="teal-text"><strong>1.</strong></span> Create a new CSS file inside <code>DELETE-LATER/</code> named <code>practice-styles.css</code> using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Text File</strong> option.</p>
+<p><span class="teal-text"><strong>1.</strong></span> Create a new CSS file inside <code>DELETE-LATER/</code> named <code>practice.css</code> using either the <code>touch</code> command or the <strong>Blank File</strong> &gt; <strong>Text File</strong> option.</p>
 <p><br></p>
 <div class="fragment">
 <p><span class="teal-text"><strong>2.</strong></span> Link your CSS file inside the <code>&lt;head&gt;</code> of your HTML file (you can <a href="https://www.w3schools.com/css/css_howto.asp">read more</a> about inserting style sheets).</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>~/DELETE-LATER/practice-html.html</strong></pre>
+<pre><strong>~/DELETE-LATER/practice.html</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb37" data-code-line-numbers="5"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb37-1"><a href=""></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb37-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
 <span id="cb37-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb37-4"><a href=""></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
-<span id="cb37-5"><a href=""></a> <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"practice-styles.css"</span><span class="dt">&gt;</span> </span>
+<span id="cb37-5"><a href=""></a> <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"practice.css"</span><span class="dt">&gt;</span> </span>
 <span id="cb37-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb37-7"><a href=""></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span> </span>
 <span id="cb37-8"><a href=""></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
 <span id="cb37-9"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Here is my level one header<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
 <span id="cb37-10"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my first paragraph<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb37-11"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my second paragraph, where you can read more about <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://ucsb-meds.github.io/"</span><span class="dt">&gt;</span>MEDS<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb37-11"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my second paragraph, where you can read more about <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://bren.ucsb.edu/masters-programs/master-environmental-data-science"</span><span class="dt">&gt;</span>MEDS<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb37-12"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>This is very important text!<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb37-13"><a href=""></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb37-14"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1959,7 +1959,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 </section><section id="css-practice2" class="slide level2" data-menu-title="Practice CSS (2/3)"><h2></h2>
 <p><span class="slide-title">Practice writing CSS (2/3)</span></p>
 <hr>
-<p><span class="teal-text"><strong>3.</strong></span> Write some CSS selectors in your <code>practice-styles.css</code> file and save. Update your HTML file as necessary (e.g.&nbsp;using class selectors) to apply your styles and <strong>Preview</strong> <code>practice-html.html</code> to see the updates. Some suggestions:</p>
+<p><span class="teal-text"><strong>3.</strong></span> Write some CSS selectors in your <code>practice.css</code> file and save. Update your HTML file as necessary (e.g.&nbsp;using class selectors) to apply your styles and <strong>Preview</strong> <code>practice.html</code> to see the updates. Some suggestions:</p>
 <div class="body-text-s topbr">
 <p><span class="teal-text"><strong>(a)</strong></span> create an <code>&lt;h1&gt;</code> element selector that styles the background color to something of your choosing (<a href="https://htmlcolorcodes.com/">hex and rgb codes</a> allowed!), rounds the edges of the background box, increases the spacing between each letter, <em>and</em> centers the text on the page,</p>
 </div>
@@ -1997,7 +1997,7 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>~/DELETE-LATER/practice-styles.css</strong></pre>
+<pre><strong>~/DELETE-LATER/practice.css</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb38-1"><a href=""></a><span class="co">/* ------- element selectors ------- */</span></span>
 <span id="cb38-2"><a href=""></a></span>
@@ -2034,19 +2034,19 @@ A <em>light</em> introduction to CSS <i class="fa-brands fa-css3-alt" title="the
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>~/DELETE-LATER/practice-html.html</strong></pre>
+<pre><strong>~/DELETE-LATER/practice.html</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb39-1"><a href=""></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span> <span class="co">&lt;!-- All HTML docs start with a doc type declaration--&gt;</span></span>
 <span id="cb39-2"><a href=""></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span> <span class="co">&lt;!-- This tag represents the root of the HTML doc --&gt;</span></span>
 <span id="cb39-3"><a href=""></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb39-4"><a href=""></a> <span class="co">&lt;!-- Write any metadata about the HTML doc here (inluding the link to an external CSS file) --&gt;</span></span>
-<span id="cb39-5"><a href=""></a> <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"practice-styles.css"</span><span class="dt">&gt;</span></span>
+<span id="cb39-5"><a href=""></a> <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"practice.css"</span><span class="dt">&gt;</span></span>
 <span id="cb39-6"><a href=""></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
 <span id="cb39-7"><a href=""></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span> </span>
 <span id="cb39-8"><a href=""></a>  <span class="co">&lt;!-- Write all the contents of the HTML doc here --&gt;</span></span>
 <span id="cb39-9"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Here is my level one header<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
 <span id="cb39-10"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"blue-text"</span><span class="dt">&gt;</span>Here is my first paragraph<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
-<span id="cb39-11"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my second paragraph, where you can read more about <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://ucsb-meds.github.io/"</span><span class="dt">&gt;</span>MEDS<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb39-11"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Here is my second paragraph, where you can read more about <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://bren.ucsb.edu/masters-programs/master-environmental-data-science"</span><span class="dt">&gt;</span>MEDS<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb39-12"><a href=""></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="ot"> class</span><span class="op">=</span><span class="st">"important-text"</span><span class="dt">&gt;</span>This is <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"blue-text"</span><span class="dt">&gt;</span>very<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> important text!<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
 <span id="cb39-13"><a href=""></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
 <span id="cb39-14"><a href=""></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2372,7 +2372,7 @@ Okay, that’s cool…but what about Quarto?
 <pre><strong>resources.qmd</strong></pre>
 </div>
 <div class="sourceCode cell-code" id="cb43" data-code-line-numbers="5-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="sc">---</span></span>
-<span id="cb43-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"Resources"</span></span>
+<span id="cb43-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"All my favorite resources!"</span></span>
 <span id="cb43-3"><a href=""></a><span class="sc">---</span></span>
 <span id="cb43-4"><a href=""></a></span>
 <span id="cb43-5"><a href=""></a><span class="er">&lt;</span>h1<span class="sc">&gt;</span>this is an <span class="st">`</span><span class="at">&lt;h1&gt;</span><span class="st">`</span> element<span class="sc">&lt;</span><span class="er">/</span>h1<span class="sc">&gt;</span> <span class="co"># alternatively, you can write &lt;h1&gt; elements using markdown (`# this is an `&lt;h1&gt;` element`)</span></span>

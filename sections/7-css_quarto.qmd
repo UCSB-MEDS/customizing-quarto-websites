@@ -486,7 +486,7 @@ Yes! To demonstrate, let's write a couple of HTML elements that *are not by defa
 #| echo: true
 #| code-line-numbers: "5-11"
 ---
-title: "Resources"
+title: "All my favorite resources!"
 ---
 
 <h1>this is an `<h1>` element</h1> # alternatively, you can write <h1> elements using markdown (`# this is an `<h1>` element`)
