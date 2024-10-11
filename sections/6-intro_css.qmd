@@ -533,7 +533,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 [**2.**]{.teal-text} Link your CSS file inside the `<head>` of your HTML file (you can [read more](https://www.w3schools.com/css/css_howto.asp) about inserting style sheets).
 
-```{html filename="~/DELETE-LATER/practice.html"} 
+```{html filename="~/DELETE-LATER/practice-html.html"} 
 #| eval: false
 #| echo: true
 #| code-line-numbers: "5"
@@ -561,7 +561,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 <hr>
 
-[**3.**]{.teal-text} Write some CSS selectors in your `practice.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice.html` to see the updates. Some suggestions:
+[**3.**]{.teal-text} Write some CSS selectors in your `practice.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
 
 ::: {.body-text-s .topbr}
 [**(a)**]{.teal-text} create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/) allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
@@ -640,7 +640,7 @@ a {
 ```
 
 ## HTML 
-```{html filename="~/DELETE-LATER/practice.html"}
+```{html filename="~/DELETE-LATER/practice-html.html"}
 #| eval: false
 #| echo: true
 <!DOCTYPE html> <!-- All HTML docs start with a doc type declaration-->
