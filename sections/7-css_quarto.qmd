@@ -469,6 +469,10 @@ h1, h2 {
 knitr::include_graphics("images/maroon-text.gif")
 ```
 
+::: {.footer}
+Similarly, you can modify the `.anchored` class that we saw was, by default, applied to our `<h2>` elements.
+:::
+
 ---
 
 ##  {#non-titles data-menu-title="Elements w/o title class"}
@@ -520,7 +524,7 @@ title: "All my favorite resources!"
 knitr::include_graphics("images/h1-title.png")
 ```
 
-[**Note** that we can also apply the `title` class to *any* text element (not *just* `<h1>` elements). In this example, we apply it both to an `<h1>` element and a `<p>` element.]{.body-text-s}
+[**Note** that we can also apply the `title` class to *any* text element (not *just* `<h1>` elements). In this example, we apply it both to an `<h1>` element and a `<p>` element. *That said, giving your class selectors sensible names can help keep your code readable* -- the Quarto `.title` class is (most likely) intended for styling page titles.]{.body-text-s}
 
 ---
 
@@ -594,7 +598,7 @@ h1, h2 {
 
 <hr>
 
-[Add a few more elements in `resources.qmd` and apply our custom class selectors. **Remember,** unlike element selectors, **class selectors must be applied to the elements that we want to style** (i.e. we need to update our HTML!):]{.body-text-s}
+[Add a few more elements in `resources.qmd` and apply our custom class selectors. **Remember,** unlike element selectors, **class selectors must be applied to the elements that we want to style** (i.e. we must update our HTML!):]{.body-text-s}
 
 ```{r filename="resources.qmd"}
 #| eval: false
@@ -766,7 +770,9 @@ Some text with just [this section]{.my-selector} styled
 
 <hr>
 
-I tend to use a mix of both approaches (HTML & Quarto syntax). An example:
+[An example:]{.body-text-m}
+
+<br>
 
 ```{md filename="resources.qmd"}
 #| eval: false

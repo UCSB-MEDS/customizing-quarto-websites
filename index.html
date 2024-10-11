@@ -403,7 +403,7 @@
 <div class="column" style="width:50%;">
 <p><span class="body-text-s baby-blue-text"><strong>Published:</strong> Oct 10, 2022</span></p>
 </div><div class="column" style="width:50%;">
-<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 08, 2024</span></p>
+<p><span class="body-text-s baby-blue-text"><strong>Last updated:</strong> Oct 11, 2024</span></p>
 </div></div>
 <hr class="hr-teal">
 <div class="columns">
@@ -1072,7 +1072,7 @@ Next, create a <code>styles.scss</code> file, link to it in <code>_quarto.yml</c
 </section><section id="define-quarto-sass1" class="slide level2" data-menu-title="Define Quarto Sass variables (rendered)"><h2></h2>
 <p><span class="slide-title">Define Quarto’s Sass variables</span> <!-- [Make sweeping colorful updates using Quarto's Sass variables]{.slide-title3} --></p>
 <hr>
-<p><span class="teal-text"><strong>5.</strong></span> Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">list of Sass Variables</a> that can be specified within <code>.scss</code> files. We can assign our newly minted color variables <em>as values</em> to specific Quarto Sass variables to easily update things like the background color, navbar &amp; footer colors, hyperlink color, and more.</p>
+<p><span class="teal-text"><strong>5.</strong></span> Quarto provides a <a href="https://quarto.org/docs/output-formats/html-themes.html#sass-variables">list of pre-defined Sass Variables</a>, which control the appearance of various website elements and that can be specified within <code>.scss</code> files. We can <strong>assign our newly-minted color variables <em>as values</em> to Quarto Sass variables</strong> to easily update things like the background color, navbar &amp; footer colors, hyperlink color, and more.</p>
 <p><br></p>
 
 <img data-src="images/quarto-sass-updates.png" class="quarto-figure quarto-figure-center r-stretch" style="width:10.0%"></section><section id="define-quarto-sass2" class="slide level2" data-menu-title="Define Quarto Sass variables (code)"><h2></h2>
@@ -2361,7 +2361,10 @@ Okay, that’s cool…but what about Quarto?
 <p><span class="body-text-s"><strong>It’s important to note that we didn’t need to make any changes to the HTML</strong> (in <code>about.qmd</code>, and <code>resources.qmd</code>) since those <code>&lt;h1&gt;</code> elements are <em>already</em> assigned the class, <code>title</code>. Updates are automatically applied to any elements that the Quarto framework has already assigned as that class.</span></p>
 <p><br></p>
 
-<img data-src="images/maroon-text.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section><section id="non-titles" class="slide level2" data-menu-title="Elements w/o title class"><h2></h2>
+<img data-src="images/maroon-text.gif" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><div class="footer">
+<p>Similarly, you can modify the <code>.anchored</code> class that we saw was, by default, applied to our <code>&lt;h2&gt;</code> elements.</p>
+</div>
+</section><section id="non-titles" class="slide level2" data-menu-title="Elements w/o title class"><h2></h2>
 <p><span class="slide-title2">Can we apply the <code>title</code> class to other elements?</span></p>
 <hr>
 <p>Yes! To demonstrate, let’s write a couple of HTML elements that <em>are not by default</em> assigned the <code>title</code> class to see what happens – in other words, let’s apply the <code>title</code> class to some elements beyond just our website’s landing page name and page titles. I’ll do this on my <strong>Resources</strong> page (<code>resources.qmd</code>):</p>
@@ -2392,7 +2395,7 @@ Okay, that’s cool…but what about Quarto?
 <hr>
 <p><span class="body-text-s">Class selectors allow us to customize exactly how CSS rules apply to particular elements. In this example, only <code>&lt;h1&gt;</code> elements that are assigned the class, <code>title</code>, are colored maroon. Any <code>&lt;h1&gt;</code> elements that are not assigned the class, <code>title</code>, are styled according to our <code>h1, h2 {}</code> element selector.</span></p>
 
-<img data-src="images/h1-title.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><span class="body-text-s"><strong>Note</strong> that we can also apply the <code>title</code> class to <em>any</em> text element (not <em>just</em> <code>&lt;h1&gt;</code> elements). In this example, we apply it both to an <code>&lt;h1&gt;</code> element and a <code>&lt;p&gt;</code> element.</span></p>
+<img data-src="images/h1-title.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><span class="body-text-s"><strong>Note</strong> that we can also apply the <code>title</code> class to <em>any</em> text element (not <em>just</em> <code>&lt;h1&gt;</code> elements). In this example, we apply it both to an <code>&lt;h1&gt;</code> element and a <code>&lt;p&gt;</code> element. <em>That said, giving your class selectors sensible names can help keep your code readable</em> – the Quarto <code>.title</code> class is (most likely) intended for styling page titles.</span></p>
 </section><section id="write-own-class-selector" class="slide level2" data-menu-title="Write your own class selectors"><h2></h2>
 <p><span class="slide-title">We can also write our own class selectors</span></p>
 <hr>
@@ -2454,7 +2457,7 @@ Okay, that’s cool…but what about Quarto?
 </section><section id="write-resources-html" class="slide level2" data-menu-title="Write HTML for Resources page"><h2></h2>
 <p><span class="slide-title3">Write some HTML elements and apply class selectors</span></p>
 <hr>
-<p><span class="body-text-s">Add a few more elements in <code>resources.qmd</code> and apply our custom class selectors. <strong>Remember,</strong> unlike element selectors, <strong>class selectors must be applied to the elements that we want to style</strong> (i.e.&nbsp;we need to update our HTML!):</span></p>
+<p><span class="body-text-s">Add a few more elements in <code>resources.qmd</code> and apply our custom class selectors. <strong>Remember,</strong> unlike element selectors, <strong>class selectors must be applied to the elements that we want to style</strong> (i.e.&nbsp;we must update our HTML!):</span></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -2568,7 +2571,8 @@ Okay, that’s cool…but what about Quarto?
 </section><section id="mix-match" class="slide level2" data-menu-title="Mix &amp; match styles"><h2></h2>
 <p><span class="slide-title2">You can mix and match syntaxes in <code>.qmd</code> files</span></p>
 <hr>
-<p>I tend to use a mix of both approaches (HTML &amp; Quarto syntax). An example:</p>
+<p><span class="body-text-m">An example:</span></p>
+<p><br></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">

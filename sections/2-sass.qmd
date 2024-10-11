@@ -304,7 +304,7 @@ You can also define values with units, e.g. `$my-font-size: 25px;`.
 
 <hr>
 
-[**5.**]{.teal-text} Quarto provides a [list of Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) that can be specified within `.scss` files. We can assign our newly minted color variables *as values* to specific Quarto Sass variables to easily update things like the background color, navbar & footer colors, hyperlink color, and more.
+[**5.**]{.teal-text} Quarto provides a [list of pre-defined Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables), which control the appearance of various website elements and that can be specified within `.scss` files. We can **assign our newly-minted color variables *as values* to Quarto Sass variables** to easily update things like the background color, navbar & footer colors, hyperlink color, and more.
 
 <br>
 
