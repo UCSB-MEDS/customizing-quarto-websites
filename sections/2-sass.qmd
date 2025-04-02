@@ -13,7 +13,7 @@ format: revealjs
 
 ## {#what-is-sass data-menu-title="What is Sass?"}
 
-[What is [Sass](https://sass-lang.com/)?]{.slide-title}
+[What is [Sass](https://sass-lang.com/){target="_blank"}?]{.slide-title}
 
 <hr>
 
@@ -197,7 +197,7 @@ touch styles.scss # name it whatever you want
 
 <br>
 
-[**2.**]{.teal-text} Add the `/*-- scss:defaults --*/` region decorator to the top of `styles.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html)) -- you'll write all your Sass variables underneath this.
+[**2.**]{.teal-text} Add the `/*-- scss:defaults --*/` region decorator to the top of `styles.scss` ([required by Quarto](https://quarto.org/docs/output-formats/html-themes-more.html){target="_blank"}) -- you'll write all your Sass variables underneath this.
 
 ```{sass filename="styles.scss"}
 #| eval: false
@@ -304,7 +304,7 @@ You can also define values with units, e.g. `$my-font-size: 25px;`.
 
 <hr>
 
-[**5.**]{.teal-text} Quarto provides a [list of pre-defined Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables), which control the appearance of various website elements and that can be specified within `.scss` files. We can **assign our newly-minted color variables *as values* to Quarto Sass variables** to easily update things like the background color, navbar & footer colors, hyperlink color, and more.
+[**5.**]{.teal-text} Quarto provides a [list of pre-defined Sass Variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables){target="_blank"}, which control the appearance of various website elements and that can be specified within `.scss` files. We can **assign our newly-minted color variables *as values* to Quarto Sass variables** to easily update things like the background color, navbar & footer colors, hyperlink color, and more.
 
 <br>
 
@@ -363,9 +363,9 @@ $code-color: $purple; // inline code text color
 
 <hr>
 
-You also *do not* need to create a theme entirely from scratch! If you like parts of a pre-built [Bootswatch theme](https://bootswatch.com/), you can modify it by layering on your desired updates using your own custom `styles.scss` file. 
+You also *do not* need to create a theme entirely from scratch! If you like parts of a pre-built [Bootswatch theme](https://bootswatch.com/){target="_blank"}, you can modify it by layering on your desired updates using your own custom `styles.scss` file. 
 
-For example, let's say I love everything about the pre-built [cosmo](https://bootswatch.com/cosmo/) theme, and only want to update the navbar background color to orange. My files might look something like this:  
+For example, let's say I love everything about the pre-built [cosmo](https://bootswatch.com/cosmo/){target="_blank"} theme, and only want to update the navbar background color to orange. My files might look something like this:  
 
 <br>
 

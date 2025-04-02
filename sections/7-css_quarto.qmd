@@ -718,7 +718,7 @@ It's important to note that Quarto (currently) does not create a table of conten
 
 ##  {#quarto-syntax data-menu-title="Quarto Syntax"}
 
-[Quarto also provides its [own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans) for applying classes to elements]{.slide-title3}
+[Quarto also provides its [own syntax](https://quarto.org/docs/authoring/markdown-basics.html#divs-and-spans){target="_blank"} for applying classes to elements]{.slide-title3}
 
 <hr>
 
@@ -815,7 +815,7 @@ Screenshot not included, but feel free to copy this content into your `resources
 
 [Recall that we:]{.body-text-m} 
 
-[**(a)**]{.teal-text} imported two font families from Google Fonts -- [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen) (though you can import and use as many as you'd like), and
+[**(a)**]{.teal-text} imported two font families from Google Fonts -- [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito){target="_blank"} and [Sen](https://fonts.google.com/specimen/Sen?query=sen){target="_blank"} (though you can import and use as many as you'd like), and
 
 [**(b)**]{.teal-text} set Nunito as our `mainfont` in `_quarto.yml` (which applies Nunito as the default font for all text elements). 
 
@@ -972,7 +972,7 @@ knitr::include_graphics("images/large-logo.png")
 
 Great question! **I adapted it from someone else's open source code**, which was available on GitHub {{< fa face-smile-beam title="a smiling face with happy, squinty eyes" >}} This process often involves some trial and error, but it's one of the best ways to learn from the many awesome folks who openly share their work.
 
-More specifically, I stumbled upon [Robert Mitchell's personal website](https://robertmitchellv.com/) (built with Quarto) and noticed that he too had a logo, *and* that it was perfectly sized to fit the navbar space:
+More specifically, I stumbled upon [Robert Mitchell's personal website](https://robertmitchellv.com/){target="_blank"} (built with Quarto) and noticed that he too had a logo, *and* that it was perfectly sized to fit the navbar space:
 
 ```{r}
 #| eval: true
@@ -992,15 +992,15 @@ knitr::include_graphics("images/mitchell-website.png")
 
 Here's what that looked like: 
 
-1. I inspected the logo using Google Chrome's [DevTools](https://developer.chrome.com/docs/devtools) (**right click** > **Inspect**).
+1. I inspected the logo using Google Chrome's [DevTools](https://developer.chrome.com/docs/devtools){target="_blank"} (**right click** > **Inspect**).
 
 2. DevTools opened to some HTML which linked to the logo PNG file and had the class `navbar-logo` (this seemed like a reasonable place to start).
 
-3. I hopped over to Robert's [`custom.scss` file](https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss) and searched for `navbar-logo`. This didn't yield any matches.
+3. I hopped over to Robert's [`custom.scss` file](https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss){target="_blank"} and searched for `navbar-logo`. This didn't yield any matches.
 
 4. I returned to the DevTools pane and hovered over the HTML directly above my first attempt (hovering over this new HTML still highlighted the website logo, so I assumed it was targeting the right element). Here, I noticed the class `navbar-brand`.
 
-5. I jumped back to the `custom.scss` file -- this time, a search for `navbar-brand` led me to the [CSS rule](https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss#L215-L218) used to adjust the size of the logo.
+5. I jumped back to the `custom.scss` file -- this time, a search for `navbar-brand` led me to the [CSS rule](https://github.com/robertmitchellv/robertmitchellv.github.io/blob/main/custom.scss#L215-L218){target="_blank"} used to adjust the size of the logo.
 
 6. (Not shown in gif) Finally, I tried copying this rule over to my own stylesheet to test it out (and hope that it actually works)! I had to tweak the max-height to work for *my* logo.
 

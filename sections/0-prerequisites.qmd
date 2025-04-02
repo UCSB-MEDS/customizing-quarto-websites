@@ -38,13 +38,13 @@ knitr::include_graphics("images/penguins_meteor.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
+Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations){target="_blank"}
 :::
 
 <br>
 
 ::: {.footer}
-**If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/) before moving forward.**
+**If you first need to get your website up and running, follow along with these [step-by-step instructions](https://ucsb-meds.github.io/creating-quarto-websites/){target="_blank"} before moving forward.**
 :::
 
 ---
@@ -55,7 +55,7 @@ Art by [Allison Horst](https://github.com/allisonhorst/stats-illustrations)
 
 <hr>
 
-When we **render** a new Quarto site, it **converts** all of our **markdown into HTML** and **applies a pre-built CSS stylesheet** (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/)). 
+When we **render** a new Quarto site, it **converts** all of our **markdown into HTML** and **applies a pre-built CSS stylesheet** (the Bootswatch [Cosmo theme](https://bootswatch.com/cosmo/){target="_blank"}). 
 
 <br>
 
@@ -63,13 +63,13 @@ When we **render** a new Quarto site, it **converts** all of our **markdown into
 
 ::: {.incremental}
 ::: {.body-text-s}
-- [**Editing the `index.qmd` YAML**]{.teal-text} -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
+- [**Editing the `index.qmd` YAML**]{.teal-text} -- you can apply a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates){target="_blank"} to give your landing page a sleek and professional appearance (we can further modify this later with some CSS).
 
-- [**Editing the `_quarto.yml` file**]{.teal-text} -- this is our website configuration file,  where we can easily update our website's navigation (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), and much more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/) (by replacing `cosmo` with an alternative theme name).
+- [**Editing the `_quarto.yml` file**]{.teal-text} -- this is our website configuration file,  where we can easily update our website's navigation (e.g. add new pages), add a page footer, a [favicon](https://en.wikipedia.org/wiki/Favicon), and much more. We can also switch the default theme to a different pre-built [Bootswatch theme](https://bootswatch.com/){target="_blank"} (by replacing `cosmo` with an alternative theme name).
 
 - [**Defining CSS rules in the `styles.css` file**]{.teal-text} that comes with every new Quarto site. This allows you to fine-tune the appearance of your site.
 
-- [**Creating a `.scss` file(s)**]{.teal-text} that contains [Sass](https://sass-lang.com/) variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables).
+- [**Creating a `.scss` file(s)**]{.teal-text} that contains [Sass](https://sass-lang.com/){target="_blank"} variables to quickly customize your website's theme -- these take the form of `$var-name: value;` and you can find a list of them in the [Quarto documentation](https://quarto.org/docs/output-formats/html-themes.html#sass-variables){target="_blank"}.
 
 :::
 :::
@@ -103,7 +103,7 @@ Approaching this in the following order worked best for me:
 . . .
 
 ::: incremental
-- [**First**]{.teal-text}, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.
+- [**First**]{.teal-text}, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates){target="_blank"} to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.
 
 - [**Next**]{.teal-text}, create a `styles.scss` file, link to it in `_quarto.yml` (this applies your styles to your Quarto site), and define your Sass variables.
 
@@ -149,7 +149,7 @@ git push -u origin my-new-branch
 ```
 
 ::: {.body-text-s .topbr}
-You're now ready to work as normal! Once satisfied with your changes, you can `git add`, `git commit -m "my commit message"`, and `git push` (or use the RStudio GUI buttons in the **Git** tab) your files. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) from GitHub and [merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request) into `main` to integrate your changes.
+You're now ready to work as normal! Once satisfied with your changes, you can `git add`, `git commit -m "my commit message"`, and `git push` (or use the RStudio GUI buttons in the **Git** tab) your files. Open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests){target="_blank"} from GitHub and [merge](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request){target="_blank"} into `main` to integrate your changes.
 :::
 
 ---
@@ -192,7 +192,7 @@ knitr::include_graphics("images/quarto-preview.gif")
 ::: {.body-text}
 <br>
 <br>
-[Quarto](https://quarto.org/) gives us an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.
+[Quarto](https://quarto.org/){target="_blank"} gives us an easy-to-use web publishing format to create our personal websites -- we can develop in a space that is comfortable (for me, that's RStudio) and write mostly Markdown syntax (which is rendered as HTML when we build our website). A massive benefit is that these websites already look pretty slick right out of the box.
 :::
 :::
 
@@ -207,13 +207,13 @@ knitr::include_graphics("images/jolla-template.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text}
-An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/) theme, [Cosmo](https://bootswatch.com/cosmo/), *and* the `jolla` [layout template](https://quarto.org/docs/websites/website-about.html) applied
+An example Quarto website styled using the built-in [Bootswatch](https://bootswatch.com/){target="_blank"} theme, [Cosmo](https://bootswatch.com/cosmo/), *and* the `jolla` [layout template](https://quarto.org/docs/websites/website-about.html){target="_blank"} applied
 :::
 
 :::
 
 ::: {.center-text}
-[**Please note:** these materials assume you've already worked through [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/) and pick up where those instructions left off.]{.teal-text}
+[**Please note:** these materials assume you've already worked through [Creating your personal website with Quarto](https://ucsb-meds.github.io/creating-quarto-websites/){target="_blank"} and pick up where those instructions left off.]{.teal-text}
 :::
 
 ---

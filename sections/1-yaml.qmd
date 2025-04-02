@@ -16,7 +16,7 @@ format:
 
 <div class="vertical-center">
 <!-- <center><div class="custom-subtitle2">Add a template to your `index.qmd` and edit `_quarto.qmd`</div></center> -->
-<center><div class="custom-subtitle2">First, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates) to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.</div></center>
+<center><div class="custom-subtitle2">First, add a [pre-built template](https://quarto.org/docs/websites/website-about.html#templates){target="_blank"} to `index.qmd` and adjust website configurations by editing `_quarto.yml` -- this is the easiest way to add some really cool features with minimal effort.</div></center>
 </div>
 
 ---
@@ -27,7 +27,7 @@ format:
 
 <hr>
 
-Quarto has [5 pre-built template "about pages"](https://quarto.org/docs/websites/website-about.html), which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example: 
+Quarto has [5 pre-built template "about pages"](https://quarto.org/docs/websites/website-about.html){target="_blank"}, which can be used to nicely arrange content about a person or organization. These work especially well for personal websites! For example: 
 
 :::: {.columns}
 ::: {.column width="50%"}
@@ -106,7 +106,7 @@ about:
 
 <hr>
 
-Add any [**free** FontAwesome icons](https://fontawesome.com/search?o=r&m=free) to your buttons using the `icon` option. For example:
+Add any [**free** FontAwesome icons](https://fontawesome.com/search?o=r&m=free){target="_blank"} to your buttons using the `icon` option. For example:
 
 <br>
 
@@ -138,7 +138,7 @@ links:
 :::
 ::::
 
-Be sure to spell the icon name exactly as it appears on FontAwesome's website (e.g. the [LinkedIn icon](https://fontawesome.com/icons/linkedin?f=brands&s=solid), {{< fa brands linkedin >}}, is all lowercase and spelled, `linkedin`).
+Be sure to spell the icon name exactly as it appears on FontAwesome's website (e.g. the [LinkedIn icon](https://fontawesome.com/icons/linkedin?f=brands&s=solid){target="_blank"}, {{< fa brands linkedin >}}, is all lowercase and spelled, `linkedin`).
 
 ---
 
@@ -224,7 +224,7 @@ knitr::include_graphics("images/page-footer.png")
 ```
 
 ::: {.footer}
-**Note:** If you plan to use FontAwesome icons *outside* of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html) (more info on the next few slides).
+**Note:** If you plan to use FontAwesome icons *outside* of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html){target="_blank"} (more info on the next few slides).
 :::
 
 ---
@@ -278,13 +278,13 @@ format:
 
 ## {#fa-extension data-menu-title="fontawesome extension"}
 
-[Install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html)]{.slide-title}
+[Install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html){target="_blank"}]{.slide-title}
 
 <hr>
 
 <br>
 
-If you want to use FontAwesome icons anywhere else on your website (i.e. outside of the `icon` YAML option), you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html).
+If you want to use FontAwesome icons anywhere else on your website (i.e. outside of the `icon` YAML option), you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html){target="_blank"}.
 
 <br>
 
@@ -311,7 +311,7 @@ quarto add quarto-ext/fontawesome
 
 <br>
 
-To embed an icon, look up the icon’s name on FontAwesome (be sure to only choose from the [Free icons]((https://fontawesome.com/search?o=r&m=free))), then use the fontawesome shortcode:
+To embed an icon, look up the icon’s name on FontAwesome (be sure to only choose from the [Free icons]((https://fontawesome.com/search?o=r&m=free){target="_blank"})), then use the fontawesome shortcode:
 
 ```{markdown}
 #| eval: false
@@ -358,7 +358,7 @@ Some icons fall within the `brands` collection and must be prefixed with `brands
 
 <br>
 
-You can identify if an icon falls within the `brands` collection by clicking on its preview (e.g. the [github icon](https://fontawesome.com/icons/github?f=brands&s=solid)) and checking to see if the HTML class is `fa-brands`:
+You can identify if an icon falls within the `brands` collection by clicking on its preview (e.g. the [github icon](https://fontawesome.com/icons/github?f=brands&s=solid){target="_blank"}) and checking to see if the HTML class is `fa-brands`:
 
 ```{r}
 #| eval: true
@@ -376,11 +376,11 @@ knitr::include_graphics("images/github-icon.png")
 
 <hr>
 
-You can add a personal logo in the top left corner of your navbar in place of your title. The free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo) is a great tool for creating your own logo!
+You can add a personal logo in the top left corner of your navbar in place of your title. The free [Adobe Express Logo Maker](https://www.adobe.com/express/create/logo){target="_blank"} is a great tool for creating your own logo!
 
 <!-- -- provide a little info about yourself, and it'll return a bunch of AI-generated logos for you to choose from and customize further. -->
 
-A [favicon](https://en.wikipedia.org/wiki/Favicon) is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
+A [favicon](https://en.wikipedia.org/wiki/Favicon){target="_blank"} is a small icon used on web browsers to represent a website or a web page. Get creative and use a custom favicon that complements your personal logo.
 
 ```{r}
 #| eval: true 
@@ -453,7 +453,7 @@ format:
 <hr>
 
 ::: {.body-text}
-Explore Quarto's [documentation](https://quarto.org/docs/websites/website-tools.html) to learn more about enabling [Google Analytics](https://analytics.google.com/), [Open Graph protocol](https://ogp.me/), and more.
+Explore Quarto's [documentation](https://quarto.org/docs/websites/website-tools.html){target="_blank"} to learn more about enabling [Google Analytics](https://analytics.google.com/){target="_blank"}, [Open Graph protocol](https://ogp.me/){target="_blank"}, and more.
 :::
 
 <br>

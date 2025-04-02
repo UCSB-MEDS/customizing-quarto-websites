@@ -57,7 +57,7 @@ For me, it’s **a lot** of it is trial and error. Inspecting your website can t
 ::: {.body-text}
 - re-rendering often to ensure your Sass / CSS is working as expected
 - Google! (lots of queries that look like, “CSS underline text”, “CSS rounded corners”, etc.)
-- [W3 Schools](https://www.w3schools.com/css/default.asp) – seriously such a valuable resource (especially their interactive tutorials)
+- [W3 Schools](https://www.w3schools.com/css/default.asp){target="_blank"} – seriously such a valuable resource (especially their interactive tutorials)
 - drawing inspiration (and borrowing source code) from other web pages
 :::
 :::
@@ -84,7 +84,7 @@ Exploring the source code for other websites, presentations, etc. is, *in my opi
 <br>
 
 ::: {.center-text .body-text-m}
-You don't need to limit yourself to *just* Quarto websites -- check out the stylesheets for Quarto docs, presentations (*cough cough* like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites)), Shiny apps / dashboards, [Distill sites](https://distillery.rbind.io/), and more.
+You don't need to limit yourself to *just* Quarto websites -- check out the stylesheets for Quarto docs, presentations (*cough cough* like [this very presentation](https://github.com/UCSB-MEDS/customizing-quarto-websites){target="_blank"}), Shiny apps / dashboards, [Distill sites](https://distillery.rbind.io/){target="_blank"}, and more.
 :::
 
 <!-- ##  {#look-at-other-sites data-menu-title="Look at other websites"} -->
@@ -144,7 +144,7 @@ knitr::include_graphics("images/inspect-edit.gif")
 <hr>
 
 ::: {.body-text .bottombr}
-[W3Schools](https://www.w3schools.com/css/default.asp) (or alternatively, [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS), by Mozilla) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!
+[W3Schools](https://www.w3schools.com/css/default.asp){target="_blank"} (or alternatively, [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS){target="_blank"}, by Mozilla) has *tons* of great examples and interactive tutorials for learning CSS. Touching (and breaking) code is one of the best ways to learn!
 :::
 
 <br>

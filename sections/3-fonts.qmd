@@ -24,7 +24,7 @@ format:
 
 <br>
 
-[**6a.**]{.teal-text} Browse the *many* available Google fonts at <https://fonts.google.com/> and choose 1-3 fonts (two is, in my option, the sweet spot). Click on the **Filters** button in the top left corner of the page to help narrow your choices.
+[**6a.**]{.teal-text} Browse the *many* available Google fonts at [https://fonts.google.com/](https://fonts.google.com/){target="_blank"} and choose 1-3 fonts (two is, in my option, the sweet spot). Click on the **Filters** button in the top left corner of the page to help narrow your choices.
 
 <br>
 
@@ -46,13 +46,13 @@ knitr::include_graphics("images/google-fonts.png")
 
 <hr>
 
-[**6b.**]{.teal-text} Select a Google font family by clicking the blue **Get Font** button in the top right corner of the page, which adds your font family to your “bag.” You can add as many font families to your bag as you’d like to import -- here, we select both [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito) and [Sen](https://fonts.google.com/specimen/Sen?query=sen).
+[**6b.**]{.teal-text} Select a Google font family by clicking the blue **Get Font** button in the top right corner of the page, which adds your font family to your “bag.” You can add as many font families to your bag as you’d like to import -- here, we select both [Nunito](https://fonts.google.com/specimen/Nunito?query=nunito){target="_blank"} and [Sen](https://fonts.google.com/specimen/Sen?query=sen){target="_blank"}.
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 ::: {.center-text .body-text-s .gray-text}
-Explore the [Nunito font family](https://fonts.google.com/specimen/Nunito), which is available in a number of styles (i.e. different weights and italic):
+Explore the [Nunito font family](https://fonts.google.com/specimen/Nunito){target="_blank"}, which is available in a number of styles (i.e. different weights and italic):
 :::
 ```{r}
 #| eval: true
@@ -79,7 +79,7 @@ knitr::include_graphics("images/font-bag.png")
 ::::
 
 ::: {.center-text .body-text-s}
-[**IMPORTANT: If you want to bold or italicize text, you need to select a font family that has those styles**]{.teal-text} (not all font families come in every style e.g. [Sen](https://fonts.google.com/specimen/Sen?query=sen) does not come in *italic*).
+[**IMPORTANT: If you want to bold or italicize text, you need to select a font family that has those styles**]{.teal-text} (not all font families come in every style e.g. [Sen](https://fonts.google.com/specimen/Sen?query=sen){target="_blank"} does not come in *italic*).
 :::
 
 ---

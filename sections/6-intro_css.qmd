@@ -50,7 +50,7 @@ knitr::include_graphics("images/CSS_syntax.png")
 
 - [[**Selectors**]{.teal-text} select the HTML element(s) you want to style *(e.g. level one headings, `<h1>`)*]{.body-text-s}
 
-- [[**Declarations**]{.teal-text} sit inside curly brackets, `{}`, and are made up of **[property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)** and **[value](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units)** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*]{.body-text-s}
+- [[**Declarations**]{.teal-text} sit inside curly brackets, `{}`, and are made up of **[property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference){target="_blank"}** and **[value](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units){target="_blank"}** pairs. Each pair specifies the property of the HTML element(s) you're selecting *(e.g. the color property of the element `<h1>`)*, and a value you'd like to assign to that property *(e.g. green)*]{.body-text-s}
 
 - [A property and its corresponding value are separated by a colon, `:`. Declarations end with a semicolon, `;`]{.body-text-s}
 
@@ -68,7 +68,7 @@ knitr::include_graphics("images/CSS_syntax.png")
 
 <br>
 
-[There are many different CSS selector types, but the following will get you pretty far (though you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)).]{.body-text-m}
+[There are many different CSS selector types, but the following will get you pretty far (though you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp){target="_blank"}).]{.body-text-m}
 <!-- The next few slides review just a few basic CSS selector types for styling HTML elements -- these will get you far in your website customization journey (but check out you can learn more about all the [different categories of CSS selectors here](https://www.w3schools.com/css/css_selectors.asp)): -->
 
 <br>
@@ -221,7 +221,7 @@ knitr::include_graphics("images/grouping_selector.png")
 
 <hr>
 
-[Attributes](https://www.w3schools.com/html/html_attributes.asp) provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`). We can use attributes (e.g. the **`class`** attribute) to apply **targeted styling** using class selectors.
+[Attributes](https://www.w3schools.com/html/html_attributes.asp){target="_blank"} provide extra information about elements. They are always **specified in the start tag** and usually come in **value/name pairs** (e.g. `attributeName="attributeValue"`). We can use attributes (e.g. the **`class`** attribute) to apply **targeted styling** using class selectors.
 
 <br>
 
@@ -464,7 +464,7 @@ In this case, we have a universal selector that styles all of our text orange, b
 <hr>
 
 ::: {.body-text-s .topbr}
-[Specificity](https://www.w3schools.com/css/css_specificity.asp) can be complicated (especially when you consider all the other types of selectors we haven't covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override element selectors, etc. The order that rules are written in your stylesheet matters as well -- since rules are read top to bottom, a directly competing rule farther down your stylesheet will take precedent.
+[Specificity](https://www.w3schools.com/css/css_specificity.asp){target="_blank"} can be complicated (especially when you consider all the other types of selectors we haven't covered in these slides). For the purposes of this workshop and getting started on your CSS journeys, a general rule of thumb is as follows: Inline styles are the most specific and will override ID selectors, which will override class selectors, which will override element selectors, etc. The order that rules are written in your stylesheet matters as well -- since rules are read top to bottom, a directly competing rule farther down your stylesheet will take precedent.
 :::
 
 :::: {.columns}
@@ -504,7 +504,7 @@ knitr::include_graphics("images/specificity_arrow.png")
 ::::
 
 ::: {.notes}
-Some great resources for learning more about CSS specificity: the [CSS Specificity](https://www.w3schools.com/css/css_specificity.asp) chapter by W3Schools, the [Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) article by mdn web docs, the [CSS Specificity explained](https://www.youtube.com/watch?v=c0kfcP_nD9E) YouTube video by Kevin Powell, and the [Specificity Calculator](https://specificity.keegan.st/) by Keegan Street.
+Some great resources for learning more about CSS specificity: the [CSS Specificity](https://www.w3schools.com/css/css_specificity.asp){target="_blank"} chapter by W3Schools, the [Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity){target="_blank"} article by mdn web docs, the [CSS Specificity explained](https://www.youtube.com/watch?v=c0kfcP_nD9E){target="_blank"} YouTube video by Kevin Powell, and the [Specificity Calculator](https://specificity.keegan.st/){target="_blank"} by Keegan Street.
 :::
 
 <!-- --- -->
@@ -531,7 +531,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 . . .
 
-[**2.**]{.teal-text} Link your CSS file inside the `<head>` of your HTML file (you can [read more](https://www.w3schools.com/css/css_howto.asp) about inserting style sheets).
+[**2.**]{.teal-text} Link your CSS file inside the `<head>` of your HTML file (you can [read more](https://www.w3schools.com/css/css_howto.asp){target="_blank"} about inserting style sheets).
 
 ```{html filename="~/DELETE-LATER/practice-html.html"} 
 #| eval: false
@@ -564,7 +564,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 [**3.**]{.teal-text} Write some CSS selectors in your `practice.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
 
 ::: {.body-text-s .topbr}
-[**(a)**]{.teal-text} create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/) allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
+[**(a)**]{.teal-text} create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/){target="_blank"} allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,
 :::
 
 ::: {.body-text-s}
@@ -586,7 +586,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 <br>
 
 ::: {.center-text}
-It'll be especially helpful to explore this list of available [CSS properties](https://www.w3schools.com/cssref/).
+It'll be especially helpful to explore this list of available [CSS properties](https://www.w3schools.com/cssref/){target="_blank"}.
 :::
 
 <br>

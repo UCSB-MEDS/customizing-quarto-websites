@@ -26,7 +26,7 @@ format:
 
 <hr>
 
-[Elements](https://www.w3schools.com/html/html_elements.asp) comprise **start tags** and **end tags** that render some form of content in a particular way.
+[Elements](https://www.w3schools.com/html/html_elements.asp){target="_blank"} comprise **start tags** and **end tags** that render some form of content in a particular way.
 
 ::: {.center-text}
 [**The basic anatomy of an HTML element:**]{.teal-text}
@@ -56,7 +56,7 @@ In Markdown syntax, this HTML element would be written as, `# Welcome to your we
 
 
 ::: {.center-text .body-text-m}
-Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp).
+Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp){target="_blank"}.
 :::
 
 <br>

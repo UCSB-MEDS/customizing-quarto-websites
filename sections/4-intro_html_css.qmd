@@ -28,7 +28,7 @@ format:
 <hr>
 
 ::: {.body-text .topbr}
-In order to really fine-tune the appearance of our site, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html).
+In order to really fine-tune the appearance of our site, we need to dive a bit into the world of [HTML](https://html.spec.whatwg.org/){target="_blank"} and [CSS](https://www.w3.org/Style/CSS/Overview.en.html){target="_blank"}.
 :::
 
 ```{r}
@@ -65,11 +65,11 @@ knitr::include_graphics("images/html.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text .topbr}
-Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
+Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration){target="_blank"}
 :::
 
 ::: {.body-text-s .topbr}
-<sup>1</sup>[**Markdown**](https://www.markdownguide.org/) and [**R Markdown**](https://rmarkdown.rstudio.com/) are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
+<sup>1</sup>[**Markdown**](https://www.markdownguide.org/){target="_blank"} and [**R Markdown**](https://rmarkdown.rstudio.com/){target="_blank"} are both lightweight markup languages -- they're a bit easier for humans to write and read than HTML. HTML is more expressive and allows for customization that is difficult or impossible to do in Markdown.
 :::
 
 ---
@@ -93,7 +93,7 @@ knitr::include_graphics("images/css.png")
 ```
 
 ::: {.body-text-s .gray-text .center-text .bottombr}
-Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration)
+Source: Adapted from [Nicolas Karasiak](https://github.com/nkarasiak/Illustration){target="_blank"}
 :::
 
 ---
