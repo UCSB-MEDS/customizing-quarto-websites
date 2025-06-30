@@ -36,8 +36,8 @@ format:
 
 ::: {.column width="50%"}
 [Sam Shanny-Csik |]{.custom-subtitle2}<br>
-[Lecturer & Data Training Coordinator]{.custom-subtitle2}<br>
-[*Bren & NCEAS*]{.custom-subtitle3}
+*[Lecturer & Data Training Coordinator]{.custom-subtitle3}*
+<!-- [*Bren & NCEAS*]{.custom-subtitle3} -->
 <!-- [*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3} -->
 :::
 
@@ -52,8 +52,8 @@ format:
 
 ::: {.title-footer}
 Slides & source code available on [GitHub {{< fa brands github title="GitHub Octocat logo" >}}](https://github.com/UCSB-MEDS/customizing-quarto-websites){target="_blank"}
-
-*Beginning Fall 2024, these materials will be taught as a part of a 2-unit course offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/){target="_blank"}.*
+<!-- 
+*Beginning Fall 2024, these materials will be taught as a part of a 2-unit course offered at Bren. You can find these, along with other related materials, linked on the [course website](https://ucsb-meds.github.io/EDS-296-DS-portfolios/){target="_blank"}.* -->
 :::
 
 ---
