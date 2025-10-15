@@ -262,7 +262,7 @@ website:
         href: https://github.com/yourUserName
         target: _blank
   page-footer:
-    background: light # or `dark`
+    background: light # or `dark` or omit this option altogether (footer color will match page body color)
     left: Copyright 2021, Samantha Csik
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 

@@ -36,7 +36,7 @@ format:
 
 ::: {.column width="50%"}
 [Sam Shanny-Csik |]{.custom-subtitle2}<br>
-*[Lecturer & Data Training Coordinator]{.custom-subtitle3}*
+*[Lecturer & Data Science Programs Manager]{.custom-subtitle3}*
 <!-- [*Bren & NCEAS*]{.custom-subtitle3} -->
 <!-- [*National Center for Ecological Analysis & Synthesis*]{.custom-subtitle3} -->
 :::
