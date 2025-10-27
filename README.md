@@ -10,4 +10,4 @@ Note: As of Fall 2024, these materials will be presented as part of a new 2-unit
 
 ## Contributors
 
-These workshop materials are maintained and taught by [Samantha Csik](https://github.com/samanthacsik), Data Training Coordinator at the National Center for Ecological Analysis and Synthesis and Lecturer at the Bren School of Enviromental Science & Management.
+These workshop materials are maintained and taught by [Samantha Shanny-Csik](https://github.com/samanthacsik), Data Science Programs Manager and Lecturer at the Bren School of Enviromental Science & Management.
