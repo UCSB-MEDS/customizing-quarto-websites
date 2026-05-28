@@ -35,7 +35,7 @@ format:
 #| echo: false
 #| fig-align: "center"
 #| out-width: "100%" 
-knitr::include_graphics("images/quarto_files.png")
+knitr::include_graphics("images/quarto-files-positron.png")
 ```
 
 <br>

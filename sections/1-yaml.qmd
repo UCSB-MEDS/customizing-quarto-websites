@@ -77,7 +77,7 @@ Use the `about` option to apply a template to your landing page:
 #| echo: true
 #| code-line-numbers: false
 ---
-# title: "Samantha Csik" # optional (omitted in example screenshots); this title appears under your photo
+# title: "Samantha Shanny-Csik" # optional (omitted in example screenshots); this title appears under your photo
 image: file/path/to/headshot.jpeg # a great spot for your professional headshot :) 
 toc: false # disable table of contents for this page (if applicable)
 about: 
@@ -182,7 +182,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Sam Shanny-Csik"
   navbar:
     right: # accepts right/left/center; you can also place items individually on the left, right, and center
       - href: index.qmd
@@ -247,7 +247,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Sam Shanny-Csik"
   navbar:
     right:
       - href: index.qmd
@@ -263,7 +263,7 @@ website:
         target: _blank
   page-footer:
     background: light # or `dark` or omit this option altogether (footer color will match page body color)
-    left: Copyright 2021, Samantha Csik
+    left: Copyright 2021, Samantha Shanny-Csik
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
@@ -288,9 +288,9 @@ If you want to use FontAwesome icons anywhere else on your website (i.e. outside
 
 <br>
 
-Running the following in your RStudio Terminal will download and save the extension to a folder named `_extensions` in your repo's root directory (alternatively, you may do so from any command line interface, but make sure you're in your project's root directory). Be sure to push this new folder (and its contents) to GitHub:
+Running the following in your Terminal will download and save the extension to a folder named `_extensions` in your repo's root directory (alternatively, you may do so from any command line interface, but make sure you're in your project's root directory). Be sure to push this new folder (and its contents) to GitHub:
 
-```{bash filename="RStudio Terminal"}
+```{bash filename="Terminal"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: false
@@ -412,7 +412,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Sam Shanny-Csik"
   favicon: file/path/to/image.png # NOTE: that the `favicon` is a `website` level option (not under `navbar`)
   navbar:
     title: false # override printing your website `title` (e.g. "Sam Csik" on line 6) in the top left corner of your navbar
@@ -432,7 +432,7 @@ website:
         target: _blank
   page-footer:
     background: light
-    left: Copyright 2021, Samantha Csik
+    left: Copyright 2021, Samantha Shanny-Csik
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 

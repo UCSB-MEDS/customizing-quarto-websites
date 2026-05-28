@@ -208,12 +208,12 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Sam Shanny-Csik"
   favicon: media/myFavicon.png
   navbar:
     title: false
     logo: media/myLogo.png
-    logo-alt: "The name 'sam csik' written in green text. Above 'csik' is a dark green horizontal line, above which sits a green chick."
+    logo-alt: "The name 'sam shanny-csik' written in green text. Above 'csik' is a dark green horizontal line, above which sits a green chick."
     right:
       - href: index.qmd
         text: Home
@@ -228,7 +228,7 @@ website:
         target: _blank
   page-footer:
     background: light
-    left: Copyright 2021, Samantha Csik
+    left: Copyright 2021, Samantha Shanny-Csik
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:

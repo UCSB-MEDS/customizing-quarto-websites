@@ -525,7 +525,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 <hr>
 
-[**1.**]{.teal-text} Create a new CSS file inside `DELETE-LATER/` named `practice.css` using either the `touch` command or the **Blank File** > **Text File** option.
+[**1.**]{.teal-text} Add a new CSS file named `practice.css` inside your `DELETE-LATER/` folder by clicking on the `DELETE-LATER/` folder in your Explorer menu, then clicking the **New File...** button.
 
 <br>
 
@@ -561,7 +561,7 @@ Some great resources for learning more about CSS specificity: the [CSS Specifici
 
 <hr>
 
-[**3.**]{.teal-text} Write some CSS selectors in your `practice.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles and **Preview** `practice-html.html` to see the updates. Some suggestions:
+[**3.**]{.teal-text} Write some CSS selectors in your `practice.css` file and save. Update your HTML file as necessary (e.g. using class selectors) to apply your styles. Check out your updates by clicking on the **Open in Browser / Viewer** button. Some suggestions:
 
 ::: {.body-text-s .topbr}
 [**(a)**]{.teal-text} create an `<h1>` element selector that styles the background color to something of your choosing ([hex and rgb codes](https://htmlcolorcodes.com/){target="_blank"} allowed!), rounds the edges of the background box, increases the spacing between each letter, *and* centers the text on the page,

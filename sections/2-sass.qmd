@@ -186,9 +186,9 @@ Let's create our website's `.scss ` stylesheet.
 
 <br>
 
-[**1.**]{.teal-text} Create a `.scss` file in your repo's root directory using the `touch` command in the RStudio Terminal (alternatively, use **New Blank File** > **Text File** in the Files pane):
+[**1.**]{.teal-text} Create a `.scss` file in your repo's root directory using the `touch` command in the Terminal (alternatively, use **New Blank File** > **Text File** in the Files pane):
 
-```{bash filename="RStudio Terminal"}
+```{bash filename="Terminal"}
 #| eval: false
 #| echo: true
 #| code-line-numbers: false
@@ -220,7 +220,7 @@ Adding the region decorator as written above is ***critical!*** Quarto won't rec
 
 <hr>
 
-[**3.**]{.teal-text} Apply your `styles.scss` file to your website using the `theme` option: 
+[**3.**]{.teal-text} Apply your `styles.scss` file to your website using the `theme` option (*Note:* if you have your preview running, you'll likely see an *Bad resource ID* error appear until we add more content to our `styles.scss` file): 
 
 ```{r filename="styles.scss"}
 #| eval: false
@@ -231,7 +231,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Sam Csik"
+  title: "Sam Shanny-Csik"
   favicon: file/path/to/image.png 
   navbar:
     title: false 
@@ -251,7 +251,7 @@ website:
         target: _blank
   page-footer:
     background: light
-    left: Copyright 2021, Samantha Csik
+    left: Copyright 2021, Samantha Shanny-Csik
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 

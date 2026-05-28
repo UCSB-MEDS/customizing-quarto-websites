@@ -151,16 +151,16 @@ Some elements will still display correctly if you forget an end tag, but you can
 <br>
 
 ::: {.center-text}
-*You can use any text editor to write HTML, but the following steps assume you're working in RStudio. You can continue to work on your branch.*
+*You can use any text editor to write HTML, but the following steps assume you're working in Positron. You can continue to work on your branch.*
 :::
 
 <br>
 
-[**0.**]{.teal-text} I'm going to create a new subdirectory in my repo's root directory called, `DELETE-LATER/`. We'll save the following practice files to this folder, then delete it after (these files are purely for demonstration and aren't needed for your website). To do so, click on the **folder button** in the **Files** pane to add your new subdirectory.
+[**0.**]{.teal-text} I'm going to create a new subdirectory in my repo's root directory called, `DELETE-LATER/`. We'll save the following practice files to this folder, then delete it after (these files are purely for demonstration and aren't needed for your website). To do so, click on the **New Folder...** button in the **Explorer** menu to add your new subdirectory.
 
 <br>
 
-[**1.**]{.teal-text} Add a new file named `practice-html.html` to your new folder using either the `touch` command or the **Blank File** > **Text File** option.
+[**1.**]{.teal-text} Add a new file named `practice-html.html` to your `DELETE-LATER/` folder by clicking on the `DELETE-LATER/` folder in your Explorer menu, then clicking the **New File...** button.
 
 ::: {.footer}
 **Reminder:** You can delete the `DELETE-LATER/` subdirectory after the next few exercises. These files will not be incorporated into our website.
@@ -204,7 +204,7 @@ Some elements will still display correctly if you forget an end tag, but you can
 
 <hr>
 
-[**3.**]{.teal-text} Click the **Preview** button to render your HTML: 
+[**3.**]{.teal-text} Click the **Open in Browser / Viewer** button (located at the top right of your open file, ![](images/open-in-viewer.png){alt="A file with a plus sign, +, overlaid on it" style="display: inline-block; margin: 0; position: relative; top: 0px; width:20px;height:20px;"}) to render your HTML in the browser: 
 
 ```{r}
 #| eval: true 
@@ -228,7 +228,7 @@ Quarto (`.qmd`) files allow us to write markdown, then *Render* that markdown as
 
 <br>
 
-[**1.**]{.teal-text} Add a new file named, `practice-markdown.qmd`, inside `DELETE-LATER/` using either the `touch` command or the **Blank File** > **Quarto Doc...** option.
+[**1.**]{.teal-text} Add a new file named `practice-markdown.md` to your `DELETE-LATER/` folder by clicking on the `DELETE-LATER/` folder in your Explorer menu, then clicking the **New File...** button.
 
 <br>
 
@@ -254,7 +254,7 @@ This is very important text!
 
 <br>
 
-[**3.**]{.teal-text} Click the **Render** button to render the markdown as HTML.
+[**3.**]{.teal-text} Click the **Open Preview to the Side** button to render the markdown as HTML in a secondary pane:
 
 ```{r}
 #| eval: true 
@@ -263,8 +263,4 @@ This is very important text!
 #| out-width: "55%" 
 knitr::include_graphics("images/rendered-practice-markdown.png")
 ```
-
-::: {.center-text}
-***Note:** Because we are in our website repo, the resulting file will be rendered as a web page and styled according to our `styles.scss` stylesheet.*
-:::
 

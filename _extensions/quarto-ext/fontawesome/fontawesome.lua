@@ -1,12 +1,12 @@
 local function ensureLatexDeps()
-  quarto.doc.useLatexPackage("fontawesome5")
+  quarto.doc.use_latex_package("fontawesome6")
 end
 
 local function ensureHtmlDeps()
-  quarto.doc.addHtmlDependency({
+  quarto.doc.add_html_dependency({
     name = 'fontawesome6',
-    version = '0.1.0',
-    stylesheets = {'assets/css/all.css', 'assets/css/latex-fontsize.css'}
+    version = '6.7.2',
+    stylesheets = {'assets/css/all.min.css', 'assets/css/latex-fontsize.css'}
   })
 end
 
@@ -50,25 +50,37 @@ return {
       title = " title=\"" .. title  .. "\""
     end
 
+    local label = pandoc.utils.stringify(kwargs["label"])
+    if isEmpty(label) then
+      label = " aria-label=\"" .. icon  .. "\""
+    else
+      label = " aria-label=\"" .. label  .. "\""
+    end
+
     local size = pandoc.utils.stringify(kwargs["size"])
     
     -- detect html (excluding epub which won't handle fa)
-    if quarto.doc.isFormat("html:js") then
+    if quarto.doc.is_format("html:js") then
       ensureHtmlDeps()
       if not isEmpty(size) then
         size = " fa-" .. size
       end
       return pandoc.RawInline(
         'html',
-        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. " aria-hidden=\"true\"></i>"
+        "<i class=\"fa-" .. group .. " fa-" .. icon .. size .. "\"" .. title .. label .. "></i>"
       )
     -- detect pdf / beamer / latex / etc
-    elseif quarto.doc.isFormat("pdf") then
+    elseif quarto.doc.is_format("pdf") then
       ensureLatexDeps()
+      local options = ""
+      if (group == "regular") then
+        options = "[regular]"
+      end
+      local icons = "\\faIcon" .. options .. "{" .. icon .. "}"
       if isEmpty(isValidSize(size)) then
-        return pandoc.RawInline('tex', "\\faIcon{" .. icon .. "}")
+        return pandoc.RawInline('tex', icons)
       else
-        return pandoc.RawInline('tex', "{\\" .. size .. "\\faIcon{" .. icon .. "}}")
+        return pandoc.RawInline('tex', "{\\" .. size .. icons .. "}")
       end
     else
       return pandoc.Null()
