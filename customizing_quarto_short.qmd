@@ -647,6 +647,39 @@ styles.scss    →    styles.css
 
 ---
 
+
+##  {#html-elements2 data-menu-title="Commonly used HTML tags"}
+
+[Commonly used HTML tags]{.slide-title}
+
+<hr>
+
+
+::: {.center-text .body-text-m}
+Browse a complete [list of HTML tags](https://www.w3schools.com/tags/default.asp){target="_blank"}.
+:::
+
+<br>
+
+| Tag                 | What it does                                                 |
+|---------------------|--------------------------------------------------------------|
+| `<div></div>`       | defines a division or section in an HTML document            |
+| `<h1></h1>`         | create a first-level heading (largest)                       |
+| `<h6></h6>`         | create a sixth-level heading (smallest)                      |
+| `<p></p>`           | begin a new paragraph                                        |
+| `<strong></strong>` | bold text                                                    |
+| `<em></em>`         | italicized text                                              |
+| `<img></img>`       | present an image                                             |
+| `<a></a>`           | define a hyperlink                                           |
+| `<br>`              | add a line break (empty element)                             |
+| `<span></span>`     | an inline container used to markup part of a text or document|
+
+::: {.footer}
+**Note:** Some HTML elements have no content (e.g. the `<br>`, or "break" element) -- these are called *empty* elements and do not have an end tag.
+:::
+
+---
+
 ## {#selector-types data-menu-title="Key selector types"}
 
 [The selector types you'll use most]{.slide-title}
@@ -708,74 +741,6 @@ styles.scss    →    styles.css
 
 ---
 
-## {#selector-types-2 data-menu-title="Key selector types (cont.)"}
-
-[The selector types you'll use most (cont.)]{.slide-title}
-
-<hr>
-
-**ID** — `#page-title { color: teal; }` targets only the element with `id="page-title"`:
-
-:::: {.columns}
-::: {.column width="50%"}
-```{.html}
-<h1 id="page-title">My Page</h1>
-<h1>Another heading</h1>
-```
-:::
-::: {.column width="50%"}
-::: {style="border:2px solid #ddd; border-radius:6px; padding:8px 12px; background:#fafafa; font-size:0.8em;"}
-<p style="color:teal; text-decoration:underline; font-weight:700; margin:0 0 6px;">My Page</p>
-<p style="margin:0;">Another heading</p>
-:::
-:::
-::::
-
-**Descendant** — `.navbar a { color: orange; }` styles `<a>` tags only when inside `.navbar`:
-
-:::: {.columns}
-::: {.column width="50%"}
-```{.html}
-<nav class="navbar">
-  <a href="#">Inside navbar</a>
-</nav>
-<a href="#">Outside navbar</a>
-```
-:::
-::: {.column width="50%"}
-::: {style="border:2px solid #ddd; border-radius:6px; padding:8px 12px; background:#fafafa; font-size:0.8em;"}
-<div style="border:1px solid #ccc; border-radius:4px; padding:4px 8px; margin-bottom:6px;">
-<p style="font-size:0.8em; color:#888; margin:0 0 2px;">.navbar</p>
-<p style="color:orange; font-weight:bold; margin:0;">Inside navbar</p>
-</div>
-<p style="margin:0;">Outside navbar</p>
-:::
-:::
-::::
-
-**Pseudo-class** — `a:hover { color: red; }` styles `<a>` tags only when hovered:
-
-:::: {.columns}
-::: {.column width="50%"}
-```{.html}
-<a href="#">Hover over me</a>
-```
-:::
-::: {.column width="50%"}
-::: {style="border:2px solid #ddd; border-radius:6px; padding:8px 12px; background:#fafafa; font-size:0.8em;"}
-<p style="color:#888; font-size:0.85em; margin:0 0 2px;">default:</p>
-<p style="color:#0d6efd; text-decoration:underline; margin:0 0 8px;">Hover over me</p>
-<p style="color:#888; font-size:0.85em; margin:0 0 2px;">on hover:</p>
-<p style="color:red; text-decoration:none; margin:0;">Hover over me</p>
-:::
-:::
-::::
-
-::: {.footer}
-**Tip:** Use Inspect to find `id` values and parent classes already assigned by Quarto — then target them directly.
-:::
-
----
 
 ## {#scss-rules data-menu-title="Add scss:rules section"}
 

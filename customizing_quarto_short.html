@@ -656,6 +656,68 @@ styles.scss    →    styles.css
 <p><strong>This is why we write CSS rules inside <code>styles.scss</code> — Quarto compiles it and wires everything up automatically.</strong></p>
 </div>
 </div></div>
+</section><section id="html-elements2" class="slide level2" data-menu-title="Commonly used HTML tags"><h2></h2>
+<p><span class="slide-title">Commonly used HTML tags</span></p>
+<hr>
+<div class="center-text body-text-m">
+<p>Browse a complete <a href="https://www.w3schools.com/tags/default.asp" target="_blank">list of HTML tags</a>.</p>
+</div>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 74%">
+</colgroup>
+<thead><tr class="header">
+<th>Tag</th>
+<th>What it does</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;div&gt;&lt;/div&gt;</code></td>
+<td>defines a division or section in an HTML document</td>
+</tr>
+<tr class="even">
+<td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
+<td>create a first-level heading (largest)</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
+<td>create a sixth-level heading (smallest)</td>
+</tr>
+<tr class="even">
+<td><code>&lt;p&gt;&lt;/p&gt;</code></td>
+<td>begin a new paragraph</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;strong&gt;&lt;/strong&gt;</code></td>
+<td>bold text</td>
+</tr>
+<tr class="even">
+<td><code>&lt;em&gt;&lt;/em&gt;</code></td>
+<td>italicized text</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;img&gt;&lt;/img&gt;</code></td>
+<td>present an image</td>
+</tr>
+<tr class="even">
+<td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+<td>define a hyperlink</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;br&gt;</code></td>
+<td>add a line break (empty element)</td>
+</tr>
+<tr class="even">
+<td><code>&lt;span&gt;&lt;/span&gt;</code></td>
+<td>an inline container used to markup part of a text or document</td>
+</tr>
+</tbody>
+</table>
+<div class="footer">
+<p><strong>Note:</strong> Some HTML elements have no content (e.g.&nbsp;the <code>&lt;br&gt;</code>, or “break” element) – these are called <em>empty</em> elements and do not have an end tag.</p>
+</div>
 </section><section id="selector-types" class="slide level2" data-menu-title="Key selector types"><h2></h2>
 <p><span class="slide-title">The selector types you’ll use most</span></p>
 <hr>
@@ -708,69 +770,6 @@ Not styled
 </p>
 </div>
 </div></div>
-</section><section id="selector-types-2" class="slide level2" data-menu-title="Key selector types (cont.)"><h2></h2>
-<p><span class="slide-title">The selector types you’ll use most (cont.)</span></p>
-<hr>
-<p><strong>ID</strong> — <code>#page-title { color: teal; }</code> targets only the element with <code>id="page-title"</code>:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb17-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="ot"> id</span><span class="op">=</span><span class="st">"page-title"</span><span class="dt">&gt;</span>My Page<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
-<span id="cb17-2"><a href="" aria-label="2"></a><span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Another heading<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:50%;">
-<div style="border:2px solid #ddd; border-radius:6px; padding:8px 12px; background:#fafafa; font-size:0.8em;">
-<p style="color:teal; text-decoration:underline; font-weight:700; margin:0 0 6px;">
-My Page
-</p>
-<p style="margin:0;">
-Another heading
-</p>
-</div>
-</div></div>
-<p><strong>Descendant</strong> — <code>.navbar a { color: orange; }</code> styles <code>&lt;a&gt;</code> tags only when inside <code>.navbar</code>:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb18-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">nav</span><span class="ot"> class</span><span class="op">=</span><span class="st">"navbar"</span><span class="dt">&gt;</span></span>
-<span id="cb18-2"><a href="" aria-label="2"></a>  <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>Inside navbar<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
-<span id="cb18-3"><a href="" aria-label="3"></a><span class="dt">&lt;/</span><span class="kw">nav</span><span class="dt">&gt;</span></span>
-<span id="cb18-4"><a href="" aria-label="4"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>Outside navbar<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:50%;">
-<div style="border:2px solid #ddd; border-radius:6px; padding:8px 12px; background:#fafafa; font-size:0.8em;">
-<div style="border:1px solid #ccc; border-radius:4px; padding:4px 8px; margin-bottom:6px;">
-<p style="font-size:0.8em; color:#888; margin:0 0 2px;">
-.navbar
-</p>
-<p style="color:orange; font-weight:bold; margin:0;">
-Inside navbar
-</p>
-</div>
-<p style="margin:0;">
-Outside navbar
-</p>
-</div>
-</div></div>
-<p><strong>Pseudo-class</strong> — <code>a:hover { color: red; }</code> styles <code>&lt;a&gt;</code> tags only when hovered:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb19-1"><a href="" aria-label="1"></a><span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"#"</span><span class="dt">&gt;</span>Hover over me<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:50%;">
-<div style="border:2px solid #ddd; border-radius:6px; padding:8px 12px; background:#fafafa; font-size:0.8em;">
-<p style="color:#888; font-size:0.85em; margin:0 0 2px;">
-default:
-</p>
-<p style="color:#0d6efd; text-decoration:underline; margin:0 0 8px;">
-Hover over me
-</p>
-<p style="color:#888; font-size:0.85em; margin:0 0 2px;">
-on hover:
-</p>
-<p style="color:red; text-decoration:none; margin:0;">
-Hover over me
-</p>
-</div>
-</div></div>
-<div class="footer">
-<p><strong>Tip:</strong> Use Inspect to find <code>id</code> values and parent classes already assigned by Quarto — then target them directly.</p>
-</div>
 </section><section id="scss-rules" class="slide level2" data-menu-title="Add scss:rules section"><h2></h2>
 <p><span class="slide-title">Add a CSS rules section to <code>styles.scss</code></span></p>
 <hr>
@@ -780,17 +779,17 @@ Hover over me
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" data-code-line-numbers="11"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb20-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:defaults --*/</span></span>
-<span id="cb20-2"><a href="" aria-label="2"></a></span>
-<span id="cb20-3"><a href="" aria-label="3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
-<span id="cb20-4"><a href="" aria-label="4"></a></span>
-<span id="cb20-5"><a href="" aria-label="5"></a><span class="va">$dark-green</span>: <span class="cn">#858E79</span>;</span>
-<span id="cb20-6"><a href="" aria-label="6"></a><span class="co">// ... additional Sass variables ...</span></span>
-<span id="cb20-7"><a href="" aria-label="7"></a><span class="va">$link-color</span>: <span class="va">$purple</span>;</span>
-<span id="cb20-8"><a href="" aria-label="8"></a></span>
-<span id="cb20-9"><a href="" aria-label="9"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb20-10"><a href="" aria-label="10"></a></span>
-<span id="cb20-11"><a href="" aria-label="11"></a><span class="co">/* Write your CSS rules below here */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="11"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb17-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb17-2"><a href="" aria-label="2"></a></span>
+<span id="cb17-3"><a href="" aria-label="3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
+<span id="cb17-4"><a href="" aria-label="4"></a></span>
+<span id="cb17-5"><a href="" aria-label="5"></a><span class="va">$dark-green</span>: <span class="cn">#858E79</span>;</span>
+<span id="cb17-6"><a href="" aria-label="6"></a><span class="co">// ... additional Sass variables ...</span></span>
+<span id="cb17-7"><a href="" aria-label="7"></a><span class="va">$link-color</span>: <span class="va">$purple</span>;</span>
+<span id="cb17-8"><a href="" aria-label="8"></a></span>
+<span id="cb17-9"><a href="" aria-label="9"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb17-10"><a href="" aria-label="10"></a></span>
+<span id="cb17-11"><a href="" aria-label="11"></a><span class="co">/* Write your CSS rules below here */</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section><section id="use-inspect" class="slide level2" data-menu-title="Use Inspect to identify elements"><h2></h2>
@@ -825,12 +824,12 @@ Hover over me
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" data-code-line-numbers="3-6"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb21-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb21-2"><a href="" aria-label="2"></a></span>
-<span id="cb21-3"><a href="" aria-label="3"></a>h1<span class="op">,</span> h2 {</span>
-<span id="cb21-4"><a href="" aria-label="4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
-<span id="cb21-5"><a href="" aria-label="5"></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>;</span>
-<span id="cb21-6"><a href="" aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="3-6"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb18-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb18-2"><a href="" aria-label="2"></a></span>
+<span id="cb18-3"><a href="" aria-label="3"></a>h1<span class="op">,</span> h2 {</span>
+<span id="cb18-4"><a href="" aria-label="4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
+<span id="cb18-5"><a href="" aria-label="5"></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>;</span>
+<span id="cb18-6"><a href="" aria-label="6"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p><strong>Example: modify Quarto’s pre-assigned <code>.title</code> class</strong> (applied to page titles):</p>
@@ -839,16 +838,16 @@ Hover over me
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" data-code-line-numbers="8-10"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb22-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb22-2"><a href="" aria-label="2"></a></span>
-<span id="cb22-3"><a href="" aria-label="3"></a>h1<span class="op">,</span> h2 {</span>
-<span id="cb22-4"><a href="" aria-label="4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
-<span id="cb22-5"><a href="" aria-label="5"></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>;</span>
-<span id="cb22-6"><a href="" aria-label="6"></a>}</span>
-<span id="cb22-7"><a href="" aria-label="7"></a></span>
-<span id="cb22-8"><a href="" aria-label="8"></a><span class="fu">.title</span> {</span>
-<span id="cb22-9"><a href="" aria-label="9"></a>  <span class="kw">color</span>: <span class="cn">maroon</span>;</span>
-<span id="cb22-10"><a href="" aria-label="10"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" data-code-line-numbers="8-10"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb19-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb19-2"><a href="" aria-label="2"></a></span>
+<span id="cb19-3"><a href="" aria-label="3"></a>h1<span class="op">,</span> h2 {</span>
+<span id="cb19-4"><a href="" aria-label="4"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span>;</span>
+<span id="cb19-5"><a href="" aria-label="5"></a>  <span class="kw">font-weight</span>: <span class="dv">800</span>;</span>
+<span id="cb19-6"><a href="" aria-label="6"></a>}</span>
+<span id="cb19-7"><a href="" aria-label="7"></a></span>
+<span id="cb19-8"><a href="" aria-label="8"></a><span class="fu">.title</span> {</span>
+<span id="cb19-9"><a href="" aria-label="9"></a>  <span class="kw">color</span>: <span class="cn">maroon</span>;</span>
+<span id="cb19-10"><a href="" aria-label="10"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="footer">
@@ -863,8 +862,8 @@ Hover over me
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb23-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">.center-text</span> { text-align: <span class="dv">center</span>; }</span>
-<span id="cb23-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">.orange-text</span> { color: <span class="va">$orange</span>; }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode sass code-with-copy"><code class="sourceCode sass"><span id="cb20-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">.center-text</span> { text-align: <span class="dv">center</span>; }</span>
+<span id="cb20-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">.orange-text</span> { color: <span class="va">$orange</span>; }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p><strong>Apply using HTML syntax or Quarto’s div/span syntax in <code>.qmd</code> files:</strong></p>
@@ -873,24 +872,24 @@ Hover over me
 <div class="center-text">
 <p><strong>HTML syntax</strong></p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb24-1"><a href="" aria-label="1"></a><span class="co">&lt;!-- Block element (div) --&gt;</span></span>
-<span id="cb24-2"><a href="" aria-label="2"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"center-text"</span><span class="dt">&gt;</span></span>
-<span id="cb24-3"><a href="" aria-label="3"></a>  Centered content</span>
-<span id="cb24-4"><a href="" aria-label="4"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb24-5"><a href="" aria-label="5"></a></span>
-<span id="cb24-6"><a href="" aria-label="6"></a><span class="co">&lt;!-- Inline (span) --&gt;</span></span>
-<span id="cb24-7"><a href="" aria-label="7"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Some <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"orange-text"</span><span class="dt">&gt;</span>orange<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb21-1"><a href="" aria-label="1"></a><span class="co">&lt;!-- Block element (div) --&gt;</span></span>
+<span id="cb21-2"><a href="" aria-label="2"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"center-text"</span><span class="dt">&gt;</span></span>
+<span id="cb21-3"><a href="" aria-label="3"></a>  Centered content</span>
+<span id="cb21-4"><a href="" aria-label="4"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb21-5"><a href="" aria-label="5"></a></span>
+<span id="cb21-6"><a href="" aria-label="6"></a><span class="co">&lt;!-- Inline (span) --&gt;</span></span>
+<span id="cb21-7"><a href="" aria-label="7"></a><span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Some <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"orange-text"</span><span class="dt">&gt;</span>orange<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> text<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div class="center-text">
 <p><strong>Quarto syntax</strong></p>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="" aria-label="1"></a><span class="co">&lt;!-- Block (div) --&gt;</span></span>
-<span id="cb25-2"><a href="" aria-label="2"></a>::: {.center-text}</span>
-<span id="cb25-3"><a href="" aria-label="3"></a>Centered content</span>
-<span id="cb25-4"><a href="" aria-label="4"></a>:::</span>
-<span id="cb25-5"><a href="" aria-label="5"></a></span>
-<span id="cb25-6"><a href="" aria-label="6"></a><span class="co">&lt;!-- Inline (span) --&gt;</span></span>
-<span id="cb25-7"><a href="" aria-label="7"></a>Some <span class="co">[</span><span class="ot">orange</span><span class="co">]</span>{.orange-text} text</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource md number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="" aria-label="1"></a><span class="co">&lt;!-- Block (div) --&gt;</span></span>
+<span id="cb22-2"><a href="" aria-label="2"></a>::: {.center-text}</span>
+<span id="cb22-3"><a href="" aria-label="3"></a>Centered content</span>
+<span id="cb22-4"><a href="" aria-label="4"></a>:::</span>
+<span id="cb22-5"><a href="" aria-label="5"></a></span>
+<span id="cb22-6"><a href="" aria-label="6"></a><span class="co">&lt;!-- Inline (span) --&gt;</span></span>
+<span id="cb22-7"><a href="" aria-label="7"></a>Some <span class="co">[</span><span class="ot">orange</span><span class="co">]</span>{.orange-text} text</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section><section id="apply-second-font" class="slide level2" data-menu-title="Apply a second font family"><h2></h2>
 <p><span class="slide-title3">Apply a second font with a Sass variable + CSS rule</span></p>
@@ -901,20 +900,20 @@ Hover over me
 <div class="code-with-filename-file">
 <pre><strong>styles.scss</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26" data-code-line-numbers="6-7|13-15"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb26-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:defaults --*/</span></span>
-<span id="cb26-2"><a href="" aria-label="2"></a></span>
-<span id="cb26-3"><a href="" aria-label="3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
-<span id="cb26-4"><a href="" aria-label="4"></a></span>
-<span id="cb26-5"><a href="" aria-label="5"></a><span class="co">// Fonts</span></span>
-<span id="cb26-6"><a href="" aria-label="6"></a><span class="va">$sen</span>: <span class="st">"Sen"</span><span class="op">,</span> <span class="dv">sans-serif</span>;</span>
-<span id="cb26-7"><a href="" aria-label="7"></a></span>
-<span id="cb26-8"><a href="" aria-label="8"></a><span class="co">// Colors + Quarto Sass variables omitted for brevity ...</span></span>
-<span id="cb26-9"><a href="" aria-label="9"></a></span>
-<span id="cb26-10"><a href="" aria-label="10"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb26-11"><a href="" aria-label="11"></a></span>
-<span id="cb26-12"><a href="" aria-label="12"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3<span class="op">,</span> h4<span class="op">,</span> h5<span class="op">,</span> h6 {</span>
-<span id="cb26-13"><a href="" aria-label="13"></a>  <span class="kw">font-family</span>: <span class="va">$sen</span>;</span>
-<span id="cb26-14"><a href="" aria-label="14"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23" data-code-line-numbers="6-7|13-15"><pre class="sourceCode numberSource sass number-lines code-with-copy"><code class="sourceCode sass"><span id="cb23-1"><a href="" aria-label="1"></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb23-2"><a href="" aria-label="2"></a></span>
+<span id="cb23-3"><a href="" aria-label="3"></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sen:wght@400..800&amp;display=swap'</span><span class="fu">)</span>;</span>
+<span id="cb23-4"><a href="" aria-label="4"></a></span>
+<span id="cb23-5"><a href="" aria-label="5"></a><span class="co">// Fonts</span></span>
+<span id="cb23-6"><a href="" aria-label="6"></a><span class="va">$sen</span>: <span class="st">"Sen"</span><span class="op">,</span> <span class="dv">sans-serif</span>;</span>
+<span id="cb23-7"><a href="" aria-label="7"></a></span>
+<span id="cb23-8"><a href="" aria-label="8"></a><span class="co">// Colors + Quarto Sass variables omitted for brevity ...</span></span>
+<span id="cb23-9"><a href="" aria-label="9"></a></span>
+<span id="cb23-10"><a href="" aria-label="10"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb23-11"><a href="" aria-label="11"></a></span>
+<span id="cb23-12"><a href="" aria-label="12"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3<span class="op">,</span> h4<span class="op">,</span> h5<span class="op">,</span> h6 {</span>
+<span id="cb23-13"><a href="" aria-label="13"></a>  <span class="kw">font-family</span>: <span class="va">$sen</span>;</span>
+<span id="cb23-14"><a href="" aria-label="14"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div class="footer">
