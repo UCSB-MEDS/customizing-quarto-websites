@@ -184,6 +184,76 @@ format:
 
 ---
 
+
+## {#page-footer1 data-menu-title="Add page footer (rendered)"}
+
+[Add a page footer]{.slide-title}
+
+<hr>
+
+Footers appear on each page (you may have to scroll to the bottom to see it appear). You can include a mix of text, icons, logos, hyperlinks, etc.
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "65%" 
+knitr::include_graphics("images/page-footer.png")
+```
+
+::: {.footer}
+**Note:** If you plan to use FontAwesome icons *outside* of the `icon` YAML option, you'll need to first install the Quarto [fontawesome extension](https://quarto.org/docs/websites/website-about.html){target="_blank"} (more info on the next few slides).
+:::
+
+---
+
+## {#add-footer2 data-menu-title="Add page footer (code)"}
+
+[Add a page footer]{.slide-title}
+<!-- [Configure your page footer in `_quarto.yml`]{.slide-title2} -->
+
+<hr>
+
+Make edits to a website's footer under the `website` > `page-footer` option:
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "20-23"
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Sam Shanny-Csik"
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: resources.qmd
+        text: Resources
+      - href: cv/myCV.pdf
+        text: CV
+        target: _blank 
+      - icon: github 
+        href: https://github.com/yourUserName
+        target: _blank
+  page-footer:
+    background: light # or `dark` or omit this option altogether (footer color will match page body color)
+    left: Copyright 2021, Samantha Shanny-Csik
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/samanthacsik/samanthacsik.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    page-layout: full
+```
+
+---
+
 ## {#fa-extension data-menu-title="fontawesome extension"}
 
 [Install the Quarto [fontawesome extension](https://github.com/quarto-ext/fontawesome){target="_blank"} to use icons outside of YAML]{.slide-title3}
@@ -248,11 +318,115 @@ knitr::include_graphics("images/sass.png")
 
 ::: {.body-text}
 - A **CSS extension** (adds features like variables)
-- A **CSS preprocessor** (converts Sass to CSS — browsers can't read `.scss`, but Quarto handles this conversion automatically)
+- **`.scss`** is Sass's modern file format — a *superset of CSS*, meaning all valid CSS is also valid SCSS
+- A **CSS preprocessor** (converts `.scss` to CSS — browsers can't read SCSS directly, but Quarto handles this conversion automatically)
 :::
 :::
 
 ::::
+
+---
+
+
+## {#why-use-sass1 data-menu-title="Sass reduces repetition"}
+
+[Sass helps to reduce repetition]{.slide-title}
+
+<hr>
+
+::: {.body-text}
+Sass extends existing CSS features in a number of exciting ways, but importantly **reduces repetition**. For example, let’s say you’re building a website / web page that uses three colors:
+<!-- Stylesheets (e.g. `.css` files) are getting larger and more complex. Sass extends existing CSS features and importantly, reduces repetition. For example, let's say you're working on a website, which uses 3 main colors: -->
+:::
+
+<br>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "10%" 
+knitr::include_graphics("images/meds-colors.png")
+```
+
+<br>
+
+::: {.body-text .topbr}
+You might imagine how often you'll need to type those HEX codes out as you developing your stylesheet...it can get annoying rather quickly.
+:::
+
+---
+
+## {#why-use-sass2 data-menu-title="Define Sass variables"}
+
+[Define Sass variables to reduce repetition]{.slide-title2}
+
+<hr>
+
+Sass allows us to **define variables** (in the form `$var-name: value;`) for our colors, which we can reference *instead* of writing out their HEX codes each time. This makes your stylesheet **more readable and easier to update** (e.g. only need to update HEX codes in one spot, not multiple!).
+
+```{sass filename="Example stylesheet (.scss)"}
+//| eval: false
+//| echo: true
+//| code-line-numbers: false
+// define Sass vars 
+$darkblue: #053660;
+$teal: #147C91;
+$darkgray: #333333;
+
+// use vars in CSS rules (we'll learn more about how to write CSS soon!) 
+h1 {
+  color: $darkblue;
+}
+
+.button-styling {
+  background: $teal;
+  color: $darkblue; 
+  border-color: $darkgray;
+}
+```
+
+::: {.footer}
+**Note:** Sass has two syntaxes – SCSS syntax (`.scss`), shown above, is the most common. It stands for **S**assy **C**ascading **S**tyle**s**heets {{< fa face-smile-beam title="a squinty smiley face" >}}
+:::
+
+---
+
+## {#quarto-compiles data-menu-title="Quarto compiles Sass automatically"}
+
+[Quarto automatically compiles Sass]{.slide-title}
+
+<hr>
+
+<br>
+
+::: {.center-text}
+Web browsers can interpret CSS ([{{< fa check >}}]{.teal-text} `.css`) but *not* Sass ([{{< fa xmark >}}]{.teal-text} `.scss` or `.sass`). 
+:::
+
+. . . 
+
+<br>
+
+::: {.center-text}
+Typically, you’d need to **compile (i.e. convert) Sass to CSS**, then link the resulting `.css` file in your HTML.
+:::
+
+. . . 
+
+<br>
+
+::: {.center-text}
+Lucky for us, **Quarto compiles the contents of a `.scss` file into CSS without any extra steps** -- all we need to do is link to a `.scss` file directly in our website's `_quarto.yml`. 
+:::
+
+. . . 
+
+<br>
+
+::: {.body-text-xl .teal-text .center-text}
+Let's create our website's `.scss ` stylesheet.
+:::
 
 ---
 
